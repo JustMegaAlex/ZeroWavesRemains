@@ -8,4 +8,4 @@ if !range {
 xprev = x
 yprev = y
 Move(sp, image_angle)
-bring_damage()
+bringDamage()

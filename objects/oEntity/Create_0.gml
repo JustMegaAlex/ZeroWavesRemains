@@ -8,8 +8,10 @@ dampening = new Vec2(0, 0)
 sp = new Vec2(0, 0)
 dir = 0
 dir_to = 0
-
 rotary_sp = 6
+
+battle_side = battle_side_none
+can_hit = can_hit_all
 
 dirApproach = function(dir_to, rot_sp=rotary_sp) {
 	var diff = angle_difference(dir_to, dir)
@@ -31,3 +33,6 @@ move = function() {
     x += sp.x
     y += sp.y
 }
+
+/// Late init
+alarm[0] = 1

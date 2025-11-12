@@ -24,3 +24,20 @@ function IsEnemySide(inst) {
     var _side_friendly_with = !(friendly_with & power(2, inst.side))
     return _side and _friendly_with and _side_friendly_with
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

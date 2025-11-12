@@ -1,10 +1,7 @@
 
-function bring_damage() {
+bringDamage = function() {
 	var inst = instance_place(x, y, object_to_hit)
-	if inst and inst != shooter {
-        if shooter and instance_exists(shooter) {
-            shooter.BulletHitCallback(id, inst)
-        }
+	if inst and inst != shooter and CanHit(inst) {
 		inst.Hit(id)
 		instance_destroy()
 	}
@@ -14,7 +11,7 @@ visible = false
 image_speed = 0
 // become visible back
 alarm[0] = 1
-side = -1
+battle_side = -1
 object_to_hit = oEntity
 shooter = noone
 

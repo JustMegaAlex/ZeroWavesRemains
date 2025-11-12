@@ -68,6 +68,7 @@
     {"id":{"name":"Globals","path":"scripts/Globals/Globals.yy",},},
     {"id":{"name":"libShoot","path":"scripts/libShoot/libShoot.yy",},},
     {"id":{"name":"movement","path":"scripts/movement/movement.yy",},},
+    {"id":{"name":"Shooting","path":"scripts/Shooting/Shooting.yy",},},
     {"id":{"name":"ui","path":"scripts/ui/ui.yy",},},
     {"id":{"name":"utils","path":"scripts/utils/utils.yy",},},
     {"id":{"name":"libSBullet","path":"sprites/libSBullet/libSBullet.yy",},},

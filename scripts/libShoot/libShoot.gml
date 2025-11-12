@@ -1,5 +1,5 @@
 
-function Shoot(dir=0, obj=oBullet, args={}) {
+function libShoot(dir=0, obj=oBullet, args={}) {
 	var bullet = instance_create_layer(x, y, "Instances", obj, args)
 	bullet.image_angle = dir
 	//bullet.side = side
