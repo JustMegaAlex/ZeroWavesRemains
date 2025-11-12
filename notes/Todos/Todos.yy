@@ -1,0 +1,11 @@
+{
+  "$GMNotes":"v1",
+  "%Name":"Todos",
+  "name":"Todos",
+  "parent":{
+    "name":"ZeroWavesRemains",
+    "path":"ZeroWavesRemains.yyp",
+  },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
+}

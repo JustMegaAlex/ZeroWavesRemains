@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"DebugTeleport",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"DebugTeleport",
+  "parent":{
+    "name":"Debug",
+    "path":"folders/Libraries/AlexLibs/Debug.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

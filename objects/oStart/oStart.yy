@@ -8,8 +8,8 @@
   "name":"oStart",
   "overriddenProperties":[],
   "parent":{
-    "name":"Sys",
-    "path":"folders/Objects/Sys.yy",
+    "name":"Systems",
+    "path":"folders/Objects/Systems.yy",
   },
   "parentObjectId":null,
   "persistent":false,

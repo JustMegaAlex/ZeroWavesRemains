@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"battle_sides",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"battle_sides",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Libraries/AlexLibs/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
