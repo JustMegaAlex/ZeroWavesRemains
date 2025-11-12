@@ -34,5 +34,7 @@ move = function() {
     y += sp.y
 }
 
+hit = function() {}
+
 /// Late init
 alarm[0] = 1
