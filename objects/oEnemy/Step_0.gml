@@ -22,7 +22,7 @@ if instance_exists(oPlayer) {
     dir_to = InstDir(oPlayer)
     dirApproach(dir_to)
     if !weapon.timer.timer {
-        Shoot(dir_to, oBullet, weapon)
+        Shoot(Aim(oPlayer), oBullet, weapon)
         weapon.timer.reset()
     }
 }
