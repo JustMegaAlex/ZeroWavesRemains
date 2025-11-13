@@ -17,8 +17,8 @@ if target {
 } else {
 
     if oInput.Pressed("camera_focus") {
-        if instance_exists(oPlayer) {
-            target = oPlayer
+        if instance_exists(oPlayerRef) {
+            target = oPlayerRef
         }
     }
 

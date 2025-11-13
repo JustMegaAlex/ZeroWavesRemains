@@ -11,8 +11,8 @@
   "name":"oCursor",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Refs",
+    "path":"folders/Refs.yy",
   },
   "parentObjectId":null,
   "persistent":true,

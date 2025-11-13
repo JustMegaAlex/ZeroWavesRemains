@@ -8,8 +8,8 @@
   "name":"oEntitySpaceShip",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Refs",
+    "path":"folders/Refs.yy",
   },
   "parentObjectId":{
     "name":"oEntity1",

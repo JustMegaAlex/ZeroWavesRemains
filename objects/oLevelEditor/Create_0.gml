@@ -275,7 +275,7 @@ function ReplaceWithPlaceholder(inst) {
 			 image_alpha: image_alpha}
 		)
 
-        if object_index == oPlayer {
+        if object_index == oPlayerRef {
             other.player_placeholder = placeholder
         }
 		placeholder.source_instance = id
