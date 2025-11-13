@@ -4,4 +4,7 @@ battle_side = battle_side_player
 
 instance_create_layer(x, y, layer, oCamera)
 
-dmg = 20
+weapon = {
+    dmg: 20,
+    timer: MakeTimer(15)
+}

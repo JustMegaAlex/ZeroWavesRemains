@@ -16,6 +16,13 @@ if mover.finished {
 
 move()
 
+weapon.timer.update()
+
 if instance_exists(oPlayer) {
-    dirApproach(InstDir(oPlayer))
+    dir_to = InstDir(oPlayer)
+    dirApproach(dir_to)
+    if !weapon.timer.timer {
+        Shoot(dir_to, oBullet, weapon)
+        weapon.timer.reset()
+    }
 }

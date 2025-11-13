@@ -25,6 +25,7 @@ if oInput.Hold("rclick") {
 move()
 
 
-if oInput.Pressed("lclick") {
-    Shoot(dir)
+if !weapon.timer.update() and oInput.Hold("lclick") {
+    Shoot(dir, oBullet, weapon)
+    weapon.timer.reset()
 }

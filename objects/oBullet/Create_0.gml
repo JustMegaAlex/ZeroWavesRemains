@@ -18,7 +18,6 @@ battle_side = -1
 can_hit = 0
 object_to_hit = oEntity
 shooter = noone
-dmg = 0
 
 xprev = x
 yprev = y

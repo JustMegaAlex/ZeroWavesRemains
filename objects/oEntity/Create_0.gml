@@ -11,7 +11,10 @@ sp = new Vec2(0, 0)
 dir = 0
 dir_to = 0
 rotary_sp = 6
-dmg = 0
+
+weapon = {
+    dmg: 0
+}
 
 battle_side = battle_side_none
 can_hit = can_hit_all

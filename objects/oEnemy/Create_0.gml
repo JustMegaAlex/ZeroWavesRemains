@@ -1,8 +1,15 @@
 event_inherited()
 
 battle_side = battle_side_enemy
-dmg = 5
 move_around_player_dist = 1000
+
+
+weapon = {
+    dmg: 5,
+    timer: MakeTimer(45)
+}
+
+
 
 
 //// Movers
