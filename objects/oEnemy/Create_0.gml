@@ -2,6 +2,7 @@ event_inherited()
 
 battle_side = battle_side_enemy
 move_around_player_dist = 1000
+active = true
 
 
 weapon = {

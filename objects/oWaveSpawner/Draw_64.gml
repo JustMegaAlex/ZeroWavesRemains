@@ -1,0 +1,1 @@
+DebugDrawVar("timer", spawn_timer.timer)

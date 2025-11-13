@@ -1,6 +1,6 @@
 
 range -= sp
-if !range {
+if !range or (point_distance(0, 0, x, y) > (oGameArea.radius - sprite_width)) {
 	instance_destroy()
 	exit
 }

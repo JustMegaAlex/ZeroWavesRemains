@@ -57,6 +57,7 @@
     {"id":{"name":"oStarsBg","path":"objects/oStarsBg/oStarsBg.yy",},},
     {"id":{"name":"oStart","path":"objects/oStart/oStart.yy",},},
     {"id":{"name":"oSys","path":"objects/oSys/oSys.yy",},},
+    {"id":{"name":"oWaveSpawner","path":"objects/oWaveSpawner/oWaveSpawner.yy",},},
     {"id":{"name":"rmGame","path":"rooms/rmGame/rmGame.yy",},},
     {"id":{"name":"rmStart","path":"rooms/rmStart/rmStart.yy",},},
     {"id":{"name":"autotiling","path":"scripts/autotiling/autotiling.yy",},},
