@@ -34,7 +34,7 @@ drag_button = mb_middle
 mouse_x_prev = 0
 mouse_y_prev = 0
 
-spd = 8
+sp_max = 8
 
 function SetZoom(value) {
     zoom = value
@@ -42,5 +42,6 @@ function SetZoom(value) {
 }
 
 
-
+sp_target = new Vec2(0, 0)
+sp_target_ratio = 0.04
 
