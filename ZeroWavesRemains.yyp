@@ -60,6 +60,7 @@
     {"id":{"name":"rmStart","path":"rooms/rmStart/rmStart.yy",},},
     {"id":{"name":"autotiling","path":"scripts/autotiling/autotiling.yy",},},
     {"id":{"name":"battle_sides","path":"scripts/battle_sides/battle_sides.yy",},},
+    {"id":{"name":"BotMovers","path":"scripts/BotMovers/BotMovers.yy",},},
     {"id":{"name":"camera","path":"scripts/camera/camera.yy",},},
     {"id":{"name":"debug_view_helpers","path":"scripts/debug_view_helpers/debug_view_helpers.yy",},},
     {"id":{"name":"debug","path":"scripts/debug/debug.yy",},},
