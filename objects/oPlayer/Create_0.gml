@@ -6,5 +6,5 @@ instance_create_layer(x, y, layer, oCamera)
 
 weapon = {
     dmg: 20,
-    timer: MakeTimer(15)
+    timer: MakeTimer(9)
 }

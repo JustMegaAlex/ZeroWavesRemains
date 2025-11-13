@@ -44,6 +44,7 @@
     {"id":{"name":"oEntity1","path":"objects/oEntity1/oEntity1.yy",},},
     {"id":{"name":"oEntitySpaceShip","path":"objects/oEntitySpaceShip/oEntitySpaceShip.yy",},},
     {"id":{"name":"oFloatingText","path":"objects/oFloatingText/oFloatingText.yy",},},
+    {"id":{"name":"oGameArea","path":"objects/oGameArea/oGameArea.yy",},},
     {"id":{"name":"oInput","path":"objects/oInput/oInput.yy",},},
     {"id":{"name":"oLevelEditor","path":"objects/oLevelEditor/oLevelEditor.yy",},},
     {"id":{"name":"oMusic","path":"objects/oMusic/oMusic.yy",},},

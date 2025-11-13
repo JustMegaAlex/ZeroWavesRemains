@@ -22,6 +22,12 @@ if oInput.Hold("rclick") {
     accelerate(0, dir)
 }
 
+// push back into circle
+if PointDist(0, 0) > oGameArea.radius {
+    var suck_dir = PointDir(0, 0)
+    acc.add_polar(acc_max, suck_dir)
+}
+
 move()
 
 
@@ -29,3 +35,4 @@ if !weapon.timer.update() and oInput.Hold("lclick") {
     Shoot(dir, oBullet, weapon)
     weapon.timer.reset()
 }
+
