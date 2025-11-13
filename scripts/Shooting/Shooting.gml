@@ -11,6 +11,7 @@ function Shoot(dir=0, obj=oBullet, args={}) {
 	bullet.battle_side = battle_side
     bullet.can_hit = can_hit
     bullet.shooter = id
+    bullet.dmg = dmg
     //bullet.dmg = id.weapon.dmg
     //bullet.life_distance = id.weapon.range
 	return bullet

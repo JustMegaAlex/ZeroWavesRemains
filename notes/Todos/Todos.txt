@@ -1,5 +1,12 @@
 
 > coloring entities
-> import libs
-> player movement
-> shooting
+    > find pallete
+    > impl coloring from a sprite
+> mob ai
+> fighting
+> circle area
+> wave spawner
+> vfx
+> sfx
+> gameplay loop
+> gameplay ui
