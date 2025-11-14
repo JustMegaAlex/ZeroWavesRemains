@@ -5,6 +5,7 @@ frames_since_start++
 //}
 
 if oInput.Pressed("reload") {
+    ResetGlobals()
 	room_restart()
 }
 

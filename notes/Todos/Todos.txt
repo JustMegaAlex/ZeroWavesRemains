@@ -1,9 +1,12 @@
 playtest:
-> switch weapon with Q/E
 > limit zooming
 > rework waves
 > win/lose states
 > destroy dummy to start
+> explosions
+> speed up spawn if won
+> COUNT waves remains
+> restart only from pause or if lost
 
 > new enemies
     > long range spready, heavy, slow

@@ -1,12 +1,30 @@
 var sec = 60
 active = true
 spawn_timer = MakeTimer(40 * sec, 0)
-waves_count = [4, 5, 6, 7, 8]
+just_spawned = 0
+waves = [
+    {oEnemy: 2, oEnemyTiny: 0},
+    {oEnemy: 4, oEnemyTiny: 0},
+    {oEnemy: 7, oEnemyTiny: 0},
+    {oEnemy: 0, oEnemyTiny: 3},
+    {oEnemy: 0, oEnemyTiny: 9},
+    {oEnemy: 5, oEnemyTiny: 10},
+    {oEnemy: 10, oEnemyTiny: 2},
+    {oEnemy: 0, oEnemyTiny: 22},
+    {oEnemy: 12, oEnemyTiny: 15},
+    {oEnemy: 15, oEnemyTiny: 30},
+    //{oEnemy: 1, oEnemyTiny: 0},
+]
 wave_index = 0
 next_wave_instances = []
 spawn_extra_radius = 500
 spawn_pos = new Vec2(0, 0)
 spawning_inst_speed = spawn_extra_radius / spawn_timer.time
+
+dummy = noone
+if instance_exists(oEnemy) {
+    dummy = instance_find(oEnemy, 0)
+}
 
 spawn = function() {
     var dist = oGameArea.radius + spawn_extra_radius * (wave_index > 0)
@@ -15,28 +33,36 @@ spawn = function() {
        function(inst) {
             inst.active = true
             inst.invincible = false
+            global.wave_enemies_count++
        }
    )
     ArrayClear(next_wave_instances)
-    repeat waves_count[wave_index] {
-        var _dir = irandom(360)
-        spawn_pos.set_polar(dist, _dir)
-        var inst = instance_create_layer(
-            spawn_pos.x, spawn_pos.y,
-            "Instances", oEnemyTiny
-        )
-        with inst {
-            invincible = true
-            dir = _dir + 180
-            active = false
+    var wave = waves[wave_index]
+    var names = struct_get_names(wave)
+    for (var i = 0; i < array_length(names); i++) {
+        var obj_name = names[i]
+        var number = wave[$ obj_name]
+        var obj = asset_get_index(obj_name)
+        repeat number {
+            var _dir = irandom(360)
+            spawn_pos.set_polar(dist, _dir)
+            var inst = instance_create_layer(
+                spawn_pos.x, spawn_pos.y,
+                "Instances", obj
+            )
+            with inst {
+                invincible = true
+                dir = _dir + 180
+                active = false
+            }
+            array_push(next_wave_instances, inst)
         }
-        array_push(next_wave_instances, inst)
     }
     if wave_index > 0 {
         spawn_timer.reset()
     }
     wave_index++
-    if wave_index > array_length(waves_count) {
+    if wave_index > array_length(waves) {
         active = false
     }
 }

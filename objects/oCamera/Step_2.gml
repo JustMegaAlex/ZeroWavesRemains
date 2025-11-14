@@ -44,6 +44,7 @@ if target {
 
 if !is_mouse_over_debug_overlay() {
     zoom_to += (oInput.Pressed("zoom_out") - oInput.Pressed("zoom_in")) * zoom_factor
+    zoom_to = clamp(zoom_to, 0.5, 4)
 }
 zoom = Approach2(zoom, zoom_to, 0.04, 0.01)
 SetZoom(zoom)

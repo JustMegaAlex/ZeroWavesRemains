@@ -1,15 +1,31 @@
 macro_pause
 
+if instance_exists(dummy) {
+    exit
+} else if dummy {
+    dummy = noone
+    spawn()
+    exit
+}
+
 array_foreach(next_wave_instances, 
     function(inst) {
-        inst.sp.set_polar(oWaveSpawner.spawning_inst_speed, inst.dir)
+        if inst == undefined { return }
+        var mult = 1 + 3 * (global.wave_enemies_count == 0)
+        inst.sp.set_polar(oWaveSpawner.spawning_inst_speed*mult, inst.dir)
+        var dist = point_distance(inst.x, inst.y, 0, 0)
+        if !oWaveSpawner.just_spawned and point_distance(inst.x, inst.y, 0, 0) <= oGameArea.radius {
+            oWaveSpawner.spawn()
+            oWaveSpawner.just_spawned = true
+        }
     }
 )
+just_spawned = false
 
 if !active { exit }
-
-if !spawn_timer.update() {
-    spawn()
-}
+//
+//if !spawn_timer.update() {
+    //spawn()
+//}
 
 
