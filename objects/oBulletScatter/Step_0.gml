@@ -9,7 +9,7 @@ if fading {
 }
 
 dist_went += sp
-if (dist_went >= range) or (point_distance(0, 0, x, y) > (oGameArea.radius - sprite_width)) {
+if (dist_went >= range) {
 	fading = true
 	exit
 }

@@ -1,10 +1,6 @@
 playtest:
-> limit zooming
-> rework waves
 > win/lose states
-> destroy dummy to start
 > explosions
-> speed up spawn if won
 > COUNT waves remains
 > restart only from pause or if lost
 
