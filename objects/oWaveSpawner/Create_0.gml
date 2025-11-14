@@ -15,6 +15,7 @@ waves = [
     {oEnemy: 8, oEnemyTiny: 15},
     //{oEnemy: 1, oEnemyTiny: 0},
 ]
+waves_remains = array_length(waves)
 wave_index = 0
 next_wave_instances = []
 spawn_extra_radius = 500
@@ -27,8 +28,6 @@ if instance_exists(oEnemy) {
 }
 
 spawn = function() {
-    var dist = oGameArea.radius + spawn_extra_radius * (wave_index > 0)
-    
    array_foreach(next_wave_instances, 
        function(inst) {
             inst.active = true
@@ -37,6 +36,10 @@ spawn = function() {
        }
    )
     ArrayClear(next_wave_instances)
+    if !active { return }
+    var dist = oGameArea.radius + spawn_extra_radius * (wave_index > 0)
+    
+    waves_remains--
     var wave = waves[wave_index]
     var names = struct_get_names(wave)
     for (var i = 0; i < array_length(names); i++) {
@@ -62,7 +65,7 @@ spawn = function() {
         spawn_timer.reset()
     }
     wave_index++
-    if wave_index > array_length(waves) {
+    if wave_index >= array_length(waves) {
         active = false
     }
 }

@@ -58,7 +58,6 @@ hit = function(dmg) {
     hp -= dmg
     if hp <= 0 {
         die()
-        global.wave_enemies_count--
     }
 }
 

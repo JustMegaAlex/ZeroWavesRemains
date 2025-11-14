@@ -1,9 +1,4 @@
 playtest:
-> win/lose states
-> explosions
-> COUNT waves remains
-> restart only from pause or if lost
-
 > new enemies
     > long range spready, heavy, slow
 > coloring entities

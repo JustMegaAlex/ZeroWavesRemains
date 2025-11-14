@@ -76,3 +76,11 @@ function Aim(target) {
     }
     return sight_angle + aim_angle + choose(0, 3, 4, 5, 6, 7, 8, 9, 10) * choose(1, -1)
 }
+
+die = function() {
+    global.wave_enemies_count--
+    if instance_number(oEnemy) == 1 and oWaveSpawner.waves_remains == 0 {
+        global.win = true
+    }
+    instance_destroy()
+}
