@@ -1,4 +1,6 @@
 
+invincible = false
+
 ///// Ships functionality
 hp_max = 100
 hp = hp_max
@@ -13,7 +15,8 @@ dir_to = 0
 rotary_sp = 6
 
 weapon = {
-    dmg: 0
+    dmg: 0,
+    object: oBullet,
 }
 
 battle_side = battle_side_none
@@ -45,10 +48,17 @@ die = function() {
 }
 
 hit = function(dmg) {
+    if invincible {
+        return;
+    }
     hp -= dmg
     if hp <= 0 {
         die()        
     }
+}
+
+shoot = function(dir) {
+    Shoot(dir, weapon.object, weapon)
 }
 
 /// Late init

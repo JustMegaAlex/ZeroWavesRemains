@@ -21,7 +21,7 @@ if active {
         dir_to = InstDir(oPlayer)
         dirApproach(dir_to)
         if !weapon.timer.timer {
-            Shoot(Aim(oPlayer), oBullet, weapon)
+            shoot(Aim(oPlayer))
             weapon.timer.reset()
         }
     }

@@ -8,7 +8,9 @@ active = true
 weapon = {
     dmg: 5,
     timer: MakeTimer(45),
-    sp: 50,
+    sp: 40,
+    range: 2000,
+    object: oBullet,
 }
 
 

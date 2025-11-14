@@ -13,7 +13,8 @@ spawn = function() {
     
    array_foreach(next_wave_instances, 
        function(inst) {
-           inst.active = true
+            inst.active = true
+            inst.invincible = false
        }
    )
     ArrayClear(next_wave_instances)
@@ -24,7 +25,8 @@ spawn = function() {
             spawn_pos.x, spawn_pos.y,
             "Instances", oEnemy
         )
-        with inst {
+        with inst {
+            invincible = true
             dir = _dir + 180
             active = false
         }

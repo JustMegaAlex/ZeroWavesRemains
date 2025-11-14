@@ -1,4 +1,6 @@
-
+> custom weapons
+    > sniper laser
+    > scatter
 > coloring entities
     > find pallete
     > impl coloring from a sprite
