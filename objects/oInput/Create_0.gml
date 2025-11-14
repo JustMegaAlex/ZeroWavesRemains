@@ -251,6 +251,8 @@ mapping_config = {
         new Key(ord("4")),
         new Key(ord("5")),
     ],
+    switch_weapon_fwd: [new Key(ord("E"))],
+    switch_weapon_back: [new Key(ord("Q"))],
     left: [new Key(vk_left), new Key(ord("A")),
            new Gamepad(gp_padl), new GamepadAxis(gp_axislh, -1, 0.25)],
     right: [new Key(vk_right), new Key(ord("D")),

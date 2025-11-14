@@ -3,9 +3,8 @@ event_inherited()
 hp = 10
 
 move_around_player_dist = 400
-active = true
 sp_max = 40
-acc_max = 0.5
+acc_max = 0.37
 updateDampening()
 
 image_xscale = 0.3

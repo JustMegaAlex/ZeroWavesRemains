@@ -1,5 +1,11 @@
+playtest:
+> switch weapon with Q/E
+> limit zooming
+> rework waves
+> win/lose states
+> destroy dummy to start
+
 > new enemies
-    > tiny
     > long range spready, heavy, slow
 > coloring entities
     > find pallete

@@ -9,7 +9,11 @@ if oInput.Pressed("reload") {
 }
 
 if oInput.Pressed("escape") {
-    game_end()
+    if IsHtmlBuild() {
+        global.pause = !global.pause
+    } else {
+        game_end()
+    }
 }
 
 if oInput.Pressed("pause") {
