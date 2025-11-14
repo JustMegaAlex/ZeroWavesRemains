@@ -3,8 +3,14 @@
 
 pause = false
 wave_enemies_count = 1
+gameover = false
+win = false
+
 
 
 function ResetGlobals() {
-    wave_enemies_count = 1
+    global.wave_enemies_count = 1
+    global.gameover = false
+    global.win = false
+    global.pause = false
 }

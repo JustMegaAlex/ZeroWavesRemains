@@ -1,5 +1,6 @@
 event_inherited()
 
+
 battle_side = battle_side_player
 
 instance_create_layer(x, y, layer, oCamera)

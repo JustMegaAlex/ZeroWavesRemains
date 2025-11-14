@@ -49,3 +49,8 @@ if switch_weapon_dir != 0 {
     weapon = weapons_array[new_ind]
 }
 
+die = function() {
+    instance_destroy()
+    global.gameover = true
+}
+
