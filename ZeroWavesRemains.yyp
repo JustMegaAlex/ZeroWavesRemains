@@ -38,6 +38,7 @@
   "resources":[
     {"id":{"name":"Todos","path":"notes/Todos/Todos.yy",},},
     {"id":{"name":"oBullet","path":"objects/oBullet/oBullet.yy",},},
+    {"id":{"name":"oBulletScatter","path":"objects/oBulletScatter/oBulletScatter.yy",},},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
     {"id":{"name":"oCursor","path":"objects/oCursor/oCursor.yy",},},
     {"id":{"name":"oDebugTeleport","path":"objects/oDebugTeleport/oDebugTeleport.yy",},},

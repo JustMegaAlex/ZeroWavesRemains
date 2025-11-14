@@ -15,10 +15,11 @@ weapon_scatter = {
     dmg: 4,
     timer: MakeTimer(2),
     range: 1800,
-    object: oBullet,
+    object: oBulletScatter,
     image_xscale: 1,
     image_yscale: 1,
     spread_angle: 7,
+    sp: 120,
 }
 
 weapon_snipe = {
