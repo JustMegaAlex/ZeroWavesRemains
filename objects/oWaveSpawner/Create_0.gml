@@ -5,14 +5,14 @@ just_spawned = 0
 waves = [
     {oEnemy: 2, oEnemyTiny: 0},
     {oEnemy: 4, oEnemyTiny: 0},
-    {oEnemy: 7, oEnemyTiny: 0},
+    {oEnemy: 5, oEnemyTiny: 0},
     {oEnemy: 0, oEnemyTiny: 3},
-    {oEnemy: 0, oEnemyTiny: 9},
-    {oEnemy: 5, oEnemyTiny: 10},
-    {oEnemy: 10, oEnemyTiny: 2},
-    {oEnemy: 0, oEnemyTiny: 22},
-    {oEnemy: 12, oEnemyTiny: 15},
-    {oEnemy: 15, oEnemyTiny: 30},
+    {oEnemy: 0, oEnemyTiny: 5},
+    {oEnemy: 2, oEnemyTiny: 5},
+    {oEnemy: 4, oEnemyTiny: 6},
+    {oEnemy: 0, oEnemyTiny: 12},
+    {oEnemy: 6, oEnemyTiny: 3},
+    {oEnemy: 8, oEnemyTiny: 15},
     //{oEnemy: 1, oEnemyTiny: 0},
 ]
 wave_index = 0

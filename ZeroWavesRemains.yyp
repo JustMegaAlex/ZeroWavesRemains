@@ -88,6 +88,7 @@
     {"id":{"name":"libSShootBurstS","path":"sprites/libSShootBurstS/libSShootBurstS.yy",},},
     {"id":{"name":"libSTopDownPlayer","path":"sprites/libSTopDownPlayer/libSTopDownPlayer.yy",},},
     {"id":{"name":"sBGGrid","path":"sprites/sBGGrid/sBGGrid.yy",},},
+    {"id":{"name":"sBulletScatter","path":"sprites/sBulletScatter/sBulletScatter.yy",},},
     {"id":{"name":"sButton","path":"sprites/sButton/sButton.yy",},},
     {"id":{"name":"sCursor","path":"sprites/sCursor/sCursor.yy",},},
     {"id":{"name":"sDebugTeleport","path":"sprites/sDebugTeleport/sDebugTeleport.yy",},},

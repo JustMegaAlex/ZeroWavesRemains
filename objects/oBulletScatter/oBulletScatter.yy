@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sProjectile",
-    "path":"sprites/sProjectile/sProjectile.yy",
+    "name":"sBulletScatter",
+    "path":"sprites/sBulletScatter/sBulletScatter.yy",
   },
   "spriteMaskId":null,
   "visible":true,
