@@ -22,6 +22,10 @@ weapon = {
 battle_side = battle_side_none
 can_hit = can_hit_all
 
+updateDampening = function() {
+    dampening_val = acc_max / sp_max
+}
+
 dirApproach = function(dir_to, rot_sp=rotary_sp) {
 	var diff = angle_difference(dir_to, dir)
 	if abs(diff) < rot_sp {

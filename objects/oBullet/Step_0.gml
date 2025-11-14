@@ -1,3 +1,4 @@
+macro_pause
 
 range -= sp
 if !range or (point_distance(0, 0, x, y) > (oGameArea.radius - sprite_width)) {

@@ -1,5 +1,6 @@
 event_inherited()
 
+macro_pause
 
 dir_to = MouseDir()
 dirApproach(dir_to)
@@ -34,5 +35,9 @@ move()
 if !weapon.timer.update() and oInput.Hold("lclick") {
     shoot(dir)
     weapon.timer.reset()
+}
+
+if oInput.Pressed("switch_weapon") {
+    inputSwitchWeapon()
 }
 

@@ -244,6 +244,13 @@ gamepad_set_axis_deadzone(gp_id, 0.25)
 
 /// @follow-up input keys mapping
 mapping_config = {
+    switch_weapon: [
+        new Key(ord("1")),
+        new Key(ord("2")),
+        new Key(ord("3")),
+        new Key(ord("4")),
+        new Key(ord("5")),
+    ],
     left: [new Key(vk_left), new Key(ord("A")),
            new Gamepad(gp_padl), new GamepadAxis(gp_axislh, -1, 0.25)],
     right: [new Key(vk_right), new Key(ord("D")),

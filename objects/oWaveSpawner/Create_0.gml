@@ -23,7 +23,7 @@ spawn = function() {
         spawn_pos.set_polar(dist, _dir)
         var inst = instance_create_layer(
             spawn_pos.x, spawn_pos.y,
-            "Instances", oEnemy
+            "Instances", oEnemyTiny
         )
         with inst {
             invincible = true

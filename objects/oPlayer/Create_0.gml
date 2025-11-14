@@ -28,4 +28,20 @@ weapon_snipe = {
     range: 6000,
 }
 
-weapon = weapon_scatter
+weapon = weapon_pulse
+
+weapons_array = [
+    weapon_pulse, weapon_scatter, weapon_snipe
+]
+
+inputSwitchWeapon = function() {
+    var slot = keyboard_lastkey - 48
+    if median(1, 5, slot) != slot {
+        show_debug_message($"Wrong weapon slot {slot}")
+        return;
+    }
+    if median(1, array_length(weapons_array), slot) != slot {
+        return;
+    }
+    weapon = weapons_array[slot-1]
+}

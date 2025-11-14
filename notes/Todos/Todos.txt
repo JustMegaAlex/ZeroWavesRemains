@@ -1,6 +1,6 @@
-> custom weapons
-    > sniper laser
-    > scatter
+> new enemies
+    > tiny
+    > long range spready, heavy, slow
 > coloring entities
     > find pallete
     > impl coloring from a sprite

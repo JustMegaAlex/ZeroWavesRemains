@@ -1,3 +1,4 @@
+macro_pause
 
 array_foreach(next_wave_instances, 
     function(inst) {

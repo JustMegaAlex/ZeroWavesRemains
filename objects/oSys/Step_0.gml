@@ -9,9 +9,9 @@ if oInput.Pressed("reload") {
 }
 
 if oInput.Pressed("escape") {
-    if room == rmStart {
-        game_end()
-    } else {
-        room_goto(rmStart)
-    }
+    game_end()
+}
+
+if oInput.Pressed("pause") {
+    global.pause = !global.pause
 }
