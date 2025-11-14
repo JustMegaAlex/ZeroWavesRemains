@@ -1,3 +1,7 @@
 draw_healthbar(30, 30, 400, 70, hp, c_grey, c_red, c_green, 0, true, true)
 SetTextAllign(1, 1)
+draw_set_font(-1)
 draw_text(200, 50, "hp")
+SetTextAllign(0, 0)
+draw_set_font(fntUIBig)
+draw_text(30, 100, $"Weapon: {weapon.name}")

@@ -10,6 +10,7 @@
   },
   "defaultScriptType":1,
   "Folders":[
+    {"$GMFolder":"","%Name":"Fonts","folderPath":"folders/Fonts.yy","name":"Fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Libraries","folderPath":"folders/Libraries.yy","name":"Libraries","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"AlexLibs","folderPath":"folders/Libraries/AlexLibs.yy","name":"AlexLibs","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Debug","folderPath":"folders/Libraries/AlexLibs/Debug.yy","name":"Debug","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -36,6 +37,7 @@
   },
   "name":"ZeroWavesRemains",
   "resources":[
+    {"id":{"name":"fntUIBig","path":"fonts/fntUIBig/fntUIBig.yy",},},
     {"id":{"name":"Font1","path":"fonts/Font1/Font1.yy",},},
     {"id":{"name":"Todos","path":"notes/Todos/Todos.yy",},},
     {"id":{"name":"oBullet","path":"objects/oBullet/oBullet.yy",},},
