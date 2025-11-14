@@ -1,6 +1,6 @@
 {
   "$GMObject":"",
-  "%Name":"oBullet",
+  "%Name":"oSnipeShot",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
@@ -8,13 +8,16 @@
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oBullet",
+  "name":"oSnipeShot",
   "overriddenProperties":[],
   "parent":{
     "name":"Bullets",
     "path":"folders/Objects/Bullets.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oBullet",
+    "path":"objects/oBullet/oBullet.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
