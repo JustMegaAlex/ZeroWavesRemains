@@ -36,6 +36,7 @@
   },
   "name":"ZeroWavesRemains",
   "resources":[
+    {"id":{"name":"Font1","path":"fonts/Font1/Font1.yy",},},
     {"id":{"name":"Todos","path":"notes/Todos/Todos.yy",},},
     {"id":{"name":"oBullet","path":"objects/oBullet/oBullet.yy",},},
     {"id":{"name":"oBulletScatter","path":"objects/oBulletScatter/oBulletScatter.yy",},},
