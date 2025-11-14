@@ -21,5 +21,3 @@ image_xscale = range / sprite_width
 var animation_time = 25
 image_yscale_sp =  image_yscale / animation_time
 
-
-

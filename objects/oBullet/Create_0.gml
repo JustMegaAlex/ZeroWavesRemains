@@ -7,9 +7,6 @@ bringDamage = function() {
 	}
 }
 
-image_xscale = 3
-image_yscale = 3
-
 visible = false
 image_speed = 0
 // become visible back

@@ -10,6 +10,17 @@ weapon_pulse = {
     object: oBullet,
 }
 
+
+weapon_scatter = {
+    dmg: 4,
+    timer: MakeTimer(2),
+    range: 1800,
+    object: oBullet,
+    image_xscale: 1,
+    image_yscale: 1,
+    spread_angle: 7,
+}
+
 weapon_snipe = {
     dmg: 120,
     timer: MakeTimer(60),
@@ -17,4 +28,4 @@ weapon_snipe = {
     range: 6000,
 }
 
-weapon = weapon_snipe
+weapon = weapon_scatter
