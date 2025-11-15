@@ -1,7 +1,9 @@
 // Inherit the parent event
 event_inherited();
 
-
-//if place_meeting(x, y, oBulletScatter) {
-    //var test = 1
-//}
+var scatter = instance_place(x, y, oBulletScatter)
+if scatter {
+    hit(scatter.dmg)
+    scatter.fading = true
+    scatter.fading_hurt_frames = 0
+}
