@@ -1,6 +1,9 @@
 macro_pause
 
 if fading {
+    if (--fading_hurt_frames) > 0 {
+        bringDamage()
+    }
     image_alpha -= 0.03
     if image_alpha <= 0 {
         instance_destroy()

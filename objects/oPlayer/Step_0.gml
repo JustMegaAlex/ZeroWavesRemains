@@ -48,14 +48,14 @@ if switch_weapon_dir != 0 {
 
 /// reload restoring weapons
 for (var i = 0; i < array_length(weapons_array); ++i) {
-    var item = weapons_array[i]
-    if (item.ammo >= item.ammo_max) or (item.timer.timer > 0) {
+    var weap = weapons_array[i]
+    if (weap.ammo >= weap.ammo_max) or (weap.timer.timer > 0) {
         continue
     }
-    var timer = item[$ "ammo_restore_timer"]
+    var timer = weap[$ "ammo_restore_timer"]
     if timer != undefined and !timer.update() {
         timer.reset()
-        weapon.ammo++
+        weap.ammo++
     }
 }
 

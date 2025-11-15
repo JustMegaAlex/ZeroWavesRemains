@@ -1,5 +1,9 @@
 event_inherited()
 
+if global.debug_tiny == noone {
+    global.debug_tiny = id
+}
+
 hp = 10
 
 move_around_player_dist = 400

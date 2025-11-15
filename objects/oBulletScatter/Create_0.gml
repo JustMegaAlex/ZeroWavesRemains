@@ -1,9 +1,13 @@
 
 bringDamage = function() {
 	var inst = instance_place(x, y, object_to_hit)
+    if inst and inst.object_index == oEnemyTiny {
+        var test = 1
+    }
 	if inst and inst != shooter and CanHit(inst) {
 		inst.hit(dmg)
 		fading = true
+        fading_hurt_frames = 0
 	}
 }
 
@@ -23,3 +27,4 @@ yprev = y
 original_width = sprite_width
 
 fading = false
+fading_hurt_frames = 4

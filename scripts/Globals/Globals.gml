@@ -7,6 +7,8 @@ gameover = false
 win = false
 
 
+debug_tiny = noone
+
 
 function ResetGlobals() {
     global.wave_enemies_count = 1
