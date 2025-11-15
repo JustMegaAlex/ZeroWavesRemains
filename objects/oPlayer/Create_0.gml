@@ -2,7 +2,7 @@ event_inherited()
 
 kb_prev_char = ""
 
-money = 100
+money = 0
 
 battle_side = battle_side_player
 

@@ -16,3 +16,11 @@ function ResetGlobals() {
     global.win = false
     global.pause = false
 }
+
+
+/// Shop
+snipe_cost = 80
+scatter_cost = 50
+heal_cost = 50
+snipe_ammo_cost = 30
+scatter_ammo_cost = 20
