@@ -12,12 +12,14 @@ if global.win {
 }
 
 //// Skip ui section
-DebugDrawVar("")
-DebugDrawVar("")
-DebugDrawVar("")
-DebugDrawVar("")
-DebugDrawVar("")
-DebugDrawVar("")
-DebugDrawVar("")
-DebugDrawVar("")
-DebugDrawVar("")
+DebugDrawVar("", "")
+DebugDrawVar("", "")
+DebugDrawVar("", "")
+DebugDrawVar("", "")
+DebugDrawVar("", "")
+DebugDrawVar("", "")
+DebugDrawVar("", "")
+DebugDrawVar("", "")
+DebugDrawVar("", "")
+DebugDrawVar("last key", keyboard_lastkey)
+DebugDrawVar("last char", keyboard_lastchar)

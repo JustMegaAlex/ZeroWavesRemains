@@ -1,6 +1,8 @@
 event_inherited()
 
-money = 0
+kb_prev_char = ""
+
+money = 100
 
 battle_side = battle_side_player
 
@@ -61,8 +63,7 @@ for (var i = 0; i < array_length(all_weapons); ++i) {
 shop_item = noone
 
 
-inputSwitchWeapon = function() {
-    var slot = keyboard_lastkey - 48
+inputSwitchWeapon = function(slot) {
     if median(1, 5, slot) != slot {
         show_debug_message($"Wrong weapon slot {slot}")
         return;

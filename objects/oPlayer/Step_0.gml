@@ -33,9 +33,21 @@ if !weapon.timer.update() and oInput.Hold("lclick") {
     weapon.timer.reset()
 }
 
-if oInput.Pressed("switch_weapon") {
-    inputSwitchWeapon()
+if keyboard_check_pressed(ord("1")) {
+    show_debug_message("1")
 }
+
+var int = -1
+try {
+    int = int64(keyboard_lastchar)
+} catch (e) {}
+if kb_prev_char != keyboard_lastchar and median(int, 1, 5) == int {
+    inputSwitchWeapon(int)
+}
+kb_prev_char = keyboard_lastchar
+//if oInput.Pressed("switch_weapon") {
+    //inputSwitchWeapon()
+//}
 
 var switch_weapon_dir = oInput.Pressed("switch_weapon_fwd") - oInput.Pressed("switch_weapon_back")
 if switch_weapon_dir != 0 {
