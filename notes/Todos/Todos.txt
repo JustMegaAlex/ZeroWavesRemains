@@ -1,7 +1,8 @@
 0.0.3:
-> ammo system
-    > infinite restorable pulse
+> spawner
+    > make "next wave" button, but keep waves slowly moving in
 > shop
+    > shop items
 > enemies drop coins
 > new enemies
     > long range spready, heavy, slow
@@ -10,3 +11,10 @@
     > impl coloring from a sprite
 > vfx
 > sfx
+
+feedback:
+> add fullscreen
+> show previous run waves count
+> finish gp controls  
+> add wave arriving indicator
+

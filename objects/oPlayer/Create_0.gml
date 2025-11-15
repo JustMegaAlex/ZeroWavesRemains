@@ -1,5 +1,6 @@
 event_inherited()
 
+money = 100
 
 battle_side = battle_side_player
 
@@ -48,6 +49,8 @@ for (var i = 0; i < array_length(weapons_array); ++i) {
     item.ammo_max = item.ammo
 }
 
+
+shop_item = noone
 
 
 inputSwitchWeapon = function() {
