@@ -275,6 +275,7 @@ mapping_config = {
     zoom_out: [new MouseWheelDown()],
     skill1: [new Key(ord("1"))],
     interact: [new Key(ord("F"))],
+    next_wave: [new Key(vk_space)],
 }
 //// Initialize key mapping
 mapping = {}

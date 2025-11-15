@@ -3,6 +3,7 @@
 
 pause = false
 wave_enemies_count = 1
+increase_spawning_speed_between_waves = false
 gameover = false
 win = false
 

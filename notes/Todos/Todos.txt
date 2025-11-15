@@ -1,20 +1,23 @@
-0.0.3:
+0.3.0:
 > spawner
     > make "next wave" button, but keep waves slowly moving in
-> shop
-    > shop items
-> enemies drop coins
 > new enemies
     > long range spready, heavy, slow
 > coloring entities
     > find pallete
     > impl coloring from a sprite
 > vfx
+    > hit effects
+    > bullet die effect
+    > explosions
 > sfx
-
-feedback:
 > add fullscreen
 > show previous run waves count
 > finish gp controls  
 > add wave arriving indicator
+> 
 
+
+fixes:
+> move bullet collision detection to entity
+> resize gui

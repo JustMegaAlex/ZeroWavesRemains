@@ -67,3 +67,7 @@ if shop_item and oInput.Pressed("interact") {
         shop_item = noone
     }
 }
+
+if global.wave_enemies_count <= 0 and oInput.Pressed("next_wave") {
+    oWaveSpawner.spawn()
+}

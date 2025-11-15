@@ -10,13 +10,17 @@ draw_set_color(c_white)
 draw_text(50, 160, $"Waves remains: {oWaveSpawner.waves_remains}")
 draw_text(50, 200, $"Money: {money}")
 
+var w = window_get_width()
+var h = window_get_height()
 if shop_item {
     SetTextAllign(1, 0)
-    var xx = window_get_width() * 0.5
-    var yy = window_get_height() * 0.75
-    draw_text(xx, yy, shop_item.text)
+    draw_text(w*0.5, h*0.75, shop_item.text)
     var col = shop_item.can_buy() ? c_yellow : c_red
     draw_set_color(col)
-    draw_text(xx, yy + 30, shop_item.cost)
+    draw_text(w*0.5, h*0.75 + 30, shop_item.cost)
     draw_set_color(c_white)
+}
+
+if global.wave_enemies_count <= 0 {
+    draw_text(w*0.5, h*0.75 + 60, "Press Space for the next wave!")
 }

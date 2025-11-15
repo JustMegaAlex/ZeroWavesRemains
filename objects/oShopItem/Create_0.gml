@@ -1,6 +1,6 @@
-var scale = 0.5
-image_xscale = scale
-image_yscale = scale
+//var scale = 0.5
+//image_xscale = scale
+//image_yscale = scale
 
 can_buy = function() {
     return oPlayer.money >= cost

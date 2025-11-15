@@ -6,5 +6,4 @@
 // }
 event_inherited();
 
-DrawBoundingBox()
 //draw_text(x, y - 200, sp.len())

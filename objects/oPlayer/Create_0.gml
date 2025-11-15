@@ -1,6 +1,6 @@
 event_inherited()
 
-money = 300
+money = 0
 
 battle_side = battle_side_player
 
@@ -84,4 +84,7 @@ playerShoot = function(dir) {
 die = function() {
     instance_destroy()
     global.gameover = true
+    repeat money {
+        instance_create_layer(x, y, layer, oCoin)
+    }
 }
