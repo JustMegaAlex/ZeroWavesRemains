@@ -83,4 +83,10 @@ die = function() {
         global.win = true
     }
     instance_destroy()
+    // spawn coins
+    repeat irandom_range(coins_min, coins_max) {
+        with instance_create_layer(x, y, layer, oCoin) {
+            direction = other.last_hit_direction + irandom_range(-60, 60)
+        }
+    }
 }

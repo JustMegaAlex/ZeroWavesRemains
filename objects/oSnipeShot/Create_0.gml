@@ -2,7 +2,7 @@
 bringDamage = function() {
 	var inst = instance_place(x, y, object_to_hit)
 	if inst and inst != shooter and CanHit(inst) {
-		inst.hit(dmg)
+		inst.hit(id)
 		instance_destroy()
 	}
 }

@@ -5,7 +5,7 @@ var inst = noone
 for (var i = 0; i < count; i++) {
     inst = list[| i]
     if inst != shooter and CanHit(inst) {
-        inst.hit(dmg)    
+        inst.hit(id)    
     }
 }
 ds_list_destroy(list)

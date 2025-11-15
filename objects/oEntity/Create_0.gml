@@ -14,6 +14,8 @@ dir = 0
 dir_to = 0
 rotary_sp = 6
 
+last_hit_direction = 0
+
 weapon = {
     dmg: 0,
     object: oBullet,
@@ -59,11 +61,12 @@ die = function() {
     instance_destroy()
 }
 
-hit = function(dmg) {
+hit = function(bullet) {
     if invincible {
         return;
     }
-    hp -= dmg
+    hp -= bullet.dmg
+    last_hit_direction = bullet.image_angle
     if hp <= 0 {
         die()
     }

@@ -5,7 +5,7 @@ bringDamage = function() {
         var test = 1
     }
 	if inst and inst != shooter and CanHit(inst) {
-		inst.hit(dmg)
+		inst.hit(id)
 		fading = true
         fading_hurt_frames = 0
 	}
