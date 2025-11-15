@@ -1,6 +1,6 @@
 event_inherited()
 
-money = 100
+money = 300
 
 battle_side = battle_side_player
 
@@ -40,12 +40,20 @@ weapon_snipe = {
 
 weapon = weapon_pulse
 
-weapons_array = [
-    weapon_pulse, weapon_scatter, weapon_snipe
+all_weapons = [
+    weapon_pulse,
+    weapon_scatter, 
+    weapon_snipe
 ]
 
-for (var i = 0; i < array_length(weapons_array); ++i) {
-    var item = weapons_array[i]
+weapons_array = [
+    weapon_pulse,
+    //weapon_scatter, 
+    //weapon_snipe
+]
+
+for (var i = 0; i < array_length(all_weapons); ++i) {
+    var item = all_weapons[i]
     item.ammo_max = item.ammo
 }
 

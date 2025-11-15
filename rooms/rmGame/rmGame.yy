@@ -13,6 +13,8 @@
     {"name":"inst_44B718E8","path":"rooms/rmGame/rmGame.yy",},
     {"name":"inst_6AB2BE0D","path":"rooms/rmGame/rmGame.yy",},
     {"name":"inst_4A6B3CB6","path":"rooms/rmGame/rmGame.yy",},
+    {"name":"inst_7D2D8634","path":"rooms/rmGame/rmGame.yy",},
+    {"name":"inst_6BA734B8","path":"rooms/rmGame/rmGame.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -23,6 +25,14 @@
         {"$GMRInstance":"v4","%Name":"inst_1D8D3F54","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1D8D3F54","objectId":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEntity","path":"objects/oEntity/oEntity.yy",},"propertyId":{"name":"active","path":"objects/oEntity/oEntity.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":49.488342,"scaleX":1.0,"scaleY":1.0,"x":1408.0,"y":96.0,},
+        {"$GMRInstance":"v4","%Name":"inst_7D2D8634","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7D2D8634","objectId":{"name":"oShopItemWeapon","path":"objects/oShopItemWeapon/oShopItemWeapon.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oShopItemWeapon","path":"objects/oShopItemWeapon/oShopItemWeapon.yy",},"propertyId":{"name":"weapon","path":"objects/oShopItemWeapon/oShopItemWeapon.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"oPlayer.weapon_scatter",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oShopItem","path":"objects/oShopItem/oShopItem.yy",},"propertyId":{"name":"cost","path":"objects/oShopItem/oShopItem.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"50",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.5625,"scaleY":0.5625,"x":0.0,"y":224.0,},
+        {"$GMRInstance":"v4","%Name":"inst_6BA734B8","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6BA734B8","objectId":{"name":"oShopItemWeapon","path":"objects/oShopItemWeapon/oShopItemWeapon.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oShopItemWeapon","path":"objects/oShopItemWeapon/oShopItemWeapon.yy",},"propertyId":{"name":"weapon","path":"objects/oShopItemWeapon/oShopItemWeapon.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"oPlayer.weapon_snipe",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oShopItem","path":"objects/oShopItem/oShopItem.yy",},"propertyId":{"name":"cost","path":"objects/oShopItem/oShopItem.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"50",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.5625,"scaleY":0.5625,"x":-256.0,"y":0.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"BackObjects","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_44B718E8","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_44B718E8","objectId":{"name":"oShop","path":"objects/oShop/oShop.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},

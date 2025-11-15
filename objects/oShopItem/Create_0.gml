@@ -2,8 +2,6 @@ var scale = 0.5
 image_xscale = scale
 image_yscale = scale
 
-text = $"{weapon.name} ammo +{ammo}"
-
 can_buy = function() {
     return oPlayer.money >= cost
 }
