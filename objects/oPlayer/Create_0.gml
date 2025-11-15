@@ -10,6 +10,8 @@ weapon_pulse = {
     timer: MakeTimer(9),
     object: oBullet,
     name: "Pulse",
+    ammo: 40,
+    ammo_restore_timer: MakeTimer(30),
 }
 
 
@@ -23,6 +25,7 @@ weapon_scatter = {
     spread_angle: 7,
     sp: 120,
     name: "Scatter",
+    ammo: 100,
 }
 
 weapon_snipe = {
@@ -31,6 +34,7 @@ weapon_snipe = {
     object: oSnipeShot,
     range: 6000,
     name: "Snipe",
+    ammo: 12,
 }
 
 weapon = weapon_pulse
@@ -38,6 +42,13 @@ weapon = weapon_pulse
 weapons_array = [
     weapon_pulse, weapon_scatter, weapon_snipe
 ]
+
+for (var i = 0; i < array_length(weapons_array); ++i) {
+    var item = weapons_array[i]
+    item.ammo_max = item.ammo
+}
+
+
 
 inputSwitchWeapon = function() {
     var slot = keyboard_lastkey - 48
@@ -49,4 +60,12 @@ inputSwitchWeapon = function() {
         return;
     }
     weapon = weapons_array[slot-1]
+}
+
+playerShoot = function(dir) {
+    if weapon.ammo <= 0 {
+        return;
+    }
+    shoot(dir)
+    weapon.ammo--
 }

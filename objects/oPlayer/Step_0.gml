@@ -33,7 +33,7 @@ move()
 
 
 if !weapon.timer.update() and oInput.Hold("lclick") {
-    shoot(dir)
+    playerShoot(dir)
     weapon.timer.reset()
 }
 

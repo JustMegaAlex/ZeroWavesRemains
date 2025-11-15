@@ -1,11 +1,12 @@
-playtest:
+0.0.3:
+> ammo system
+    > infinite restorable pulse
+> shop
+> enemies drop coins
 > new enemies
     > long range spready, heavy, slow
 > coloring entities
     > find pallete
     > impl coloring from a sprite
-> wave spawner
-> gameplay loop
-> gameplay ui
 > vfx
 > sfx

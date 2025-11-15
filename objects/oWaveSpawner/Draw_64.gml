@@ -1,1 +1,1 @@
-DebugDrawVar("timer", spawn_timer.timer)
+//DebugDrawVar("timer", spawn_timer.timer)
