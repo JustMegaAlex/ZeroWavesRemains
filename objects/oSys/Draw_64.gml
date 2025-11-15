@@ -10,3 +10,14 @@ if global.win {
 } else if global.pause {
     draw_text(xx, yy, "Pause\nYou can restart the game by pressing R")
 }
+
+//// Skip ui section
+DebugDrawVar("")
+DebugDrawVar("")
+DebugDrawVar("")
+DebugDrawVar("")
+DebugDrawVar("")
+DebugDrawVar("")
+DebugDrawVar("")
+DebugDrawVar("")
+DebugDrawVar("")

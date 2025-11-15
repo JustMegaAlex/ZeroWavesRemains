@@ -23,11 +23,7 @@ if oInput.Hold("rclick") {
     accelerate(0, dir)
 }
 
-// push back into circle
-if PointDist(0, 0) > oGameArea.radius {
-    var suck_dir = PointDir(0, 0)
-    acc.add_polar(acc_max, suck_dir)
-}
+checkPushBackIntoCircle()
 
 move()
 
@@ -49,8 +45,18 @@ if switch_weapon_dir != 0 {
     weapon = weapons_array[new_ind]
 }
 
-die = function() {
-    instance_destroy()
-    global.gameover = true
+
+/// reload restoring weapons
+for (var i = 0; i < array_length(weapons_array); ++i) {
+    var item = weapons_array[i]
+    if (item.ammo >= item.ammo_max) or (item.timer.timer > 0) {
+        continue
+    }
+    var timer = item[$ "ammo_restore_timer"]
+    if timer != undefined and !timer.update() {
+        timer.reset()
+        weapon.ammo++
+    }
 }
+
 

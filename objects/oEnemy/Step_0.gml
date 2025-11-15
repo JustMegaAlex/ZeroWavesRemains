@@ -30,4 +30,6 @@ if active {
     
 }
 
+checkPushBackIntoCircle()
+
 move()

@@ -69,3 +69,8 @@ playerShoot = function(dir) {
     shoot(dir)
     weapon.ammo--
 }
+
+die = function() {
+    instance_destroy()
+    global.gameover = true
+}

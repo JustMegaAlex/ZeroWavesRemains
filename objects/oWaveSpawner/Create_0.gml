@@ -3,6 +3,18 @@ active = true
 spawn_timer = MakeTimer(40 * sec, 0)
 just_spawned = 0
 waves = [
+    // {oEnemy: 1, oEnemyTiny: 0},
+    // {oEnemy: 1, oEnemyTiny: 0},
+    // {oEnemy: 1, oEnemyTiny: 0},
+    // {oEnemy: 1, oEnemyTiny: 0},
+    // {oEnemy: 1, oEnemyTiny: 0},
+    // {oEnemy: 1, oEnemyTiny: 0},
+    // {oEnemy: 1, oEnemyTiny: 0},
+    // {oEnemy: 1, oEnemyTiny: 0},
+    // {oEnemy: 1, oEnemyTiny: 0},
+    // {oEnemy: 1, oEnemyTiny: 0},
+    // {oEnemy: 1, oEnemyTiny: 0},
+
     {oEnemy: 2, oEnemyTiny: 0},
     {oEnemy: 4, oEnemyTiny: 0},
     {oEnemy: 5, oEnemyTiny: 0},

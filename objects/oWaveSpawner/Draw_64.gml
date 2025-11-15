@@ -1,1 +1,1 @@
-//DebugDrawVar("timer", spawn_timer.timer)
+// DebugDrawVar("count", global.wave_enemies_count)

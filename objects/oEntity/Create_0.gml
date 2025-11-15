@@ -47,6 +47,14 @@ move = function() {
     y += sp.y
 }
 
+checkPushBackIntoCircle = function() {
+    if !active { return }
+    if PointDist(0, 0) > oGameArea.radius {
+        var suck_dir = PointDir(0, 0)
+        acc.add_polar(acc_max, suck_dir)
+    }
+}
+
 die = function() {
     instance_destroy()
 }
