@@ -513,3 +513,95 @@ function SmoothApproacher(from, to, time, accel_time_fract) constructor {
         return self.dir ? (self.time >= self.total_time) : (self.time <= 0)
     }
 }
+
+
+
+function createPartType(ps, args) {
+    function _applyArgs(pt, fun, arr, num) {
+        var a1 = arr[0]
+        var a2 = arr[1]
+        var a3 = 0
+        var a4 = 0
+        var a5 = 0
+        var len = array_length(arr)
+        if len >= 3 { a3 = arr[2] }
+        if len >= 4 { a4 = arr[3] }
+        if len >= 5 { a4 = arr[4] }
+
+        if num == 3 { fun(pt, a1, a2, a3) }
+        if num == 4 { fun(pt, a1, a2, a3, a4) }
+        if num == 5 { fun(pt, a1, a2, a3, a4, a5) }
+    }
+    var life = args[$ "life"]
+    var spd = args[$ "speed"]
+    var size = args[$ "size"]
+    var sprite = args[$ "sprite"]
+    var shape = args[$ "shape"]
+    var dir = args[$ "dir"]
+    var angle = args[$ "angle"]
+    var color = args[$ "color"]
+    var alpha = args[$ "alpha"]
+    var pt = part_type_create()
+    if life != undefined {
+        if is_array(life) {
+            part_type_life(pt, life[0], life[1])
+        } else {
+            part_type_life(pt, life, life)
+        }
+    }
+    if spd != undefined {
+        if is_array(spd) {
+            _applyArgs(pt, part_type_speed, spd, 4)
+        } else {
+            part_type_speed(pt, spd, spd, 0, 0)
+        }
+    }
+    if dir != undefined {
+        if is_array(dir) {
+            _applyArgs(pt, part_type_direction, dir, 4)
+        } else {
+            part_type_direction(pt, dir, dir, 0, 0)
+        }
+    }
+    if angle != undefined {
+        if is_array(angle) {
+            _applyArgs(pt, part_type_orientation, angle, 5)
+        } else {
+            part_type_orientation(pt, angle, angle, 0, 0, true)
+        }
+    }
+    if color != undefined {
+        if is_array(color) {
+            switch array_length(color) {
+                case 2: part_type_color2(pt, color[0], color[1])
+                case 3: part_type_color3(pt, color[0], color[1], color[2])
+            }
+        } else { part_type_color1(pt, color) }
+    }
+    if alpha != undefined {
+        if is_array(alpha) {
+            switch array_length(alpha) {
+                case 2: part_type_alpha2(pt, alpha[0], alpha[1])
+                case 3: part_type_alpha3(pt, alpha[0], alpha[1], alpha[2])
+            }
+        } else { part_type_alpha1(pt, alpha) }
+    }
+    if sprite != undefined {
+        if is_array(sprite) {
+            _applyArgs(pt, part_type_sprite, sprite, 4)
+        } else {
+            part_type_sprite(pt, sprite, false, true, false)
+        }
+    }
+    if shape != undefined {
+        part_type_shape(pt, shape)
+    }
+    if size != undefined {
+        if is_array(size) {
+            _applyArgs(pt, part_type_size, size, 4)
+        } else {
+            part_type_size(pt, size, size, 0, 0)
+        }
+    }
+    return pt
+}

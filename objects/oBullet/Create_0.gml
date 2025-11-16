@@ -11,6 +11,7 @@ contact = function(inst) {
 	if inst and inst != shooter and CanHit(inst) {
 		inst.hit(id)
 		instance_destroy()
+        oParticles.hitSparks(x, y, image_angle + 180)
 	}
 }
 

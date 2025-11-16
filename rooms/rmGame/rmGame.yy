@@ -18,6 +18,7 @@
     {"name":"inst_445AF1F7","path":"rooms/rmGame/rmGame.yy",},
     {"name":"inst_4E8773DB","path":"rooms/rmGame/rmGame.yy",},
     {"name":"inst_60700114","path":"rooms/rmGame/rmGame.yy",},
+    {"name":"inst_5A8DCD80","path":"rooms/rmGame/rmGame.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -30,6 +31,7 @@
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":49.488342,"scaleX":1.0,"scaleY":1.0,"x":1408.0,"y":96.0,},
         {"$GMRInstance":"v4","%Name":"inst_4E8773DB","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4E8773DB","objectId":{"name":"oDebug","path":"objects/oDebug/oDebug.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":96.0,"y":704.0,},
         {"$GMRInstance":"v4","%Name":"inst_60700114","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_60700114","objectId":{"name":"oUI","path":"objects/oUI/oUI.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":128.0,"y":704.0,},
+        {"$GMRInstance":"v4","%Name":"inst_5A8DCD80","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5A8DCD80","objectId":{"name":"oParticles","path":"objects/oParticles/oParticles.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":160.0,"y":704.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"BackObjects","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_6AB2BE0D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6AB2BE0D","objectId":{"name":"oShopItemAmmo","path":"objects/oShopItemAmmo/oShopItemAmmo.yy",},"properties":[
