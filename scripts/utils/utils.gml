@@ -3,6 +3,7 @@
 #macro struct_del variable_struct_remove
 #macro inst_get variable_instance_get
 #macro inst_set variable_instance_set
+#macro arrlen array_length
 
 
 function ArrJoin(arr, sep) {

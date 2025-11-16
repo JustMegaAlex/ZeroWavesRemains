@@ -14,13 +14,14 @@
   "frames":[
     {"$GMSpriteFrame":"v1","%Name":"321e1175-cf9f-4095-a190-a89dfa5be632","name":"321e1175-cf9f-4095-a190-a89dfa5be632","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
-  "gridX":32,
-  "gridY":32,
+  "gridX":64,
+  "gridY":64,
   "height":1280,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"c5de76ef-f16f-4e0f-ad42-048c90d0ce05","blendMode":0,"displayName":"text","isLocked":false,"name":"c5de76ef-f16f-4e0f-ad42-048c90d0ce05","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"3ceaac00-0edb-4128-ab9e-6d57a6718406","blendMode":0,"displayName":"default","isLocked":false,"name":"3ceaac00-0edb-4128-ab9e-6d57a6718406","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"e033ad12-11df-4d6d-9bff-de74735bd13a","blendMode":0,"displayName":"draft","isLocked":false,"name":"e033ad12-11df-4d6d-9bff-de74735bd13a","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
   ],
   "name":"sGameColors",
   "nineSlice":null,

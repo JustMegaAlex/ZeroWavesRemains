@@ -1,6 +1,7 @@
 0.3.0:
+> add tute: press F to buy
 > new enemies
-    > long range spready, heavy, slow, dangerous at clost distance
+    > as a mini boss: long range spready, heavy, slow, dangerous at clost distance
 > coloring entities
     > find pallete
 > vfx
