@@ -21,6 +21,15 @@ function ResetGlobals() {
 }
 
 
+game_colors = {}
+
+function SetColor() {
+    var col = global.game_colors[$ object_get_name(object_index)]
+    if col != undefined {
+        image_blend = col
+    }
+}
+
 /// Shop
 snipe_cost = 80
 snipe_ammo_cost = 30

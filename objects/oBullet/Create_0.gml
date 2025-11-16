@@ -25,3 +25,6 @@ shooter = noone
 
 xprev = x
 yprev = y
+
+
+SetColor()

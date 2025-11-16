@@ -85,3 +85,5 @@ catchBullet = function() {
 
 /// Late init
 alarm[0] = 1
+
+SetColor()

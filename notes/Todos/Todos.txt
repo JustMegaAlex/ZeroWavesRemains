@@ -1,8 +1,6 @@
 0.3.0:
-> spawner
-    > make "next wave" button, but keep waves slowly moving in
 > new enemies
-    > long range spready, heavy, slow
+    > long range spready, heavy, slow, dangerous at clost distance
 > coloring entities
     > find pallete
     > impl coloring from a sprite
@@ -19,5 +17,3 @@
 
 
 fixes:
-> move bullet collision detection to entity
-> resize gui
