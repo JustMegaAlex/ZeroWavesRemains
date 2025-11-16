@@ -70,6 +70,9 @@ hit = function(bullet) {
     }
     hp -= bullet.dmg
     last_hit_direction = bullet.image_angle
+    if bullet.knockback > 0 {
+        sp.add_polar(bullet.knockback, bullet.image_angle)
+    }
     objectHit()
     if hp <= 0 {
         die()

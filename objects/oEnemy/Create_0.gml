@@ -12,6 +12,7 @@ weapon = {
     sp: 40,
     range: 2000,
     object: oBullet,
+    knockback: 7,
 }
 
 

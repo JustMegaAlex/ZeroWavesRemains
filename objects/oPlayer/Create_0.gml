@@ -15,6 +15,7 @@ weapon_pulse = {
     name: "Pulse",
     ammo: 40,
     ammo_restore_timer: MakeTimer(30),
+    knockback: 7,
 }
 
 
@@ -57,6 +58,9 @@ weapons_array = [
 for (var i = 0; i < array_length(all_weapons); ++i) {
     var item = all_weapons[i]
     item.ammo_max = item.ammo
+    if !struct_has(item, "knockback") {
+        item.knockback = 0
+    }
 }
 
 
