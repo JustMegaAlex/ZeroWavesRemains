@@ -14,7 +14,7 @@ battle_side = -1
 can_hit = 0
 object_to_hit = oEntity
 shooter = noone
-alarm[0] = 1
+// alarm[0] = 1
 
 image_xscale = 1
 image_xscale = range / sprite_width

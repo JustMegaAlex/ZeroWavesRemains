@@ -1,5 +1,8 @@
 #macro macro_pause if global.pause {exit}
 #macro null undefined
+#macro key_pressed keyboard_check_pressed
+#macro key_released keyboard_check_released
+#macro key_hold keyboard_check
 
 pause = false
 wave_enemies_count = 1

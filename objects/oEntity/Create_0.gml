@@ -76,5 +76,12 @@ shoot = function(dir) {
     Shoot(dir, weapon.object, weapon)
 }
 
+catchBullet = function() {
+    var bullet = instance_place(x, y, oBullet)
+    if bullet {
+        bullet.contact(id)
+    }
+}
+
 /// Late init
 alarm[0] = 1

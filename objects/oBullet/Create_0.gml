@@ -1,6 +1,13 @@
 
-bringDamage = function() {
-	var inst = instance_place(x, y, object_to_hit)
+// bringDamage = function() {
+// 	var inst = instance_place(x, y, object_to_hit)
+// 	if inst and inst != shooter and CanHit(inst) {
+// 		inst.hit(id)
+// 		instance_destroy()
+// 	}
+// }
+
+contact = function(inst) {
 	if inst and inst != shooter and CanHit(inst) {
 		inst.hit(id)
 		instance_destroy()

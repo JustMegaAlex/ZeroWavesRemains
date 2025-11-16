@@ -1,10 +1,12 @@
 
-bringDamage = function() {
-	var inst = instance_place(x, y, object_to_hit)
-    if inst and inst.object_index == oEnemyTiny {
-        var test = 1
-    }
-	if inst and inst != shooter and CanHit(inst) {
+// bringDamage = function() {
+// 	var inst = instance_place(x, y, object_to_hit)
+// 	if inst { contact(inst) }
+// }
+
+contact = function() {
+    if (!fading or fading_hurt_frames > 0)
+            and inst != shooter and CanHit(inst) {
 		inst.hit(id)
 		fading = true
         fading_hurt_frames = 0

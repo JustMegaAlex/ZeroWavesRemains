@@ -1,9 +1,7 @@
 macro_pause
 
 if fading {
-    if (--fading_hurt_frames) > 0 {
-        bringDamage()
-    }
+    fading_hurt_frames--
     image_alpha -= 0.03
     if image_alpha <= 0 {
         instance_destroy()
@@ -21,4 +19,3 @@ if (dist_went >= range) {
 xprev = x
 yprev = y
 image_xscale = dist_went / original_width
-bringDamage()
