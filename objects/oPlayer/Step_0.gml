@@ -1,4 +1,3 @@
-event_inherited()
 
 macro_pause
 
@@ -83,3 +82,5 @@ if shop_item and oInput.Pressed("interact") {
 if global.wave_enemies_count <= 0 and oInput.Pressed("next_wave") {
     oWaveSpawner.spawn()
 }
+
+event_inherited()

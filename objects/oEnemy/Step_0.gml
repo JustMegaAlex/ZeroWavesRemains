@@ -1,5 +1,4 @@
 
-event_inherited()
 
 macro_pause
 
@@ -33,3 +32,5 @@ if active {
 checkPushBackIntoCircle()
 
 move()
+
+event_inherited()
