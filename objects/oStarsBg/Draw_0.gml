@@ -4,12 +4,19 @@ var move_due_to_scale = (1 - scale) * 0.5
 //draw
 for (var i = 0; i < array_length(surfaces); ++i) {
     var parallax = parallaxes[i]
-    var x_draw_stars = x_draw_stars_start
+    // var x_draw_stars = x_draw_stars_start
+    //                + (CamXCent(0) - x_ship_st) * parallax
+    //                + move_due_to_scale * surf_w
+    // var y_draw_stars = y_draw_stars_start
+    //                + (CamYCent(0) - y_ship_st) * parallax
+    //                + move_due_to_scale * surf_h
+
+    var x_draw_stars = x_ship_st
                    + (CamXCent(0) - x_ship_st) * parallax
-                   + move_due_to_scale * surf_w
-    var y_draw_stars = y_draw_stars_start
+                   - surf_w * 0.5 * scale
+    var y_draw_stars = y_ship_st
                    + (CamYCent(0) - y_ship_st) * parallax
-                   + move_due_to_scale * surf_h
+                   - surf_h * 0.5 * scale
     var surf = surfaces[i]
     if surface_exists(surf)
         draw_surface_ext(surf, x_draw_stars, y_draw_stars, scale, scale, 0, c_white, 1)
