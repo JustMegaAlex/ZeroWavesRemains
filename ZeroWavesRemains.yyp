@@ -114,6 +114,7 @@
     {"id":{"name":"sProjectile","path":"sprites/sProjectile/sProjectile.yy",},},
     {"id":{"name":"sRhombusStructure","path":"sprites/sRhombusStructure/sRhombusStructure.yy",},},
     {"id":{"name":"sShipFighter","path":"sprites/sShipFighter/sShipFighter.yy",},},
+    {"id":{"name":"sSparks","path":"sprites/sSparks/sSparks.yy",},},
     {"id":{"name":"sTopDownPlayer_1","path":"sprites/sTopDownPlayer_1/sTopDownPlayer_1.yy",},},
     {"id":{"name":"sUIHitIndication","path":"sprites/sUIHitIndication/sUIHitIndication.yy",},},
   ],

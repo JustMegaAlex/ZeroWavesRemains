@@ -69,21 +69,23 @@ function emitBulletBurst(x, y) {
 }
 
 
-ps_sparks = part_system_create(psHitSparks)
+ps_sparks = part_system_create()
 
-function hitSparks(x, y, angle, num=15) {
+function hitSparks(x, y, angle, num=6) {
     part_type_direction(pt_sparks, angle-45, angle+45, 0, 0)
     part_particles_create(ps_sparks, x, y, pt_sparks, num)
 }
 
 pt_sparks = createPartType(ps_sparks,
     {
-        life: [30, 40],
+        life: [20, 25],
         size: [0.5, 1, -0.05],
-        shape: pt_shape_line,
+        // shape: pt_shape_line,
+        sprite: [sSparks, false, false, true],
         angle: [0, 0, 0, 0, true],
-        dir: [-45, 45],
-        speed: [20, 25],
+        dir: [-25, 25],
+        speed: [20, 25, -0.5],
+        scale: [2, 0.5]
     }
 )
 

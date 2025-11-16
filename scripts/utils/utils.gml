@@ -526,7 +526,7 @@ function createPartType(ps, args) {
         var len = array_length(arr)
         if len >= 3 { a3 = arr[2] }
         if len >= 4 { a4 = arr[3] }
-        if len >= 5 { a4 = arr[4] }
+        if len >= 5 { a5 = arr[4] }
 
         if num == 3 { fun(pt, a1, a2, a3) }
         if num == 4 { fun(pt, a1, a2, a3, a4) }
@@ -535,6 +535,7 @@ function createPartType(ps, args) {
     var life = args[$ "life"]
     var spd = args[$ "speed"]
     var size = args[$ "size"]
+    var scale = args[$ "scale"]
     var sprite = args[$ "sprite"]
     var shape = args[$ "shape"]
     var dir = args[$ "dir"]
@@ -602,6 +603,9 @@ function createPartType(ps, args) {
         } else {
             part_type_size(pt, size, size, 0, 0)
         }
+    }
+    if scale != undefined {
+        part_type_scale(pt, scale[0], scale[1])
     }
     return pt
 }
