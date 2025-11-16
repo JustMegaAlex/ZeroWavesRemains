@@ -30,7 +30,7 @@ if active {
             var add_weapon = all_arr[int]
             if array_get_index(arr, add_weapon) == -1 {
                 array_push(arr, add_weapon)
-                show_debug_message($"Debug: added weapon {add_weapon.name})
+                show_debug_message($"Debug: added weapon {add_weapon.name}")
             }
         }
     }

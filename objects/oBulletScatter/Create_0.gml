@@ -4,7 +4,7 @@
 // 	if inst { contact(inst) }
 // }
 
-contact = function() {
+contact = function(inst) {
     if (!fading or fading_hurt_frames > 0)
             and inst != shooter and CanHit(inst) {
 		inst.hit(id)
