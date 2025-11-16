@@ -58,8 +58,11 @@ checkPushBackIntoCircle = function() {
 }
 
 die = function() {
+    objectDie()
     instance_destroy()
 }
+
+objectDie = function() {}
 
 hit = function(bullet) {
     if invincible {
@@ -67,10 +70,13 @@ hit = function(bullet) {
     }
     hp -= bullet.dmg
     last_hit_direction = bullet.image_angle
+    objectHit()
     if hp <= 0 {
         die()
     }
 }
+
+objectHit = function() {}
 
 shoot = function(dir) {
     Shoot(dir, weapon.object, weapon)

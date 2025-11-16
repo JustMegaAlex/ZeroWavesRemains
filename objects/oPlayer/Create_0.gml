@@ -82,6 +82,10 @@ playerShoot = function(dir) {
     weapon.ammo--
 }
 
+objectHit = function() {
+    oUI.indicateHit()
+}
+
 die = function() {
     instance_destroy()
     global.gameover = true

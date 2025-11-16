@@ -3,7 +3,6 @@
     > long range spready, heavy, slow, dangerous at clost distance
 > coloring entities
     > find pallete
-    > impl coloring from a sprite
 > vfx
     > hit effects
     > bullet die effect
