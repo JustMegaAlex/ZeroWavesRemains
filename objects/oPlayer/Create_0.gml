@@ -28,7 +28,7 @@ weapon_scatter = {
     spread_angle: 7,
     sp: 120,
     name: "Scatter",
-    ammo: 100,
+    ammo: 200,
 }
 
 weapon_snipe = {

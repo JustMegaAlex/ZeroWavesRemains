@@ -5,6 +5,6 @@ can_buy = function() {
 }
 
 apply = function() {
-    oPlayer.hp += 10
+    oPlayer.hp += global.heal_amount
     oPlayer.hp = min(oPlayer.hp_max, oPlayer.hp)
 }
