@@ -21,7 +21,6 @@ weapon_pulse = {
     sound: sfxSingleShot,
 }
 
-
 weapon_scatter = {
     dmg: 4,
     timer: MakeTimer(2),
@@ -100,6 +99,7 @@ objectHit = function() {
 }
 
 die = function() {
+    audio_play_sound(sfxLastHit, 2, false)
     instance_destroy()
     global.gameover = true
     repeat money {

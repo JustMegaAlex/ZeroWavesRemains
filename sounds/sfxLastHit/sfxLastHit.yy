@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"sfxMetalImpact",
+  "%Name":"sfxLastHit",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -12,7 +12,7 @@
   "conversionMode":0,
   "duration":1.0,
   "exportDir":"",
-  "name":"sfxMetalImpact",
+  "name":"sfxLastHit",
   "parent":{
     "name":"Audio",
     "path":"folders/Audio.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sfxMetalImpact.mp3",
-  "volume":0.34,
+  "soundFile":"sfxLastHit.wav",
+  "volume":0.46,
 }

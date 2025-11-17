@@ -8,6 +8,8 @@ contact = function(inst) {
 		inst.hit(id)
         if !instance_exists(inst) {
             oParticles.hitSparks(xx, yy, 0, 24, 1.2, 360)
+        } else {
+            oParticles.hitSparks(xx, yy, image_angle + 180, 12)
         }
 	}
 }

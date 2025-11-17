@@ -77,6 +77,10 @@ hit = function(bullet) {
     if hp <= 0 {
         die()
     }
+    var snd = inst_get(bullet, "contact_sound")
+    if snd != undefined {
+        audio_play_sound(snd, 2, false)
+    }
 }
 
 objectHit = function() {}

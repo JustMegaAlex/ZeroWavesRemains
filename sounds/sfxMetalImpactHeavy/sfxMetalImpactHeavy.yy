@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"sfxShotContact",
+  "%Name":"sfxMetalImpactHeavy",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,9 +10,9 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":1.0,
+  "duration":3.0,
   "exportDir":"",
-  "name":"sfxShotContact",
+  "name":"sfxMetalImpactHeavy",
   "parent":{
     "name":"Audio",
     "path":"folders/Audio.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sfxShotContact.mp3",
-  "volume":1.0,
+  "soundFile":"sfxMetalImpactHeavy.wav",
+  "volume":0.25,
 }
