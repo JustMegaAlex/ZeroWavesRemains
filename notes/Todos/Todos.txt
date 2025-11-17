@@ -23,6 +23,40 @@ Future:
     > shoot particles
     > area boundaries
 
+Enemies concepts:
+> upd bonk (oEnemy)
+    - aim is increased over time if player stays still
+    - start evading if get hits
+> upd tiny
+    - two modes
+    - one: fly in circles around player
+    - two: fly-by from long distance
+    - swarm behavior
+> knife
+    - small, melee, slams into a player
+> leader
+    - brings a swarm of knifes
+    - super-throws knifes at you
+> behemoth
+    - long-range rechargable scatter burst
+    - short range non-stop all directions machine gun, very dangerous
+> clunky
+    - randomly flies around searching for the player
+    - shoots mid-range very fast machine gun
+    - limited shooting angle
+    - dangerous if exposed to his guns
+> sniper
+    - sniper snipes from long range
+    - average damage
+    - if player is too close for some time gains distance
+> fighter 2.0
+    - burst blaster
+    - missiles
+> frigate
+    - lots of missiles ?
+
+
+
 fixes:
 > error
     ___________________________________________
