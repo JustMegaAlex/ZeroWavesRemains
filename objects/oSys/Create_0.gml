@@ -2,6 +2,7 @@
 EnsureSingleton()
 
 DebugDrawIni()
+VAR_BAR_Y_BASE = 150
 
 frames_since_start = 0
 

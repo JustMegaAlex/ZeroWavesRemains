@@ -2,8 +2,6 @@
 > add tute: press F to buy
 > new enemies
     > as a mini boss: long range spready, heavy, slow, dangerous at clost distance
-> coloring entities
-    > find pallete
 > vfx
     > hit effects
     > bullet die effect
@@ -17,3 +15,14 @@
 
 
 fixes:
+> error
+    ___________________________________________
+    ############################################################################################
+    ERROR in action number 1
+    of  Step Event0 for object oEntity:
+    Variable <unknown_object>.contact(100209, -2147483648) not set before reading it.
+    at gml_Script_anon@1517@gml_Object_oEntity_Create_0 (line 91) -         bullet.contact(id)
+    ############################################################################################
+    gml_Script_anon@1517@gml_Object_oEntity_Create_0 (line 91)
+    gml_Object_oEntity_Step_0 (line 2) - catchBullet()
+    gml_Object_oPlayer_Step_0 (line 86)

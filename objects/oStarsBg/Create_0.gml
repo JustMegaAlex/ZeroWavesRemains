@@ -1,4 +1,5 @@
 
+parallaxes = [1, 1, 1]
 parallaxes = [0.9, 0.89, 0.88]
 surfaces = []
 surf_count = arrlen(parallaxes)
