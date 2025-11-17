@@ -12,6 +12,10 @@ if toggle {
 }
 
 if active {
+
+
+    //// Player part
+    if !instance_exists(oPlayer) { exit }
     var arr = oPlayer.weapons_array
     var all_arr = oPlayer.all_weapons
     var int = -1
@@ -34,7 +38,6 @@ if active {
             }
         }
     }
-    if !instance_exists(oPlayer) { exit }
     if key_pressed(ord("M")) {
         oPlayer.money += 30
     }

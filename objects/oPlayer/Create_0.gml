@@ -19,6 +19,7 @@ weapon_pulse = {
     ammo_restore_timer: MakeTimer(30),
     knockback: 7,
     sound: sfxSingleShot,
+    range: 2400,
 }
 
 weapon_scatter = {
