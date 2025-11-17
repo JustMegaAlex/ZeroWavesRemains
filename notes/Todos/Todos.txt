@@ -3,16 +3,25 @@
 > new enemies
     > as a mini boss: long range spready, heavy, slow, dangerous at clost distance
 > vfx
-    > hit effects
     > bullet die effect
-    > explosions
+    > add lite shake effect on enemy destruction
 > sfx
+    > shooting
+    > player hit
+    > explosions
+    > enemy hit
+    > buy items
 > add fullscreen
 > show previous run waves count
 > finish gp controls  
 > add wave arriving indicator
 > 
 
+
+Future:
+> vfx
+    > shoot particles
+    > area boundaries
 
 fixes:
 > error
