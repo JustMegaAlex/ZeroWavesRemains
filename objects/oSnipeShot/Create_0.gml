@@ -3,7 +3,12 @@ image_yscale = 4.5
 
 contact = function(inst) {
 	if inst and inst != shooter and CanHit(inst) {
+        var xx = inst.x
+        var yy = inst.y
 		inst.hit(id)
+        if !instance_exists(inst) {
+            oParticles.hitSparks(xx, yy, 0, 24, 1.2, 360)
+        }
 	}
 }
 

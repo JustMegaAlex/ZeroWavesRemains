@@ -89,9 +89,9 @@ pt_sparks = createPartType(ps_sparks,
     }
 )
 
-function hitSparks(x, y, angle, num=6, size=1) {
+function hitSparks(x, y, angle, num=6, size=1, spread=45) {
     part_type_size(pt_sparks, sparks_size.min*size, sparks_size.max*size, sparks_size.incr*size, 0)
-    part_type_direction(pt_sparks, angle-45, angle+45, 0, 0)
+    part_type_direction(pt_sparks, angle-spread, angle+spread, 0, 0)
     part_particles_create(ps_sparks, x, y, pt_sparks, num)
 }
 
