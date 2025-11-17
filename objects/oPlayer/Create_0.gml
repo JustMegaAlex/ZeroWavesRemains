@@ -33,8 +33,9 @@ weapon_scatter = {
     sp: 120,
     name: "Scatter",
     ammo: 200,
-    sound: sfxBurstShot,
-    sound_timer: MakeTimer(6, 0)
+    sound: sfxBurstShotLoop,
+    sound_end: sfxBurstShotEnd,
+    // sound_timer: MakeTimer(6, 0)
 }
 
 weapon_snipe = {
@@ -110,14 +111,14 @@ current_shoot_loop_sound = noone
 playShotSound = function(weapon) {
     var loop = false
     var offset = 0
-    // if weapon.name == "Scatter" {
-    //     if current_shoot_loop_sound == weapon.sound {
-    //         return;
-    //     }
-    //     loop = true
-    //     offset = 1
-    //     current_shoot_loop_sound = weapon.sound
-    // }
+    if weapon.name == "Scatter" {
+        if current_shoot_loop_sound == weapon.sound {
+            return;
+        }
+        loop = true
+        offset = 1
+        current_shoot_loop_sound = weapon.sound
+    }
     var timer = weapon[$ "sound_timer"]
     if timer != undefined {
         if timer.timer > 0 {
@@ -136,5 +137,9 @@ manageShotLoopSound = function() {
     if oInput.Released("lclick") or weapon.ammo <= 0 {
         audio_stop_sound(current_shoot_loop_sound)
         current_shoot_loop_sound = noone
+        if weapon[$ "sound_end"] != undefined {
+            audio_play_sound(weapon[$ "sound_end"], 2, false)
+            audio_sound_set_track_position(weapon[$ "sound_end"], 0.2)
+        }
     }
 }

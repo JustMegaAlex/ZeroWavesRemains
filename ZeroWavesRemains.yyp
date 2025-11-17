@@ -99,6 +99,8 @@
     {"id":{"name":"utils","path":"scripts/utils/utils.yy",},},
     {"id":{"name":"mscStealthTheme","path":"sounds/mscStealthTheme/mscStealthTheme.yy",},},
     {"id":{"name":"sfxBurstShot","path":"sounds/sfxBurstShot/sfxBurstShot.yy",},},
+    {"id":{"name":"sfxBurstShotEnd","path":"sounds/sfxBurstShotEnd/sfxBurstShotEnd.yy",},},
+    {"id":{"name":"sfxBurstShotLoop","path":"sounds/sfxBurstShotLoop/sfxBurstShotLoop.yy",},},
     {"id":{"name":"sfxMetalImpact","path":"sounds/sfxMetalImpact/sfxMetalImpact.yy",},},
     {"id":{"name":"sfxShotContact","path":"sounds/sfxShotContact/sfxShotContact.yy",},},
     {"id":{"name":"sfxSingleShot","path":"sounds/sfxSingleShot/sfxSingleShot.yy",},},
