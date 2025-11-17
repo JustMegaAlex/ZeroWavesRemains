@@ -108,6 +108,7 @@
     {"id":{"name":"sCursor","path":"sprites/sCursor/sCursor.yy",},},
     {"id":{"name":"sDebugTeleport","path":"sprites/sDebugTeleport/sDebugTeleport.yy",},},
     {"id":{"name":"sEnemyBasic","path":"sprites/sEnemyBasic/sEnemyBasic.yy",},},
+    {"id":{"name":"sExplosion","path":"sprites/sExplosion/sExplosion.yy",},},
     {"id":{"name":"sFullnessBar","path":"sprites/sFullnessBar/sFullnessBar.yy",},},
     {"id":{"name":"sGameColors","path":"sprites/sGameColors/sGameColors.yy",},},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},

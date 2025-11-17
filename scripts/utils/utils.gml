@@ -583,7 +583,7 @@ function createPartType(ps, args) {
     if alpha != undefined {
         if is_array(alpha) {
             switch array_length(alpha) {
-                case 2: part_type_alpha2(pt, alpha[0], alpha[1])
+                case 2: part_type_alpha2(pt, alpha[0], alpha[1]) break
                 case 3: part_type_alpha3(pt, alpha[0], alpha[1], alpha[2])
             }
         } else { part_type_alpha1(pt, alpha) }

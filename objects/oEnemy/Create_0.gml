@@ -90,4 +90,5 @@ die = function() {
             direction = other.last_hit_direction + irandom_range(-45, 45)
         }
     }
+    oParticles.explosion_2(x, y)
 }
