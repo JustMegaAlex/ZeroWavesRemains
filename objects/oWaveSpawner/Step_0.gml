@@ -4,6 +4,7 @@ if instance_exists(dummy) {
     exit
 } else if dummy {
     dummy = noone
+    oMusic.switch_music(mscStealthTheme)
     spawn()
     exit
 }

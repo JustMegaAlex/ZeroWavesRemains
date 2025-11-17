@@ -12,6 +12,8 @@ next_music_transition_time_ms = music_transition_time_ms
 next_music_loops = undefined
 global.music_gain_array = []
 
+audio_master_gain(0.3)
+
 function get_gain(msc) {
     var not_in_array = array_length(global.music_gain_array) <= msc
     if not_in_array
