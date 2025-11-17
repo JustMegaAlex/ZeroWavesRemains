@@ -71,15 +71,15 @@ function emitBulletBurst(x, y) {
 
 ps_sparks = part_system_create()
 
-function hitSparks(x, y, angle, num=6) {
-    part_type_direction(pt_sparks, angle-45, angle+45, 0, 0)
-    part_particles_create(ps_sparks, x, y, pt_sparks, num)
+sparks_size = {
+    min: 0.5,
+    max: 1,
+    incr: -0.05
 }
-
 pt_sparks = createPartType(ps_sparks,
     {
         life: [20, 25],
-        size: [0.5, 1, -0.05],
+        size: [sparks_size.min, sparks_size.max, sparks_size.incr],
         // shape: pt_shape_line,
         sprite: [sSparks, false, false, true],
         angle: [0, 0, 0, 0, true],
@@ -89,31 +89,21 @@ pt_sparks = createPartType(ps_sparks,
     }
 )
 
-
-pt_explosion = createPartType(ps_sparks,
-    {
-        life: 240,
-        size: [1, 2.5, -0.003],
-        // shape: pt_shape_line,
-        sprite: [sSparks, false, false, false],
-        angle: [0, 0, 0, 0, true],
-        dir: 0,
-        speed: 0,
-        scale: [4, 1],
-        alpha: [1, 0.2, 0],
-        color: [c_white, c_black, c_black],
-    }
-)
+function hitSparks(x, y, angle, num=6, size=1) {
+    part_type_size(pt_sparks, sparks_size.min*size, sparks_size.max*size, sparks_size.incr*size, 0)
+    part_type_direction(pt_sparks, angle-45, angle+45, 0, 0)
+    part_particles_create(ps_sparks, x, y, pt_sparks, num)
+}
 
 vec = new Vec2(0, 0)
-pt_explosion_2 = createPartType(ps_sparks,
+pt_explosion = createPartType(ps_sparks,
     {
         life: 20,
         sprite: [sExplosion, false, false, false],
         alpha: [1, 0],
     }
 )
-pt_explosion_2_smoke = createPartType(ps_sparks,
+pt_explosion_smoke = createPartType(ps_sparks,
     {
         life: 120,
         sprite: [sExplosion, false, false, false],
@@ -121,15 +111,6 @@ pt_explosion_2_smoke = createPartType(ps_sparks,
         color: c_black,
     }
 )
-
-function explosion(x, y) {
-    var base_angle = irandom(30)
-    for (var i = 0; i < 12; ++i) {
-        var angle = base_angle + i * 30 + irandom_range(-5, 5)
-        part_type_direction(pt_explosion, angle, angle, 0, 0)
-        part_particles_create(ps_sparks, x, y, pt_explosion, 1)
-    }
-}
 
 
 function _explosion_beam(x, y, angle, len, count, size_start, size_end) {
@@ -139,10 +120,10 @@ function _explosion_beam(x, y, angle, len, count, size_start, size_end) {
     for (var j = 0; j < count; ++j) {
         vec.add_polar(step, angle)
         size = lerp(size_start, size_end, j / count)
-        part_type_size(pt_explosion_2, size, size, 0, 0)
-        part_type_size(pt_explosion_2_smoke, size, size, -0.005, 0)
-        part_particles_create(ps_sparks, vec.x, vec.y, pt_explosion_2_smoke, 1)
-        part_particles_create(ps_sparks, vec.x, vec.y, pt_explosion_2, 1)
+        part_type_size(pt_explosion, size, size, 0, 0)
+        part_type_size(pt_explosion_smoke, size, size, -0.005, 0)
+        part_particles_create(ps_sparks, vec.x, vec.y, pt_explosion_smoke, 1)
+        part_particles_create(ps_sparks, vec.x, vec.y, pt_explosion, 1)
     }
 }
 _core_randomer = randomer(-50, 50)
@@ -161,10 +142,10 @@ function explosion_2(x, y) {
     repeat core_count {
         vec.set(x, y)
         vec.add_coords(_core_randomer(), _core_randomer())
-        part_type_size(pt_explosion_2, core_size_base*0.6, core_size_base*1.2, 0, 0)
-        part_type_size(pt_explosion_2_smoke, core_size_base*0.6, core_size_base*1.2, 0, 0)
-        part_particles_create(ps_sparks, vec.x, vec.y, pt_explosion_2_smoke, 1)
-        part_particles_create(ps_sparks, vec.x, vec.y, pt_explosion_2, 1)
+        part_type_size(pt_explosion, core_size_base*0.6, core_size_base*1.2, 0, 0)
+        part_type_size(pt_explosion_smoke, core_size_base*0.6, core_size_base*1.2, 0, 0)
+        part_particles_create(ps_sparks, vec.x, vec.y, pt_explosion_smoke, 1)
+        part_particles_create(ps_sparks, vec.x, vec.y, pt_explosion, 1)
     }
     for (var i = 0; i < beam_count; ++i) {
         var angle = base_angle + i * angle_delta + irandom_range(-angle_rand, angle_rand)

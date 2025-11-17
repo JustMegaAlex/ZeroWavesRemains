@@ -85,10 +85,15 @@ shoot = function(dir) {
     Shoot(dir, weapon.object, weapon)
 }
 
+list = ds_list_create()
 catchBullet = function() {
-    var bullet = instance_place(x, y, oBullet)
-    if bullet {
-        bullet.contact(id)
+    ds_list_clear(list)
+    var count = instance_place_list(x, y, oBullet, list, false)
+    for (var i = 0; i < ds_list_size(list); ++i) {
+        list[| i].contact(id)
+        if !instance_exists(id) {
+            return
+        }
     }
 }
 

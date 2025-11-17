@@ -7,9 +7,11 @@
 contact = function(inst) {
     if (!fading or fading_hurt_frames > 0)
             and inst != shooter and CanHit(inst) {
+        oParticles.hitSparks(inst.x, inst.y, image_angle + 180, 6, 0.5)
 		inst.hit(id)
 		fading = true
         fading_hurt_frames = 0
+        image_blend = c_red
 	}
 }
 
