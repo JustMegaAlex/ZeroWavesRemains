@@ -27,10 +27,12 @@ checkPushBackIntoCircle()
 move()
 
 
-if !weapon.timer.update() and oInput.Hold("lclick") {
+if !weapon.timer.update() and (oInput.Hold("lclick") or debug_shoot) {
     playerShoot(dir)
     weapon.timer.reset()
 }
+
+manageShotLoopSound()
 
 if keyboard_check_pressed(ord("1")) {
     show_debug_message("1")
@@ -60,14 +62,19 @@ if switch_weapon_dir != 0 {
 /// reload restoring weapons
 for (var i = 0; i < array_length(weapons_array); ++i) {
     var weap = weapons_array[i]
+    var timer = weapon[$ "sound_timer"]
+    if timer != undefined {
+        timer.update()
+    }
     if (weap.ammo >= weap.ammo_max) or (weap.timer.timer > 0) {
         continue
     }
-    var timer = weap[$ "ammo_restore_timer"]
+    timer = weap[$ "ammo_restore_timer"]
     if timer != undefined and !timer.update() {
         timer.reset()
         weap.ammo++
     }
+
 }
 
 

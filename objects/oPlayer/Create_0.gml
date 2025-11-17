@@ -1,5 +1,7 @@
 event_inherited()
 
+debug_shoot = false
+
 kb_prev_char = ""
 
 money = 0
@@ -16,6 +18,7 @@ weapon_pulse = {
     ammo: 40,
     ammo_restore_timer: MakeTimer(30),
     knockback: 7,
+    sound: sfxSingleShot,
 }
 
 
@@ -30,6 +33,8 @@ weapon_scatter = {
     sp: 120,
     name: "Scatter",
     ammo: 200,
+    sound: sfxBurstShot,
+    sound_timer: MakeTimer(6, 0)
 }
 
 weapon_snipe = {
@@ -39,6 +44,7 @@ weapon_snipe = {
     range: 6000,
     name: "Snipe",
     ammo: 12,
+    sound: sfxSnipeShot,
 }
 
 weapon = weapon_pulse
@@ -84,10 +90,12 @@ playerShoot = function(dir) {
     }
     shoot(dir)
     weapon.ammo--
+    playShotSound(weapon)
 }
 
 objectHit = function() {
     oUI.indicateHit()
+    audio_play_sound(sfxMetalImpact, 2, false)
 }
 
 die = function() {
@@ -95,5 +103,38 @@ die = function() {
     global.gameover = true
     repeat money {
         instance_create_layer(x, y, layer, oCoin)
+    }
+}
+
+current_shoot_loop_sound = noone
+playShotSound = function(weapon) {
+    var loop = false
+    var offset = 0
+    // if weapon.name == "Scatter" {
+    //     if current_shoot_loop_sound == weapon.sound {
+    //         return;
+    //     }
+    //     loop = true
+    //     offset = 1
+    //     current_shoot_loop_sound = weapon.sound
+    // }
+    var timer = weapon[$ "sound_timer"]
+    if timer != undefined {
+        if timer.timer > 0 {
+            return;
+        } else {
+            timer.reset()
+        }
+    }
+    audio_play_sound(weapon.sound, 2, loop, 1, offset)
+}
+
+manageShotLoopSound = function() {
+    if current_shoot_loop_sound == noone {
+        return
+    }
+    if oInput.Released("lclick") or weapon.ammo <= 0 {
+        audio_stop_sound(current_shoot_loop_sound)
+        current_shoot_loop_sound = noone
     }
 }

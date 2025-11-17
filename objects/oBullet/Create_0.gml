@@ -13,6 +13,7 @@ contact = function(inst) {
 	if inst and inst != shooter and CanHit(inst) {
 		inst.hit(id)
         oParticles.hitSparks(x, y, image_angle + 180)
+        audio_play_sound(sfxShotContact, 2, false)
         if destroy_on_contact {
             instance_destroy()
         }

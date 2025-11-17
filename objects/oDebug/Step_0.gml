@@ -34,4 +34,12 @@ if active {
             }
         }
     }
+    if !instance_exists(oPlayer) { exit }
+    if key_pressed(ord("M")) {
+        oPlayer.money += 30
+    }
+    if key_pressed(ord("K")) {
+        oPlayer.debug_shoot = !oPlayer.debug_shoot
+    }
+
 }
