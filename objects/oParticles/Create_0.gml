@@ -130,30 +130,46 @@ function explosion(x, y) {
         part_particles_create(ps_sparks, x, y, pt_explosion, 1)
     }
 }
-function explosion_2(x, y) {
-    var size_start = 3
-    var size_end = 0.5
-    var size = -1
-    var len = 300
-    var count = 6
-    var step = len / count
-    var n = 5
-    var delta = 360 / n
-    var rand = delta * 0.2
-    var base_angle = irandom(delta)
-    for (var i = 0; i < n; ++i) {
-        var angle = base_angle + i * delta + irandom_range(-rand, rand)
-        vec.set(x, y)
-        for (var j = 0; j < count; ++j) {
-            size = lerp(size_start, size_end, j / count)
-            vec.add_polar(step, angle)
-            part_type_size(pt_explosion_2, size, size, 0, 0)
-            part_type_size(pt_explosion_2_smoke, size, size, -0.005, 0)
-            part_particles_create(ps_sparks, vec.x, vec.y, pt_explosion_2_smoke, 1)
-            part_particles_create(ps_sparks, vec.x, vec.y, pt_explosion_2, 1)
-        }
-    }
 
+
+function _explosion_beam(x, y, angle, len, count, size_start, size_end) {
+    var size = -1
+    var step = len / count
+    vec.set(x, y)
+    for (var j = 0; j < count; ++j) {
+        vec.add_polar(step, angle)
+        size = lerp(size_start, size_end, j / count)
+        part_type_size(pt_explosion_2, size, size, 0, 0)
+        part_type_size(pt_explosion_2_smoke, size, size, -0.005, 0)
+        part_particles_create(ps_sparks, vec.x, vec.y, pt_explosion_2_smoke, 1)
+        part_particles_create(ps_sparks, vec.x, vec.y, pt_explosion_2, 1)
+    }
+}
+_core_randomer = randomer(-50, 50)
+function explosion_2(x, y) {
+    var beam_len = 150
+    var beam_count = choose(7, 9)
+    var beam_particles_amount = 6
+    var beam_size_start = 0.6
+    var beam_size_end = 0.2
+    var angle_delta = 360 / beam_count
+    var angle_rand = angle_delta * 0.2
+    var base_angle = irandom(angle_delta)
+
+    var core_size_base = 1.3
+    var core_count = 5
+    repeat core_count {
+        vec.set(x, y)
+        vec.add_coords(_core_randomer(), _core_randomer())
+        part_type_size(pt_explosion_2, core_size_base*0.6, core_size_base*1.2, 0, 0)
+        part_type_size(pt_explosion_2_smoke, core_size_base*0.6, core_size_base*1.2, 0, 0)
+        part_particles_create(ps_sparks, vec.x, vec.y, pt_explosion_2_smoke, 1)
+        part_particles_create(ps_sparks, vec.x, vec.y, pt_explosion_2, 1)
+    }
+    for (var i = 0; i < beam_count; ++i) {
+        var angle = base_angle + i * angle_delta + irandom_range(-angle_rand, angle_rand)
+        _explosion_beam(x, y, angle, beam_len, beam_particles_amount, beam_size_start, beam_size_end)
+    }
 }
 
 
