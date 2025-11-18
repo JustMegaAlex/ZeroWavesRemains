@@ -10,8 +10,8 @@ draw_set_color(c_white)
 draw_text(50, 160, $"Waves remains: {oWaveSpawner.waves_remains}")
 draw_text(50, 200, $"Money: {money}")
 
-var w = window_get_width()
-var h = window_get_height()
+var w = display_get_gui_width()
+var h = display_get_gui_height()
 if shop_item {
     SetTextAllign(1, 0)
     draw_text(w*0.5, h*0.75, shop_item.text)

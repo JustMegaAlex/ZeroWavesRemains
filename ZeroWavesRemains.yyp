@@ -101,6 +101,8 @@
     {"id":{"name":"Shooting","path":"scripts/Shooting/Shooting.yy",},},
     {"id":{"name":"ui","path":"scripts/ui/ui.yy",},},
     {"id":{"name":"utils","path":"scripts/utils/utils.yy",},},
+    {"id":{"name":"mscIntro","path":"sounds/mscIntro/mscIntro.yy",},},
+    {"id":{"name":"mscLooseTheme","path":"sounds/mscLooseTheme/mscLooseTheme.yy",},},
     {"id":{"name":"mscStealthTheme","path":"sounds/mscStealthTheme/mscStealthTheme.yy",},},
     {"id":{"name":"sfxBurstShot","path":"sounds/sfxBurstShot/sfxBurstShot.yy",},},
     {"id":{"name":"sfxBurstShotEnd","path":"sounds/sfxBurstShotEnd/sfxBurstShotEnd.yy",},},

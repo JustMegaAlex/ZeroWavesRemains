@@ -5,6 +5,7 @@
 
 
 Future:
+> impl loading screen
 > show previous run waves count
 > finish gp controls
 > vfx

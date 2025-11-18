@@ -104,10 +104,11 @@ objectHit = function() {
 }
 
 die = function() {
-    audio_play_sound(sfxLastHit, 2, false)
-    oMusic.switch_music(noone)
+    audio_play_sound(sfxExplosion2, 2, false)
+    oMusic.switch_music(mscLooseTheme)
     instance_destroy()
     global.gameover = true
+    oParticles.explosion_2(x, y)
     repeat money {
         instance_create_layer(x, y, layer, oCoin)
     }

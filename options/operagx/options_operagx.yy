@@ -1,6 +1,12 @@
 {
   "$GMOperaGXOptions":"v1",
   "%Name":"Opera GX",
+  "ConfigValues":{
+    "Dev":{
+      "option_operagx_game_name":"ZeroWavesRemains",
+      "option_operagx_mod_game_name":"ZeroWavesRemains",
+    },
+  },
   "name":"Opera GX",
   "option_operagx_display_cursor":true,
   "option_operagx_editUrl":"",

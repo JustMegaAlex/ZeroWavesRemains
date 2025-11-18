@@ -1,8 +1,8 @@
 
 draw_set_font(fntUIBig)
 SetTextAllign(1, 1)
-var xx = window_get_width() * 0.5
-var yy = window_get_height() * 0.3
+var xx = display_get_gui_width() * 0.5
+var yy = display_get_gui_height() * 0.3
 if global.win {
     draw_text(xx, yy, "Zero waves remains!\nPress R to start again")
 } else if global.gameover {
