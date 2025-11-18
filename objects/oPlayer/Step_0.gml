@@ -79,6 +79,9 @@ for (var i = 0; i < array_length(weapons_array); ++i) {
 
 
 shop_item = MouseCollision(oShopItem)
+if shop_item and InstDist(shop_item) > shot_interact_range {
+    shop_item = noone
+}
 if shop_item and oInput.Pressed("interact") {
     shop_item.interact()
     if !instance_exists(shop_item) {
@@ -88,6 +91,7 @@ if shop_item and oInput.Pressed("interact") {
 
 if global.wave_enemies_count <= 0 and oInput.Pressed("next_wave") {
     oWaveSpawner.spawn()
+    weapon_pulse.ammo = min(weapon_pulse.ammo + weapon_pulse.ammo_max * 0.5, weapon_pulse.ammo_max)
 }
 
 event_inherited()

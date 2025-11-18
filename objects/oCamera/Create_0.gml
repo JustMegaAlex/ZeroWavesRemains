@@ -29,6 +29,16 @@ zoom_to = 1
 zoom_treshold_speed = 40
 zoom_factor = 0.25
 
+shaking = {
+    on: false,
+    magnitude: 5,
+    timer: MakeTimer(12, 0),
+    time_gain: 40,
+    xphase_sp: 1.2,
+    yphase_sp: 0.82,
+    vec: new Vec2(0, 0)
+}
+
 // mouse drag
 drag_button = mb_middle
 mouse_x_prev = 0
@@ -39,6 +49,11 @@ sp_max = 8
 function SetZoom(value) {
     zoom = value
     camera_set_view_size(view_camera[0], camera_width * zoom, camera_height * zoom)
+}
+
+shake = function() {
+    shaking.on = true
+    shaking.timer.reset()
 }
 
 

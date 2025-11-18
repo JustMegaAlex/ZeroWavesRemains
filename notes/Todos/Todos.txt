@@ -1,24 +1,18 @@
 0.3.0:
-> add tute: press F to buy
-> new enemies
-    > as a mini boss: long range spready, heavy, slow, dangerous at clost distance
-> vfx
-    > bullet die effect
-    > add lite shake effect on enemy destruction
-> sfx
-    > shooting
-    > player hit
-    > explosions
-    > enemy hit
-    > buy items
 > add fullscreen
-> show previous run waves count
-> finish gp controls  
-> add wave arriving indicator
-> 
+> fixes
+    > don't destroy bullets out of circle
 
 
 Future:
+> show previous run waves count
+> finish gp controls
+> vfx
+    > make explosions bigger
+    > make small explosions for tiny
+> add wave arriving indicator
+> new enemies
+    > as a mini boss: long range spready, heavy, slow, dangerous at clost distance
 > vfx
     > shoot particles
     > area boundaries
@@ -69,3 +63,7 @@ fixes:
     gml_Script_anon@1517@gml_Object_oEntity_Create_0 (line 91)
     gml_Object_oEntity_Step_0 (line 2) - catchBullet()
     gml_Object_oPlayer_Step_0 (line 86)
+
+
+Ideas:
+> penetrating kinetic weapon (like that bugged out pulse)

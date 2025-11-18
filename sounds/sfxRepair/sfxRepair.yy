@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"sfxExplosion2",
+  "%Name":"sfxRepair",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,9 +10,9 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":2.6555328,
+  "duration":1.0,
   "exportDir":"",
-  "name":"sfxExplosion2",
+  "name":"sfxRepair",
   "parent":{
     "name":"Audio",
     "path":"folders/Audio.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sfxExplosion2.wav",
-  "volume":0.32,
+  "soundFile":"sfxRepair.wav",
+  "volume":1.0,
 }

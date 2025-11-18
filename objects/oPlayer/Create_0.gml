@@ -10,6 +10,10 @@ battle_side = battle_side_player
 
 instance_create_layer(x, y, layer, oCamera)
 
+heal_effect_timer = MakeTimer(30, 0)
+
+shot_interact_range = 500
+
 weapon_pulse = {
     dmg: 20,
     timer: MakeTimer(9),
@@ -19,13 +23,13 @@ weapon_pulse = {
     ammo_restore_timer: MakeTimer(30),
     knockback: 7,
     sound: sfxSingleShot,
-    range: 2400,
+    range: 2000,
 }
 
 weapon_scatter = {
     dmg: 4,
     timer: MakeTimer(2),
-    range: 1800,
+    range: 1500,
     object: oBulletScatter,
     image_xscale: 1,
     image_yscale: 1,
@@ -101,6 +105,7 @@ objectHit = function() {
 
 die = function() {
     audio_play_sound(sfxLastHit, 2, false)
+    oMusic.switch_music(noone)
     instance_destroy()
     global.gameover = true
     repeat money {

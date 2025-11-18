@@ -1,22 +1,12 @@
 
-// bringDamage = function() {
-// 	var inst = instance_place(x, y, object_to_hit)
-// 	if inst and inst != shooter and CanHit(inst) {
-// 		inst.hit(id)
-// 		instance_destroy()
-// 	}
-// }
+event_inherited()
 
 destroy_on_contact = true
 
-contact = function(inst) {
-	if inst and inst != shooter and CanHit(inst) {
-		inst.hit(id)
-        oParticles.hitSparks(x, y, image_angle + 180)
-        if destroy_on_contact {
-            instance_destroy()
-        }
-	}
+fadeout = false
+
+destroy = function() {
+    instance_destroy()
 }
 
 visible = false

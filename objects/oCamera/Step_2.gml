@@ -44,7 +44,7 @@ if target {
 
 if !is_mouse_over_debug_overlay() {
     zoom_to += (oInput.Pressed("zoom_out") - oInput.Pressed("zoom_in")) * zoom_factor
-    zoom_to = clamp(zoom_to, 0.5, 4)
+    zoom_to = clamp(zoom_to, 0.5, 3)
 }
 zoom = Approach2(zoom, zoom_to, 0.04, 0.01)
 SetZoom(zoom)
@@ -52,4 +52,20 @@ SetZoom(zoom)
 // update camera position with clampint to room bounds
 // var w = CamW() * 0.5, h = CamH() * 0.5
 // CameraSetPos(x + w, y + h)
-CameraSetPos(x + relx*0, y + rely*0)
+
+
+if shaking.on {
+    var mag = shaking.magnitude * shaking.timer.timer / shaking.timer.time
+    var time = shaking.timer.time - shaking.timer.timer
+    shaking.vec.set(
+        lengthdir_y(mag, time * shaking.xphase_sp * shaking.time_gain),
+        lengthdir_y(mag, time * shaking.yphase_sp * shaking.time_gain),
+    )
+    shaking.timer.update()
+}
+
+
+CameraSetPos(
+    x + shaking.vec.x * max(1, zoom) + relx*0,
+    y + shaking.vec.y * max(1, zoom) + rely*0
+)

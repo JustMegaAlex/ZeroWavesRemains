@@ -13,8 +13,8 @@
     "path":"folders/Objects/Bullets.yy",
   },
   "parentObjectId":{
-    "name":"oBullet",
-    "path":"objects/oBullet/oBullet.yy",
+    "name":"oBulletParent",
+    "path":"objects/oBulletParent/oBulletParent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

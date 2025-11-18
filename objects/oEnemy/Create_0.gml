@@ -92,4 +92,5 @@ die = function() {
     }
     oParticles.explosion_2(x, y)
     audio_play_sound(sfxExplosion1, 3, false)
+    oCamera.shake()
 }

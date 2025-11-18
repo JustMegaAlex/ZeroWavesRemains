@@ -45,4 +45,7 @@ if active {
         oPlayer.debug_shoot = !oPlayer.debug_shoot
     }
 
+    if key_pressed(ord("X")) {
+        oPlayer.die()
+    }
 }

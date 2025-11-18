@@ -1,9 +1,19 @@
 macro_pause
 
+if fadeout {
+    image_yscale -= 0.15
+    if image_yscale <= 0 {
+        instance_destroy()
+    }
+}
+
 range -= sp
-if !range or (point_distance(0, 0, x, y) > (oGameArea.radius - sprite_width)) {
-	instance_destroy()
-	exit
+if !fadeout and !range {
+	fadeout = true
+    sparks_count = 1
+    knockback = 0
+    dmg = 0
+    sp *= 0.6
 }
 
 xprev = x

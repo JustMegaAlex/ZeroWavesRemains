@@ -2,6 +2,8 @@
 //image_xscale = scale
 //image_yscale = scale
 
+prompt_text = "Press F to "
+
 can_buy = function() {
     return oPlayer.money >= cost
 }

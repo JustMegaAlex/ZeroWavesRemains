@@ -10,7 +10,7 @@
   "name":"oShopItemHeal",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oShopItem","path":"objects/oShopItem/oShopItem.yy",},"propertyId":{"name":"oneshot","path":"objects/oShopItem/oShopItem.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oShopItem","path":"objects/oShopItem/oShopItem.yy",},"propertyId":{"name":"text","path":"objects/oShopItem/oShopItem.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Heal 10 hp",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oShopItem","path":"objects/oShopItem/oShopItem.yy",},"propertyId":{"name":"text","path":"objects/oShopItem/oShopItem.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"heal 50 hp",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oShopItem","path":"objects/oShopItem/oShopItem.yy",},"propertyId":{"name":"cost","path":"objects/oShopItem/oShopItem.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"30",},
   ],
   "parent":{

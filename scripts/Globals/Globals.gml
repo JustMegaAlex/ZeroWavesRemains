@@ -1,3 +1,8 @@
+
+#macro DEV false
+
+#macro Dev:DEV true
+
 #macro macro_pause if global.pause {exit}
 #macro null undefined
 #macro key_pressed keyboard_check_pressed

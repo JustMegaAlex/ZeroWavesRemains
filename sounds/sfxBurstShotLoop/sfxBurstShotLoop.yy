@@ -22,5 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"sfxBurstShotLoop.wav",
-  "volume":1.0,
+  "volume":0.27,
 }

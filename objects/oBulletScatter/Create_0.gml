@@ -11,7 +11,6 @@ contact = function(inst) {
 		inst.hit(id)
 		fading = true
         fading_hurt_frames = 0
-        image_blend = c_red
 	}
 }
 

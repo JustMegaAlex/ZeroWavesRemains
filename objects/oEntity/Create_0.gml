@@ -92,7 +92,7 @@ shoot = function(dir) {
 list = ds_list_create()
 catchBullet = function() {
     ds_list_clear(list)
-    var count = instance_place_list(x, y, oBullet, list, false)
+    var count = instance_place_list(x, y, oBulletParent, list, false)
     for (var i = 0; i < ds_list_size(list); ++i) {
         list[| i].contact(id)
         if !instance_exists(id) {
