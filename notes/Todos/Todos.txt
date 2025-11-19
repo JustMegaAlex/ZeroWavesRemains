@@ -1,8 +1,6 @@
-0.3.0:
-> add fullscreen
-> fixes
-    > don't destroy bullets out of circle
-
+0.4.0
+> fixes:
+    > remove ammo items at start, replace weapon with ammo after weapon purchase
 
 Future:
 > impl loading screen
