@@ -62,8 +62,8 @@ all_weapons = [
 
 weapons_array = [
     weapon_pulse,
-    //weapon_scatter, 
-    //weapon_snipe
+    noone, //weapon_scatter, 
+    noone, //weapon_snipe
 ]
 
 for (var i = 0; i < array_length(all_weapons); ++i) {
@@ -78,6 +78,11 @@ for (var i = 0; i < array_length(all_weapons); ++i) {
 shop_item = noone
 
 
+function unlockWeapon(weapon) {
+    var ind = array_get_index(all_weapons, weapon)
+    weapons_array[ind] = weapon
+}
+
 inputSwitchWeapon = function(slot) {
     if median(1, 5, slot) != slot {
         show_debug_message($"Wrong weapon slot {slot}")
@@ -86,7 +91,11 @@ inputSwitchWeapon = function(slot) {
     if median(1, array_length(weapons_array), slot) != slot {
         return;
     }
-    weapon = weapons_array[slot-1]
+    slot--
+    if weapons_array[slot] == noone {
+        return;
+    }
+    weapon = weapons_array[slot]
 }
 
 playerShoot = function(dir) {
