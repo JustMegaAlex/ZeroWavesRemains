@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oUIWeaponAmmoBar",
+  "%Name":"oUIWeaponSegment",
   "eventList":[],
   "managed":true,
-  "name":"oUIWeaponAmmoBar",
+  "name":"oUIWeaponSegment",
   "overriddenProperties":[],
   "parent":{
     "name":"UI",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sUIWeaponAmmoBar",
-    "path":"sprites/sUIWeaponAmmoBar/sUIWeaponAmmoBar.yy",
+    "name":"sUIWeaponsSegment",
+    "path":"sprites/sUIWeaponsSegment/sUIWeaponsSegment.yy",
   },
   "spriteMaskId":null,
   "visible":true,
