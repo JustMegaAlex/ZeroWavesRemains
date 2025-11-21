@@ -52,16 +52,7 @@ kb_prev_char = keyboard_lastchar
 
 var switch_weapon_dir = oInput.Pressed("switch_weapon_fwd") - oInput.Pressed("switch_weapon_back")
 if switch_weapon_dir != 0 {
-    var cur_ind = array_get_index(weapons_array, weapon)
-    var new_ind = cur_ind
-    while true {
-        new_ind = (new_ind + switch_weapon_dir) mod array_length(weapons_array)
-        if new_ind < 0 { new_ind = array_length(weapons_array) - 1}
-        if weapons_array[new_ind] != noone {
-            break
-        }
-    }
-    weapon = weapons_array[new_ind]
+    inputSwtichWeaponDir(switch_weapon_dir)
 }
 
 

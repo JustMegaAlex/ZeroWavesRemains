@@ -5,5 +5,4 @@ weapon_icons = [
     sUIWeaponSnipe
 ]
 
-
-
+index = 0

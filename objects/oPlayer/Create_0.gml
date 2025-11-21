@@ -53,6 +53,7 @@ weapon_snipe = {
 }
 
 weapon = weapon_pulse
+weapon_index = 0
 
 all_weapons = [
     weapon_pulse,
@@ -96,6 +97,20 @@ inputSwitchWeapon = function(slot) {
         return;
     }
     weapon = weapons_array[slot]
+    weapon_index = slot
+}
+
+inputSwtichWeaponDir = function(switch_weapon_dir) {
+    var new_ind = weapon_index
+    while true {
+        new_ind = (new_ind + switch_weapon_dir) mod array_length(weapons_array)
+        if new_ind < 0 { new_ind = array_length(weapons_array) - 1}
+        if weapons_array[new_ind] != noone {
+            break
+        }
+    }
+    weapon = weapons_array[new_ind]
+    weapon_index = new_ind
 }
 
 playerShoot = function(dir) {
