@@ -11,6 +11,7 @@ music_transition_time_ms = 1000
 next_music_transition_time_ms = music_transition_time_ms
 next_music_loops = undefined
 global.music_gain_array = []
+music_enabled = false
 
 audio_master_gain(0.3)
 
@@ -25,8 +26,8 @@ function get_gain(msc) {
     return global.music_gain_array[msc]
 }
 
-function switch_music(msc, loops = true, transition_time =
-    music_transition_time_ms) {
+function switch_music(msc, loops = true, transition_time = music_transition_time_ms) {
+    if !music_enabled { return }
     next_music_transition_time_ms = transition_time
     next_music_loops = loops
     if current_music != noone {

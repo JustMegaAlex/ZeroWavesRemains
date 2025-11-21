@@ -4,7 +4,7 @@ debug_shoot = false
 
 kb_prev_char = ""
 
-money = 0
+money = 143
 
 battle_side = battle_side_player
 

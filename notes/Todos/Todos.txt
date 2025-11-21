@@ -1,38 +1,74 @@
-0.4.0
+
+- непонятно что враг в волне
+- не понял индикацию аммо
+- загрузочный экран
+- подсказки далеко, не сразу прочитал
+- непонятно про магаз
+- непонятно, что не хватает денег
+- купил пули до покупки пушки
+- трек немного надоедает
+- написовать норм спрайты для магаза
+- убил подсказки и не знал как переключить пушку
+- не понял, что пульс восстанавливается 
+
+
+> art
+    > ui weapons
+    > ui hp
+    > ui shield
+    > ui cross cursor
+    > enemy: clunky
+
+
+
+0.4.0 - Update gameplay loop: more items, +1 heavy enemy, rework enemy ai, upgrades
+> add cross cursor
+> rework items shop
+    > animate item shops
+        > press F on main structure to deploy items
+    > replace ammo with ammo upgrades: restore ratio + amount
+> upd scatter and snipe: autorestore ammo
+> impl item drones
+> audio
+    > add victory music
+> upd weapons: add upgrading
+> rework enemy ai
+    > upd bonk (oEnemy)
+        - aim is increased over time if player stays still
+        - start evading if get hits
+    > upd tiny
+        - two modes
+        - one: fly in circles around player
+        - two: fly-by from long distance
+        - swarm behavior
+> new enemies
+    > behemoth
+        - long-range rechargable scatter burst
+        - short range non-stop all directions machine gun, very dangerous
+        > draw a sprite
+> show previous run waves count
+> add casual difficulty mode
+> vfx
+    > make variable size for explosions
+    > shoot particles
+    > area boundaries
+> add wave arriving indicator
+> finish gp controls
 > fixes:
+    > indicate better next wave enemies
+    > disable Esc for GX
     > remove ammo items at start, replace weapon with ammo after weapon purchase
+
 
 Future:
 > impl loading screen
-> show previous run waves count
-> finish gp controls
-> vfx
-    > make explosions bigger
     > make small explosions for tiny
-> add wave arriving indicator
-> new enemies
-    > as a mini boss: long range spready, heavy, slow, dangerous at clost distance
-> vfx
-    > shoot particles
-    > area boundaries
-
 Enemies concepts:
-> upd bonk (oEnemy)
-    - aim is increased over time if player stays still
-    - start evading if get hits
-> upd tiny
-    - two modes
-    - one: fly in circles around player
-    - two: fly-by from long distance
-    - swarm behavior
 > knife
     - small, melee, slams into a player
 > leader
     - brings a swarm of knifes
     - super-throws knifes at you
-> behemoth
-    - long-range rechargable scatter burst
-    - short range non-stop all directions machine gun, very dangerous
 > clunky
     - randomly flies around searching for the player
     - shoots mid-range very fast machine gun
@@ -48,20 +84,6 @@ Enemies concepts:
 > frigate
     - lots of missiles ?
 
-
-
-fixes:
-> error
-    ___________________________________________
-    ############################################################################################
-    ERROR in action number 1
-    of  Step Event0 for object oEntity:
-    Variable <unknown_object>.contact(100209, -2147483648) not set before reading it.
-    at gml_Script_anon@1517@gml_Object_oEntity_Create_0 (line 91) -         bullet.contact(id)
-    ############################################################################################
-    gml_Script_anon@1517@gml_Object_oEntity_Create_0 (line 91)
-    gml_Object_oEntity_Step_0 (line 2) - catchBullet()
-    gml_Object_oPlayer_Step_0 (line 86)
 
 
 Ideas:
