@@ -13,8 +13,6 @@
 
 
 > art
-    > ui weapons
-    > ui hp
     > ui shield
     > ui cross cursor
     > enemy: clunky

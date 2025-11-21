@@ -39,8 +39,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sRhombusStructure",
-    "path":"sprites/sRhombusStructure/sRhombusStructure.yy",
+    "name":"sShopItem",
+    "path":"sprites/sShopItem/sShopItem.yy",
   },
   "spriteMaskId":null,
   "visible":true,

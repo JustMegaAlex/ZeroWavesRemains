@@ -88,6 +88,10 @@ if shop_item and oInput.Pressed("interact") {
         shop_item = noone
     }
 }
+shop = MouseCollision(oShop)
+if shop and oInput.Pressed("interact") {
+    shop.open()
+}
 
 if global.wave_enemies_count <= 0 and oInput.Pressed("next_wave") {
     oWaveSpawner.spawn()
