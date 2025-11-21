@@ -10,3 +10,8 @@ window_center()
 display_set_gui_size(
     window_get_width(), window_get_height()
 )
+
+layers_to_make_visible = [
+    "Instances", "BackObjects", "Parallax", "Assets"
+]
+
