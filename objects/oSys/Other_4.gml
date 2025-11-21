@@ -9,4 +9,3 @@ for (var i = 0; i < array_length(layers_to_make_visible); ++i) {
         layer_set_visible(layer_get_id(name), true)
     }
 }
-

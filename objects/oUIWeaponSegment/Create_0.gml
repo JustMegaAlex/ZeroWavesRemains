@@ -6,3 +6,7 @@ weapon_icons = [
 ]
 
 index = 0
+
+checkbox_alphas = [
+    1, 0.0, 0.0
+]
