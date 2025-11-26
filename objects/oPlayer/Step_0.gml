@@ -78,9 +78,15 @@ for (var i = 0; i < array_length(weapons_array); ++i) {
 }
 
 if oShop.is_open {
+    if shop_item {
+        shop_item.highlight = false
+    }
     shop_item = MouseCollision(oShopItem)
     if shop_item and InstDist(shop_item) > shot_interact_range {
         shop_item = noone
+    }
+    if shop_item {
+        shop_item.highlight = true
     }
     if shop_item and oInput.Pressed("interact") {
         shop_item.interact()

@@ -11,6 +11,7 @@ openy = y
 
 x = 0
 y = 0
+highlight = false
 
 can_buy = function() {
     return oPlayer.money >= cost
