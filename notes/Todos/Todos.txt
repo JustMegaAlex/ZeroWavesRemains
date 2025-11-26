@@ -11,6 +11,9 @@
 - убил подсказки и не знал как переключить пушку
 - не понял, что пульс восстанавливается 
 
+Continue:
+- I added new sprites for shop and items
+- Started implementing shop open/close animation. It's broken << continue
 
 > art
     > ui shield
@@ -20,10 +23,13 @@
 
 
 0.4.0 - Update gameplay loop: more items, +1 heavy enemy, rework enemy ai, upgrades
+> show high score
 > add cross cursor
 > rework items shop
     > animate item shops
         > press F on main structure to deploy items
+        > close shop by distance
+        > open shop in between waves
     > replace ammo with ammo upgrades: restore ratio + amount
 > upd scatter and snipe: autorestore ammo
 > impl item drones
@@ -57,6 +63,9 @@
     > disable Esc for GX
     > remove ammo items at start, replace weapon with ammo after weapon purchase
 
+feedback:
+    > not clear if overbuying ammo will add ammo or waste money
+    > bonus for double kill
 
 Future:
 > impl loading screen

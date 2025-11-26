@@ -1,5 +1,10 @@
 
 size_to = is_open ? open_size : close_size
 size = Approach(size, size_to, open_sp)
-var scale = size / close_size
-image_yscale = image_xscale = scale
+
+if !instance_exists(oPlayer) { exit }
+if is_open and (InstDist(oPlayer) > (open_size * 1.1)) {
+    is_open = false
+}
+
+open_ratio = size / open_size

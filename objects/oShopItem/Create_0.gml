@@ -4,6 +4,14 @@
 
 prompt_text = "Press F to "
 
+openx = x
+openy = y
+// opensp = 0.03
+// opensp_min = 0.1
+
+x = 0
+y = 0
+
 can_buy = function() {
     return oPlayer.money >= cost
 }
@@ -21,3 +29,5 @@ interact = function() {
         }
     }
 }
+
+open = function() {}

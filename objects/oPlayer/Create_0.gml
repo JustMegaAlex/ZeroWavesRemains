@@ -24,6 +24,7 @@ weapon_pulse = {
     knockback: 7,
     sound: sfxSingleShot,
     range: 2000,
+    sprite: sUIWeaponPulse,
 }
 
 weapon_scatter = {
@@ -39,6 +40,7 @@ weapon_scatter = {
     ammo: 200,
     sound: sfxBurstShotLoop,
     sound_end: sfxBurstShotEnd,
+    sprite: sUIWeaponScatter,
     // sound_timer: MakeTimer(6, 0)
 }
 
@@ -50,6 +52,7 @@ weapon_snipe = {
     name: "Snipe",
     ammo: 12,
     sound: sfxSnipeShot,
+    sprite: sUIWeaponSnipe,
 }
 
 weapon = weapon_pulse
@@ -67,12 +70,17 @@ weapons_array = [
     noone, //weapon_snipe
 ]
 
+_weapon_default_field = function(weapon_item, key, value) {
+    if !struct_has(weapon_item, key) {
+        weapon_item[$ key] = value
+    }
+}
+
 for (var i = 0; i < array_length(all_weapons); ++i) {
     var item = all_weapons[i]
-    item.ammo_max = item.ammo
-    if !struct_has(item, "knockback") {
-        item.knockback = 0
-    }
+    _weapon_default_field(item, "knockback", 0)
+    _weapon_default_field(item, "sprite", noone)
+    _weapon_default_field(item, "ammo_max", item.ammo)
 }
 
 

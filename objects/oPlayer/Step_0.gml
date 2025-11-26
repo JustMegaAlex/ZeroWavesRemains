@@ -77,15 +77,16 @@ for (var i = 0; i < array_length(weapons_array); ++i) {
 
 }
 
-
-shop_item = MouseCollision(oShopItem)
-if shop_item and InstDist(shop_item) > shot_interact_range {
-    shop_item = noone
-}
-if shop_item and oInput.Pressed("interact") {
-    shop_item.interact()
-    if !instance_exists(shop_item) {
+if oShop.is_open {
+    shop_item = MouseCollision(oShopItem)
+    if shop_item and InstDist(shop_item) > shot_interact_range {
         shop_item = noone
+    }
+    if shop_item and oInput.Pressed("interact") {
+        shop_item.interact()
+        if !instance_exists(shop_item) {
+            shop_item = noone
+        }
     }
 }
 shop = MouseCollision(oShop)
