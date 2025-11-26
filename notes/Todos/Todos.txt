@@ -25,14 +25,13 @@ Continue:
 0.4.0 - Update gameplay loop: more items, +1 heavy enemy, rework enemy ai, upgrades
 > show high score
 > add cross cursor
-> rework items shop
+> rework items
     > animate item shops
-        > press F on main structure to deploy items
-        > close shop by distance
         > open shop in between waves
-    > replace ammo with ammo upgrades: restore ratio + amount
-> upd scatter and snipe: autorestore ammo
-> impl item drones
+    > impl item drones
+    > impl item drops
+        > interaction with player
+        > choose ui
 > audio
     > add victory music
 > upd weapons: add upgrading
@@ -95,3 +94,5 @@ Enemies concepts:
 
 Ideas:
 > penetrating kinetic weapon (like that bugged out pulse)
+> replace ammo with ammo upgrades: restore ratio + amount
+> upd scatter and snipe: autorestore ammo

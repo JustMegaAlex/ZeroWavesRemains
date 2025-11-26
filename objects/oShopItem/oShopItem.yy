@@ -33,6 +33,7 @@
     {"$GMObjectProperty":"v2","%Name":"cost","filters":[],"listItems":[],"multiselect":false,"name":"cost","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":4,},
     {"$GMObjectProperty":"v2","%Name":"oneshot","filters":[],"listItems":[],"multiselect":false,"name":"oneshot","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
     {"$GMObjectProperty":"v2","%Name":"icon_scale","filters":[],"listItems":[],"multiselect":false,"name":"icon_scale","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"image_blend","filters":[],"listItems":[],"multiselect":false,"name":"image_blend","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"c_white","varType":4,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

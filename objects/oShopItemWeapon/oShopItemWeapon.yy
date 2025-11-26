@@ -12,6 +12,7 @@
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oShopItem","path":"objects/oShopItem/oShopItem.yy",},"propertyId":{"name":"oneshot","path":"objects/oShopItem/oShopItem.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oShopItem","path":"objects/oShopItem/oShopItem.yy",},"propertyId":{"name":"icon_scale","path":"objects/oShopItem/oShopItem.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0.7",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oShopItem","path":"objects/oShopItem/oShopItem.yy",},"propertyId":{"name":"image_blend","path":"objects/oShopItem/oShopItem.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"#E5A02D",},
   ],
   "parent":{
     "name":"Shop",
