@@ -47,34 +47,29 @@ mover = mover_point
 
 //// Create trajectory
 chunk_len = 300
-chunk_num = 15
-trajectory = [new Vec2(0, 0)]
+chunk_num = 45
+trajectory = [new Vec2(x, y)]
 traj_angle = random(360)
 prev_traj_angle = traj_angle
 traj_angle_delta = 5
 traj_angle_delta_change = 5
-var qdist = oGameArea.radius * oGameArea.radius
+var qmaxdist = oGameArea.radius * oGameArea.radius
 var pprev = trajectory[0]
+var push_back_angle = 45
 failed = false
 while chunk_num {
-    var p = new Vec2(-100000, 0)
-    var tries = 0
-    while (p.x*p.x + p.y*p.y) > qdist {
-        traj_angle = prev_traj_angle + traj_angle_delta * choose(-1, 1)
-        p.setv(pprev).add_polar(chunk_len, traj_angle)
-        tries++
-        if (tries mod 4) == 0 {
-            angle_delta += 5
-        }
-        if tries > 1000 {
-            failed = false
-            break
-        }
-    }
+    var p = new Vec2(pprev.x, pprev.y)
+    var push_back_factor = (p.x*p.x + p.y*p.y) / qmaxdist
     traj_angle_delta += random_range(-1, 1) * traj_angle_delta_change
+    if push_back_factor > 0 {
+        var angle_from_center = point_direction(0, 0, p.x, p.y)
+        var diff = angle_difference(traj_angle, angle_from_center)
+        traj_angle += sign(diff) * push_back_factor * push_back_angle
+    }
+    traj_angle += traj_angle_delta
+    p.add_polar(chunk_len, traj_angle)
     pprev = p
     array_push(trajectory, p)
     chunk_num--
-    if failed break
 }
 
