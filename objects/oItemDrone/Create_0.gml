@@ -55,11 +55,13 @@ traj_angle_delta = 5
 traj_angle_delta_change = 5
 var qmaxdist = oGameArea.radius * oGameArea.radius
 var pprev = trajectory[0]
+var p
 var push_back_angle = 45
+var push_back_factor = 0
 failed = false
 while chunk_num {
-    var p = new Vec2(pprev.x, pprev.y)
-    var push_back_factor = (p.x*p.x + p.y*p.y) / qmaxdist
+    p = new Vec2(pprev.x, pprev.y)
+    push_back_factor = (p.x*p.x + p.y*p.y) / qmaxdist
     traj_angle_delta += random_range(-1, 1) * traj_angle_delta_change
     if push_back_factor > 0 {
         var angle_from_center = point_direction(0, 0, p.x, p.y)
@@ -71,5 +73,19 @@ while chunk_num {
     pprev = p
     array_push(trajectory, p)
     chunk_num--
+}
+// build the way out
+while (p.x*p.x + p.y*p.y) < qmaxdist {
+    p = new Vec2(pprev.x, pprev.y)
+    var angle_out = point_direction(0, 0, pprev.x, pprev.y)
+    var diff = angle_difference(angle_out, traj_angle)
+    if abs(diff) < traj_angle_delta {
+        traj_angle = angle_out
+    } else {
+        traj_angle += traj_angle_delta * sign(diff)
+    }
+    p.add_polar(chunk_len, traj_angle)
+    pprev = p
+    array_push(trajectory, p)
 }
 
