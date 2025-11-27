@@ -53,6 +53,29 @@ mover_point = {
     }
 }
 
+mover_dir = {
+    id: id,
+    dir: 0,
+    accel_value: 0.5,
+    dist_left: 0,
+    finished: false,
+    step: function() {
+        self.dist_left -= id.sp.len()
+        if self.dist_left <= 0 {
+            self.finished = true
+            return;
+        }
+        with id {
+            accelerate(other.accel_value, other.dir)
+        }
+    },
+    start: function(dir, dist_left) {
+        self.dir = dir
+        self.dist_left = dist_left
+        self.finished = false
+    }
+}
+
 mover = mover_point
 
 

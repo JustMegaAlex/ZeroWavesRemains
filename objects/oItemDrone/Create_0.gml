@@ -1,11 +1,17 @@
 event_inherited()
 
-hp = 10
+hp = 120
 
 move_around_player_dist = 400
-sp_max = 40
+sp_max = 14
+sp = new Vec2(0, 0)
 acc_max = 0.37
 updateDampening()
+
+var angle = random(360)
+var dist = oGameArea.radius * 1.1
+x = lengthdir_x(dist, angle)
+y = lengthdir_y(dist, angle)
 
 
 //// Movers
@@ -59,6 +65,7 @@ var p
 var push_back_angle = 45
 var push_back_factor = 0
 failed = false
+count = 0
 while chunk_num {
     p = new Vec2(pprev.x, pprev.y)
     push_back_factor = (p.x*p.x + p.y*p.y) / qmaxdist
@@ -73,19 +80,37 @@ while chunk_num {
     pprev = p
     array_push(trajectory, p)
     chunk_num--
+    count++
 }
 // build the way out
-while (p.x*p.x + p.y*p.y) < qmaxdist {
-    p = new Vec2(pprev.x, pprev.y)
-    var angle_out = point_direction(0, 0, pprev.x, pprev.y)
-    var diff = angle_difference(angle_out, traj_angle)
-    if abs(diff) < traj_angle_delta {
-        traj_angle = angle_out
-    } else {
-        traj_angle += traj_angle_delta * sign(diff)
-    }
-    p.add_polar(chunk_len, traj_angle)
-    pprev = p
-    array_push(trajectory, p)
-}
+p = new Vec2(pprev.x, pprev.y)
+var angle_out = point_direction(0, 0, pprev.x, pprev.y)
+p.set_polar(oGameArea.radius * 1.5, angle_out)
+array_push(trajectory, p)
 
+
+mover = mover_dir
+mover.accel_value = 1
+acc_max = 1
+traj_index = 0
+sp_max = 15
+next_point = undefined
+dir = 0
+dist_to_next_point = 0
+updateDampening()
+updateTraj = function() {
+    traj_index++
+    if traj_index >= array_length(trajectory) {
+        return;
+    }
+    var p = trajectory[traj_index]
+    mover.start(PointDir(p.x, p.y), PointDist(p.x, p.y))
+    // traj_index++
+    // if traj_index >= array_length(trajectory) {
+    //     return;
+    // }
+    // next_point = trajectory[traj_index]
+    // dir = PointDir(next_point.x, next_point.y)
+    dist_to_next_point = PointDist(p.x, p.y)
+    // sp.set_polar(sp_max, dir)
+}
