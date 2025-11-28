@@ -85,6 +85,7 @@
     {"id":{"name":"oStarsBg","path":"objects/oStarsBg/oStarsBg.yy",},},
     {"id":{"name":"oStart","path":"objects/oStart/oStart.yy",},},
     {"id":{"name":"oSys","path":"objects/oSys/oSys.yy",},},
+    {"id":{"name":"oTutorial","path":"objects/oTutorial/oTutorial.yy",},},
     {"id":{"name":"oUI","path":"objects/oUI/oUI.yy",},},
     {"id":{"name":"oUIHealthBar","path":"objects/oUIHealthBar/oUIHealthBar.yy",},},
     {"id":{"name":"oUIHitIndicator","path":"objects/oUIHitIndicator/oUIHitIndicator.yy",},},

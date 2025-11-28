@@ -12,6 +12,6 @@ display_set_gui_size(
 )
 
 layers_to_make_visible = [
-    "Instances", "BackObjects", "Parallax", "Assets"
+    "Instances", "BackObjects", "Parallax", //"Assets"
 ]
 
