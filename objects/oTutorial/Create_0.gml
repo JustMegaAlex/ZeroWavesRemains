@@ -37,13 +37,26 @@ steps = [
         }
     },
     {
+        in: 0, out: 0,
+        default_gui,
+        text: "Mouse scroll to zoom in/out",
+        step: function() {
+            in = in or oInput.Pressed("zoom_in")
+            out = out or oInput.Pressed("zoom_out")
+        },
+        done: function() {
+            return (in + out) == 2
+        }
+    },
+    {
         arr: [],
         default_gui,
         text: "Destroy all 3 dummies",
         start: function() {
-            array_push(arr, instance_create_layer(100, 600, "Instances", oEnemy, {active: false}))
-            array_push(arr, instance_create_layer(300, -600, "Instances", oEnemy, {active: false}))
-            array_push(arr, instance_create_layer(1200, 400, "Instances", oEnemy, {active: false}))
+            var args = {active: false, coins_min: 0, coins_max: 0}
+            array_push(arr, instance_create_layer(100, 600, "Instances", oEnemy, args))
+            array_push(arr, instance_create_layer(300, -600, "Instances", oEnemy, args))
+            array_push(arr, instance_create_layer(1200, 400, "Instances", oEnemy, args))
             for (var i = 0; i < array_length(arr); ++i) {
                 var item = arr[i]
                 oUI.addHintArrow(item, "enemy", c_red)
@@ -78,7 +91,7 @@ var keys = [
 for (var i = 0; i < array_length(steps); ++i) {
     var _step = steps[i]
     for (var j = 0; j < array_length(keys); ++j) {
-        var key = keys[i]
+        var key = keys[j]
         if !struct_has(_step, key) {
             _step[$ key] = function() {}
         }

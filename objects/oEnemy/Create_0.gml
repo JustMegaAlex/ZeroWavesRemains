@@ -118,3 +118,8 @@ die = function() {
     audio_play_sound(sfxExplosion1, 3, false)
     oCamera.shake()
 }
+
+setCoins = function(cmin, cmax) {
+    coins_min = cmin
+    coins_max = cmax
+}
