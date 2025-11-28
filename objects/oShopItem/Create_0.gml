@@ -6,6 +6,8 @@ event_inherited()
 
 prompt_text = "Press F to buy "
 
+visible = is_unlocked
+
 openx = x
 openy = y
 // opensp = 0.03
@@ -35,3 +37,8 @@ interact = function() {
 }
 
 open = function() {}
+
+unlock = function() {
+    visible = true
+    is_unlocked = true
+}
