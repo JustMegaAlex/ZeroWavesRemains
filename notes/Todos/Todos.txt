@@ -26,8 +26,8 @@ Continue:
 > show high score
 > add cross cursor
 > rework items
-    > animate item shops
-        > open shop in between waves
+    > weapon items: replace with ammo items after purchase
+    > open shop in between waves
     > impl item drones
     > impl item drops
         > interaction with player

@@ -51,6 +51,10 @@ mover_point = {
 
 mover = mover_point
 
+objectDie = function() {
+    instance_create_layer(x, y, layer, oItemDrop)
+}
+
 //// Create trajectory
 chunk_len = 300
 chunk_num = 45

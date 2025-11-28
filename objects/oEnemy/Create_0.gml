@@ -106,6 +106,7 @@ die = function() {
     if instance_number(oEnemy) == 1 and oWaveSpawner.waves_remains == 0 {
         global.win = true
     }
+    objectDie()
     instance_destroy()
     // spawn coins
     repeat irandom_range(coins_min, coins_max) {
