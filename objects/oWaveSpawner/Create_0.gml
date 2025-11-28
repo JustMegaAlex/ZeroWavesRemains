@@ -53,7 +53,7 @@ if instance_exists(oEnemy) {
     dummy = instance_find(oEnemy, 0)
 }
 
-spawn = function() {
+spawn = function(wave_override=undefined) {
    array_foreach(next_wave_instances, 
        function(inst) {
             inst.active = true
@@ -64,9 +64,14 @@ spawn = function() {
     ArrayClear(next_wave_instances)
     if !active { return }
     var dist = oGameArea.radius + spawn_extra_radius * (wave_index > 0)
-    
-    waves_remains--
-    var wave = waves[wave_index]
+
+    var wave
+    if wave_override == undefined {
+        wave = waves[wave_index]
+        waves_remains--
+    } else {
+        wave = wave_override
+    }
     var names = struct_get_names(wave)
     for (var i = 0; i < array_length(names); i++) {
         var obj_name = names[i]
@@ -87,11 +92,13 @@ spawn = function() {
             array_push(next_wave_instances, inst)
         }
     }
-    if wave_index > 0 {
-        spawn_timer.reset()
-    }
-    wave_index++
-    if wave_index >= array_length(waves) {
-        active = false
+    if wave_override == undefined {
+        if wave_index > 0 {
+            spawn_timer.reset()
+        }
+        wave_index++
+        if wave_index >= array_length(waves) {
+            active = false
+        }
     }
 }
