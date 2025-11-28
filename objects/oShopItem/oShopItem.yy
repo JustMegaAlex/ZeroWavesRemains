@@ -10,7 +10,7 @@
   "managed":true,
   "name":"oShopItem",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oInteractible","path":"objects/oInteractible/oInteractible.yy",},"propertyId":{"name":"text","path":"objects/oInteractible/oInteractible.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Shopping!",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oInteractible","path":"objects/oInteractible/oInteractible.yy",},"propertyId":{"name":"prompt_text","path":"objects/oInteractible/oInteractible.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Shopping!",},
   ],
   "parent":{
     "name":"Shop",

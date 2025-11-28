@@ -20,6 +20,7 @@
     {"name":"inst_193AB573","path":"rooms/rmGame/rmGame.yy",},
     {"name":"inst_30C36076","path":"rooms/rmGame/rmGame.yy",},
     {"name":"inst_1DBCC92C","path":"rooms/rmGame/rmGame.yy",},
+    {"name":"inst_5CF497EF","path":"rooms/rmGame/rmGame.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -47,6 +48,9 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oShopItemWeapon","path":"objects/oShopItemWeapon/oShopItemWeapon.yy",},"propertyId":{"name":"weapon","path":"objects/oShopItemWeapon/oShopItemWeapon.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"oPlayer.weapon_scatter",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-160.0,"y":-192.0,},
         {"$GMRInstance":"v4","%Name":"inst_1DBCC92C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1DBCC92C","objectId":{"name":"oShopItemHeal","path":"objects/oShopItemHeal/oShopItemHeal.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":160.0,"y":-192.0,},
+        {"$GMRInstance":"v4","%Name":"inst_5CF497EF","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5CF497EF","objectId":{"name":"oItemDropChoice","path":"objects/oItemDropChoice/oItemDropChoice.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oItemDropChoice","path":"objects/oItemDropChoice/oItemDropChoice.yy",},"propertyId":{"name":"item","path":"objects/oItemDropChoice/oItemDropChoice.yy",},"resource":{"name":"oShopItemWeapon","path":"objects/oShopItemWeapon/oShopItemWeapon.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"oShopItemWeapon",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":640.0,"y":-192.0,},
       ],"layers":[],"name":"BackObjects","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Assets","assets":[
         {"$GMRTextItem":"v3","%Name":"text_6AC12DA4","alignment":0,"charSpacing":0.0,"colour":4294967295,"fontId":{"name":"Font1","path":"fonts/Font1/Font1.yy",},"frameH":0.0,"frameW":0.0,"frozen":false,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"lineSpacing":0.0,"name":"text_6AC12DA4","paragraphSpacing":0.0,"resourceType":"GMRTextItem","resourceVersion":"2.0","rotation":0.0,"scaleX":1.622807,"scaleY":1.622807,"text":"Welcome to the playtest!\r\n\r\nControls:\r\n\r\n     WASD - move\r\n\r\n     Right mouse - boost\r\n\r\n     Left mouse - shoot\r\n\r\n     Scroll mouse - change zoom\r\n\r\n     Q/E - switch weapon\r\n\r\n     1...3 - also switch weapon\r\n\r\n     P - pause/unpause\r\n\r\n\r\n","wrap":false,"x":416.0,"y":-992.0,},
