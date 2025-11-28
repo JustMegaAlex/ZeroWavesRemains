@@ -6,5 +6,6 @@ if step.done() {
         step = step_template
     } else {
         step = steps[step_index]
+        step.start()
     }
 }
