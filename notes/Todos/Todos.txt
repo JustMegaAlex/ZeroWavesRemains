@@ -15,11 +15,6 @@ Continue:
 - I added new sprites for shop and items
 - Started implementing shop open/close animation. It's broken << continue
 
-> art
-    > ui shield
-    > ui cross cursor
-    > enemy: clunky
-
 
 
 0.4.0 - Update gameplay loop: more items, +1 heavy enemy, rework enemy ai, upgrades
@@ -31,6 +26,20 @@ Continue:
     > impl item drones
     > impl item drops
         > interaction with player
+> rework wave spawn
+    > lower diff increase
+    > add drones
+> coloring
+    > item choice
+    > shop items
+    > coins
+    > 
+
+> art
+    > ui shield
+    > ui cross cursor
+    > enemy: clunky
+ 
 > audio
     > add victory music
 > upd weapons: add upgrading

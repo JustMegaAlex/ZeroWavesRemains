@@ -227,11 +227,11 @@ function Line(_xst, _yst, _xend, _yend) constructor {
         // Calculate the direction vector of the line
         var dx = xend - xst;
         var dy = yend - yst;
-        
+
         // Calculate the vector from point (x0, y0) to point (px, py)
         var vpx = px - xst;
         var vpy = py - yst;
-        
+
         // Project the point onto the line, finding the scalar t
         var t = ((vpx * dx) + (vpy * dy)) / (dx * dx + dy * dy);
         

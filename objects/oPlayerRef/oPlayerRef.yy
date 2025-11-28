@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sShipFighter",
-    "path":"sprites/sShipFighter/sShipFighter.yy",
+    "name":"sUIArrow",
+    "path":"sprites/sUIArrow/sUIArrow.yy",
   },
   "spriteMaskId":null,
   "visible":true,

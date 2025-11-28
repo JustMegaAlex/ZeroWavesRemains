@@ -4,6 +4,8 @@
 #macro Dev:DEV true
 
 #macro macro_pause if global.pause {exit}
+#macro no_player_exit if !instance_exists(oPlayer) {exit}
+#macro no_player_return if !instance_exists(oPlayer) {return;}
 #macro null undefined
 #macro key_pressed keyboard_check_pressed
 #macro key_released keyboard_check_released

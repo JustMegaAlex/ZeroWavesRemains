@@ -1,10 +1,10 @@
 {
   "$GMSprite":"v2",
-  "%Name":"sShipFighter",
+  "%Name":"sUIArrow",
   "bboxMode":0,
-  "bbox_bottom":31,
+  "bbox_bottom":95,
   "bbox_left":0,
-  "bbox_right":31,
+  "bbox_right":95,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -16,12 +16,12 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":32,
+  "height":96,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"b8ecbd30-2532-4980-93dd-abf6c65ca158","blendMode":0,"displayName":"default","isLocked":false,"name":"b8ecbd30-2532-4980-93dd-abf6c65ca158","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"sShipFighter",
+  "name":"sUIArrow",
   "nineSlice":null,
   "origin":4,
   "parent":{
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"sShipFighter",
+    "%Name":"sUIArrow",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"sShipFighter",
+    "name":"sUIArrow",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -71,14 +71,14 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"825626c4-1525-4225-85cd-33e31e1313a8","path":"sprites/sShipFighter/sShipFighter.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"825626c4-1525-4225-85cd-33e31e1313a8","path":"sprites/sUIArrow/sUIArrow.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"e8d6bac5-3357-4fa0-8676-d89bf886995c","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":16,
-    "yorigin":16,
+    "xorigin":48,
+    "yorigin":48,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
@@ -88,5 +88,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":32,
+  "width":96,
 }
