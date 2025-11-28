@@ -13,12 +13,7 @@ draw_text(50, 200, $"Money: {money}")
 var w = display_get_gui_width()
 var h = display_get_gui_height()
 if shop_item {
-    SetTextAllign(1, 0)
-    draw_text(w*0.5, h*0.75, shop_item.text)
-    var col = shop_item.can_buy() ? c_yellow : c_red
-    draw_set_color(col)
-    draw_text(w*0.5, h*0.75 + 30, shop_item.cost)
-    draw_set_color(c_white)
+    shop_item.promptText()
 }
 
 if global.wave_enemies_count <= 0 {

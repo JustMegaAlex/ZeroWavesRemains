@@ -7,9 +7,7 @@
   ],
   "managed":true,
   "name":"oShopItemAmmo",
-  "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oShopItem","path":"objects/oShopItem/oShopItem.yy",},"propertyId":{"name":"text","path":"objects/oShopItem/oShopItem.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Shopping!",},
-  ],
+  "overriddenProperties":[],
   "parent":{
     "name":"Shop",
     "path":"folders/Objects/Shop.yy",

@@ -77,11 +77,11 @@ for (var i = 0; i < array_length(weapons_array); ++i) {
 
 }
 
-if oShop.is_open {
-    if shop_item {
-        shop_item.highlight = false
-    }
-    shop_item = MouseCollision(oShopItem)
+if shop_item {
+    shop_item.highlight = false
+}
+shop_item = MouseCollision(oInteractible)
+if shop_item and ((shop_item.object_index != oShopItem) or oShop.is_open) {
     if shop_item and InstDist(shop_item) > shot_interact_range {
         shop_item = noone
     }

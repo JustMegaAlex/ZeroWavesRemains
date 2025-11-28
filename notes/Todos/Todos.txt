@@ -31,7 +31,6 @@ Continue:
     > impl item drones
     > impl item drops
         > interaction with player
-        > choose ui
 > audio
     > add victory music
 > upd weapons: add upgrading

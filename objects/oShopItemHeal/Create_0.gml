@@ -1,6 +1,6 @@
 event_inherited()
 
-text = prompt_text + text
+prompt_text = prompt_text + $"heal {global.heal_amount}"
 
 can_buy = function() {
     return oPlayer.money >= cost and oPlayer.hp < oPlayer.hp_max

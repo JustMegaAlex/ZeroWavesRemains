@@ -1,6 +1,6 @@
 {
   "$GMObject":"",
-  "%Name":"oShopItem",
+  "%Name":"oInteractible",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
@@ -8,18 +8,13 @@
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oShopItem",
-  "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oInteractible","path":"objects/oInteractible/oInteractible.yy",},"propertyId":{"name":"text","path":"objects/oInteractible/oInteractible.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Shopping!",},
-  ],
+  "name":"oInteractible",
+  "overriddenProperties":[],
   "parent":{
-    "name":"Shop",
-    "path":"folders/Objects/Shop.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
-  "parentObjectId":{
-    "name":"oInteractible",
-    "path":"objects/oInteractible/oInteractible.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -34,8 +29,10 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v2","%Name":"cost","filters":[],"listItems":[],"multiselect":false,"name":"cost","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":4,},
-    {"$GMObjectProperty":"v2","%Name":"is_unlocked","filters":[],"listItems":[],"multiselect":false,"name":"is_unlocked","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v2","%Name":"text","filters":[],"listItems":[],"multiselect":false,"name":"text","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"Interact!","varType":2,},
+    {"$GMObjectProperty":"v2","%Name":"oneshot","filters":[],"listItems":[],"multiselect":false,"name":"oneshot","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v2","%Name":"icon_scale","filters":[],"listItems":[],"multiselect":false,"name":"icon_scale","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"image_blend","filters":[],"listItems":[],"multiselect":false,"name":"image_blend","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"c_white","varType":4,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
