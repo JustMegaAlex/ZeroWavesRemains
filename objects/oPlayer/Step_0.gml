@@ -1,6 +1,8 @@
 
 macro_pause
 
+deny_killing_shot = global.tutorial
+
 dir_to = MouseDir()
 dirApproach(dir_to)
 

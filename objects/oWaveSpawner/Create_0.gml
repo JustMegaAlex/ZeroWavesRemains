@@ -69,6 +69,7 @@ spawn = function(wave_override=undefined) {
     if wave_override == undefined {
         wave = waves[wave_index]
         waves_remains--
+        global.waves_remains = waves_remains
     } else {
         wave = wave_override
     }

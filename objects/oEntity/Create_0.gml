@@ -1,5 +1,6 @@
 
 invincible = false
+deny_killing_shot = false
 
 ///// Ships functionality
 hp_max = 100
@@ -66,6 +67,9 @@ objectDie = function() {}
 
 hit = function(bullet) {
     if invincible {
+        return;
+    }
+    if deny_killing_shot and hp <= bullet.dmg {
         return;
     }
     hp -= bullet.dmg

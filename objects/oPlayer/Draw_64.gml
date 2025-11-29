@@ -7,8 +7,13 @@
 // draw_set_color(c_green)
 // draw_text(50, 110, $"{weapon.name}")
 // draw_set_color(c_white)
-draw_text(50, 160, $"Waves remains: {oWaveSpawner.waves_remains}")
-draw_text(50, 200, $"Money: {money}")
+SetTextAllign(0, 1)
+if display_waves {
+    draw_text(10, 160, $"Waves remains: {global.waves_remains}")
+}
+if display_money {
+    draw_text(10, 200, $"Money: {money}")
+}
 
 var w = display_get_gui_width()
 var h = display_get_gui_height()

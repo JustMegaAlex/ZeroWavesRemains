@@ -3,6 +3,8 @@
 
 oWaveSpawner.active = false
 
+global.tutorial = true
+
 step_template = {
         gui: function(w, h) {
         },
@@ -14,6 +16,7 @@ step_template = {
 }
 steps = [
     {
+        // define index with search
         l: 0, r: 0, u: 0, d: 0,
         text: "WASD to move",
         default_gui,
@@ -28,6 +31,7 @@ steps = [
         }
     },
     {
+        // define index with search
         pressed: false,
         default_gui,
         text: "Left mouse to shoot",
@@ -39,6 +43,7 @@ steps = [
         }
     },
     {
+        // define index with search
         in: 0, out: 0,
         default_gui,
         text: "Mouse scroll to zoom in/out",
@@ -51,6 +56,7 @@ steps = [
         }
     },
     {
+        // define index with search
         arr: [],
         default_gui,
         text: "Destroy all 3 dummies",
@@ -74,9 +80,14 @@ steps = [
         }
     },
     {
+        // define index with search
         text: "Press Space to spawn a wave!",
         spawned: 3,
         default_gui,
+        start: function() {
+            global.waves_remains = 3
+            oPlayer.display_waves = true
+        },
         done: function() {
             if instance_exists(oEnemy) {
                 text = "Destroy the wave!"
@@ -94,6 +105,7 @@ steps = [
         }
     },
     {
+        // define index with search
         text: "Check out the shop.\nYou can heal there if your ship is damaged",
         default_gui,
         start: function() {
@@ -107,6 +119,7 @@ steps = [
     },
 /*
     {
+        // define index with search
         gui: function(w, h) {
         },
         default_gui,
@@ -137,5 +150,4 @@ for (var i = 0; i < array_length(steps); ++i) {
 
 step_index = 4
 step = steps[step_index]
-
-
+alarm[0] = 1

@@ -12,10 +12,13 @@
 #macro key_hold keyboard_check
 
 pause = false
-wave_enemies_count = 1
-increase_spawning_speed_between_waves = false
 gameover = false
 win = false
+tutorial = false
+wave_enemies_count = 1
+waves_remains = 0
+increase_spawning_speed_between_waves = false
+
 
 
 debug_tiny = noone

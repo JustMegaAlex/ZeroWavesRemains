@@ -1,6 +1,8 @@
 event_inherited()
 
 debug_shoot = false
+display_waves = true
+display_money = true
 
 kb_prev_char = ""
 
@@ -14,7 +16,7 @@ heal_effect_timer = MakeTimer(30, 0)
 
 shot_interact_range = 500
 
-// hp = 10
+hp = 10
 
 weapon_pulse = {
     dmg: 20,
