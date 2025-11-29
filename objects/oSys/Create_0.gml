@@ -15,3 +15,4 @@ layers_to_make_visible = [
     "Instances", "BackObjects", "Parallax", //"Assets"
 ]
 
+// show_debug_overlay(true)

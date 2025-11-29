@@ -6,15 +6,6 @@ oWaveSpawner.active = false
 drone_sp_first = 6
 drone_sp_second = 10
 
-finishTutorial = function() {
-    global.tutorial_finished = true
-    oWaveSpawner.active = true
-    global.tutorial = false
-    with oPlayer {
-        display_waves = false
-        display_money = false
-    }
-}
 
 step_template = {
         gui: function(w, h) {
@@ -23,14 +14,19 @@ step_template = {
         },
         done: function() {
             return false
-        }
+        },
+        end_: function() {}
 }
-step_press_space_to_proceed = {
-    text: "Press Space to proceed",
-    done: function() {
-        return oInput.Pressed("next_wave")
+spaceToProceed = function(text="Press Space to proceed") {
+    return {
+        text: text,
+        default_gui,
+        done: function() {
+            return oInput.Pressed("next_wave")
+        }
     }
 }
+
 steps = [
     {
         // define index with search
@@ -97,7 +93,11 @@ steps = [
         }
     },
     // define index with search
-    step_press_space_to_proceed,
+    spaceToProceed("The Pulse weapon restores ammo over time - see your ammo bar?\n(press Space)"),
+    // define index with search
+    spaceToProceed("This doesn't apply to other weapons you'll get.\n(press Space)"),
+    // define index with search
+    spaceToProceed("You'll have to find/buy ammo for them\nPress space to proceed"),
     {
         // define index with search
         text: "Press Space to spawn a wave!",
@@ -127,7 +127,7 @@ steps = [
         }
     },
     // define index with search
-    step_press_space_to_proceed,
+    spaceToProceed(),
     {
         // define index with search
         text: "Valuable drop in bound!\nKill the drone!",
@@ -169,7 +169,7 @@ steps = [
         }
     },
     // define index with search
-    step_press_space_to_proceed,
+    spaceToProceed(),
     {
         // define index with search
         text: "Another drop!\nLet's try something more spicy this time",
@@ -301,11 +301,38 @@ startTutorial = function() {
     }
     step.start()
 }
+finishTutorial = function() {
+    global.tutorial_finished = true
+    instance_destroy(oWaveSpawner)
+    instance_create_layer(0, 0, "Instances", oWaveSpawner)
+    global.tutorial = false
+    global.wave_enemies_count = 0
+    step = step_template
+    with oPlayer {
+        display_waves = true
+        display_money = true
+    }
+    instance_destroy(oEnemy)
+    instance_destroy(oCoin)
+    instance_destroy(oItemDrop)
+    instance_destroy(oItemDropChoice)
+    oMusic.switch_music(mscStealthTheme)
+}
 
 if global.tutorial_finished {
     exit
 }
-step_index = 7
+step_index = 3
 step = steps[step_index]
 alarm[0] = 1
 global.tutorial = true
+
+skip_tutorial = {
+    ratio: 0.01,
+    x: 0.5,
+    y: 0.1,
+    text: "Long press T to skip tutorial",
+    value: 0,
+    bar_len: 500,
+    bar_col: c_white,
+}

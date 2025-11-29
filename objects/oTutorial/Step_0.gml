@@ -1,4 +1,6 @@
 
+if !global.tutorial exit
+
 step.step()
 if step.done() {
     step_index++
@@ -11,3 +13,12 @@ if step.done() {
         step.start()
     }
 }
+
+with skip_tutorial {
+    value = Approach(value, oInput.Hold("skip_tutorial"), ratio)
+    if value >= 1 {
+        other.finishTutorial()
+    }
+
+}
+

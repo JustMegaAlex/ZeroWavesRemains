@@ -1,14 +1,5 @@
 macro_pause
 
-if instance_exists(dummy) {
-    exit
-} else if dummy {
-    dummy = noone
-    oMusic.switch_music(mscStealthTheme)
-    spawn()
-    exit
-}
-
 array_foreach(next_wave_instances, 
     function(inst) {
         if inst == undefined { return }

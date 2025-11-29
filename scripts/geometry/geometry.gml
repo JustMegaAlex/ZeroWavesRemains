@@ -279,6 +279,18 @@ function Line(_xst, _yst, _xend, _yend) constructor {
     draw_ = function(col=c_white, width=1) {
         draw_line_width_color(xst, yst, xend, yend, width, col, col)
     }
+
+    clamp_len = function(_min, _max) {
+        var len = self.len()
+        if len < _min {
+            self.mult(_min/len)
+            return self
+        }
+        if len > _max {
+            self.mult(len/_max)
+        }
+        return self
+    }
 }
 
 function LineIntersection(l1, l2, segment) {

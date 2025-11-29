@@ -272,6 +272,7 @@ mapping_config = {
     camera_focus: [new Key(ord("C"))],
     pause: [new Key(ord("P"))],
     zoom_in: [new MouseWheelUp()],
+    skip_tutorial: [new Key(ord("T"))],
     zoom_out: [new MouseWheelDown()],
     skill1: [new Key(ord("1"))],
     interact: [new Key(ord("F"))],
