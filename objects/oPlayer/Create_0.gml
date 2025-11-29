@@ -41,7 +41,7 @@ weapon_pulse = {
 weapon_scatter = {
     dmg: 4,
     timer: MakeTimer(2),
-    range: 1500,
+    range: 1200,
     object: oBulletScatter,
     image_xscale: 1,
     image_yscale: 1,
@@ -52,11 +52,15 @@ weapon_scatter = {
     sound: sfxBurstShotLoop,
     sound_end: sfxBurstShotEnd,
     sprite: sUIWeaponScatter,
-    // sound_timer: MakeTimer(6, 0)
+    upgrades: 0,
+    upgrade_confs: [
+        {range: 1400, dmg: 4.5, cost: 30},
+        {range: 1600, dmg: 5, cost: 50},
+    ]
 }
 
 weapon_snipe = {
-    dmg: 120,
+    dmg: 70,
     timer: MakeTimer(60),
     object: oSnipeShot,
     range: 6000,
@@ -64,6 +68,11 @@ weapon_snipe = {
     ammo: 12,
     sound: sfxSnipeShot,
     sprite: sUIWeaponSnipe,
+    upgrades: 0,
+    upgrade_confs: [
+        {dmg: 90, cost: 40},
+        {dmg: 120, cost: 70},
+    ]
 }
 
 weapon = weapon_pulse

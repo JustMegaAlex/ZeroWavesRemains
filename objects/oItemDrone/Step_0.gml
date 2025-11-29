@@ -12,8 +12,7 @@ if key_pressed(ord("T")) {
 
 mover.step()
 move()
-
-dir = dirApproach(sp.dir())
+dirApproach(sp.dir())
 
 if mover.finished {
     updateTraj()

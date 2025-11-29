@@ -42,3 +42,17 @@ unlock = function() {
     visible = true
     is_unlocked = true
 }
+
+
+
+promptTextWeapon = function() {
+     var w = display_get_gui_width()
+     var h = display_get_gui_height()
+    SetTextAllign(1, 1)
+    draw_text(w*0.5, h*0.75, text)
+    draw_set_color(c_white)
+    var col = can_buy() ? c_yellow : c_red
+    draw_set_color(col)
+    draw_text(w*0.5, h*0.75 - 40, cost)
+}
+

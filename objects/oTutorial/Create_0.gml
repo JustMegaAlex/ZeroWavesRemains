@@ -1,5 +1,5 @@
 
-#macro default_gui gui: function(w, h) {draw_text(w*0.5, h*0.7, self.text)}
+#macro default_gui gui: function(w, h) { SetTextAllign(1, 1); draw_text(w*0.5, h*0.3, self.text)}
 
 oWaveSpawner.active = false
 

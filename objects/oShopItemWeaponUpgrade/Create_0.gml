@@ -1,6 +1,20 @@
 event_inherited()
 
-text = $"(Press F) Upgrade {weapon.name} to level 2"
+updateText = function() {
+    text = $"(Press F) Upgrade {weapon.name} to level 2"
+    var next_upgrade_conf = weapon.upgrade_confs[weapon.upgrades]
+    var keys = variable_struct_get_names(next_upgrade_conf)
+    for (var i = 0; i < array_length(keys); ++i) {
+        var key = keys[i]
+        if key == "cost" {
+            continue
+        }
+        var next_value = next_upgrade_conf[$ key]
+        var value = weapon[$ key]
+        text += $"\n{key} {value} -> {next_value}"
+    }
+}
+
 
 if array_length(weapon.upgrade_confs) == 0 {
     show_debug_message($"No upgrades for weapon {weapon.name}")
@@ -9,6 +23,7 @@ if array_length(weapon.upgrade_confs) == 0 {
 }
 
 cost = weapon.upgrade_confs[0].cost
+updateText()
 
 apply = function() {
     var conf = weapon.upgrade_confs[weapon.upgrades]
@@ -24,17 +39,8 @@ apply = function() {
         instance_destroy()
         return;
     }
-    cost = weapon.upgrade_confs[weapon.upgrades]
-    text = $"(Press F) Upgrade {weapon.name} to level {weapon.upgrades+2}"
+    cost = weapon.upgrade_confs[weapon.upgrades].cost
+    updateText()
 }
 
-promptText = function() {
-     var w = display_get_gui_width()
-     var h = display_get_gui_height()
-    SetTextAllign(1, 0)
-    draw_text(w*0.5, h*0.75, text)
-    draw_set_color(c_white)
-    var col = can_buy() ? c_yellow : c_red
-    draw_set_color(col)
-    draw_text(w*0.5, h*0.75 + 30, cost)
-}
+promptText = promptTextWeapon
