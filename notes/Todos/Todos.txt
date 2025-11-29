@@ -18,9 +18,17 @@ Continue:
 
 
 0.4.0 - Update gameplay loop: more items, +1 heavy enemy, rework enemy ai, upgrades
+
+> new enemies
+    > scout
+        - simple enemy, flying around, shooting slow lasting bullets
+    > behemoth
+        - long-range rechargable scatter burst
+        - short range non-stop all directions machine gun, very dangerous
+        > draw a sprite
 > tutorial
     > don't restore ammo on every Space hit
-    > skip tutorial
+    > add step about coins
 > rework items
     > item drops: add particle animation
     > weapon items: replace with ammo items after purchase
@@ -29,6 +37,9 @@ Continue:
     > item types
         > pickups: oneshot ammo/health pickups
         > shop upgrades: add new shop item
+> shop
+    > change items positioning
+    > show hint to open + highlight
 
 > rework wave spawn
     > lower diff increase
@@ -50,7 +61,6 @@ Continue:
   
 > audio
     > add victory music
-> upd weapons: add upgrading
 > rework enemy ai
     > upd bonk (oEnemy)
         - aim is increased over time if player stays still
@@ -60,11 +70,6 @@ Continue:
         - one: fly in circles around player
         - two: fly-by from long distance
         - swarm behavior
-> new enemies
-    > behemoth
-        - long-range rechargable scatter burst
-        - short range non-stop all directions machine gun, very dangerous
-        > draw a sprite
 > show previous run waves count
 > add casual difficulty mode
 > vfx

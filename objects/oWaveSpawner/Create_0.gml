@@ -14,6 +14,7 @@ waves = [
     // {oEnemy: 1, oEnemyTiny: 0},
     // {oEnemy: 1, oEnemyTiny: 0},
     // {oEnemy: 1, oEnemyTiny: 0},
+    {oScout: 1},
 
     {oEnemy: 1, oEnemyTiny: 0},
     {oEnemy: 2, oEnemyTiny: 0},

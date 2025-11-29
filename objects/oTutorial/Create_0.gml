@@ -322,7 +322,7 @@ finishTutorial = function() {
 if global.tutorial_finished {
     exit
 }
-step_index = 3
+step_index = 0
 step = steps[step_index]
 alarm[0] = 1
 global.tutorial = true

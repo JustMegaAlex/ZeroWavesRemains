@@ -11,7 +11,7 @@ music_transition_time_ms = 1000
 next_music_transition_time_ms = music_transition_time_ms
 next_music_loops = undefined
 global.music_gain_array = []
-music_enabled = true
+music_enabled = false
 
 audio_master_gain(0.3)
 
