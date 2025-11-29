@@ -135,9 +135,53 @@ steps = [
                 setItem(global.item_heal)
             }
         },
+        done: function() {
+            return !instance_exists(oItemDropChoice)
+        }
+    },
+    {
+        // define index with search
+        text: "Another drop!\nLet's try something more spicy this time",
+        drone: noone,
+        finished: false,
+        default_gui,
+        start: function() {
+            drone = instance_create_layer(0, 0, "Instances", oItemDrone)
+        },
         step: function() {
+            if !instance_exists(drone) {
+                if !instance_exists(oItemDrop) {
+                    drone = instance_create_layer(0, 0, "Instances", oItemDrone)
+                } else {
+                    finished = true
+                }
+            }
         },
         done: function() {
+            return finished
+        }
+    },
+    {
+        // define index with search
+        text: "Nice! Collect the drop",
+        default_gui,
+        start: function() {
+            var item = noone
+            with oShopItemWeaponUpgrade {
+                if weapon.name == "Pulse" {
+                    item = id
+                    break
+                }
+            }
+            if item == noone {
+                throw "Ooops, tutorial didn't find that pulse upgrade item"
+            }
+            with oItemDropChoice {
+                setItem(item)
+            }
+        },
+        done: function() {
+            return !instance_exists(oItemDropChoice)
         }
     },
     {
@@ -184,6 +228,6 @@ for (var i = 0; i < array_length(steps); ++i) {
     }
 }
 
-step_index = 5
+step_index = 7
 step = steps[step_index]
 alarm[0] = 1

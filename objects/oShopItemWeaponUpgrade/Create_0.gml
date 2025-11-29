@@ -7,7 +7,7 @@ apply = function() {
     var keys = variable_struct_get_names(conf)
     for (var i = 0; i < array_length(keys); ++i) {
         var parameter = keys[i]
-        var value = conf[$ key]
+        var value = conf[$ parameter]
         weapon[$ parameter] = value
     }
     text = prompt_text + $"upgrade {weapon.name} to level {weapon.upgrades+1}"
