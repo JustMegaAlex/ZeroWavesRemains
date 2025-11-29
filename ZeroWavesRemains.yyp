@@ -82,6 +82,7 @@
     {"id":{"name":"oShopItemAmmo","path":"objects/oShopItemAmmo/oShopItemAmmo.yy",},},
     {"id":{"name":"oShopItemHeal","path":"objects/oShopItemHeal/oShopItemHeal.yy",},},
     {"id":{"name":"oShopItemWeapon","path":"objects/oShopItemWeapon/oShopItemWeapon.yy",},},
+    {"id":{"name":"oShopItemWeaponUpgrade","path":"objects/oShopItemWeaponUpgrade/oShopItemWeaponUpgrade.yy",},},
     {"id":{"name":"oSnipeShot","path":"objects/oSnipeShot/oSnipeShot.yy",},},
     {"id":{"name":"oStarsBg","path":"objects/oStarsBg/oStarsBg.yy",},},
     {"id":{"name":"oStart","path":"objects/oStart/oStart.yy",},},

@@ -21,14 +21,21 @@ hp = 10
 weapon_pulse = {
     dmg: 20,
     timer: MakeTimer(9),
+    sp: 50,
     object: oBullet,
     name: "Pulse",
     ammo: 40,
-    ammo_restore_timer: MakeTimer(30),
+    ammo_restore_timer: MakeTimer(40),
     knockback: 7,
     sound: sfxSingleShot,
     range: 2000,
     sprite: sUIWeaponPulse,
+    upgrades: 0,
+    upgrade_confs: [
+        {sp: 60, ammo_restore_timer: MakeTimer(33),},
+        {sp: 70, ammo_restore_timer: MakeTimer(25),},
+        {sp: 80, ammo_restore_timer: MakeTimer(20),},
+    ]
 }
 
 weapon_scatter = {
@@ -85,6 +92,9 @@ for (var i = 0; i < array_length(all_weapons); ++i) {
     _weapon_default_field(item, "knockback", 0)
     _weapon_default_field(item, "sprite", noone)
     _weapon_default_field(item, "ammo_max", item.ammo)
+    _weapon_default_field(item, "upgrades", 0)
+    _weapon_default_field(item, "upgrade_confs", [])
+    _weapon_default_field(item, "upgrades_max", array_length(item.upgrade_confs))
 }
 
 
