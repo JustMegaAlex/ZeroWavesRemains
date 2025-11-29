@@ -1,6 +1,8 @@
 
 #macro default_gui gui: function(w, h) {draw_text(w*0.5, h*0.7, self.text)}
 
+oWaveSpawner.active = false
+
 step_template = {
         gui: function(w, h) {
         },
@@ -71,15 +73,50 @@ steps = [
             return true
         }
     },
+    {
+        text: "Press Space to spawn a wave!",
+        spawned: 3,
+        default_gui,
+        done: function() {
+            if instance_exists(oEnemy) {
+                text = "Destroy the wave!"
+                return false
+            } else if spawned <= 0 {
+                return true
+            }
+            text = "Press Space to spawn a wave!"
+            if oInput.Pressed("next_wave") {
+                oWaveSpawner.spawn({oEnemy: 1})
+                oWaveSpawner.spawn({oEnemy: 0})
+                spawned--
+            }
+            return false
+        }
+    },
+    {
+        text: "Check out the shop.\nYou can heal there if your ship is damaged",
+        default_gui,
+        start: function() {
+            oUI.addHintArrow(oShop, "shop", c_yellow)
+        },
+        step: function() {
+        },
+        done: function() {
+            return false
+        }
+    },
 /*
     {
         gui: function(w, h) {
         },
+        default_gui,
+        start: function() {
+        },
         step: function() {
-        }
+        },
         done: function() {
         }
-    }
+    },
 */
 ]
 var keys = [
@@ -98,7 +135,7 @@ for (var i = 0; i < array_length(steps); ++i) {
     }
 }
 
-step = steps[0]
-step_index = 0
+step_index = 4
+step = steps[step_index]
 
 

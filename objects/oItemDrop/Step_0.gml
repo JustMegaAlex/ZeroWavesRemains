@@ -5,3 +5,5 @@ for (var i = 0; i < array_length(items); ++i) {
     item.x = item_placement_vec.x
     item.y = item_placement_vec.y
 }
+
+part_system_position(ps, x, y)

@@ -14,6 +14,7 @@
   "Folders":[
     {"$GMFolder":"","%Name":"Audio","folderPath":"folders/Audio.yy","name":"Audio","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Fonts","folderPath":"folders/Fonts.yy","name":"Fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Particles","folderPath":"folders/Particles.yy","name":"Particles","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Libraries","folderPath":"folders/Libraries.yy","name":"Libraries","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"AlexLibs","folderPath":"folders/Libraries/AlexLibs.yy","name":"AlexLibs","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Debug","folderPath":"folders/Libraries/AlexLibs/Debug.yy","name":"Debug","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -92,6 +93,7 @@
     {"id":{"name":"oUIWeaponAmmoBar","path":"objects/oUIWeaponAmmoBar/oUIWeaponAmmoBar.yy",},},
     {"id":{"name":"oUIWeaponSegment","path":"objects/oUIWeaponSegment/oUIWeaponSegment.yy",},},
     {"id":{"name":"oWaveSpawner","path":"objects/oWaveSpawner/oWaveSpawner.yy",},},
+    {"id":{"name":"psItemDrop","path":"particles/psItemDrop/psItemDrop.yy",},},
     {"id":{"name":"rmGame","path":"rooms/rmGame/rmGame.yy",},},
     {"id":{"name":"rmStart","path":"rooms/rmStart/rmStart.yy",},},
     {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},

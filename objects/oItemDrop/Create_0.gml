@@ -22,3 +22,7 @@ with oShopItem {
         break
     }
 }
+
+ps = part_system_create(psItemDrop)
+part_system_layer(ps, "Assets")
+

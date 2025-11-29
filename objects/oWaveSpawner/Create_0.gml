@@ -62,7 +62,7 @@ spawn = function(wave_override=undefined) {
        }
    )
     ArrayClear(next_wave_instances)
-    if !active { return }
+    if !active and wave_override==undefined { return }
     var dist = oGameArea.radius + spawn_extra_radius * (wave_index > 0)
 
     var wave

@@ -18,28 +18,33 @@ Continue:
 
 
 0.4.0 - Update gameplay loop: more items, +1 heavy enemy, rework enemy ai, upgrades
-> show high score
-> add cross cursor
 > rework items
+    > item drops: add particle animation
     > weapon items: replace with ammo items after purchase
-    > open shop in between waves
-    > impl item drones
-    > impl item drops
-        > interaction with player
+    > items interaction
+        > arrow "Item added to shop"
+    > item types
+        > pickups: oneshot ammo/health pickups
+        > shop upgrades: add new shop item
+
 > rework wave spawn
     > lower diff increase
     > add drones
+> ai
+    > shoot only if in range
 > coloring
     > item choice
     > shop items
     > coins
     > 
+> show high score
+> add cross cursor
 
 > art
     > ui shield
     > ui cross cursor
     > enemy: clunky
- 
+  
 > audio
     > add victory music
 > upd weapons: add upgrading
@@ -104,3 +109,4 @@ Ideas:
 > penetrating kinetic weapon (like that bugged out pulse)
 > replace ammo with ammo upgrades: restore ratio + amount
 > upd scatter and snipe: autorestore ammo
+> killing spree: add kill combo timer
