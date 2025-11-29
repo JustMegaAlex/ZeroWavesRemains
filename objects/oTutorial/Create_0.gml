@@ -5,6 +5,16 @@ oWaveSpawner.active = false
 
 global.tutorial = true
 
+finishTutorial = function() {
+    global.tutorial_finished = true
+    oWaveSpawner.active = true
+    global.tutorial = false
+    with oPlayer {
+        display_waves = false
+        display_money = false
+    }
+}
+
 step_template = {
         gui: function(w, h) {
         },
@@ -13,6 +23,12 @@ step_template = {
         done: function() {
             return false
         }
+}
+step_press_space_to_proceed = {
+    text: "Press Space to proceed",
+    done: function() {
+        return oInput.Pressed("next_wave")
+    }
 }
 steps = [
     {
@@ -59,7 +75,7 @@ steps = [
         // define index with search
         arr: [],
         default_gui,
-        text: "Destroy all 3 dummies",
+        text: "Destroy 3 dummies",
         start: function() {
             var args = {active: false, coins_min: 0, coins_max: 0}
             array_push(arr, instance_create_layer(100, 600, "Instances", oEnemy, args))
@@ -79,6 +95,8 @@ steps = [
             return true
         }
     },
+    // define index with search
+    step_press_space_to_proceed,
     {
         // define index with search
         text: "Press Space to spawn a wave!",
@@ -87,7 +105,7 @@ steps = [
         start: function() {
             global.waves_remains = 3
             oPlayer.display_waves = true
-        },
+        }, 
         done: function() {
             if instance_exists(oEnemy) {
                 text = "Destroy the wave!"
@@ -99,19 +117,25 @@ steps = [
             if oInput.Pressed("next_wave") {
                 oWaveSpawner.spawn({oEnemy: 1})
                 oWaveSpawner.spawn({oEnemy: 0})
+                with oEnemy {
+                    oUI.addHintArrow(id, "enemy", c_red)
+                }
                 spawned--
             }
             return false
         }
     },
+    // define index with search
+    step_press_space_to_proceed,
     {
         // define index with search
-        text: "Valuable drop in bound!\nDon't let him escape!",
+        text: "Valuable drop in bound!\nKill the drone!",
         drone: noone,
         finished: false,
         default_gui,
         start: function() {
             drone = instance_create_layer(0, 0, "Instances", oItemDrone)
+            oUI.addHintArrow(drone, "drone", c_red)
         },
         step: function() {
             if !instance_exists(drone) {
@@ -134,11 +158,16 @@ steps = [
             with oItemDropChoice {
                 setItem(global.item_heal)
             }
+            with oItemDrop {
+                oUI.addHintArrow(id, "collect item to heal", c_green)
+            }
         },
         done: function() {
             return !instance_exists(oItemDropChoice)
         }
     },
+    // define index with search
+    step_press_space_to_proceed,
     {
         // define index with search
         text: "Another drop!\nLet's try something more spicy this time",
@@ -147,6 +176,7 @@ steps = [
         default_gui,
         start: function() {
             drone = instance_create_layer(0, 0, "Instances", oItemDrone)
+            oUI.addHintArrow(drone, "drone", c_red)
         },
         step: function() {
             if !instance_exists(drone) {
@@ -179,6 +209,9 @@ steps = [
             with oItemDropChoice {
                 setItem(item)
             }
+            with oItemDrop {
+                oUI.addHintArrow(id, "collect the shop upgrade", c_green)
+            }
         },
         done: function() {
             return !instance_exists(oItemDropChoice)
@@ -186,15 +219,44 @@ steps = [
     },
     {
         // define index with search
-        text: "Check out the shop.\nYou can heal there if your ship is damaged",
+        text: "Check out the shop",
+        default_gui,
+        arrow: noone,
+        start: function() {
+            arrow = oUI.addHintArrow(oShop, "shop", c_yellow)
+        },
+        step: function() {
+            if oShop.is_open {
+                text = "Upgrade your weapon"
+            } else {
+                text = "Come back to the shop"
+            }
+        },
+        end_: function() {
+            oUI.removeHintArrow(arrow)
+        },
+        done: function() {
+            /// any upgrade was made
+            with oShopItemWeaponUpgrade {
+                if weapon.upgrades > 0 {
+                    return true
+                }
+            }
+            return false
+        }
+    },
+    {
+        // define index with search
+        text: "Great!\nPress Space to finish this tutorial",
+        gui: function(w, h) {
+        },
         default_gui,
         start: function() {
-            oUI.addHintArrow(oShop, "shop", c_yellow)
         },
         step: function() {
         },
         done: function() {
-            return false
+            return oInput.Pressed("next_wave")
         }
     },
 /*
@@ -217,6 +279,7 @@ var keys = [
     "start",
     "step",
     "done",
+    "end_",
 ]
 for (var i = 0; i < array_length(steps); ++i) {
     var _step = steps[i]
@@ -228,6 +291,16 @@ for (var i = 0; i < array_length(steps); ++i) {
     }
 }
 
-step_index = 7
+startTutorial = function() {
+    with oPlayer {
+        display_waves = false
+        display_money = false
+    }
+    step.start()
+}
+
+step_index = 5
 step = steps[step_index]
-alarm[0] = 1
+if !global.tutorial_finished {
+    alarm[0] = 1
+}

@@ -1,5 +1,9 @@
 event_inherited()
 
+_key_remap = {
+    sp: "bullet speed",
+    dmg: "damage"
+}
 updateText = function() {
     text = $"(Press F) Upgrade {weapon.name} to level 2"
     var next_upgrade_conf = weapon.upgrade_confs[weapon.upgrades]
@@ -11,6 +15,14 @@ updateText = function() {
         }
         var next_value = next_upgrade_conf[$ key]
         var value = weapon[$ key]
+        if struct_has(_key_remap, key) {
+            key = _key_remap[$ key]
+        }
+        if key == "timer" {
+            next_value = 60 / next_value.time
+            value = 60 / value.time
+            key = "fire rate"
+        }
         text += $"\n{key} {value} -> {next_value}"
     }
 }

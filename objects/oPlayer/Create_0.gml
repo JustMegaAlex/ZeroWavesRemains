@@ -16,12 +16,12 @@ heal_effect_timer = MakeTimer(30, 0)
 
 shot_interact_range = 500
 
-hp = 10
+// hp = 10
 
 weapon_pulse = {
     dmg: 20,
-    timer: MakeTimer(9),
-    sp: 50,
+    timer: MakeTimer(15),
+    sp: 60,
     object: oBullet,
     name: "Pulse",
     ammo: 40,
@@ -32,9 +32,9 @@ weapon_pulse = {
     sprite: sUIWeaponPulse,
     upgrades: 0,
     upgrade_confs: [
-        {sp: 60, ammo_restore_timer: MakeTimer(33), cost: 10},
-        {sp: 70, ammo_restore_timer: MakeTimer(25), cost: 20},
-        {sp: 80, ammo_restore_timer: MakeTimer(20), cost: 30},
+        {sp: 70, timer: MakeTimer(13), cost: 10},
+        {sp: 80, timer: MakeTimer(10), cost: 20},
+        {sp: 100, timer: MakeTimer(8), cost: 30},
     ]
 }
 

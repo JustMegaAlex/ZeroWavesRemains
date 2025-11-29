@@ -7,6 +7,10 @@ collapse = function() {
     instance_destroy()
 }
 
+
+move_vec = new Vec2(0, 0)
+move_sp = 10
+push_from_shop_dist = 500
 items = []
 var count = 3
 item_pos_radius = 150

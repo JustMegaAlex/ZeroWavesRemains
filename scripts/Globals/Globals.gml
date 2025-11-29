@@ -15,6 +15,7 @@ pause = false
 gameover = false
 win = false
 tutorial = false
+tutorial_finished = false
 wave_enemies_count = 1
 waves_remains = 0
 increase_spawning_speed_between_waves = false
