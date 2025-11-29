@@ -3,7 +3,8 @@
 
 oWaveSpawner.active = false
 
-global.tutorial = true
+drone_sp_first = 6
+drone_sp_second = 10
 
 finishTutorial = function() {
     global.tutorial_finished = true
@@ -135,6 +136,7 @@ steps = [
         default_gui,
         start: function() {
             drone = instance_create_layer(0, 0, "Instances", oItemDrone)
+            drone.updateSpMax(oTutorial.drone_sp_first)
             oUI.addHintArrow(drone, "drone", c_red)
         },
         step: function() {
@@ -176,6 +178,7 @@ steps = [
         default_gui,
         start: function() {
             drone = instance_create_layer(0, 0, "Instances", oItemDrone)
+            drone.updateSpMax(oTutorial.drone_sp_second)
             oUI.addHintArrow(drone, "drone", c_red)
         },
         step: function() {
@@ -299,8 +302,10 @@ startTutorial = function() {
     step.start()
 }
 
-step_index = 5
-step = steps[step_index]
-if !global.tutorial_finished {
-    alarm[0] = 1
+if global.tutorial_finished {
+    exit
 }
+step_index = 7
+step = steps[step_index]
+alarm[0] = 1
+global.tutorial = true

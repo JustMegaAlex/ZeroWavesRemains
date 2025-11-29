@@ -25,6 +25,11 @@ weapon = {
 battle_side = battle_side_none
 can_hit = can_hit_all
 
+updateSpMax = function(_sp) {
+    sp_max = _sp
+    updateDampening()
+}
+
 updateDampening = function() {
     dampening_val = acc_max / sp_max
 }

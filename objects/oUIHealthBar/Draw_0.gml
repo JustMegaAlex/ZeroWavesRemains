@@ -1,6 +1,8 @@
 
 if instance_exists(oPlayer) {
     value = oPlayer.hp / oPlayer.hp_max
+} else {
+    value = 0
 }
 
 var top = sprite_height * (1 - value)

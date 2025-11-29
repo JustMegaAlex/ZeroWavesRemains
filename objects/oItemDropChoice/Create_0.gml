@@ -5,12 +5,12 @@ prompt_text = "???"
 setItem = function(_item) {
     item = _item
     if is_struct(item) {
-        prompt_text = item.prompt_text
+        prompt_text = press_f_prompt + item.prompt_text
     } else {
         switch item.object_index {
             case oShopItemWeapon:
             case oShopItemWeaponUpgrade:
-                prompt_text = $"Add {item.weapon.name} weapon to the shop"
+                prompt_text = $"{press_f_prompt} add {item.weapon.name} weapon to the shop"
             break
         }
     }

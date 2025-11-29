@@ -19,9 +19,9 @@ Continue:
 
 0.4.0 - Update gameplay loop: more items, +1 heavy enemy, rework enemy ai, upgrades
 > tutorial
-    > drop drone: healing
-    > drop drone: pulse upgrade
-    > shop tutorial: pulse upgrade
+    > slower drones
+    > don't restore ammo on every Space hit
+    > let know about ammo restoration
 > rework items
     > item drops: add particle animation
     > weapon items: replace with ammo items after purchase
