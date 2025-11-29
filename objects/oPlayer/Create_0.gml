@@ -186,3 +186,10 @@ manageShotLoopSound = function() {
         }
     }
 }
+
+heal = function(heal_amount) {
+    hp += heal_amount
+    hp = min(oPlayer.hp_max, oPlayer.hp)
+    heal_effect_timer.reset()
+    audio_play_sound(sfxRepair, 2, false)
+}

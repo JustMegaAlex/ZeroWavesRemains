@@ -106,6 +106,42 @@ steps = [
     },
     {
         // define index with search
+        text: "Valuable drop in bound!\nDon't let him escape!",
+        drone: noone,
+        finished: false,
+        default_gui,
+        start: function() {
+            drone = instance_create_layer(0, 0, "Instances", oItemDrone)
+        },
+        step: function() {
+            if !instance_exists(drone) {
+                if !instance_exists(oItemDrop) {
+                    drone = instance_create_layer(0, 0, "Instances", oItemDrone)
+                } else {
+                    finished = true
+                }
+            }
+        },
+        done: function() {
+            return finished
+        }
+    },
+    {
+        // define index with search
+        text: "Good job! Grab some healing if you need",
+        default_gui,
+        start: function() {
+            with oItemDropChoice {
+                setItem(global.item_heal)
+            }
+        },
+        step: function() {
+        },
+        done: function() {
+        }
+    },
+    {
+        // define index with search
         text: "Check out the shop.\nYou can heal there if your ship is damaged",
         default_gui,
         start: function() {
@@ -148,6 +184,6 @@ for (var i = 0; i < array_length(steps); ++i) {
     }
 }
 
-step_index = 4
+step_index = 5
 step = steps[step_index]
 alarm[0] = 1

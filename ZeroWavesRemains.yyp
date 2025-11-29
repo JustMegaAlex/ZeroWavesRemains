@@ -106,6 +106,7 @@
     {"id":{"name":"DebugTeleport","path":"scripts/DebugTeleport/DebugTeleport.yy",},},
     {"id":{"name":"geometry","path":"scripts/geometry/geometry.yy",},},
     {"id":{"name":"Globals","path":"scripts/Globals/Globals.yy",},},
+    {"id":{"name":"Items","path":"scripts/Items/Items.yy",},},
     {"id":{"name":"libShoot","path":"scripts/libShoot/libShoot.yy",},},
     {"id":{"name":"movement","path":"scripts/movement/movement.yy",},},
     {"id":{"name":"Shooting","path":"scripts/Shooting/Shooting.yy",},},

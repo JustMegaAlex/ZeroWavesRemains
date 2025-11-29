@@ -18,7 +18,6 @@
     {"name":"inst_30C36076","path":"rooms/rmGame/rmGame.yy",},
     {"name":"inst_1DBCC92C","path":"rooms/rmGame/rmGame.yy",},
     {"name":"inst_57ED7E4F","path":"rooms/rmGame/rmGame.yy",},
-    {"name":"inst_F1DA80A","path":"rooms/rmGame/rmGame.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -42,7 +41,6 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oShopItemWeapon","path":"objects/oShopItemWeapon/oShopItemWeapon.yy",},"propertyId":{"name":"weapon","path":"objects/oShopItemWeapon/oShopItemWeapon.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"oPlayer.weapon_scatter",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-128.0,"y":-192.0,},
         {"$GMRInstance":"v4","%Name":"inst_1DBCC92C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1DBCC92C","objectId":{"name":"oShopItemHeal","path":"objects/oShopItemHeal/oShopItemHeal.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":128.0,"y":-192.0,},
-        {"$GMRInstance":"v4","%Name":"inst_F1DA80A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_F1DA80A","objectId":{"name":"oItemDrop","path":"objects/oItemDrop/oItemDrop.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-160.0,"y":192.0,},
       ],"layers":[],"name":"BackObjects","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Assets","assets":[],"depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Assets","properties":[],"resourceType":"GMRAssetLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Text","assets":[

@@ -7,8 +7,5 @@ can_buy = function() {
 }
 
 apply = function() {
-    oPlayer.hp += global.heal_amount
-    oPlayer.hp = min(oPlayer.hp_max, oPlayer.hp)
-    oPlayer.heal_effect_timer.reset()
-    audio_play_sound(sfxRepair, 2, false)
+    oPlayer.heal(global.heal_amount)
 }
