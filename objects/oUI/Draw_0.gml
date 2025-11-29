@@ -2,7 +2,7 @@
 no_player_exit
 
 var arrow, dist, mult
-var arrow_zoom = oCamera.zoom * 0.5
+var _arrow_zoom = oCamera.zoom * arrow_zoom
 var text_zoom = oCamera.zoom
 for (var i = 0; i < array_length(hint_arrows); ++i) {
     arrow = hint_arrows[i]
@@ -18,12 +18,12 @@ for (var i = 0; i < array_length(hint_arrows); ++i) {
     }
     var test = helper_line.set(
         oPlayer.x, oPlayer.y, arrow.target.x, arrow.target.y
-    ).mult(mult * arrow_zoom)
+    ).mult(mult * _arrow_zoom)
     draw_sprite_ext(
         sUIArrow, 0, helper_line.xend, helper_line.yend,
-        arrow_zoom, arrow_zoom, helper_line.angle(), arrow.color, 0.5)
+        _arrow_zoom, _arrow_zoom, helper_line.angle(), arrow.color, 0.5)
     draw_text_transformed(
-        helper_line.xend, helper_line.yend - 100 * arrow_zoom, 
+        helper_line.xend, helper_line.yend - 100 * _arrow_zoom, 
         arrow.text, text_zoom, text_zoom, 0)
     
     // draw mult

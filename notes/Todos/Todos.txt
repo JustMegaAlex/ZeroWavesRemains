@@ -19,7 +19,6 @@ Continue:
 
 0.4.0 - Update gameplay loop: more items, +1 heavy enemy, rework enemy ai, upgrades
 > tutorial
-    > add waves counter
     > drop drone: healing
     > drop drone: pulse upgrade
     > shop tutorial: pulse upgrade

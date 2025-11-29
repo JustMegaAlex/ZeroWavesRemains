@@ -14,10 +14,7 @@
     "name":"Refs",
     "path":"folders/Refs.yy",
   },
-  "parentObjectId":{
-    "name":"oEntitySpaceShip",
-    "path":"objects/oEntitySpaceShip/oEntitySpaceShip.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

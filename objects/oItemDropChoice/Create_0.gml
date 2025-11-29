@@ -9,6 +9,7 @@ setItem = function(_item) {
     } else {
         switch item.object_index {
             case oShopItemWeapon:
+            case oShopItemWeaponUpgrade:
                 prompt_text = $"Add {item.weapon.name} weapon to the shop"
             break
         }

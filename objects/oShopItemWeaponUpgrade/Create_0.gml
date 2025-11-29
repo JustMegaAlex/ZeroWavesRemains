@@ -1,6 +1,14 @@
 event_inherited()
 
-text = prompt_text + $"upgrade {weapon.name} level 1"
+text = $"(Press F) Upgrade {weapon.name} to level 2"
+
+if array_length(weapon.upgrade_confs) == 0 {
+    show_debug_message($"No upgrades for weapon {weapon.name}")
+    instance_destroy()
+    exit
+}
+
+cost = weapon.upgrade_confs[0].cost
 
 apply = function() {
     var conf = weapon.upgrade_confs[weapon.upgrades]
@@ -10,12 +18,14 @@ apply = function() {
         var value = conf[$ parameter]
         weapon[$ parameter] = value
     }
-    text = prompt_text + $"upgrade {weapon.name} to level {weapon.upgrades+1}"
     weapon.upgrades++
     audio_play_sound(sfxWeaponPickup, 2, false)
     if weapon.upgrades >= weapon.upgrades_max {
         instance_destroy()
+        return;
     }
+    cost = weapon.upgrade_confs[weapon.upgrades]
+    text = $"(Press F) Upgrade {weapon.name} to level {weapon.upgrades+2}"
 }
 
 promptText = function() {

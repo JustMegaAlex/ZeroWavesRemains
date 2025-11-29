@@ -24,3 +24,5 @@ if shop_item {
 if global.wave_enemies_count <= 0 {
     draw_text(w*0.5, h*0.75 + 60, "Press Space for the next wave!")
 }
+
+DebugDrawVar("pulse", $"{weapon_pulse.upgrades} {weapon_pulse.sp}")

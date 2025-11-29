@@ -32,9 +32,9 @@ weapon_pulse = {
     sprite: sUIWeaponPulse,
     upgrades: 0,
     upgrade_confs: [
-        {sp: 60, ammo_restore_timer: MakeTimer(33),},
-        {sp: 70, ammo_restore_timer: MakeTimer(25),},
-        {sp: 80, ammo_restore_timer: MakeTimer(20),},
+        {sp: 60, ammo_restore_timer: MakeTimer(33), cost: 10},
+        {sp: 70, ammo_restore_timer: MakeTimer(25), cost: 20},
+        {sp: 80, ammo_restore_timer: MakeTimer(20), cost: 30},
     ]
 }
 
