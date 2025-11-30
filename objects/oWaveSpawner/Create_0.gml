@@ -10,7 +10,15 @@ just_spawned = 0
 //     {oScout: 1, oEnemy: 1, oEnemyTiny: 1},
 // ]
 // waves_remains = array_length(waves)
-waves = []
+waves = [
+    // {oItemDrone: 1},
+    // {oItemDrone: 1},
+    // {oItemDrone: 1},
+    // {oItemDrone: 1},
+    // {oItemDrone: 1},
+    // {oItemDrone: 1},
+    // {oItemDrone: 1},
+]
 wave_index = 0
 waves_remains = 30
 strength_growth = 1.1

@@ -9,4 +9,8 @@ if heal_effect_timer.update() {
 
 event_inherited()
 
-
+if DEV {
+    with oEnemyParent {
+        draw_line(x, y, other.x, other.y)
+    }
+}

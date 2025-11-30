@@ -5,21 +5,19 @@ if key_pressed(ord("T")) {
     event_perform(ev_create, 0)
 }
 
+if active {
+    mover.step()
+    dirApproach(sp.dir())
 
-// x += sp.x
-// y += sp.y
-// dist_to_next_point -= sp_max
+    if mover.finished {
+        updateTraj()
+    }
 
-mover.step()
+    if PointDist(0, 0) > (oGameArea.radius * 1.2) {
+        instance_destroy()
+    }
+}
+
+
 move()
-dirApproach(sp.dir())
-
-if mover.finished {
-    updateTraj()
-}
-
-if PointDist(0, 0) > (oGameArea.radius * 1.2) {
-    instance_destroy()
-}
-
 catchBullet()

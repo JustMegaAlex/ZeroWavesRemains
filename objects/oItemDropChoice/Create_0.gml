@@ -12,6 +12,9 @@ setItem = function(_item) {
             case oShopItemWeaponUpgrade:
                 prompt_text = $"{press_f_prompt} add {item.weapon.name} weapon to the shop"
             break
+            case oShopItemHeal:
+                prompt_text = $"{press_f_prompt} add healing to the shop"
+            break
         }
     }
 }
