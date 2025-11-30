@@ -1,0 +1,23 @@
+Controls:
+
+     WASD - move
+
+     Left mouse - shoot
+
+     Right mouse - boost
+
+     Scroll mouse - change zoom
+
+     Q/E - switch weapon
+
+     1...3 - also switch weapon
+
+     P - pause/unpause
+
+     F - choose/interact with items and shop
+
+How to interact with items and shop:
+
+     1. Fly close to an item
+     2. See it being highlighted
+     3. Press F to interact
