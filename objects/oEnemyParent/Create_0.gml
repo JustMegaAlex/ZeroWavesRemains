@@ -3,18 +3,20 @@ event_inherited()
 macro_pause
 
 battle_side = battle_side_enemy
-move_around_player_dist = 2800
+move_around_player_dist = 1000
 
 
 weapon = {
     dmg: 5,
-    timer: MakeTimer(90),
-    sp: 14,
-    range: 4000,
+    timer: MakeTimer(45),
+    sp: 40,
+    range: 2000,
     object: oBullet,
-    knockback: 5,
-    sprite_index: sProjectileCircle,
+    knockback: 7,
 }
+
+
+
 
 //// Movers
 mover_template = {
@@ -31,7 +33,7 @@ mover_template = {
 mover_point = {
     id: id,
     to: new Vec2(0, 0),
-    treshold_dist: 400,
+    treshold_dist: 40,
     dist_to: 0,
     finished: true,
     accel_value: 0.5,
@@ -56,7 +58,6 @@ mover_dir = {
     dir: 0,
     accel_value: 0.5,
     dist_left: 0,
-    dist_default: 2500,
     finished: false,
     step: function() {
         self.dist_left -= id.sp.len()
@@ -68,14 +69,14 @@ mover_dir = {
             accelerate(other.accel_value, other.dir)
         }
     },
-    start: function(dir, dist_left=0) {
+    start: function(dir, dist_left) {
         self.dir = dir
-        self.dist_left = dist_left > 0 ? dist_left : dist_default
+        self.dist_left = dist_left
         self.finished = false
     }
 }
 
-mover = mover_dir
+mover = mover_point
 
 
 /// Aim
@@ -122,7 +123,3 @@ setCoins = function(cmin, cmax) {
     coins_min = cmin
     coins_max = cmax
 }
-
-
-mover_point.treshold_dist = 400
-updateSpMax(16)

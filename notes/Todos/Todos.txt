@@ -12,12 +12,20 @@
 - не понял, что пульс восстанавливается 
 
 Continue:
-- I added new sprites for shop and items
-- Started implementing shop open/close animation. It's broken << continue
-
 
 
 0.4.0 - Update gameplay loop: more items, +1 heavy enemy, rework enemy ai, upgrades
+> rework spawn chain
+    > add scouts
+    > add drops
+        > drop items randomness
+> shop
+    > change items positioning
+    > show hint to open + highlight
+> refactor enemies: make descent enemy parent
+> pause: add guide
+
+
 
 > new enemies
     > refactor: make descent enemy parent
@@ -38,9 +46,6 @@ Continue:
     > item types
         > pickups: oneshot ammo/health pickups
         > shop upgrades: add new shop item
-> shop
-    > change items positioning
-    > show hint to open + highlight
 
 > rework wave spawn
     > lower diff increase
