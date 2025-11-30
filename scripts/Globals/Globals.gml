@@ -29,7 +29,7 @@ increase_spawning_speed_between_waves = false
 debug_tiny = noone
 
 function ResetGlobals() {
-    global.wave_enemies_count = 1
+    global.wave_enemies_count = 0
     global.gameover = false
     global.win = false
     global.pause = false

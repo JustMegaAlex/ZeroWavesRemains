@@ -54,4 +54,10 @@ if active {
             unlock()
         }
     }
+
+    if key_pressed(ord("N")) {
+        with oEnemyParent {
+            if active { die() }
+        }
+    }
 }

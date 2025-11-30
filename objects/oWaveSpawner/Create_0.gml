@@ -21,6 +21,7 @@ waves = [
 ]
 wave_index = 0
 waves_remains = 3
+global.waves_remains = waves_remains
 strength_growth = 1.1
 strength = 1
 strength_growth_decrease = 0.05 / waves_remains

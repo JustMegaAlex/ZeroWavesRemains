@@ -1,6 +1,12 @@
 
 #macro default_gui gui: function(w, h) { SetTextAllign(1, 1); draw_text(w*0.5, h*0.3, self.text)}
 
+
+if global.tutorial_finished {
+    oWaveSpawner.spawn()
+    exit
+}
+
 oWaveSpawner.active = false
 
 drone_sp_first = 6
@@ -347,7 +353,6 @@ finishTutorial = function() {
     instance_destroy(oCoin)
     instance_destroy(oItemDrop)
     instance_destroy(oItemDropChoice)
-    oMusic.switch_music(mscStealthTheme)
     /// ensure to unlock pulse 
     with oShopItemWeaponUpgrade {
         if weapon.name == "Pulse" {
@@ -360,9 +365,6 @@ finishTutorial = function() {
     oWaveSpawner.spawn()
 }
 
-if global.tutorial_finished {
-    exit
-}
 step_index = 0
 step = steps[step_index]
 alarm[0] = 1

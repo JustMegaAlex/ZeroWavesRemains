@@ -111,6 +111,9 @@ if !oShop.is_open and place_meeting(x, y, oShop) {
 }
 
 if global.wave_enemies_count <= 0 and oInput.Pressed("next_wave") {
+    if instance_exists(oEnemyParent) and !audio_is_playing(mscStealthTheme) {
+        oMusic.switch_music(mscStealthTheme)
+    }
     show_debug_message($"Activating by player")
     oWaveSpawner.spawn()
     weapon_pulse.ammo = min(weapon_pulse.ammo + weapon_pulse.ammo_max * 0.5, weapon_pulse.ammo_max)
