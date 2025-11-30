@@ -9,12 +9,14 @@ var coins = 20
 item_heal = {
     heal_amount: heal_amount,
     prompt_text: $"heal {heal_amount} hp",
+    icon: sIconHeal,
     apply: function() {
         oPlayer.heal(heal_amount)
     }
 }
 
 item_ammo = {
+    icon: sIconAmmo,
     ammo_precent: ammo_precent,
     prompt_text: $"get {ammo_precent}% ammo for current weapon",
     apply: function() {
@@ -24,11 +26,14 @@ item_ammo = {
 }
 
 item_coins = {
+    icon: sIconCoins,
     coins: coins,
     prompt_text: $"get {coins} coins",
     apply: function() {
-        repeat coins {
-            instance_create_layer(x, y, "Instances", oCoin)
+        with oPlayer {
+            repeat other.coins {
+                instance_create_layer(x + 50, y, "Instances", oCoin)
+            }
         }
     }
 }

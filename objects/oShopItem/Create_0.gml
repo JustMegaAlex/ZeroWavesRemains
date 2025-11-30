@@ -8,6 +8,8 @@ prompt_text = "Press F to buy "
 
 visible = is_unlocked
 
+icon = noone
+
 openx = x
 openy = y
 // opensp = 0.03
