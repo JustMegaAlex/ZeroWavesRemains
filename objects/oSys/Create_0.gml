@@ -15,4 +15,6 @@ layers_to_make_visible = [
     "Instances", "BackObjects", "Parallax", //"Assets"
 ]
 
+layer_set_visible("ui_text", false)
+
 // show_debug_overlay(true)

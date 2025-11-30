@@ -19,6 +19,7 @@ Continue:
 ? weapons cost
 > pause: add guide
 > rebalance item costs
+> items interaction by collision
 
 
 > indicate when dron flyes away
