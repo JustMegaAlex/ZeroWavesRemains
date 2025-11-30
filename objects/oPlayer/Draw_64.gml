@@ -23,6 +23,7 @@ SetTextAllign(1, 1)
 if oShop.highlight {
     draw_text(xx, yy, "Open shop")
 }
+SetTextAllign(1, 0)
 if shop_item {
     shop_item.promptText()
 }

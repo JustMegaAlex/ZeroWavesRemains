@@ -82,8 +82,9 @@ for (var i = 0; i < array_length(weapons_array); ++i) {
 if shop_item {
     shop_item.highlight = false
 }
-shop_item = MouseCollision(oInteractible)
-if shop_item and object_is_ancestor(shop_item.object_index, oShopItem) and !(shop_item.is_unlocked and oShop.is_open) {
+shop_item = interactingWithItem(oInteractible)
+if shop_item and object_is_ancestor(shop_item.object_index, oShopItem)
+        and !(shop_item.is_unlocked and oShop.is_open) {
     shop_item = noone
 }
 if shop_item {

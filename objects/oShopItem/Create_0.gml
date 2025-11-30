@@ -48,7 +48,7 @@ unlock = function() {
 promptTextWeapon = function() {
      var w = display_get_gui_width()
      var h = display_get_gui_height()
-    SetTextAllign(1, 1)
+    SetTextAllign(1, 0)
     draw_text(w*0.5, h*0.75, text)
     draw_set_color(c_white)
     var col = can_buy() ? c_yellow : c_red

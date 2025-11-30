@@ -212,3 +212,24 @@ heal = function(heal_amount) {
     heal_effect_timer.reset()
     audio_play_sound(sfxRepair, 2, false)
 }
+
+getObjectCollision = function(obj) {
+    var dist = infinity
+    var dist_check = 0
+    var closest = noone
+    with oInteractible {
+        dist_check = InstDist(oPlayer)
+        if dist_check < dist {
+            closest = id
+            dist = dist_check
+        }
+    }
+    if closest and place_meeting(x, y, closest) {
+        return closest
+    }
+    return noone
+}
+
+
+// interactingWithItem = MouseCollision
+interactingWithItem = getObjectCollision
