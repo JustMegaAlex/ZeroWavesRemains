@@ -19,6 +19,7 @@ item_ammo = {
     prompt_text: $"get {ammo_precent}% ammo for current weapon",
     apply: function() {
         oPlayer.weapon.ammo += round(oPlayer.weapon.ammo_max * ammo_precent)
+        audio_play_sound(sfxWeaponReload, 2, false)
     }
 }
 
@@ -26,7 +27,9 @@ item_coins = {
     coins: coins,
     prompt_text: $"get {coins} coins",
     apply: function() {
-        oPlayer.money += coins
+        repeat coins {
+            instance_create_layer(x, y, "Instances", oCoin)
+        }
     }
 }
 

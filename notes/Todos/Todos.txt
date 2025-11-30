@@ -15,17 +15,14 @@ Continue:
 
 
 0.4.0 - Update gameplay loop: more items, +1 heavy enemy, rework enemy ai, upgrades
-> rework spawn chain
-    > add scouts
-    > add drops
-        > drop items randomness
-    ? coins progression
-    ? weapons cost
-    ? 
-> refactor enemies: make descent enemy parent
-> pause: add guide
+? coins progression
+? weapons cost
+> upd item choices:
+    > ammo: use common ammo function
+    > coins: actually spawn coins
 > add wave arriving indicator
 > add drone indicator
+> pause: add guide
 
 
 > new enemies
