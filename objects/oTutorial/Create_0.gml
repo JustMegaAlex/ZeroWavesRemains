@@ -107,6 +107,7 @@ steps = [
         start: function() {
             global.waves_remains = 3
             oPlayer.display_waves = true
+            oPlayer.display_money = true
         }, 
         done: function() {
             if instance_exists(oEnemy) {
@@ -125,6 +126,23 @@ steps = [
                 spawned--
             }
             return false
+        }
+    },
+    {
+        // define index with search
+        text: "Collect all coins! We'll need them in a moment",
+        default_gui,
+        step: function() {
+            if !ArrayEmpty(oUI.hint_arrows) {
+                return;
+            }
+            with oCoin {
+                other.arrow = oUI.addHintArrow(id, "coins", c_yellow)
+                return;
+            }
+        },
+        done: function() {
+            return !instance_exists(oCoin)
         }
     },
     // define index with search
@@ -318,12 +336,19 @@ finishTutorial = function() {
     instance_destroy(oItemDrop)
     instance_destroy(oItemDropChoice)
     oMusic.switch_music(mscStealthTheme)
+    /// ensure to unlock pulse 
+    with oShopItemWeaponUpgrade {
+        if weapon.name == "Pulse" {
+            unlock()
+            break
+        }
+    }
 }
 
 if global.tutorial_finished {
     exit
 }
-step_index = 0
+step_index = 7
 step = steps[step_index]
 alarm[0] = 1
 global.tutorial = true
@@ -332,7 +357,7 @@ skip_tutorial = {
     ratio: 0.01,
     x: 0.5,
     y: 0.1,
-    text: "Long press T to skip tutorial",
+    text: "Tutorial\nLong press T to skip",
     value: 0,
     bar_len: 500,
     bar_col: c_white,

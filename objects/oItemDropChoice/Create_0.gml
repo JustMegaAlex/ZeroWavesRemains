@@ -1,19 +1,19 @@
 event_inherited()
 
-prompt_text = "???"
+text = "???"
 
 setItem = function(_item) {
     item = _item
     if is_struct(item) {
-        prompt_text = press_f_prompt + item.prompt_text
+        text = press_f_prompt + item.prompt_text
     } else {
         switch item.object_index {
             case oShopItemWeapon:
             case oShopItemWeaponUpgrade:
-                prompt_text = $"{press_f_prompt} add {item.weapon.name} weapon to the shop"
+                text = $"{press_f_prompt} add {item.weapon.name} weapon to the shop"
             break
             case oShopItemHeal:
-                prompt_text = $"{press_f_prompt} add healing to the shop"
+                text = $"{press_f_prompt} add healing to the shop"
             break
         }
     }

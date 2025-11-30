@@ -22,7 +22,8 @@ Continue:
         > heal
         > ammo
         > coins
-> tute: add step about coins
+> fix items' prompt text
+> tutorial: ensure pulse upgrade in the end
 
 
 > indicate when drone flies away

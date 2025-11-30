@@ -26,8 +26,6 @@ if oShop.highlight {
 SetTextAllign(1, 0)
 if shop_item {
     shop_item.promptText()
-}
-
-if oWaveSpawner.active and global.wave_enemies_count <= 0 {
+} else if oWaveSpawner.active and global.wave_enemies_count <= 0 {
     draw_text(w*0.5, h*0.75 + 60, "Press Space for the next wave!")
 }
