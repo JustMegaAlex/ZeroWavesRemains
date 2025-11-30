@@ -110,7 +110,7 @@ steps = [
             oPlayer.display_money = true
         }, 
         done: function() {
-            if instance_exists(oEnemy) {
+            if instance_exists(oScout) {
                 text = "Destroy the wave!"
                 return false
             } else if spawned <= 0 {
@@ -118,9 +118,9 @@ steps = [
             }
             text = "Press Space to spawn a wave!"
             if oInput.Pressed("next_wave") {
-                oWaveSpawner.spawn({oEnemy: 1})
-                oWaveSpawner.spawn({oEnemy: 0})
-                with oEnemy {
+                oWaveSpawner.spawn({oScout: 1})
+                oWaveSpawner.spawn({oScout: 0})
+                with oScout {
                     oUI.addHintArrow(id, "enemy", c_red)
                 }
                 spawned--
