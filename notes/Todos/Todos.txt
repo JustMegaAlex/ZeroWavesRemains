@@ -21,7 +21,6 @@ Continue:
         > drop items randomness
 > shop
     > change items positioning
-    > show hint to open + highlight
 > refactor enemies: make descent enemy parent
 > pause: add guide
 

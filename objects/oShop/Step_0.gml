@@ -7,4 +7,4 @@ if is_open and (InstDist(oPlayer) > (open_size * 2.5)) {
     is_open = false
 }
 
-open_ratio = size / open_size
+open_ratio = (size - close_size) / (open_size - close_size)
