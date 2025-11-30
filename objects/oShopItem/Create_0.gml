@@ -54,5 +54,6 @@ promptTextWeapon = function() {
     var col = can_buy() ? c_yellow : c_red
     draw_set_color(col)
     draw_text(w*0.5, h*0.75 - 40, cost)
+    draw_set_color(c_white)
 }
 

@@ -17,10 +17,15 @@ Continue:
 0.4.0 - Update gameplay loop: more items, +1 heavy enemy, rework enemy ai, upgrades
 ? coins progression
 ? weapons cost
-> fix heal item: show money
+> add icons
+    > items:
+        > heal
+        > ammo
+        > coins
+> tute: add step about coins
 
 
-> indicate when dron flyes away
+> indicate when drone flies away
 > new enemies
     > behemoth
         - long-range rechargable scatter burst
@@ -28,9 +33,7 @@ Continue:
         > draw a sprite
 > tutorial
     > don't restore ammo on every Space hit
-    > add step about coins
 > rework items
-    > item drops: add particle animation
     > weapon items: replace with ammo items after purchase
     > items interaction
         > arrow "Item added to shop"
@@ -40,16 +43,12 @@ Continue:
 
 > rename coins to "space coins" in ui
 
-> rework wave spawn
-    > lower diff increase
-    > add drones
 > ai
     > shoot only if in range
 > coloring
     > item choice
     > shop items
     > coins
-    > 
 > show high score
 > add cross cursor
 
@@ -77,7 +76,6 @@ Continue:
     > area boundaries
 > finish gp controls
 > fixes:
-    > indicate better next wave enemies
     > disable Esc for GX
     > remove ammo items at start, replace weapon with ammo after weapon purchase
 
