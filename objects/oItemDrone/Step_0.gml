@@ -14,6 +14,7 @@ if active {
     }
 
     if PointDist(0, 0) > (oGameArea.radius * 1.2) {
+        global.wave_enemies_count--
         instance_destroy()
     }
 }

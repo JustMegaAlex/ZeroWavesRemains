@@ -71,6 +71,18 @@ steps = [
     },
     {
         // define index with search
+        time: 60,
+        default_gui,
+        text: "Hold right mouse to boost",
+        step: function() {
+            time -= oInput.Hold("rclick")
+        },
+        done: function() {
+            return time < 0
+        }
+    },
+    {
+        // define index with search
         arr: [],
         default_gui,
         text: "Destroy 3 dummies",
@@ -162,6 +174,7 @@ steps = [
             if !instance_exists(drone) {
                 if !instance_exists(oItemDrop) {
                     drone = instance_create_layer(0, 0, "Instances", oItemDrone)
+                    oUI.addHintArrow(drone, "drone", global.drone_arrow_color)
                 } else {
                     finished = true
                 }
@@ -191,7 +204,7 @@ steps = [
     spaceToProceed(),
     {
         // define index with search
-        text: "Another drop!\nLet's try something more spicy this time",
+        text: "Catch another drop!",
         drone: noone,
         finished: false,
         default_gui,
@@ -204,6 +217,7 @@ steps = [
             if !instance_exists(drone) {
                 if !instance_exists(oItemDrop) {
                     drone = instance_create_layer(0, 0, "Instances", oItemDrone)
+                    oUI.addHintArrow(drone, "drone", global.drone_arrow_color)
                 } else {
                     finished = true
                 }
@@ -322,8 +336,6 @@ startTutorial = function() {
 }
 finishTutorial = function() {
     global.tutorial_finished = true
-    instance_destroy(oWaveSpawner)
-    instance_create_layer(0, 0, "Instances", oWaveSpawner)
     global.tutorial = false
     global.wave_enemies_count = 0
     step = step_template
@@ -331,7 +343,7 @@ finishTutorial = function() {
         display_waves = true
         display_money = true
     }
-    instance_destroy(oEnemy)
+    instance_destroy(oEnemyParent)
     instance_destroy(oCoin)
     instance_destroy(oItemDrop)
     instance_destroy(oItemDropChoice)
@@ -343,12 +355,15 @@ finishTutorial = function() {
             break
         }
     }
+    instance_destroy(oWaveSpawner)
+    instance_create_layer(0, 0, "Instances", oWaveSpawner)
+    oWaveSpawner.spawn()
 }
 
 if global.tutorial_finished {
     exit
 }
-step_index = 7
+step_index = 0
 step = steps[step_index]
 alarm[0] = 1
 global.tutorial = true
@@ -357,7 +372,7 @@ skip_tutorial = {
     ratio: 0.01,
     x: 0.5,
     y: 0.1,
-    text: "Tutorial\nLong press T to skip",
+    text: "Tutorial\n(hold T to skip the whole tutorial)",
     value: 0,
     bar_len: 500,
     bar_col: c_white,

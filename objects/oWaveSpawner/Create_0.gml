@@ -11,16 +11,16 @@ just_spawned = 0
 // ]
 // waves_remains = array_length(waves)
 waves = [
-    {oItemDrone: 1},
-    {oItemDrone: 1},
-    {oItemDrone: 1},
-    {oItemDrone: 1},
-    {oItemDrone: 1},
-    {oItemDrone: 1},
-    {oItemDrone: 1},
+    // {oItemDrone: 1},
+    // {oItemDrone: 1},
+    // {oItemDrone: 1},
+    // {oItemDrone: 1},
+    // {oItemDrone: 1},
+    // {oItemDrone: 1},
+    // {oItemDrone: 1},
 ]
 wave_index = 0
-waves_remains = 30
+waves_remains = 3
 strength_growth = 1.1
 strength = 1
 strength_growth_decrease = 0.05 / waves_remains
@@ -88,20 +88,25 @@ spawn = function(wave_override=undefined) {
                 text = "drone"
             }
             oUI.addHintArrow(inst, text, col, time)
+            show_debug_message($"Activated {object_get_name(inst.object_index)}")
        }
    )
-    ArrayClear(next_wave_instances)
     if !active and wave_override==undefined { return }
-    var dist = oGameArea.radius + spawn_extra_radius * (wave_index > 0)
+    var dist = oGameArea.radius + spawn_extra_radius
 
     var wave
     if wave_override == undefined {
-        wave = waves[wave_index]
-        waves_remains--
+        waves_remains -= !ArrayEmpty(next_wave_instances)
         global.waves_remains = waves_remains
+        ArrayClear(next_wave_instances)
+        if waves_remains <= 0 {
+            return;
+        }
+        wave = waves[wave_index]
     } else {
         wave = wave_override
     }
+
     var names = struct_get_names(wave)
     for (var i = 0; i < array_length(names); i++) {
         var obj_name = names[i]
@@ -120,6 +125,7 @@ spawn = function(wave_override=undefined) {
                 active = false
             }
             array_push(next_wave_instances, inst)
+            show_debug_message($"Prespawned {object_get_name(inst.object_index)}")
         }
     }
     if wave_override == undefined {
@@ -127,8 +133,5 @@ spawn = function(wave_override=undefined) {
             spawn_timer.reset()
         }
         wave_index++
-        if wave_index >= array_length(waves) {
-            active = false
-        }
     }
 }

@@ -8,6 +8,7 @@ array_foreach(next_wave_instances,
         inst.sp.set_polar(oWaveSpawner.spawning_inst_speed*mult, inst.dir)
         var dist = point_distance(inst.x, inst.y, 0, 0)
         if !oWaveSpawner.just_spawned and point_distance(inst.x, inst.y, 0, 0) <= oGameArea.radius {
+            show_debug_message($"Activating by distance")
             oWaveSpawner.spawn()
             oWaveSpawner.just_spawned = true
         }
@@ -15,7 +16,7 @@ array_foreach(next_wave_instances,
 )
 just_spawned = false
 
-if !active { exit }
+// if !active { exit }
 //
 //if !spawn_timer.update() {
     //spawn()

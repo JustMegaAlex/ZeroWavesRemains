@@ -21,7 +21,7 @@ var xx = w*0.5
 var yy = h*0.75
 SetTextAllign(1, 1)
 if oShop.highlight {
-    draw_text(xx, yy, "Open shop")
+    draw_text(xx, yy, "Press F to open shop")
 }
 SetTextAllign(1, 0)
 if shop_item {
