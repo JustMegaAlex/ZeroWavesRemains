@@ -5,6 +5,7 @@ macro_pause
 battle_side = battle_side_enemy
 move_around_player_dist = 2800
 
+hp = 80
 
 weapon = {
     dmg: 5,

@@ -33,8 +33,8 @@ weapon_pulse = {
     upgrades: 0,
     upgrade_confs: [
         {sp: 70, timer: MakeTimer(13), cost: global.item_costs.pulse[0]},
-        {sp: 80, timer: MakeTimer(10), cost: global.item_costs.pulse[1]},
-        {sp: 100, timer: MakeTimer(8), cost: global.item_costs.pulse[2]},
+        {sp: 78, timer: MakeTimer(11), cost: global.item_costs.pulse[1]},
+        {sp: 86, timer: MakeTimer(10), cost: global.item_costs.pulse[2]},
     ]
 }
 
@@ -60,7 +60,7 @@ weapon_scatter = {
 }
 
 weapon_snipe = {
-    dmg: 70,
+    dmg: 80,
     timer: MakeTimer(60),
     object: oSnipeShot,
     range: 6000,
@@ -70,7 +70,7 @@ weapon_snipe = {
     sprite: sUIWeaponSnipe,
     upgrades: 0,
     upgrade_confs: [
-        {dmg: 90, cost: global.item_costs.snipe[1]},
+        {dmg: 100, cost: global.item_costs.snipe[1]},
         {dmg: 120, cost: global.item_costs.snipe[2]},
     ]
 }
