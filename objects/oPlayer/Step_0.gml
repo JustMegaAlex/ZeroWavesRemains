@@ -100,9 +100,13 @@ if shop_item {
         }
     }
 }
-shop = MouseCollision(oShop)
-if shop and oInput.Pressed("interact") {
-    shop.open()
+
+oShop.highlight = false
+if !oShop.is_open and place_meeting(x, y, oShop) {
+    oShop.highlight = true
+    if oInput.Pressed("interact") {
+        oShop.open()
+    }
 }
 
 if global.wave_enemies_count <= 0 and oInput.Pressed("next_wave") {

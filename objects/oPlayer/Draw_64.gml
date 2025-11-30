@@ -17,6 +17,12 @@ if display_money {
 
 var w = display_get_gui_width()
 var h = display_get_gui_height()
+var xx = w*0.5
+var yy = h*0.75
+SetTextAllign(1, 1)
+if oShop.highlight {
+    draw_text(xx, yy, "Open shop")
+}
 if shop_item {
     shop_item.promptText()
 }
