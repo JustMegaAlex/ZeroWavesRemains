@@ -6,7 +6,9 @@ var _arrow_zoom = oCamera.zoom * arrow_zoom
 var text_zoom = oCamera.zoom
 for (var i = 0; i < array_length(hint_arrows); ++i) {
     arrow = hint_arrows[i]
-    if !is_struct(arrow.target) and !instance_exists(arrow.target) {
+    arrow.time--
+    if (!is_struct(arrow.target) and !instance_exists(arrow.target))
+            or (arrow.time <= 0) {
         array_delete(hint_arrows, i, 1)
         i--
         continue

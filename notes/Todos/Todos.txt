@@ -17,14 +17,11 @@ Continue:
 0.4.0 - Update gameplay loop: more items, +1 heavy enemy, rework enemy ai, upgrades
 ? coins progression
 ? weapons cost
-> upd item choices:
-    > ammo: use common ammo function
-    > coins: actually spawn coins
-> add wave arriving indicator
-> add drone indicator
 > pause: add guide
+> rebalance item costs
 
 
+> indicate when dron flyes away
 > new enemies
     > behemoth
         - long-range rechargable scatter burst

@@ -7,6 +7,7 @@ drone_sp_first = 6
 drone_sp_second = 10
 
 
+
 step_template = {
         gui: function(w, h) {
         },
@@ -137,7 +138,7 @@ steps = [
         start: function() {
             drone = instance_create_layer(0, 0, "Instances", oItemDrone)
             drone.updateSpMax(oTutorial.drone_sp_first)
-            oUI.addHintArrow(drone, "drone", c_red)
+            oUI.addHintArrow(drone, "drone", global.drone_arrow_color)
         },
         step: function() {
             if !instance_exists(drone) {
@@ -179,7 +180,7 @@ steps = [
         start: function() {
             drone = instance_create_layer(0, 0, "Instances", oItemDrone)
             drone.updateSpMax(oTutorial.drone_sp_second)
-            oUI.addHintArrow(drone, "drone", c_red)
+            oUI.addHintArrow(drone, "drone", global.drone_arrow_color)
         },
         step: function() {
             if !instance_exists(drone) {

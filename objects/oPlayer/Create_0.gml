@@ -6,7 +6,7 @@ display_money = true
 
 kb_prev_char = ""
 
-money = 143
+money = 0
 
 battle_side = battle_side_player
 

@@ -37,6 +37,7 @@ function ResetGlobals() {
 
 
 game_colors = {}
+drone_arrow_color = c_aqua
 
 function SetColor() {
     var col = global.game_colors[$ object_get_name(object_index)]

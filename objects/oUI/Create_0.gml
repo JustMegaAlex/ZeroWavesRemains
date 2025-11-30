@@ -16,11 +16,12 @@ arrow_max_distance = 600
 arrow_min_distance = 150
 arrow_dist_mult_treshold = 0.11
 arrow_zoom = 0.3
-addHintArrow = function(target, text, color=c_white) {
+addHintArrow = function(target, text, color=c_white, time=infinity) {
     var arrow = {
         target: target,
         color: color,
         text: text,
+        time: time
     }
     array_push(hint_arrows, arrow)
     return arrow
