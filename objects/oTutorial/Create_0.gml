@@ -136,8 +136,7 @@ steps = [
             }
             text = "Press Space to spawn a wave!"
             if oInput.Pressed("next_wave") {
-                oWaveSpawner.spawn({oScout: 1})
-                oWaveSpawner.spawn({oScout: 0})
+                oWaveSpawner.spawnSingleInstance(oScout, true)
                 with oScout {
                     oUI.addHintArrow(id, "enemy", c_red)
                 }
@@ -341,7 +340,7 @@ startTutorial = function() {
     step.start()
 }
 finishTutorial = function() {
-    global.tutorial_finished = true
+    // global.tutorial_finished = true
     global.tutorial = false
     global.wave_enemies_count = 0
     step = step_template

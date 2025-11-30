@@ -40,7 +40,14 @@ game_colors = {}
 drone_arrow_color = c_aqua
 
 function SetColor() {
+    
     var col = global.game_colors[$ object_get_name(object_index)]
+    if col == undefined {
+        var obj = object_get_parent(object_index)
+        if obj {
+            col = global.game_colors[$ object_get_name(obj)]
+        }
+    }
     if col != undefined {
         image_blend = col
     }

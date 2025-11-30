@@ -111,7 +111,7 @@ if !oShop.is_open and place_meeting(x, y, oShop) {
 }
 
 if global.wave_enemies_count <= 0 and oInput.Pressed("next_wave") {
-    if instance_exists(oEnemyParent) and !audio_is_playing(mscStealthTheme) {
+    if !global.tutorial and instance_exists(oEnemyParent) and !audio_is_playing(mscStealthTheme) {
         oMusic.switch_music(mscStealthTheme)
     }
     show_debug_message($"Activating by player")

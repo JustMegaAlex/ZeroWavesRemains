@@ -1,7 +1,7 @@
 
 order = [
     oPlayer,
-    oEnemy,
+    oEnemyParent,
     oBullet,
     "space_bg",
     "stars",

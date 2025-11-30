@@ -11,17 +11,19 @@ just_spawned = 0
 // ]
 // waves_remains = array_length(waves)
 waves = [
-    // {oItemDrone: 1},
-    // {oItemDrone: 1},
-    // {oItemDrone: 1},
-    // {oItemDrone: 1},
-    // {oItemDrone: 1},
-    // {oItemDrone: 1},
-    // {oItemDrone: 1},
+    {oScout: 2},
+    {oEnemyTiny: 2},
+    {oEnemyTiny: 2},
+    {oEnemyTiny: 3},
+    {oItemDrone: 1},
+    {oEnemy: 1},
+    {oEnemy: 1},
+    {oEnemy: 2},
+    {oScout: 2, oEnemyTiny: 2},
+    {oEnemy: 1, oScout: 2, oItemDrone: 1},
 ]
 wave_index = 0
-waves_remains = 3
-global.waves_remains = waves_remains
+waves_remains = 20
 strength_growth = 1.1
 strength = 1
 strength_growth_decrease = 0.05 / waves_remains
@@ -62,6 +64,8 @@ for (var i = 0; i < waves_remains; ++i) {
     strength_growth -= strength_growth_decrease
 }
 
+waves_remains = array_length(waves)
+global.waves_remains = waves_remains
 
 
 next_wave_instances = []
@@ -73,6 +77,24 @@ dummy = noone
 if instance_exists(oEnemy) {
     dummy = instance_find(oEnemy, 0)
 }
+
+spawnSingleInstance = function(obj, make_active=false) {
+    var _dir = irandom(360)
+    var dist = oGameArea.radius + spawn_extra_radius
+    spawn_pos.set_polar(dist, _dir)
+    var inst = instance_create_layer(
+        spawn_pos.x, spawn_pos.y,
+        "Instances", obj
+    )
+    if !make_active {
+        with inst {
+            invincible = true
+            dir = _dir + 180
+            active = false
+        }
+    }
+    return inst
+} 
 
 spawn = function(wave_override=undefined) {
    array_foreach(next_wave_instances, 
@@ -93,7 +115,6 @@ spawn = function(wave_override=undefined) {
        }
    )
     if !active and wave_override==undefined { return }
-    var dist = oGameArea.radius + spawn_extra_radius
 
     var wave
     if wave_override == undefined {
@@ -114,17 +135,7 @@ spawn = function(wave_override=undefined) {
         var number = wave[$ obj_name]
         var obj = asset_get_index(obj_name)
         repeat number {
-            var _dir = irandom(360)
-            spawn_pos.set_polar(dist, _dir)
-            var inst = instance_create_layer(
-                spawn_pos.x, spawn_pos.y,
-                "Instances", obj
-            )
-            with inst {
-                invincible = true
-                dir = _dir + 180
-                active = false
-            }
+            var inst = spawnSingleInstance(obj)
             array_push(next_wave_instances, inst)
             show_debug_message($"Prespawned {object_get_name(inst.object_index)}")
         }
