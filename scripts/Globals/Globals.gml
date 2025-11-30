@@ -47,9 +47,16 @@ function SetColor() {
 }
 
 /// Shop
-snipe_cost = 80
-snipe_ammo_cost = 30
-scatter_cost = 25
-scatter_ammo_cost = 20
-heal_cost = 50
+
+item_costs = {
+    pulse: [10, 40, 70],
+    // [buy_cost, upgrade costs...]
+    snipe: [80, 80, 90, 120],
+    scatter: [60, 60, 70, 90],
+    heal: 40,
+    // [cost, amount]
+    snipe_ammo: [20, 5],
+    scatter_ammo: [20, 100],
+}
+
 heal_amount = 50

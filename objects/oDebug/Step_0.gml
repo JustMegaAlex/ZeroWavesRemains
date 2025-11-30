@@ -48,4 +48,10 @@ if active {
     if key_pressed(ord("X")) {
         oPlayer.die()
     }
+
+    if key_pressed(ord("U")) {
+        with oShopItem {
+            unlock()
+        }
+    }
 }

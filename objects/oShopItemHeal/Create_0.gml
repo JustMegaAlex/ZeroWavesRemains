@@ -1,5 +1,6 @@
 event_inherited()
 
+cost = global.item_costs.heal
 prompt_text = prompt_text + $"heal {global.heal_amount}"
 
 can_buy = function() {

@@ -1,5 +1,6 @@
 event_inherited()
 
+cost = global.item_costs[$ string_lower(weapon.name)][0]
 text = prompt_text + $"buy {weapon.name}"
 
 apply = function() {
