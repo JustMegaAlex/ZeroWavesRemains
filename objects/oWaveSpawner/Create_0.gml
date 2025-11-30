@@ -2,48 +2,59 @@ var sec = 60
 active = true
 spawn_timer = MakeTimer(40 * sec, 0)
 just_spawned = 0
-waves = [
-    // {oEnemy: 1, oEnemyTiny: 0},
-    // {oEnemy: 1, oEnemyTiny: 0},
-    // {oEnemy: 1, oEnemyTiny: 0},
-    // {oEnemy: 1, oEnemyTiny: 0},
-    // {oEnemy: 1, oEnemyTiny: 0},
-    // {oEnemy: 1, oEnemyTiny: 0},
-    // {oEnemy: 1, oEnemyTiny: 0},
-    // {oEnemy: 1, oEnemyTiny: 0},
-    // {oEnemy: 1, oEnemyTiny: 0},
-    // {oEnemy: 1, oEnemyTiny: 0},
-    // {oEnemy: 1, oEnemyTiny: 0},
-    {oScout: 1, oEnemy: 1, oEnemyTiny: 1},
-
-    {oEnemy: 1, oEnemyTiny: 0},
-    {oEnemy: 2, oEnemyTiny: 0},
-    {oEnemy: 2, oEnemyTiny: 0},
-    {oEnemy: 2, oEnemyTiny: 0},
-    {oEnemy: 3, oEnemyTiny: 0},
-    {oEnemy: 0, oEnemyTiny: 2},
-    {oEnemy: 0, oEnemyTiny: 3},
-    {oEnemy: 0, oEnemyTiny: 3},
-    {oEnemy: 0, oEnemyTiny: 3},
-    {oEnemy: 1, oEnemyTiny: 3},
-    {oEnemy: 2, oEnemyTiny: 3},
-    {oEnemy: 4, oEnemyTiny: 0},
-    {oEnemy: 4, oEnemyTiny: 0},
-    {oEnemy: 6, oEnemyTiny: 0},
-    {oEnemy: 1, oEnemyTiny: 7},
-    {oEnemy: 1, oEnemyTiny: 8},
-    {oEnemy: 1, oEnemyTiny: 8},
-    {oEnemy: 3, oEnemyTiny: 8},
-    {oEnemy: 3, oEnemyTiny: 8},
-    {oEnemy: 4, oEnemyTiny: 8},
-    {oEnemy: 8, oEnemyTiny: 0},
-    {oEnemy: 6, oEnemyTiny: 8},
-    {oEnemy: 6, oEnemyTiny: 8},
-    {oEnemy: 8, oEnemyTiny: 10},
-    //{oEnemy: 1, oEnemyTiny: 0},
-]
-waves_remains = array_length(waves)
+/*
+1. Random waves by wave strength
+2. Can insert custom waves
+*/
+// waves = [
+//     {oScout: 1, oEnemy: 1, oEnemyTiny: 1},
+// ]
+// waves_remains = array_length(waves)
+waves = []
 wave_index = 0
+waves_remains = 30
+strength_growth = 1.1
+strength = 1
+strength_growth_decrease = 0.05 / waves_remains
+strength_cost = {
+    oEnemy: 1, oScout: 0.45, oEnemyTiny: 0.27
+}
+enemy_randomer = new ControlledRandomer({
+    oEnemy: 3, oScout: 6, oEnemyTiny: 12
+}, true)
+extra_strength_randomer = new ControlledRandomer([
+    [0, 10], [0.5, 5], [1, 3], [2, 2]
+], true)
+drone_randomer = new ControlledRandomer({
+    in_wave: 1, single:2, none:6
+}, true)
+
+for (var i = 0; i < waves_remains; ++i) {
+    var wave = {}
+    var _strength = strength + extra_strength_randomer.get()
+    var cost = 0
+    var object_name
+    switch drone_randomer.get() {
+        case "in_wave": wave.oItemDrone = 1; break;
+        case "single": wave.oItemDrone = 1; _strength = 0 ; break;
+    }
+    while _strength >= cost {
+        object_name = enemy_randomer.get()
+        cost = strength_cost[$ object_name]
+        if !struct_has(wave, object_name) {
+            wave[$ object_name] = 1
+        } else {
+            wave[$ object_name] += 1
+        }
+        _strength -= cost
+    }
+    array_push(waves, wave)
+    strength *= strength_growth
+    strength_growth -= strength_growth_decrease
+}
+
+
+
 next_wave_instances = []
 spawn_extra_radius = 500
 spawn_pos = new Vec2(0, 0)

@@ -19,17 +19,16 @@ Continue:
     > add scouts
     > add drops
         > drop items randomness
-> shop
-    > change items positioning
+    ? coins progression
+    ? weapons cost
+    ? 
 > refactor enemies: make descent enemy parent
 > pause: add guide
-
+> add wave arriving indicator
+> add drone indicator
 
 
 > new enemies
-    > refactor: make descent enemy parent
-    > scout
-        - simple enemy, flying around, shooting slow lasting bullets
     > behemoth
         - long-range rechargable scatter burst
         - short range non-stop all directions machine gun, very dangerous
@@ -81,7 +80,6 @@ Continue:
     > make variable size for explosions
     > shoot particles
     > area boundaries
-> add wave arriving indicator
 > finish gp controls
 > fixes:
     > indicate better next wave enemies

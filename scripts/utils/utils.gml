@@ -515,8 +515,6 @@ function SmoothApproacher(from, to, time, accel_time_fract) constructor {
     }
 }
 
-
-
 function createPartType(ps, args) {
     function _applyArgs(pt, fun, arr, num) {
         var a1 = arr[0]
@@ -609,4 +607,57 @@ function createPartType(ps, args) {
         part_type_scale(pt, scale[0], scale[1])
     }
     return pt
+}
+
+
+function ControlledRandomer(config, auto=false) constructor {
+    self.config = config
+    self.list = ds_list_create()
+    self.count = 0
+    self.auto = auto
+
+    init_from_struct = function() {
+        count = 0
+        var keys = variable_struct_get_names(self.config)
+        for (var i = 0; i < array_length(keys); ++i) {
+            var val = keys[i]
+            var num = self.config[$ val]
+            repeat(num) { ds_list_add(list, val) }
+            count += num
+        }
+        ds_list_shuffle(list)
+        return count
+    }
+    init_from_array = function() {
+        count = 0
+        for (var i = 0; i < array_length(config); ++i) {
+            var item = config[i]
+            var val = item[0]
+            var num = item[1]
+            repeat(num) { ds_list_add(list, val) }
+            count += num
+        }
+        ds_list_shuffle(list)
+        return count
+    }
+    if is_struct(self.config) {
+        self.init = self.init_from_struct
+    } else {
+        self.init = self.init_from_array
+    }
+
+    self.count = self.init()
+
+    get = function() {
+        var value = list[| 0]
+        ds_list_delete(list, 0)
+        if auto and empty() {
+            init()
+        }
+        return value
+    }
+
+    empty = function() {
+        return ds_list_empty(list)
+    }
 }
