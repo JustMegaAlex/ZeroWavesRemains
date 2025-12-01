@@ -2,7 +2,10 @@ if !global.tutorial exit
 
 var w = display_get_gui_width()
 var h = display_get_gui_height()
+draw_set_color(c_yellow)
 step.gui(w,h)
+draw_set_color(c_white)
+
 
 SetTextAllign(1, 1)
 with skip_tutorial {
