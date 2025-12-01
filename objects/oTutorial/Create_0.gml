@@ -198,7 +198,7 @@ steps = [
         default_gui,
         start: function() {
             with oItemDropChoice {
-                setItem(global.item_consumable)
+                setItem(global.item_heal)
             }
             with oItemDrop {
                 oUI.addHintArrow(id, "collect item to heal", global.game_colors.arrow_common)

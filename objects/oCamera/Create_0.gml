@@ -24,7 +24,9 @@ aspect_ratio = 1920 / 1080
 camera_width = 1920
 camera_height = camera_width / aspect_ratio
 
-zoom = 1
+zoom_min = 1.8
+zoom_max = 3
+zoom = zoom_min
 zoom_to = 1
 zoom_treshold_speed = 40
 zoom_factor = 0.25
