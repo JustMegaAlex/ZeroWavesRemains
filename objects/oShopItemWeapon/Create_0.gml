@@ -1,6 +1,6 @@
 event_inherited()
 
-cost = global.item_costs[$ string_lower(weapon.name)][0]
+cost = global.balance.items.costs[$ string_lower(weapon.name)][0]
 text = prompt_text + $"buy {weapon.name}"
 icon = weapon.sprite
 image_blend = global.game_colors.item_weapon

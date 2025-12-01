@@ -11,6 +11,7 @@ just_spawned = 0
 // ]
 // waves_remains = array_length(waves)
 waves = [
+
     {oScout: 2},
     {oEnemyTiny: 2},
     {oEnemyTiny: 2},
@@ -23,13 +24,13 @@ waves = [
     {oEnemy: 1, oScout: 2, oItemDrone: 1},
 ]
 wave_index = 0
-waves_remains = 20
-strength_growth = 1.1
-strength = 1
-strength_growth_decrease = 0.05 / waves_remains
-strength_cost = {
-    oEnemy: 1, oScout: 0.45, oEnemyTiny: 0.27
-}
+var progression = global.balance.progression
+waves_remains = progression.total_waves
+strength_growth = progression.strength_growth
+strength = progression.strength
+strength_growth_decrease = progression.strength_growth_decrease_total / waves_remains
+strength_cost = progression.strength_cost
+
 enemy_randomer = new ControlledRandomer({
     oEnemy: 3, oScout: 6, oEnemyTiny: 12
 }, true)
@@ -114,7 +115,6 @@ spawn = function(wave_override=undefined) {
             show_debug_message($"Activated {object_get_name(inst.object_index)}")
        }
    )
-    if !active and wave_override==undefined { return }
 
     var wave
     if wave_override == undefined {

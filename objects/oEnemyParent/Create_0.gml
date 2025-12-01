@@ -116,10 +116,15 @@ die = function() {
     }
     oParticles.explosion_2(x, y)
     audio_play_sound(sfxExplosion1, 3, false)
-    oCamera.shake()
+    if instance_exists(oCamera) {
+        oCamera.shake()
+    }
 }
 
 setCoins = function(cmin, cmax) {
     coins_min = cmin
     coins_max = cmax
 }
+
+var my_coins = global.balance.coins[$ object_get_name(object_index)]
+setCoins(my_coins[0], my_coins[1])

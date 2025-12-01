@@ -1,8 +1,8 @@
 event_inherited()
 
 cost = global.balance.items.costs.heal
-heal_amout = global.balance.items.heal_amount
-text = press_f_prompt + $" heal {global.heal_amount}"
+heal_amount = global.balance.items.heal_amount
+text = press_f_prompt + $" heal {heal_amount}"
 icon = sIconHeal
 image_blend = global.game_colors.item_heal
 

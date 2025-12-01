@@ -1,1 +1,1 @@
-room_goto(rmGame)
+room_goto_next()
