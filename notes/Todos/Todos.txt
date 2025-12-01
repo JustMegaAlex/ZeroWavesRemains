@@ -111,6 +111,7 @@ Enemies concepts:
 
 
 Ideas:
+> choose color palette?
 > add flaring red effect when < 25% hp
 > penetrating kinetic weapon (like that bugged out pulse)
 > replace ammo with ammo upgrades: restore ratio + amount

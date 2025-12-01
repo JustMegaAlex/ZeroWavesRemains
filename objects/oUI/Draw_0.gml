@@ -22,7 +22,7 @@ for (var i = 0; i < array_length(hint_arrows); ++i) {
         .add_polar(arrow_draw_dist*_arrow_zoom, dir)
     draw_sprite_ext(
         sUIArrow, 0, helper_vec.x, helper_vec.y,
-        _arrow_zoom, _arrow_zoom, dir, arrow.color, 0.5)
+        _arrow_zoom, _arrow_zoom, dir, arrow.color, 0.7)
     draw_text_transformed(
         helper_vec.x, helper_vec.y - 100 * _arrow_zoom, 
         arrow.text, text_zoom, text_zoom, 0)

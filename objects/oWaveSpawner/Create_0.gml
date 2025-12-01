@@ -102,11 +102,11 @@ spawn = function(wave_override=undefined) {
             inst.active = true
             inst.invincible = false
             global.wave_enemies_count++
-            var col = c_red
+            var col = global.game_colors.arrow_enemy
             var time = 240
             var text = ""
             if inst.object_index == oItemDrone {
-                col = global.drone_arrow_color
+                col = global.game_colors.arrow_drone
                 time = infinity
                 text = "drone"
             }

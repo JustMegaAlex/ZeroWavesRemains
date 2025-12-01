@@ -99,7 +99,7 @@ steps = [
             array_push(arr, instance_create_layer(1200, 400, "Instances", oEnemy, args))
             for (var i = 0; i < array_length(arr); ++i) {
                 var item = arr[i]
-                oUI.addHintArrow(item, "enemy", c_red)
+                oUI.addHintArrow(item, "enemy", global.game_colors.arrow_enemy)
             }
         },
         done: function() {
@@ -138,7 +138,7 @@ steps = [
             if oInput.Pressed("next_wave") {
                 oWaveSpawner.spawnSingleInstance(oScout, true)
                 with oScout {
-                    oUI.addHintArrow(id, "enemy", c_red)
+                    oUI.addHintArrow(id, "enemy", global.game_colors.arrow_enemy)
                 }
                 spawned--
             }
@@ -154,7 +154,7 @@ steps = [
                 return;
             }
             with oCoin {
-                other.arrow = oUI.addHintArrow(id, "coins", c_yellow)
+                other.arrow = oUI.addHintArrow(id, "coins", global.game_colors.arrow_common)
                 return;
             }
         },
@@ -173,13 +173,13 @@ steps = [
         start: function() {
             drone = instance_create_layer(0, 0, "Instances", oItemDrone)
             drone.updateSpMax(oTutorial.drone_sp_first)
-            oUI.addHintArrow(drone, "drone", global.drone_arrow_color)
+            oUI.addHintArrow(drone, "drone", global.game_colors.arrow_drone)
         },
         step: function() {
             if !instance_exists(drone) {
                 if !instance_exists(oItemDrop) {
                     drone = instance_create_layer(0, 0, "Instances", oItemDrone)
-                    oUI.addHintArrow(drone, "drone", global.drone_arrow_color)
+                    oUI.addHintArrow(drone, "drone", global.game_colors.arrow_drone)
                 } else {
                     finished = true
                 }
@@ -198,7 +198,7 @@ steps = [
                 setItem(global.item_heal)
             }
             with oItemDrop {
-                oUI.addHintArrow(id, "collect item to heal", c_green)
+                oUI.addHintArrow(id, "collect item to heal", global.game_colors.arrow_common)
             }
         },
         done: function() {
@@ -216,13 +216,13 @@ steps = [
         start: function() {
             drone = instance_create_layer(0, 0, "Instances", oItemDrone)
             drone.updateSpMax(oTutorial.drone_sp_second)
-            oUI.addHintArrow(drone, "drone", global.drone_arrow_color)
+            oUI.addHintArrow(drone, "drone", global.game_colors.arrow_drone)
         },
         step: function() {
             if !instance_exists(drone) {
                 if !instance_exists(oItemDrop) {
                     drone = instance_create_layer(0, 0, "Instances", oItemDrone)
-                    oUI.addHintArrow(drone, "drone", global.drone_arrow_color)
+                    oUI.addHintArrow(drone, "drone", global.game_colors.arrow_drone)
                 } else {
                     finished = true
                 }
@@ -251,7 +251,7 @@ steps = [
                 setItem(item)
             }
             with oItemDrop {
-                oUI.addHintArrow(id, "collect the shop upgrade", c_green)
+                oUI.addHintArrow(id, "collect the shop upgrade", global.game_colors.arrow_common)
             }
         },
         done: function() {
@@ -264,7 +264,7 @@ steps = [
         default_gui,
         arrow: noone,
         start: function() {
-            arrow = oUI.addHintArrow(oShop, "shop", c_yellow)
+            arrow = oUI.addHintArrow(oShop, "shop", global.game_colors.arrow_common)
         },
         step: function() {
             if oShop.is_open {

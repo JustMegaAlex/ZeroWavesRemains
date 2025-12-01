@@ -37,7 +37,6 @@ function ResetGlobals() {
 
 
 game_colors = {}
-drone_arrow_color = c_aqua
 
 function SetColor() {
     
