@@ -21,4 +21,5 @@ if oInput.Pressed("escape") {
 if oInput.Pressed("pause") {
     global.pause = !global.pause
     layer_set_visible("ui_text", global.pause)
+    layer_set_visible("ui_buttons", global.pause)
 }

@@ -15,6 +15,8 @@ Continue:
 
 
 0.4.1 - Update gameplay loop: more items, +1 heavy enemy, rework enemy ai, upgrades
+> menu
+    > add music and sfx sliders
 > rebalance everything
     - diff coin amounts
     - costs
@@ -22,8 +24,6 @@ Continue:
 > audio
     > add victory music
     > add coins sfx
-> menu
-    > add music and sfx sliders
 
 > fix ui: make all text transparent if there are enemies
 > fix drops: don't drop ammo if no ammo-ish weapons

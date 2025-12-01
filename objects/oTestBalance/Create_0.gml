@@ -14,4 +14,4 @@ with oPlayer {
     display_money = false
 }
 
-audio_master_gain(0)
+//audio_master_gain(0)

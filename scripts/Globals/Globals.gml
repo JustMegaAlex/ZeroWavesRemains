@@ -27,7 +27,9 @@ waves_remains = 0
 increase_spawning_speed_between_waves = false
 
 
-
+music_assets = [
+    mscIntro, mscLooseTheme, mscStealthTheme,
+]
 
 debug_tiny = noone
 

@@ -16,5 +16,6 @@ layers_to_make_visible = [
 ]
 
 layer_set_visible("ui_text", false)
+layer_set_visible("ui_buttons", false)
 
 // show_debug_overlay(true)
