@@ -7,6 +7,13 @@ order = [
     "stars",
     oCoin,
     oShop,
+    "item_choice",
+    "item_weapon",
+    "item_heal",
+    "item_ammo",
+    "arrow_enemy",
+    "arrow_drone",
+    "arrow_common",
 ]
 
 cellw = 64
