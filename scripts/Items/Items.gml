@@ -3,8 +3,8 @@ item_template = {
 
 }
 
-var heal_amount = 20
-var ammo_precent = 0.3
+var heal_amount = global.balance.items.heal_amount_drop
+var ammo_precent = global.balance.items.ammo_percent_drop
 var coins = 20
 item_heal = {
     color_index: "item_heal",

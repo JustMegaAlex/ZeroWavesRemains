@@ -32,9 +32,9 @@ weapon_pulse = {
     sprite: sUIWeaponPulse,
     upgrades: 0,
     upgrade_confs: [
-        {sp: 70, timer: MakeTimer(13), cost: global.item_costs.pulse[0]},
-        {sp: 78, timer: MakeTimer(11), cost: global.item_costs.pulse[1]},
-        {sp: 86, timer: MakeTimer(10), cost: global.item_costs.pulse[2]},
+        {sp: 70, timer: MakeTimer(13), cost: global.balance.items.costs.pulse[0]},
+        {sp: 78, timer: MakeTimer(11), cost: global.balance.items.costs.pulse[1]},
+        {sp: 86, timer: MakeTimer(10), cost: global.balance.items.costs.pulse[2]},
     ]
 }
 
@@ -54,8 +54,8 @@ weapon_scatter = {
     sprite: sUIWeaponScatter,
     upgrades: 0,
     upgrade_confs: [
-        {range: 1400, dmg: 4.5, cost: global.item_costs.scatter[1]},
-        {range: 1600, dmg: 5, cost: global.item_costs.scatter[2]},
+        {range: 1400, dmg: 4.5, cost: global.balance.items.costs.scatter[1]},
+        {range: 1600, dmg: 5, cost: global.balance.items.costs.scatter[2]},
     ]
 }
 
@@ -70,8 +70,8 @@ weapon_snipe = {
     sprite: sUIWeaponSnipe,
     upgrades: 0,
     upgrade_confs: [
-        {dmg: 100, cost: global.item_costs.snipe[1]},
-        {dmg: 120, cost: global.item_costs.snipe[2]},
+        {dmg: 100, cost: global.balance.items.costs.snipe[1]},
+        {dmg: 120, cost: global.balance.items.costs.snipe[2]},
     ]
 }
 

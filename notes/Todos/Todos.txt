@@ -15,17 +15,13 @@ Continue:
 
 
 0.4.1 - Update gameplay loop: more items, +1 heavy enemy, rework enemy ai, upgrades
-> coloring
-    > item choices
-    > shop items
-    > coins
-> audio
-    > add victory music
-    > add coins sfx
 > rebalance everything
     - diff coin amounts
     - costs
     - diff progression
+> audio
+    > add victory music
+    > add coins sfx
 > menu
     > add music and sfx sliders
 
