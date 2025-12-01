@@ -1,3 +1,8 @@
+if !BALANCE {
+    instance_destroy()
+    exit
+}
+
 test_results = []
 is_generating = false
 

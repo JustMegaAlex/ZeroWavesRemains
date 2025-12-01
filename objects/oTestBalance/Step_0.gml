@@ -13,7 +13,9 @@ if is_generating {
     }
     res.coins = instance_number(oCoin)
     instance_destroy(oCoin)
-    array_push(test_results, res)
+    if res.coins > 0 {
+        array_push(test_results, res)
+    }
     if oWaveSpawner.waves_remains <= 0 {
         is_generating = false
     }

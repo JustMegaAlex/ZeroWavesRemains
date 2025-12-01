@@ -1,7 +1,10 @@
 
 #macro DEV false
+#macro BALANCE false
 
 #macro Dev:DEV true
+#macro Balance:BALANCE true
+
 
 #macro macro_pause if global.pause {exit}
 #macro no_player_exit if !instance_exists(oPlayer) {exit}

@@ -11,7 +11,6 @@ just_spawned = 0
 // ]
 // waves_remains = array_length(waves)
 waves = [
-
     {oScout: 2},
     {oEnemyTiny: 2},
     {oEnemyTiny: 2},
@@ -35,24 +34,32 @@ enemy_randomer = new ControlledRandomer({
     oEnemy: 3, oScout: 6, oEnemyTiny: 12
 }, true)
 extra_strength_randomer = new ControlledRandomer([
-    [0, 10], [0.5, 5], [1, 3], [2, 2]
+    [0, 10],// [0.5, 5], [1, 3], [2, 2]
 ], true)
 drone_randomer = new ControlledRandomer({
     in_wave: 1, single:2, none:6
 }, true)
+wave_strengths = []
+for (var i = 0; i < array_length(waves); ++i) {
+    wave_strengths[i] = -1
+}
 
 for (var i = 0; i < waves_remains; ++i) {
     var wave = {}
     var _strength = strength + extra_strength_randomer.get()
-    var cost = 0
+    array_push(wave_strengths, _strength)
+    var cost = 1
     var object_name
     switch drone_randomer.get() {
         case "in_wave": wave.oItemDrone = 1; break;
         case "single": wave.oItemDrone = 1; _strength = 0 ; break;
     }
-    while _strength >= cost {
+    while true {
         object_name = enemy_randomer.get()
         cost = strength_cost[$ object_name]
+        if _strength < cost {
+            break
+        }
         if !struct_has(wave, object_name) {
             wave[$ object_name] = 1
         } else {
