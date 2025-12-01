@@ -7,6 +7,7 @@ var heal_amount = 20
 var ammo_precent = 0.3
 var coins = 20
 item_heal = {
+    color_index: "item_heal",
     heal_amount: heal_amount,
     prompt_text: $"heal {heal_amount} hp",
     icon: sIconHeal,
@@ -16,6 +17,7 @@ item_heal = {
 }
 
 item_ammo = {
+    color_index: "item_ammo",
     icon: sIconAmmo,
     ammo_precent: ammo_precent,
     prompt_text: $"get {ammo_precent*100}% ammo for current weapon",
@@ -26,6 +28,7 @@ item_ammo = {
 }
 
 item_coins = {
+    color_index: "oCoin",
     icon: sIconCoins,
     coins: coins,
     prompt_text: $"get {coins} coins",

@@ -56,3 +56,4 @@ apply = function() {
 }
 
 promptText = promptTextWeapon
+image_blend = global.game_colors.item_weapon

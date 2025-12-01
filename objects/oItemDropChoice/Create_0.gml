@@ -6,6 +6,7 @@ setItem = function(_item) {
     item = _item
     if is_struct(item) {
         text = press_f_prompt + item.prompt_text
+        image_blend = global.game_colors[$ item.color_index]
     } else {
         switch item.object_index {
             case oShopItemWeapon:
@@ -16,6 +17,7 @@ setItem = function(_item) {
                 text = $"{press_f_prompt} add healing to the shop"
             break
         }
+        image_blend = item.image_blend
     }
 }
 
