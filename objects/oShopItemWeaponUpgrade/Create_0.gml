@@ -35,6 +35,7 @@ if array_length(weapon.upgrade_confs) == 0 {
 }
 
 cost = weapon.upgrade_confs[0].cost
+icon = weapon.sprite
 updateText()
 
 apply = function() {
