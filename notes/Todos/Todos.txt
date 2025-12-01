@@ -25,7 +25,6 @@ Continue:
 > menu
     > add music and sfx sliders
 
-
 > fix ui: make all text transparent if there are enemies
 > fix drops: don't drop ammo if no ammo-ish weapons
 > indicate when drone flies away

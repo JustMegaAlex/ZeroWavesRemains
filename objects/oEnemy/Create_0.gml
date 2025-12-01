@@ -103,9 +103,6 @@ function Aim(target) {
 
 die = function() {
     global.wave_enemies_count--
-    if instance_number(oEnemyParent) == 1 and oWaveSpawner.waves_remains == 0 {
-        global.win = true
-    }
     objectDie()
     instance_destroy()
     // spawn coins
