@@ -17,12 +17,12 @@ Continue:
 0.4.0 - Update gameplay loop: more items, +1 heavy enemy, rework enemy ai, upgrades
 ? coins progression
 ? weapons cost
-
-> add icons
-    > items:
-        > heal
-        > ammo
-        > coins
+> coloring
+    > item choice
+    > shop items
+    > coins
+> items
+    > add shop ammo item
 
 > fix ui: make all text transparent if there are enemies
 > fix drops: don't drop ammo if no ammo-ish weapons
@@ -46,10 +46,6 @@ Continue:
 
 > ai
     > shoot only if in range
-> coloring
-    > item choice
-    > shop items
-    > coins
 > show high score
 > add cross cursor
 

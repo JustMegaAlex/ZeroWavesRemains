@@ -19,6 +19,7 @@
     {"name":"inst_1DBCC92C","path":"rooms/rmGame/rmGame.yy",},
     {"name":"inst_57ED7E4F","path":"rooms/rmGame/rmGame.yy",},
     {"name":"inst_4B1C2414","path":"rooms/rmGame/rmGame.yy",},
+    {"name":"inst_3A503F7F","path":"rooms/rmGame/rmGame.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -45,6 +46,7 @@
         {"$GMRInstance":"v4","%Name":"inst_4B1C2414","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4B1C2414","objectId":{"name":"oShopItemWeaponUpgrade","path":"objects/oShopItemWeaponUpgrade/oShopItemWeaponUpgrade.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oShopItemWeaponUpgrade","path":"objects/oShopItemWeaponUpgrade/oShopItemWeaponUpgrade.yy",},"propertyId":{"name":"weapon","path":"objects/oShopItemWeaponUpgrade/oShopItemWeaponUpgrade.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"oPlayer.weapon_pulse",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-64.0,"y":-96.0,},
+        {"$GMRInstance":"v4","%Name":"inst_3A503F7F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3A503F7F","objectId":{"name":"oShopItemAmmo","path":"objects/oShopItemAmmo/oShopItemAmmo.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":64.0,"y":-96.0,},
       ],"layers":[],"name":"BackObjects","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Assets","assets":[],"depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Assets","properties":[],"resourceType":"GMRAssetLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Parallax","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[

@@ -1,9 +1,13 @@
 
 event_inherited()
 
-text = prompt_text + $"buy {weapon.name} ammo +{ammo}"
+ammo_percent = global.ammo_percent
+ammo_amount = round(oPlayer.weapon.ammo_max * ammo_percent)
+text = $"{press_f_prompt} buy {oPlayer.weapon.name} ammo + {ammo_amount}"
+icon = sIconAmmo
+cost = global.item_costs.ammo
 
 apply = function() {
-    weapon.ammo += ammo
+    oPlayer.weapon.ammo += ammo_amount
     audio_play_sound(sfxWeaponReload, 2, false)
 }

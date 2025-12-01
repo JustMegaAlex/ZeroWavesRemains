@@ -4,7 +4,7 @@ item_template = {
 }
 
 var heal_amount = 20
-var ammo_precent = 30
+var ammo_precent = 0.3
 var coins = 20
 item_heal = {
     heal_amount: heal_amount,
@@ -18,7 +18,7 @@ item_heal = {
 item_ammo = {
     icon: sIconAmmo,
     ammo_precent: ammo_precent,
-    prompt_text: $"get {ammo_precent}% ammo for current weapon",
+    prompt_text: $"get {ammo_precent*100}% ammo for current weapon",
     apply: function() {
         oPlayer.weapon.ammo += round(oPlayer.weapon.ammo_max * ammo_precent)
         audio_play_sound(sfxWeaponReload, 2, false)

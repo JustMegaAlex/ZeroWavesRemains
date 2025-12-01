@@ -61,9 +61,11 @@ item_costs = {
     snipe: [80, 80, 90, 120],
     scatter: [60, 60, 70, 90],
     heal: 40,
+    ammo: 0.3,
     // [cost, amount]
     snipe_ammo: [20, 5],
     scatter_ammo: [20, 100],
 }
 
 heal_amount = 50
+ammo_percent = 0.3
