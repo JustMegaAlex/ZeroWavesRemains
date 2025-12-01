@@ -1,5 +1,5 @@
 
-#macro default_gui gui: function(w, h) { SetTextAllign(1, 1); draw_text(w*0.5, h*0.3, self.text)}
+#macro default_gui gui: function(w, h) { SetTextAllign(1, 1); draw_text(w*0.5, h*0.15, self.text)}
 
 
 if global.tutorial_finished {
@@ -93,10 +93,13 @@ steps = [
         default_gui,
         text: "Destroy 3 dummies",
         start: function() {
-            var args = {active: false, coins_min: 0, coins_max: 0}
+            var args = {active: false}
             array_push(arr, instance_create_layer(100, 600, "Instances", oEnemy, args))
             array_push(arr, instance_create_layer(300, -600, "Instances", oEnemy, args))
             array_push(arr, instance_create_layer(1200, 400, "Instances", oEnemy, args))
+            with oEnemy {
+                setCoins(0, 0)
+            }
             for (var i = 0; i < array_length(arr); ++i) {
                 var item = arr[i]
                 oUI.addHintArrow(item, "enemy", global.game_colors.arrow_enemy)
@@ -120,18 +123,18 @@ steps = [
     {
         // define index with search
         text: "Press Space to spawn a wave!",
-        spawned: 3,
+        spawned: 0,
+        total: 3,
         default_gui,
         start: function() {
             global.waves_remains = 3
-            oPlayer.display_waves = true
             oPlayer.display_money = true
         }, 
         done: function() {
             if instance_exists(oScout) {
-                text = "Destroy the wave!"
+                text = $"Destroy the wave! ({spawned}/{total})"
                 return false
-            } else if spawned <= 0 {
+            } else if spawned >= total {
                 return true
             }
             text = "Press Space to spawn a wave!"
@@ -140,7 +143,7 @@ steps = [
                 with oScout {
                     oUI.addHintArrow(id, "enemy", global.game_colors.arrow_enemy)
                 }
-                spawned--
+                spawned++
             }
             return false
         }
@@ -195,7 +198,7 @@ steps = [
         default_gui,
         start: function() {
             with oItemDropChoice {
-                setItem(global.item_heal)
+                setItem(global.item_consumable)
             }
             with oItemDrop {
                 oUI.addHintArrow(id, "collect item to heal", global.game_colors.arrow_common)
@@ -372,7 +375,7 @@ global.tutorial = true
 skip_tutorial = {
     ratio: 0.01,
     x: 0.5,
-    y: 0.1,
+    y: 0.05,
     text: "Tutorial\n(hold T to skip the whole tutorial)",
     value: 0,
     bar_len: 500,

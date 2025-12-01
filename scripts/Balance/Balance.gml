@@ -3,7 +3,7 @@ balance = {
     items: {
         heal_amount: 50,
         ammo_percent: 0.3,
-        heal_amount_drop: 50,
+        heal_amount_drop: 20,
         ammo_percent_drop: 0.3,
         costs: {
             pulse: [10, 40, 70],

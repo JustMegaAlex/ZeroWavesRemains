@@ -16,6 +16,9 @@ setItem = function(_item) {
             case oShopItemHeal:
                 text = $"{press_f_prompt} add healing to the shop"
             break
+            case oShopItemAmmo:
+                text = $"{press_f_prompt} add ammo item to the shop"
+            break
         }
         image_blend = item.image_blend
     }

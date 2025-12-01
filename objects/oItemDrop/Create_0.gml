@@ -19,7 +19,7 @@ item_placement_vec = new Vec2(0, 0)
 
 var shop_items = []
 with oShopItem {
-    if !is_unlocked and (object_index != oShopItemAmmo) {
+    if !is_unlocked {
         array_push(shop_items, id)
     }
 }

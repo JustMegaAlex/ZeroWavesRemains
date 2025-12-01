@@ -7,7 +7,7 @@ var heal_amount = global.balance.items.heal_amount_drop
 var ammo_precent = global.balance.items.ammo_percent_drop
 var coins = 20
 item_heal = {
-    color_index: "item_heal",
+    color_index: "item_consumable",
     heal_amount: heal_amount,
     prompt_text: $"heal {heal_amount} hp",
     icon: sIconHeal,
@@ -17,7 +17,7 @@ item_heal = {
 }
 
 item_ammo = {
-    color_index: "item_ammo",
+    color_index: "item_consumable",
     icon: sIconAmmo,
     ammo_precent: ammo_precent,
     prompt_text: $"get {ammo_precent*100}% ammo for current weapon",
