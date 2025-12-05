@@ -1,5 +1,5 @@
 
-#macro DEV false
+#macro DEV 0
 #macro BALANCE false
 
 #macro Dev:DEV true

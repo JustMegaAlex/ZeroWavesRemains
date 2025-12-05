@@ -121,6 +121,13 @@ steps = [
     // define index with search
     spaceToProceed("You'll have to find/buy ammo for them\nPress space to proceed"),
     {
+        text: "Pause the game with P",
+        default_gui,
+        done: function() {
+            return global.pause
+        }
+    },
+    {
         // define index with search
         text: "Press Space to spawn a wave!",
         spawned: 0,

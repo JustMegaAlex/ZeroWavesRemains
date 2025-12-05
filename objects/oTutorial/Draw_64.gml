@@ -1,3 +1,4 @@
+macro_pause
 if !global.tutorial exit
 
 var w = display_get_gui_width()

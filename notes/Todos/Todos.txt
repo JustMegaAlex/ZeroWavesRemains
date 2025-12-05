@@ -13,12 +13,11 @@
 
 Continue:
 
+Higher difficulty playthrough:
+- add more initial ammo
+- more frequent drones, like every 2nd wave
+- pulse is the most decent option, early scatter sucks and rarely has good application, snipe is ok
 
-0.4.1 - Update gameplay loop: more items, +1 heavy enemy, rework enemy ai, upgrades
-> rebalance everything
-    - diff coin amounts
-    - costs
-    - diff progression
 > audio
     > add victory music
     > add coins sfx

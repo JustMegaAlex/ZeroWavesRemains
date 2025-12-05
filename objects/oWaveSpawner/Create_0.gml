@@ -11,16 +11,16 @@ just_spawned = 0
 // ]
 // waves_remains = array_length(waves)
 waves = [
-    {oScout: 2},
-    {oEnemyTiny: 2},
-    {oEnemyTiny: 2},
-    {oEnemyTiny: 3},
-    {oItemDrone: 1},
-    {oEnemy: 1},
-    {oEnemy: 1},
-    {oEnemy: 2},
-    {oScout: 2, oEnemyTiny: 2},
-    {oEnemy: 1, oScout: 2, oItemDrone: 1},
+    // {oScout: 2},
+    // {oEnemyTiny: 2},
+    // {oEnemyTiny: 2},
+    // {oEnemyTiny: 3},
+    // {oItemDrone: 1},
+    // {oEnemy: 1},
+    // {oEnemy: 1},
+    // {oEnemy: 2},
+    // {oScout: 2, oEnemyTiny: 2},
+    // {oEnemy: 1, oScout: 2, oItemDrone: 1},
 ]
 wave_index = 0
 var progression = global.balance.progression
@@ -37,22 +37,35 @@ extra_strength_randomer = new ControlledRandomer([
     [0, 10],// [0.5, 5], [1, 3], [2, 2]
 ], true)
 drone_randomer = new ControlledRandomer({
-    in_wave: 1, single:2, none:6
+    in_wave: 1, single:2, none:3
 }, true)
 wave_strengths = []
 for (var i = 0; i < array_length(waves); ++i) {
     wave_strengths[i] = -1
 }
-
+var _prev_single_drone = false
 for (var i = 0; i < waves_remains; ++i) {
     var wave = {}
     var _strength = strength + extra_strength_randomer.get()
     array_push(wave_strengths, _strength)
     var cost = 1
+    if i == 20 {
+        drone_randomer = new ControlledRandomer({
+            in_wave: 2, none:2
+        }, true)
+    }
     var object_name
     switch drone_randomer.get() {
         case "in_wave": wave.oItemDrone = 1; break;
-        case "single": wave.oItemDrone = 1; _strength = 0 ; break;
+        case "single":
+            wave.oItemDrone = 1;
+            if _prev_single_drone {
+                _prev_single_drone = false
+                break
+            }
+            _prev_single_drone = true
+            _strength = 0;
+        break;
     }
     while true {
         object_name = enemy_randomer.get()
