@@ -3,7 +3,11 @@ macro_pause
 
 deny_killing_shot = global.tutorial
 
-dir_to = MouseDir()
+if oInput.is_user_input_keyboard {
+    dir_to = MouseDir()
+} else {
+    dir_to = gp_dir.dir_to()
+}
 dirApproach(dir_to)
 
 var key_up = oInput.Hold("up")

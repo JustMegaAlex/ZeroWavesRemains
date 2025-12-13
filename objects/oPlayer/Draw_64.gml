@@ -7,6 +7,11 @@
 // draw_set_color(c_green)
 // draw_text(50, 110, $"{weapon.name}")
 // draw_set_color(c_white)
+DebugDrawVar("dir")
+DebugDrawVar("pull_angle", gp_dir.pull_angle)
+DebugDrawVar("en dirs", gp_dir.enemy_dirs)
+
+
 SetTextAllign(0, 1)
 if display_waves {
     draw_text(10, 160, $"Waves remains: {global.waves_remains}")

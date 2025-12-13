@@ -12,15 +12,6 @@ if global.win {
 }
 
 //// Skip ui section
-DebugDrawVar("", "")
-DebugDrawVar("", "")
-DebugDrawVar("", "")
-DebugDrawVar("", "")
-DebugDrawVar("", "")
-DebugDrawVar("", "")
-DebugDrawVar("", "")
-DebugDrawVar("", "")
-DebugDrawVar("", "")
 // DebugDrawVar($"gui: {display_get_gui_width()} x {display_get_gui_height()}")
 //DebugDrawVar("last key", keyboard_lastkey)
 //DebugDrawVar("last char", keyboard_lastchar)

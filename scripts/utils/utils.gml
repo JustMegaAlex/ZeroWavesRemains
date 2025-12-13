@@ -91,6 +91,12 @@ function ApproachAngle(val, to, amount) {
     return val + sp
 }
 
+function ApproachAngle2(val, to, ratio) {
+    var delta = angle_difference(to, val)
+    var sp = delta * ratio
+    return val + sp
+}
+
 function ArraySum(arr) {
     var res = 0
     for (var i = 0; i < array_length(arr); ++i) {

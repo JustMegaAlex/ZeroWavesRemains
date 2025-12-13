@@ -379,6 +379,10 @@ step = steps[step_index]
 alarm[0] = 1
 global.tutorial = true
 
+if DEV {
+    step_index = 3
+}
+
 skip_tutorial = {
     ratio: 0.01,
     x: 0.5,

@@ -16,7 +16,51 @@ heal_effect_timer = MakeTimer(30, 0)
 
 shot_interact_range = 500
 
+aim_vec = new Vec2(0, 0)
 // hp = 10
+gp_dir = {
+    id: id,
+    vec: new Vec2(0, 0),
+    curr: 0,
+    ratio: 0.1,
+    enemy_dirs: [],
+    enemy_pull_angle: 30,
+    enemy_pull_force: 2,
+    pull_ratio: 0.5*0,
+    pull_angle: 0,
+    dir_to: function() {
+        vec.setv(oPlayer).add_polar(2000, oPlayer.dir)
+        if oInput.AxisValueRight() != 0 {
+            ArrayClear(enemy_dirs)
+            with oEnemy {
+                array_push(other.enemy_dirs, InstInstDir(oPlayer, id))
+            }
+            array_sort(enemy_dirs, true)
+            var _dir_to = oInput.AxisDirRight(0.03)
+            pull_angle = 0
+            if !ArrayEmpty(enemy_dirs) {
+                if angle_difference(id.dir, _dir_to) > 0 {
+                    var en_dir = enemy_dirs[0]
+                    var diff = abs(angle_difference(id.dir, en_dir))
+                    if diff < enemy_pull_angle {
+                        pull_angle = (enemy_pull_force - diff)/enemy_pull_angle * enemy_pull_force
+                        _dir_to += diff * pull_ratio
+                    }
+                } else {
+                    var en_dir = array_last(enemy_dirs)
+                    var diff = abs(angle_difference(id.dir, en_dir))
+                    if diff < enemy_pull_angle {
+                        pull_angle = -(enemy_pull_force - diff)/enemy_pull_angle * enemy_pull_force
+                        _dir_to -= diff * pull_ratio
+                    }
+                }
+            }
+            
+            curr = ApproachAngle2(curr, _dir_to, ratio)
+        }
+        return curr
+    }
+}
 
 weapon_pulse = {
     dmg: 20,
