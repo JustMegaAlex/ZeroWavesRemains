@@ -11,6 +11,7 @@ is_user_input_keyboard = true
 mouse_moved = false
 mouse_x_prev = mouse_x
 mouse_y_prev = mouse_y
+gamepad_enabled = false
 
 active = true
 
@@ -98,13 +99,13 @@ function Key(key) constructor {
 function Gamepad(key) constructor {
     self.key = key
     Pressed = function() {
-        return gamepad_button_check_pressed(oInput.gp_id, self.key)
+        return gamepad_button_check_pressed(oInput.gp_id, self.key) * oInput.gamepad_enabled
     }
     Released = function() {
-        return gamepad_button_check_released(oInput.gp_id, self.key)
+        return gamepad_button_check_released(oInput.gp_id, self.key) * oInput.gamepad_enabled
     }
     Hold = function() {
-        return gamepad_button_check(oInput.gp_id, self.key)
+        return gamepad_button_check(oInput.gp_id, self.key) * oInput.gamepad_enabled
     }
     DefaultValue = function() { return false }
     actions = [
@@ -124,16 +125,16 @@ function GamepadAxis(key, sign_, treshold=0) constructor {
     Pressed = function() {
         // this is called first, so we assign current value here
 		self.current_value = (gamepad_axis_value(oInput.gp_id, self.key) * self.sign) >= self.treshold
-        return self.current_value and !self.previous_value
+        return (self.current_value and !self.previous_value) * oInput.gamepad_enabled
     }
     Released = function() {
         // this is called last, so we assign previous value here
-        var result = !self.current_value and self.previous_value
+        var result = (!self.current_value and self.previous_value) * oInput.gamepad_enabled
         self.previous_value = self.current_value
         return result
     }
     Hold = function() {
-        return self.current_value
+        return self.current_value * oInput.gamepad_enabled
     }
     DefaultValue = function() { return false }
     actions = [
@@ -149,7 +150,7 @@ function AxisValueLeft(treshold=0.05) {
     if (abs(gaxisx) < treshold) and (abs(gaxisy) < treshold) {
         return 0
     }
-	return point_distance(0, 0, gaxisx, gaxisy)   
+	return point_distance(0, 0, gaxisx, gaxisy) * oInput.gamepad_enabled
 }
 
 function AxisValueRight(treshold=0.05) {
@@ -158,7 +159,7 @@ function AxisValueRight(treshold=0.05) {
     if (abs(gaxisx) < treshold) and (abs(gaxisy) < treshold) {
         return 0
     }
-	return point_distance(0, 0, gaxisx, gaxisy)   
+	return point_distance(0, 0, gaxisx, gaxisy)    * oInput.gamepad_enabled
 }
 
 function AxisDirLeft(treshold=0.25) {
@@ -167,7 +168,7 @@ function AxisDirLeft(treshold=0.25) {
     if (abs(gaxisx) < treshold) and (abs(gaxisy) < treshold) {
         return 0
     }
-	return point_direction(0, 0, gaxisx, gaxisy)   
+	return point_direction(0, 0, gaxisx, gaxisy) * oInput.gamepad_enabled
 }
 
 function AxisDirRight(treshold=0.25) {
@@ -176,7 +177,7 @@ function AxisDirRight(treshold=0.25) {
     if (abs(gaxisx) < treshold) and (abs(gaxisy) < treshold) {
         return 0
     }
-	return point_direction(0, 0, gaxisx, gaxisy)   
+	return point_direction(0, 0, gaxisx, gaxisy) * oInput.gamepad_enabled
 }
 
 function DistinctInput(name) constructor {
@@ -218,6 +219,7 @@ function GetDistinctInput(name) {
 }
 
 function DetectGamepadDevice() {
+    if !gamepad_enabled { return false }
     for (var i = 0; i < gamepad_get_device_count(); i += 1) {
         if gamepad_is_connected(i) {
             gp_id = i
