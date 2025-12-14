@@ -94,6 +94,7 @@
     {"id":{"name":"oStart","path":"objects/oStart/oStart.yy",},},
     {"id":{"name":"oSys","path":"objects/oSys/oSys.yy",},},
     {"id":{"name":"oTestBalance","path":"objects/oTestBalance/oTestBalance.yy",},},
+    {"id":{"name":"oTestEstimateRatingError","path":"objects/oTestEstimateRatingError/oTestEstimateRatingError.yy",},},
     {"id":{"name":"oTutorial","path":"objects/oTutorial/oTutorial.yy",},},
     {"id":{"name":"oUI","path":"objects/oUI/oUI.yy",},},
     {"id":{"name":"oUIHealthBar","path":"objects/oUIHealthBar/oUIHealthBar.yy",},},
@@ -104,6 +105,7 @@
     {"id":{"name":"psItemDrop","path":"particles/psItemDrop/psItemDrop.yy",},},
     {"id":{"name":"rmGame","path":"rooms/rmGame/rmGame.yy",},},
     {"id":{"name":"rmStart","path":"rooms/rmStart/rmStart.yy",},},
+    {"id":{"name":"rmTest","path":"rooms/rmTest/rmTest.yy",},},
     {"id":{"name":"rmTestBalance","path":"rooms/rmTestBalance/rmTestBalance.yy",},},
     {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
     {"id":{"name":"autotiling","path":"scripts/autotiling/autotiling.yy",},},
@@ -185,6 +187,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"rmTest","path":"rooms/rmTest/rmTest.yy",},},
     {"roomId":{"name":"rmStart","path":"rooms/rmStart/rmStart.yy",},},
     {"roomId":{"name":"rmGame","path":"rooms/rmGame/rmGame.yy",},},
     {"roomId":{"name":"rmTestBalance","path":"rooms/rmTestBalance/rmTestBalance.yy",},},
