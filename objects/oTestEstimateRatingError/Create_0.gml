@@ -1,31 +1,30 @@
-arr = []
-total = 751
-repeat total {
-    array_push(arr, random(1))
+votes = []
+total_voters = 751
+// Assume all votes are random
+repeat total_voters {
+    array_push(votes, random(1))
 }
 
-pure = 0
+pure_score = 0
 sum_ = 0
-for (var i = 0; i < array_length(arr); ++i) {
-    var val = arr[i]
+for (var i = 0; i < array_length(votes); ++i) {
+    var val = votes[i]
     sum_ += val
 }
-pure = sum_ / total
+pure_score = sum_ / total_voters
 
-real_scores = []
 
 function estimate_error(judges_num) {
     var error = 0
-   repeat 1000 {
+    repeat 1000 {
        var _sum = 0
        for (var i = 0; i < judges_num; ++i) {
-           _sum += arr[i]
+           _sum += votes[i]
        }
-       var sc = _sum / judges_num
-       error = max(error, abs(pure - sc))
-       array_push(real_scores, )
-       arr = array_shuffle(arr)
-   }
+       var _score = _sum / judges_num
+       error = max(error, abs(pure_score - _score))
+       votes = array_shuffle(votes) // randomise voters for the next "measurement"
+    }
     return error
 }
 error_20 = estimate_error(20)
