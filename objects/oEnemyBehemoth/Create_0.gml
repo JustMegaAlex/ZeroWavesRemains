@@ -1,3 +1,5 @@
+
+
 event_inherited()
 
 macro_pause
@@ -5,6 +7,9 @@ macro_pause
 battle_side = battle_side_enemy
 move_around_player_dist = 1000
 updateSpMax(12)
+rotary_sp = 0.4
+switch_to_long_range_distance = 3000
+
 
 
 weapon = {
@@ -122,4 +127,31 @@ die = function() {
 setCoins = function(cmin, cmax) {
     coins_min = cmin
     coins_max = cmax
+}
+
+//// Create turrets
+turrets = []
+turret_helper_vec = new Vec2(0, 0)
+for (var i = 0; i < array_length(global.behemoth_turret_coords); ++i) {
+    var vec = global.behemoth_turret_coords[i]
+    var turret = instance_create_layer(
+        x + vec.x, y + vec.y, "FrontInstances", oEnemyBehemothTurret
+    )
+    turret.rel_vec = new Vec2(vec.x, vec.y)
+    turret.battle_side = battle_side
+    turret.can_hit = can_hit
+    array_push(turrets, turret)
+}
+
+
+//// Define turrets coords config
+if room == rmStart {
+    global.behemoth_turret_coords = []
+    with oEnemyBehemothTurret {
+        if place_meeting(x, y, other) {
+            array_push(global.behemoth_turret_coords, 
+                       new Vec2(x - other.x, y - other.y))
+        }
+    }
+    instance_destroy()
 }

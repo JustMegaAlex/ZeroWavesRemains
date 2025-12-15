@@ -58,3 +58,7 @@ function SetColor() {
 }
 
 /// Shop
+
+
+//// Objects configs
+behemoth_turret_coords = [] // defined in oEnemyBehemoth in rmStart

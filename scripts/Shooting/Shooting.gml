@@ -6,7 +6,7 @@
 #macro can_hit_all 7
 
 function Shoot(dir=0, obj=oBullet, args={}) {
-	var bullet = instance_create_layer(x, y, "Instances", obj, args)
+	var bullet = instance_create_layer(x, y, "Bullets", obj, args)
 	bullet.image_angle = dir
 	bullet.battle_side = battle_side
     bullet.can_hit = can_hit

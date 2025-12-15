@@ -23,18 +23,26 @@ if active {
 
     weapon.timer.update()
 
-    if instance_exists(oPlayer) {
-        dir_to = InstDir(oPlayer)
-        dirApproach(dir_to)
-        if !weapon.timer.timer {
-            shoot(Aim(oPlayer))
-            weapon.timer.reset()
-        }
-    }
+    // if instance_exists(oPlayer) {
+    //     dir_to = InstDir(oPlayer)
+    //     dirApproach(dir_to)
+    //     if !weapon.timer.timer {
+    //         shoot(Aim(oPlayer))
+    //         weapon.timer.reset()
+    //     }
+    // }
 }
 
-checkPushBackIntoCircle()
 
 move()
+checkPushBackIntoCircle()
+
+
+for (var i = 0; i < array_length(turrets); ++i) {
+    var turret = turrets[i]
+    turret_helper_vec.setv(turret.rel_vec).rotate(dir)
+    turret.x = x + turret_helper_vec.x
+    turret.y = y + turret_helper_vec.y
+}
 
 event_inherited()
