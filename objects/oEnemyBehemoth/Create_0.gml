@@ -4,6 +4,7 @@ macro_pause
 
 battle_side = battle_side_enemy
 move_around_player_dist = 1000
+updateSpMax(12)
 
 
 weapon = {
@@ -103,9 +104,6 @@ function Aim(target) {
 
 die = function() {
     global.wave_enemies_count--
-    if instance_number(oEnemyParent) == 1 and oWaveSpawner.waves_remains == 0 {
-        global.win = true
-    }
     objectDie()
     instance_destroy()
     // spawn coins
@@ -124,9 +122,4 @@ die = function() {
 setCoins = function(cmin, cmax) {
     coins_min = cmin
     coins_max = cmax
-}
-
-var my_coins = global.balance.coins[$ object_get_name(object_index)]
-if my_coins != undefined {
-    setCoins(my_coins[0], my_coins[1])
 }
