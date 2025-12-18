@@ -14,6 +14,7 @@ sp = new Vec2(0, 0)
 dir = 0
 dir_to = 0
 rotary_sp = 6
+mass_factor = 1
 
 last_hit_direction = 0
 
@@ -80,7 +81,7 @@ hit = function(bullet) {
     hp -= bullet.dmg
     last_hit_direction = bullet.image_angle
     if bullet.knockback > 0 {
-        sp.add_polar(bullet.knockback, bullet.image_angle)
+        sp.add_polar(bullet.knockback / mass_factor, bullet.image_angle)
     }
     objectHit()
     if hp <= 0 {

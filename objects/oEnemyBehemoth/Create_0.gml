@@ -10,11 +10,14 @@ updateSpMax(12)
 rotary_sp = 0.4
 switch_to_long_range_distance = 1200
 hp = 400
+mass_factor = 6
 
 
 is_firing = false
 shots_left = 0
 weapon = {
+    relx: 0,
+    rely: 0,
     dmg: 5,
     timer: MakeTimer(5),
     sp: 40,
@@ -149,6 +152,18 @@ for (var i = 0; i < array_length(global.behemoth_turret_coords); ++i) {
     array_push(turrets, turret)
 }
 
+main_weapon = noone
+main_weapon_pos = new Vec2(0, 0)
+var pos = global.behemoth_weapon_pos
+if pos[$ "x"] != undefined {
+    main_weapon_pos.setv(pos)
+    main_weapon = instance_create_layer(
+        x + pos.x, y + pos.y, "FrontInstances", oExternalWeapon,
+        {weapon: weapon, dir: dir, can_hit: can_hit,
+         battle_side:battle_side, visible: false}
+    )
+}
+
 
 //// Define turrets coords config
 if room == rmStart {
@@ -158,6 +173,11 @@ if room == rmStart {
             array_push(global.behemoth_turret_coords, 
                        new Vec2(x - other.x, y - other.y))
         }
+    }
+    with instance_place(x, y, oExternalWeapon) {
+        global.behemoth_weapon_pos.x = x - other.x
+        global.behemoth_weapon_pos.y = y - other.y
+        show_debug_message("Found behemoth weapon")
     }
     instance_destroy()
 }

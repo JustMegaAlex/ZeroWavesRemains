@@ -28,7 +28,8 @@ Higher difficulty playthrough:
 > new enemy: behemoth
     - long-range rechargable scatter burst
     - short range non-stop all directions machine gun, very dangerous
-    > 
+    > upd turret bullets animation
+    > upd ai: make switching between long/short range random timer based
 > fix ui: make all text transparent if there are enemies
 > fix drops: don't drop ammo if no ammo-ish weapons
 > indicate when drone flies away

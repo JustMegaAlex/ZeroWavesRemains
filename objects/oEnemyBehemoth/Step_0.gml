@@ -9,6 +9,7 @@ if active and instance_exists(oPlayer) {
     }
 
     if InstDist(oPlayer) < switch_to_long_range_distance {
+        is_firing = false
         if mover.finished
                 or point_distance(mover.to.x, mover.to.y, 0, 0) > oGameArea.radius {
             accelerate(0, 0)
@@ -30,7 +31,7 @@ if active and instance_exists(oPlayer) {
             shots_left = weapon.shots_count
         }
         if is_firing and !weapon.timer.update() {
-            shoot(dir)
+            main_weapon.shoot(dir)
             weapon.timer.reset()
             shots_left--
             if shots_left <= 0 {
@@ -53,5 +54,8 @@ for (var i = 0; i < array_length(turrets); ++i) {
     turret.x = x + turret_helper_vec.x
     turret.y = y + turret_helper_vec.y
 }
+turret_helper_vec.setv(main_weapon_pos).rotate(dir)
+main_weapon.x = x + turret_helper_vec.x
+main_weapon.y = y + turret_helper_vec.y
 
 event_inherited()
