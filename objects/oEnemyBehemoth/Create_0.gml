@@ -8,17 +8,22 @@ battle_side = battle_side_enemy
 move_around_player_dist = 1000
 updateSpMax(12)
 rotary_sp = 0.4
-switch_to_long_range_distance = 3000
+switch_to_long_range_distance = 1200
+hp = 400
 
 
-
+is_firing = false
+shots_left = 0
 weapon = {
     dmg: 5,
-    timer: MakeTimer(45),
+    timer: MakeTimer(5),
     sp: 40,
-    range: 2000,
+    range: 7000,
     object: oBullet,
     knockback: 7,
+    spread_angle: 10,
+    recharge_timer: MakeTimer(240),
+    shots_count: 30,
 }
 
 
@@ -140,6 +145,7 @@ for (var i = 0; i < array_length(global.behemoth_turret_coords); ++i) {
     turret.rel_vec = new Vec2(vec.x, vec.y)
     turret.battle_side = battle_side
     turret.can_hit = can_hit
+    turret.image_blend = image_blend
     array_push(turrets, turret)
 }
 

@@ -2,35 +2,44 @@
 
 macro_pause
 
-if active {
-    var too_far = false
-    if instance_exists(oPlayer) and InstDist(oPlayer, mover.to) > move_around_player_dist {
-        too_far = true
+if active and instance_exists(oPlayer) {
+
+    if !is_firing {
+        weapon.recharge_timer.update()
     }
-    if mover.finished or too_far 
-            or point_distance(mover.to.x, mover.to.y, 0, 0) > oGameArea.radius {
-        accelerate(0, 0)
-        if instance_exists(oPlayer) {
-            var dir_from_player = point_direction(
-                oPlayer.x, oPlayer.y, x, y
-            ) + irandom_range(-90, 90)
-            mover.to.setv(oPlayer).add_polar(move_around_player_dist, dir_from_player)
+
+    if InstDist(oPlayer) < switch_to_long_range_distance {
+        if mover.finished
+                or point_distance(mover.to.x, mover.to.y, 0, 0) > oGameArea.radius {
+            accelerate(0, 0)
+            mover.to.set(0, 0).add_polar(
+                random_range(0.5, 0.8) * oGameArea.radius, random(360))
             mover.start(mover.to.x, mover.to.y)
+        } else {
+            dirApproach(InstDir(mover.to))
+            mover.step()
         }
     } else {
-        mover.step()
+        accelerate(0, 0)
+        dir_to = InstDir(oPlayer)
+        dirApproach(dir_to)
+        //// Long distance fire
+        if !is_firing and !weapon.recharge_timer.timer
+                and abs(angle_difference(dir, dir_to) < 3) {
+            is_firing = true
+            shots_left = weapon.shots_count
+        }
+        if is_firing and !weapon.timer.update() {
+            shoot(dir)
+            weapon.timer.reset()
+            shots_left--
+            if shots_left <= 0 {
+                is_firing = false
+                weapon.recharge_timer.reset()
+            }
+        }
     }
 
-    weapon.timer.update()
-
-    // if instance_exists(oPlayer) {
-    //     dir_to = InstDir(oPlayer)
-    //     dirApproach(dir_to)
-    //     if !weapon.timer.timer {
-    //         shoot(Aim(oPlayer))
-    //         weapon.timer.reset()
-    //     }
-    // }
 }
 
 

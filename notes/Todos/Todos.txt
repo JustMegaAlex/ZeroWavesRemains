@@ -18,19 +18,20 @@ Higher difficulty playthrough:
 - more frequent drones, like every 2nd wave
 - pulse is the most decent option, early scatter sucks and rarely has good application, snipe is ok
 
+0.4.0
 > audio
     > add victory music
     > add coins sfx
 > shop text: add "not enough coins"
 
+> entity: mass mechanic (different knockback)
+> new enemy: behemoth
+    - long-range rechargable scatter burst
+    - short range non-stop all directions machine gun, very dangerous
+    > 
 > fix ui: make all text transparent if there are enemies
 > fix drops: don't drop ammo if no ammo-ish weapons
 > indicate when drone flies away
-> new enemies
-    > behemoth
-        - long-range rechargable scatter burst
-        - short range non-stop all directions machine gun, very dangerous
-        > draw a sprite
 > tutorial
     > don't restore ammo on every Space hit
 > rework items
