@@ -24,8 +24,8 @@ balance = {
         oItemDrone: [4,5],
     },
     progression: {
-        total_waves: 30,
-        strength_growth: 1.15,
+        total_waves: 23,
+        strength_growth: 1.11,
         strength: 1,
         strength_growth_decrease_total: 0.1,
         strength_cost: {

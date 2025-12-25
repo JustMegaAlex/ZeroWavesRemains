@@ -85,6 +85,9 @@ for (var i = 0; i < waves_remains; ++i) {
     strength_growth -= strength_growth_decrease
 }
 
+array_insert(waves, 12, {oEnemyBehemoth: 1})
+array_push(waves, {oEnemyBehemoth: 1, oEnemy: 4, oEnemyTiny: 6})
+
 waves_remains = array_length(waves)
 global.waves_remains = waves_remains
 
