@@ -6,7 +6,7 @@ weapon = {
     sp: 40,
     range: range,
     object: oBulletWithTrace,
-    knockback: 2,
+    knockback: 0.5,
     image_xscale: 0.5,
     image_yscale: 0.5,
     spread_angle: 10,
