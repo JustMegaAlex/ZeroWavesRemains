@@ -1,22 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"oBullet",
+  "%Name":"oBulletWithTrace",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oBullet",
+  "name":"oBulletWithTrace",
   "overriddenProperties":[],
   "parent":{
     "name":"Bullets",
     "path":"folders/Objects/Bullets.yy",
   },
   "parentObjectId":{
-    "name":"oBulletParent",
-    "path":"objects/oBulletParent/oBulletParent.yy",
+    "name":"oBullet",
+    "path":"objects/oBullet/oBullet.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

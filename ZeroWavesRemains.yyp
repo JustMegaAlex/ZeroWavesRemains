@@ -37,12 +37,14 @@
     {"$GMFolder":"","%Name":"Ships","folderPath":"folders/Sprites/Ships.yy","name":"Ships","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"UI","folderPath":"folders/Sprites/UI.yy","name":"UI","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
-  "ForcedPrefabProjectReferences":[],
+  "ForcedPrefabProjectReferences":[
+    {"link":"io.gamemaker.gmparticlepresets-1.0.0","name":"io.gamemaker.gmparticlepresets-1.0.0","path":"io.gamemaker.gmparticlepresets-1.0.0.yyp",},
+  ],
   "IncludedFiles":[],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.1.210",
+    "IDEVersion":"2024.14.2.213",
   },
   "name":"ZeroWavesRemains",
   "resources":[
@@ -52,6 +54,7 @@
     {"id":{"name":"oBullet","path":"objects/oBullet/oBullet.yy",},},
     {"id":{"name":"oBulletParent","path":"objects/oBulletParent/oBulletParent.yy",},},
     {"id":{"name":"oBulletScatter","path":"objects/oBulletScatter/oBulletScatter.yy",},},
+    {"id":{"name":"oBulletWithTrace","path":"objects/oBulletWithTrace/oBulletWithTrace.yy",},},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
     {"id":{"name":"oCoin","path":"objects/oCoin/oCoin.yy",},},
     {"id":{"name":"oCursor","path":"objects/oCursor/oCursor.yy",},},

@@ -153,10 +153,28 @@ function explosion_2(x, y) {
     }
 }
 
+bullet_trace_particle_map = ds_map_create()
+function getOrCreateBulletTraceParticleType(width, spd, life=60) {
+    if ds_map_exists(bullet_trace_particle_map, spd) {
+        return bullet_trace_particle_map[? spd]
+    }
+    var pt = createPartType(
+        psys,
+        {
+            life: life,
+            shape: pt_shape_pixel,
+            alpha: [0.7, 0],
+            scale: [spd, width]
+        }
+    )
+    bullet_trace_particle_map[? spd] = pt
+    return pt
+}
 
-
-
-
+function bulletTrace(pt, xx, yy, angle) {
+    part_type_orientation(pt, angle, angle, 0, 0, false)
+    part_particles_create(psys, xx, yy, pt, 1)
+}
 
 
 
