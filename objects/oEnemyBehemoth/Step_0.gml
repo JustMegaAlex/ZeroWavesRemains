@@ -8,25 +8,13 @@ if active and instance_exists(oPlayer) {
         weapon.recharge_timer.update()
     }
 
-    if InstDist(oPlayer) < switch_to_long_range_distance {
-        is_firing = false
-        if mover.finished
-                or point_distance(mover.to.x, mover.to.y, 0, 0) > oGameArea.radius {
-            accelerate(0, 0)
-            mover.to.set(0, 0).add_polar(
-                random_range(0.5, 0.8) * oGameArea.radius, random(360))
-            mover.start(mover.to.x, mover.to.y)
-        } else {
-            dirApproach(InstDir(mover.to))
-            mover.step()
-        }
-    } else {
+    if is_long_distance_fire_state {
         accelerate(0, 0)
         dir_to = InstDir(oPlayer)
         dirApproach(dir_to)
         //// Long distance fire
         if !is_firing and !weapon.recharge_timer.timer
-                and abs(angle_difference(dir, dir_to) < 3) {
+                and (abs(angle_difference(dir, dir_to)) < 3) {
             is_firing = true
             shots_left = weapon.shots_count
         }
@@ -39,8 +27,30 @@ if active and instance_exists(oPlayer) {
                 weapon.recharge_timer.reset()
             }
         }
+    } else {
+        is_firing = false
+        if mover.finished
+                or point_distance(mover.to.x, mover.to.y, 0, 0) > oGameArea.radius {
+            accelerate(0, 0)
+            mover.to.set(0, 0).add_polar(
+                random_range(0.5, 0.8) * oGameArea.radius, random(360))
+            mover.start(mover.to.x, mover.to.y)
+        } else {
+            dirApproach(InstDir(mover.to))
+            mover.step()
+        }
     }
 
+    //// Change state
+    if !state_timer.update() {
+        if (InstDist(oPlayer) < switch_to_long_range_distance) and !is_firing {
+            is_long_distance_fire_state = false
+        } else {
+            is_long_distance_fire_state = true
+        }
+        state_timer.time = state_timer_randomer()
+        state_timer.reset()
+    }
 }
 
 

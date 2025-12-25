@@ -6,14 +6,17 @@ macro_pause
 
 battle_side = battle_side_enemy
 move_around_player_dist = 1000
-updateSpMax(12)
-rotary_sp = 0.4
+updateSpMax(16)
+rotary_sp = 0.7
 switch_to_long_range_distance = 1200
 hp = 400
 mass_factor = 6
 
 
 is_firing = false
+is_long_distance_fire_state = false
+state_timer_randomer = irandomer(240, 480)
+state_timer = MakeTimer(state_timer_randomer())
 shots_left = 0
 weapon = {
     relx: 0,
