@@ -6,10 +6,11 @@ macro_pause
 
 battle_side = battle_side_enemy
 move_around_player_dist = 1000
-updateSpMax(16)
+acc_max = 0.12
+updateSpMax(8)
 rotary_sp = 0.7
 switch_to_long_range_distance = 1200
-hp = 400
+hp = 600
 mass_factor = 6
 
 
@@ -19,6 +20,10 @@ state_timer_randomer = irandomer(240, 480)
 state_timer = MakeTimer(state_timer_randomer())
 shots_left = 0
 weapon = {
+    rotary_speed: 0.7,
+    min_range: 400,
+    angle: 0,
+    angle_to: 0,
     relx: 0,
     rely: 0,
     dmg: 5,
@@ -155,6 +160,7 @@ for (var i = 0; i < array_length(global.behemoth_turret_coords); ++i) {
     array_push(turrets, turret)
 }
 
+helper_vec = new Vec2(0, 0)
 main_weapon = noone
 main_weapon_pos = new Vec2(0, 0)
 var pos = global.behemoth_weapon_pos
