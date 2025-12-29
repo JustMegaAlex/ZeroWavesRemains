@@ -152,6 +152,7 @@
     {"id":{"name":"libSExplosion","path":"sprites/libSExplosion/libSExplosion.yy",},},
     {"id":{"name":"libSShootBurstS","path":"sprites/libSShootBurstS/libSShootBurstS.yy",},},
     {"id":{"name":"libSTopDownPlayer","path":"sprites/libSTopDownPlayer/libSTopDownPlayer.yy",},},
+    {"id":{"name":"sAimCursor","path":"sprites/sAimCursor/sAimCursor.yy",},},
     {"id":{"name":"sBGGrid","path":"sprites/sBGGrid/sBGGrid.yy",},},
     {"id":{"name":"sBulletScatter","path":"sprites/sBulletScatter/sBulletScatter.yy",},},
     {"id":{"name":"sButton","path":"sprites/sButton/sButton.yy",},},
