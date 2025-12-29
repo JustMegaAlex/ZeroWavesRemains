@@ -23,13 +23,6 @@ Higher difficulty playthrough:
     > add victory music
     > add coins sfx
 > shop text: add "not enough coins"
-
-> entity: mass mechanic (different knockback)
-> new enemy: behemoth
-    - long-range rechargable scatter burst
-    - short range non-stop all directions machine gun, very dangerous
-    > upd turret bullets animation
-    > upd ai: make switching between long/short range random timer based
 > fix ui: make all text transparent if there are enemies
 > fix drops: don't drop ammo if no ammo-ish weapons
 > indicate when drone flies away
@@ -106,9 +99,41 @@ Enemies concepts:
 
 
 Ideas:
+> ship weight system: more equipment = less agile
+    - drop weapons on the go to move faster
 > choose color palette?
 > add flaring red effect when < 25% hp
 > penetrating kinetic weapon (like that bugged out pulse)
 > replace ammo with ammo upgrades: restore ratio + amount
 > upd scatter and snipe: autorestore ammo
 > killing spree: add kill combo timer
+
+
+One sentence pitch:
+"Zero Waves Remains is a twin-stick shooter where decisions beat precision"
+
+Enemy concepts:
+> mosquito: you can't kite forever
+    - kite-shooting you
+    - on distance enters sniper mode: unescapable shot
+> rework behemoth: makes you constantly change location
+    - rotating big gun
+> tiny swarms: makes you use scatter or explosives
+    - can be one shoted with pulse
+    - large numbers: pulse ineffective
+> goblin: very annoying, really asks to get wrecked with seeker missiles
+    - actively evades your shots
+    - gains distance very fast
+    - fast bullets are hard to evade
+Mechanics:
+> big rocket
+    - one shot
+    - choose who you just want to delete
+> enemy seeker missiles
+    - almost unescapable
+    - pushes into using shield
+> emp weapons
+    - disables shields
+    - partially disables systems (slows down, messes up weapons)
+
+
