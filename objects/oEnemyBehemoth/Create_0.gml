@@ -163,13 +163,18 @@ for (var i = 0; i < array_length(global.behemoth_turret_coords); ++i) {
 helper_vec = new Vec2(0, 0)
 main_weapon = noone
 main_weapon_pos = new Vec2(0, 0)
-var pos = global.behemoth_weapon_pos
+var pos = global.behemoth_gun_position
 if pos[$ "x"] != undefined {
     main_weapon_pos.setv(pos)
     main_weapon = instance_create_layer(
-        x + pos.x, y + pos.y, "FrontInstances", oExternalWeapon,
-        {weapon: weapon, dir: dir, can_hit: can_hit,
-         battle_side:battle_side, visible: false}
+        x + pos.x, y + pos.y, "FrontInstances", oEnemyBehemothGun,
+        {
+            shoot_args: {
+                weapon: weapon, dir: dir, can_hit: can_hit,
+                battle_side:battle_side, visible: false
+            },
+            image_blend: image_blend
+        }
     )
 }
 
@@ -183,10 +188,11 @@ if room == rmStart {
                        new Vec2(x - other.x, y - other.y))
         }
     }
-    with instance_place(x, y, oExternalWeapon) {
-        global.behemoth_weapon_pos.x = x - other.x
-        global.behemoth_weapon_pos.y = y - other.y
-        show_debug_message("Found behemoth weapon")
+    with instance_place(x, y, oEnemyBehemothGun) {
+        global.behemoth_gun_position.x = x - other.x
+        global.behemoth_gun_position.y = y - other.y
+        show_debug_message("Found behemoth gun")
+        instance_destroy()
     }
     instance_destroy()
 }

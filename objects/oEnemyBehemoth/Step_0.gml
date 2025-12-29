@@ -66,6 +66,7 @@ for (var i = 0; i < array_length(turrets); ++i) {
     turret.x = x + turret_helper_vec.x
     turret.y = y + turret_helper_vec.y
 }
+
 turret_helper_vec.setv(main_weapon_pos).rotate(dir)
 main_weapon.x = x + turret_helper_vec.x
 main_weapon.y = y + turret_helper_vec.y

@@ -62,4 +62,5 @@ function SetColor() {
 
 //// Objects configs
 behemoth_turret_coords = [] // defined in oEnemyBehemoth in rmStart
-behemoth_weapon_pos = {}
+behemoth_gun_shoot_point = {}
+behemoth_gun_position = {}
