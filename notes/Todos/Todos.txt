@@ -23,6 +23,7 @@ Higher difficulty playthrough:
     > upgrades tree
         > visuals: links
         > unlock upgrade chains
+            > impl buy weapons 
 > rework enemy ai
     > upd bonk (oEnemy)
         - aim is increased over time if player stays still

@@ -84,13 +84,17 @@ weapon_pulse = {
             },
             costs: _pulse_costs.fire_rate
         },
-        // bullet_speed: {
-        //     stats: {sp: 70},
-        //     cost: _pulse_costs[0]
-        // }
+        bullet_speed: {
+            name: "bullet speed",
+            stats: {
+                sp: [70, 78, 86]
+            },
+            costs: _pulse_costs.bullet_speed
+        },
     }
 }
 
+var _scatter_costs = global.balance.items.costs.scatter
 weapon_scatter = {
     dmg: 4,
     timer: MakeTimer(2),
@@ -106,12 +110,25 @@ weapon_scatter = {
     sound_end: sfxBurstShotEnd,
     sprite: sUIWeaponScatter,
     upgrades: 0,
-    upgrade_confs: [
-        {range: 1400, dmg: 4.5, cost: global.balance.items.costs.scatter[1]},
-        {range: 1600, dmg: 5, cost: global.balance.items.costs.scatter[2]},
-    ]
+    upgrade_confs: {
+        dmg: {
+            name: "damage",
+            stats: {
+                dmg: [4.5, 5]
+            },
+            costs: _scatter_costs.dmg
+        },
+        range: {
+            name: "range",
+            stats: {
+                range: [1400, 1600]
+            },
+            costs: _scatter_costs.range
+        },
+    }
 }
 
+var _snipe_costs = global.balance.items.costs.snipe
 weapon_snipe = {
     dmg: 80,
     timer: MakeTimer(60),
@@ -122,10 +139,15 @@ weapon_snipe = {
     sound: sfxSnipeShot,
     sprite: sUIWeaponSnipe,
     upgrades: 0,
-    upgrade_confs: [
-        {dmg: 100, cost: global.balance.items.costs.snipe[1]},
-        {dmg: 120, cost: global.balance.items.costs.snipe[2]},
-    ]
+    upgrade_confs: {
+        dmg: {
+            name: "damage",
+            stats: {
+                dmg: [100, 120]
+            },
+            costs: _snipe_costs.dmg
+        },
+    }
 }
 
 weapon = weapon_pulse
