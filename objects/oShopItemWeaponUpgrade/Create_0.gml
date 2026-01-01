@@ -5,54 +5,48 @@ _key_remap = {
     dmg: "damage"
 }
 updateText = function() {
-    text = $"(Press F) Upgrade {weapon.name} to level 2"
-    var next_upgrade_conf = weapon.upgrade_confs[weapon.upgrades]
-    var keys = variable_struct_get_names(next_upgrade_conf)
+    text = $"(Press F) Upgrade {weapon.name} {upgrade_conf.name} to level {upgrade_level + 2}"
+    var next_upgrade_cost = upgrade_conf.costs[upgrade_level + 1]
+    var keys = variable_struct_get_names(upgrade_conf.stats)
+    /// Legacy structure: it's supposed to have only one stat
     for (var i = 0; i < array_length(keys); ++i) {
-        var key = keys[i]
-        if key == "cost" {
-            continue
-        }
-        var next_value = next_upgrade_conf[$ key]
-        var value = weapon[$ key]
-        if struct_has(_key_remap, key) {
-            key = _key_remap[$ key]
-        }
-        if key == "timer" {
+        var stat_name = keys[i]
+        var next_value = upgrade_conf.stats[$ stat_name][upgrade_level + 1]
+        var value = weapon[$ stat_name]
+        var name = upgrade_conf.name
+        if name == "fire rate" {
             next_value = 60 / next_value.time
             value = 60 / value.time
-            key = "fire rate"
         }
-        text += $"\n{key} {value} -> {next_value}"
+        text += $"\n{value} -> {next_value}"
     }
 }
 
 
-if array_length(weapon.upgrade_confs) == 0 {
-    show_debug_message($"No upgrades for weapon {weapon.name}")
-    instance_destroy()
-    exit
-}
-
-cost = weapon.upgrade_confs[0].cost
+cost = upgrade_conf.costs[0]
 icon = weapon.sprite
+upgrade_level = -1
 updateText()
 
 apply = function() {
-    var conf = weapon.upgrade_confs[weapon.upgrades]
-    var keys = variable_struct_get_names(conf)
+    upgrade_level++
+    var conf = upgrade_conf
+    var keys = variable_struct_get_names(conf.stats)
+    var max_upgrades = 0
     for (var i = 0; i < array_length(keys); ++i) {
-        var parameter = keys[i]
-        var value = conf[$ parameter]
-        weapon[$ parameter] = value
+        var stat_name = keys[i]
+        var level_values = conf.stats[$ stat_name] // array
+        var value = level_values[upgrade_level]
+        weapon[$ stat_name] = value
+
+        max_upgrades = array_length(level_values) - 1
     }
-    weapon.upgrades++
     audio_play_sound(sfxWeaponPickup, 2, false)
-    if weapon.upgrades >= weapon.upgrades_max {
+    if upgrade_level >= max_upgrades {
         instance_destroy()
         return;
     }
-    cost = weapon.upgrade_confs[weapon.upgrades].cost
+    cost = conf.costs[upgrade_level]
     updateText()
 }
 

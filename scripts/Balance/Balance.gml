@@ -6,7 +6,9 @@ balance = {
         heal_amount_drop: 20,
         ammo_percent_drop: 0.3,
         costs: {
-            pulse: [10, 40, 70],
+            pulse: {
+                fire_rate: [7, 15, 20]
+            },
             // [buy_cost, upgrade costs...]
             snipe: [80, 80, 90, 120],
             scatter: [60, 60, 70, 90],

@@ -19,15 +19,6 @@ Higher difficulty playthrough:
 - pulse is the most decent option, early scatter sucks and rarely has good application, snipe is ok
 
 0.5.0
-> audio
-    > add victory music
-    > add coins sfx
-> shop text: add "not enough coins"
-> fix ui: make all text transparent if there are enemies
-> fix drops: don't drop ammo if no ammo-ish weapons
-> indicate when drone flies away
-> tutorial
-    > don't restore ammo on every Space hit
 > rework hub (shop)
     > upgrades tree
         > visuals: links
@@ -45,6 +36,15 @@ Higher difficulty playthrough:
     > shoot only if in range
 > rework drop items
     > drop collectibles: coins, ammo, hps
+> shop text: add "not enough coins"
+> audio
+    > add victory music
+    > add coins sfx
+> fix ui: make all text transparent if there are enemies
+> fix drops: don't drop ammo if no ammo-ish weapons
+> indicate when drone flies away
+> tutorial
+    > don't restore ammo on every Space hit
 
 0.5.1
 > difficulty settings

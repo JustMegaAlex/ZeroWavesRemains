@@ -62,6 +62,7 @@ gp_dir = {
     }
 }
 
+var _pulse_costs = global.balance.items.costs.pulse
 weapon_pulse = {
     dmg: 20,
     timer: MakeTimer(15),
@@ -75,11 +76,19 @@ weapon_pulse = {
     range: 2000,
     sprite: sUIWeaponPulse,
     upgrades: 0,
-    upgrade_confs: [
-        {sp: 70, timer: MakeTimer(13), cost: global.balance.items.costs.pulse[0]},
-        {sp: 78, timer: MakeTimer(11), cost: global.balance.items.costs.pulse[1]},
-        {sp: 86, timer: MakeTimer(10), cost: global.balance.items.costs.pulse[2]},
-    ]
+    upgrade_confs: {
+        fire_rate: {
+            name: "fire rate",
+            stats: {
+                timer: [MakeTimer(13), MakeTimer(11), MakeTimer(10)]
+            },
+            costs: _pulse_costs.fire_rate
+        },
+        // bullet_speed: {
+        //     stats: {sp: 70},
+        //     cost: _pulse_costs[0]
+        // }
+    }
 }
 
 weapon_scatter = {
