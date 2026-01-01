@@ -85,6 +85,8 @@ for (var i = 0; i < waves_remains; ++i) {
     strength_growth -= strength_growth_decrease
 }
 
+
+///// @follow-up Behemoth waves
 array_insert(waves, 12, {oEnemyBehemoth: 1})
 array_push(waves, {oEnemyBehemoth: 1, oEnemy: 4, oEnemyTiny: 6})
 

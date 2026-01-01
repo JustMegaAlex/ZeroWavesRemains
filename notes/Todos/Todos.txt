@@ -18,7 +18,7 @@ Higher difficulty playthrough:
 - more frequent drones, like every 2nd wave
 - pulse is the most decent option, early scatter sucks and rarely has good application, snipe is ok
 
-0.4.0
+0.5.0
 > audio
     > add victory music
     > add coins sfx
@@ -28,26 +28,10 @@ Higher difficulty playthrough:
 > indicate when drone flies away
 > tutorial
     > don't restore ammo on every Space hit
-> rework items
-    > weapon items: replace with ammo items after purchase
-    > items interaction
-        > arrow "Item added to shop"
-    > item types
-        > pickups: oneshot ammo/health pickups
-        > shop upgrades: add new shop item
-
-> rename coins to "space coins" in ui
-
-> ai
-    > shoot only if in range
-> show high score
-> add cross cursor
-
-> art
-    > ui shield
-    > ui cross cursor
-    > enemy: clunky
-  
+> rework hub (shop)
+    > upgrades tree
+        > visuals: links
+        > unlock upgrade chains
 > rework enemy ai
     > upd bonk (oEnemy)
         - aim is increased over time if player stays still
@@ -57,6 +41,24 @@ Higher difficulty playthrough:
         - one: fly in circles around player
         - two: fly-by from long distance
         - swarm behavior
+> ai
+    > shoot only if in range
+> rework drop items
+    > drop collectibles: coins, ammo, hps
+
+0.5.1
+> difficulty settings
+> impl loading screen
+    > make small explosions for tiny
+
+Next versions:
+> show high score
+
+> art
+    > ui shield
+    > ui cross cursor
+    > enemy: clunky
+
 > show previous run waves count
 > add casual difficulty mode
 > vfx
@@ -66,15 +68,12 @@ Higher difficulty playthrough:
 > finish gp controls
 > fixes:
     > disable Esc for GX
-    > remove ammo items at start, replace weapon with ammo after weapon purchase
 
 feedback:
     > not clear if overbuying ammo will add ammo or waste money
     > bonus for double kill
 
 Future:
-> impl loading screen
-    > make small explosions for tiny
 Enemies concepts:
 > knife
     - small, melee, slams into a player
