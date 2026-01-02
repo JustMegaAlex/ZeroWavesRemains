@@ -17,4 +17,8 @@ y = start.y
 image_angle = diff.dir()
 image_xscale *= diff.len() / sprite_width
 
+openx = x
+openy = y
+open_xscale = image_xscale
+
 global.shop_links_initialized = true

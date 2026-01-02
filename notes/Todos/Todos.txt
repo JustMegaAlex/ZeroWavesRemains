@@ -21,9 +21,11 @@ Higher difficulty playthrough:
 0.5.0
 > rework hub (shop)
     > upgrades tree
-        > visuals: links
-        > unlock upgrade chains
-            > impl buy weapons
+        > rework tutorial
+            > no pulse at start
+            > add pulse if skip
+            > hide all other items
+       
 > rework enemy ai
     > upd bonk (oEnemy)
         - aim is increased over time if player stays still

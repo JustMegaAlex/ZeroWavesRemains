@@ -14,6 +14,8 @@
 #macro key_released keyboard_check_released
 #macro key_hold keyboard_check
 #macro press_f_prompt "Press F to"
+#macro macro_ui_text_spawn_wave_pos ui_text_spawn_wave_pos
+#macro macro_ui_shop_prompt_pos ui_shop_prompt_pos
 
 DEBUG = DEV
 
@@ -26,6 +28,9 @@ tutorial_finished = false
 wave_enemies_count = 0
 waves_remains = 0
 win = false
+
+macro_ui_text_spawn_wave_pos = {x: 0, y: 0}
+macro_ui_shop_prompt_pos = {x: 0, y: 0}
 
 
 music_assets = [

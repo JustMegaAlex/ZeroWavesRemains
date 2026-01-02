@@ -18,19 +18,25 @@ child_nodes = []
 
 highlight = false
 
-can_buy = function() {
-    return oPlayer.money >= cost
+can_buy = function() {}
+
+can_buy_base = function() {
+    return (oPlayer.money >= cost) and can_buy()
 }
 
-apply = function() {
+apply = function() {}
 
+apply_base = function() {
+    apply()
+    for (var i = 0; i < array_length(child_nodes); ++i) {
+        child_nodes[i].unlock()
+    }
 }
-
 
 interact = function() {
-    if can_buy() {
+    if can_buy_base() {
         oPlayer.money -= cost
-        apply()
+        apply_base()
         if oneshot {
             instance_destroy()
         }
@@ -50,10 +56,12 @@ promptTextWeapon = function() {
     SetTextAllign(1, 0)
     draw_text(w*0.5, h*0.75, text)
     draw_set_color(c_white)
-    var col = can_buy() ? c_yellow : c_red
-    draw_set_color(col)
-    draw_text(w*0.5, h*0.75 - 40, cost)
-    draw_set_color(c_white)
+    if show_cost {
+        var col = can_buy_base() ? c_yellow : c_red
+        draw_set_color(col)
+        draw_text(w*0.5, h*0.75 - 40, cost)
+        draw_set_color(c_white)
+    }
 }
 
 if !is_unlocked {

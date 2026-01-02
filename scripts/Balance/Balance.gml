@@ -10,11 +10,12 @@ balance = {
                 fire_rate: [7, 15, 20],
                 bullet_speed: [7, 12, 18],
             },
-            // [buy_cost, upgrade costs...]
             snipe: {
+                weapon_cost: 80,
                 dmg: [80, 90]
             },
             scatter: {
+                weapon_cost: 50,
                 range: [35, 45],
                 dmg: [35, 45],
             },

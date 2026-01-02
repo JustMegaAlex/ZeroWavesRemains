@@ -9,3 +9,10 @@ alarm[0] = 1
 image_blend = c_yellow
 image_index = 1
 image_speed = 0
+image_alpha = 0.5
+
+
+openx = x
+openy = y
+open_xscale = image_xscale
+
