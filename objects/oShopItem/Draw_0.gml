@@ -1,6 +1,8 @@
 draw_self()
 
-if highlight {
+if !is_unlocked { exit }
+
+if  highlight {
     draw_sprite(sprite_index, 1, x, y)
 }
 

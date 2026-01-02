@@ -6,9 +6,8 @@ event_inherited()
 
 prompt_text = "Press F to buy "
 
-visible = is_unlocked
-
 icon = noone
+draw_icon = is_unlocked
 
 openx = x
 openy = y
@@ -41,11 +40,9 @@ interact = function() {
 open = function() {}
 
 unlock = function() {
-    visible = true
     is_unlocked = true
+    image_index = 0
 }
-
-
 
 promptTextWeapon = function() {
      var w = display_get_gui_width()
@@ -57,4 +54,8 @@ promptTextWeapon = function() {
     draw_set_color(col)
     draw_text(w*0.5, h*0.75 - 40, cost)
     draw_set_color(c_white)
+}
+
+if !is_unlocked {
+    image_index = 2
 }
