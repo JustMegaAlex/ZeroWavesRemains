@@ -1,0 +1,1 @@
+visible = oShop.is_open

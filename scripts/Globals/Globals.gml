@@ -19,12 +19,13 @@ DEBUG = DEV
 
 pause = false
 gameover = false
-win = false
+increase_spawning_speed_between_waves = false
+shop_links_initialized = false
 tutorial = false
 tutorial_finished = false
 wave_enemies_count = 0
 waves_remains = 0
-increase_spawning_speed_between_waves = false
+win = false
 
 
 music_assets = [
@@ -38,6 +39,7 @@ function ResetGlobals() {
     global.gameover = false
     global.win = false
     global.pause = false
+    global.shop_links_initialized = false
 }
 
 

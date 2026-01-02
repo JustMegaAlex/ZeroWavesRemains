@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":3,
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"ZeroWavesRemains",
+    "path":"ZeroWavesRemains.yyp",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

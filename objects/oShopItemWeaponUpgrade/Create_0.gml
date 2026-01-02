@@ -23,10 +23,6 @@ updateText = function() {
 }
 
 
-cost = upgrade_conf.costs[0]
-icon = weapon.sprite
-upgrade_level = -1
-updateText()
 
 apply = function() {
     upgrade_level++
@@ -58,3 +54,8 @@ var weapon_var_name = splitted[0]
 var upgrade_conf_var_name = splitted[1]
 weapon = inst_get(oPlayer, weapon_var_name)
 upgrade_conf = weapon.upgrade_confs[$ upgrade_conf_var_name]
+
+cost = upgrade_conf.costs[0]
+icon = weapon.sprite
+upgrade_level = -1
+updateText()
