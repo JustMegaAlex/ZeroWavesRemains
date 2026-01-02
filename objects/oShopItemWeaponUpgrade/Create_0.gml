@@ -52,3 +52,9 @@ apply = function() {
 
 promptText = promptTextWeapon
 image_blend = global.game_colors.item_weapon
+
+var splitted = string_split(upgrade_string, ".")
+var weapon_var_name = splitted[0]
+var upgrade_conf_var_name = splitted[1]
+weapon = inst_get(oPlayer, weapon_var_name)
+upgrade_conf = weapon.upgrade_confs[$ upgrade_conf_var_name]
