@@ -667,3 +667,28 @@ function ControlledRandomer(config, auto=false) constructor {
         return ds_list_empty(list)
     }
 }
+
+
+function Text(relx, rely, text, args={}) constructor {
+    self.relx = relx
+    self.rely = rely
+    self.text = text
+    self.halign = args[$ "halign"] ?? 1
+    self.valign = args[$ "valign"] ?? 1
+    self.color = args[$ "color"] ?? c_white
+    self.alpha = args[$ "alpha"] ?? 1
+}
+
+function DrawText(x, y, text) {
+    if is_string(text) {
+        draw_text(x, y, text); return;
+    }
+    SetTextAllign(text.halign, text.valign)
+    var col = draw_get_color()
+    var alpha = draw_get_alpha()
+    draw_set_color(text.color)
+    draw_set_alpha(text.alpha)
+    draw_text(x + text.relx, y + text.rely, text.text)
+    draw_set_color(col)
+    draw_set_alpha(alpha)
+}

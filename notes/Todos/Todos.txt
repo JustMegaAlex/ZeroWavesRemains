@@ -19,6 +19,9 @@ Higher difficulty playthrough:
 - pulse is the most decent option, early scatter sucks and rarely has good application, snipe is ok
 
 0.5.0
+> rework ui text
+    > fix displaying "undefined" in shop ui text
+    > remove old code from player
 > rework hub (shop)
     > upgrades tree
         > rework tutorial

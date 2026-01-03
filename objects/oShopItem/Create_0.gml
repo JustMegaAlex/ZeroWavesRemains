@@ -5,6 +5,8 @@
 event_inherited()
 
 prompt_text = "Press F to buy "
+text_struct = new Text(0, 0, "")
+
 
 icon = noone
 draw_icon = is_unlocked
@@ -50,18 +52,8 @@ unlock = function() {
     image_index = 0
 }
 
-promptTextWeapon = function() {
-     var w = display_get_gui_width()
-     var h = display_get_gui_height()
-    SetTextAllign(1, 0)
-    draw_text(w*0.5, h*0.75, text)
-    draw_set_color(c_white)
-    if show_cost {
-        var col = can_buy_base() ? c_yellow : c_red
-        draw_set_color(col)
-        draw_text(w*0.5, h*0.75 - 40, cost)
-        draw_set_color(c_white)
-    }
+promptText = function() {
+    return text_struct
 }
 
 if !is_unlocked {

@@ -19,18 +19,3 @@ if display_waves {
 if display_money {
     draw_text(10, 200, $"Money: {money}")
 }
-
-var w = display_get_gui_width()
-var h = display_get_gui_height()
-var xx = w*0.5
-var yy = h*0.75
-SetTextAllign(1, 1)
-if oShop.highlight {
-    draw_text(xx, yy, "Press F to open shop")
-}
-SetTextAllign(1, 0)
-if shop_item {
-    shop_item.promptText()
-} else if oWaveSpawner.active and global.wave_enemies_count <= 0 {
-    //draw_text(w*0.5, h*0.75 + 60, "Press Space for the next wave!")
-}

@@ -1,1 +1,1 @@
-draw_text(x, y, text)
+DrawText(x, y, text)

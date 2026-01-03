@@ -20,6 +20,7 @@ updateText = function() {
         }
         text += $"\n{value} -> {next_value}"
     }
+    text_struct.text = text
 }
 
 
@@ -46,7 +47,6 @@ apply = function() {
     updateText()
 }
 
-promptText = promptTextWeapon
 image_blend = global.game_colors.item_weapon
 
 var splitted = string_split(upgrade_string, ".")
