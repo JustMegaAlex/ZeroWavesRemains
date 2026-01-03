@@ -1,4 +1,20 @@
 
+=== Timeline ===
+-- 2025.01.10
+    - 0.5.0 Build ready, publish and start testing + promo
+
+-- 2025.01.24
+    - Finish active feature development
+    - Start working on appeal
+
+
+-- 2025.02.15
+    Evaluate the project and make a decision for further development
+
+
+=== Feedback ===
+    > not clear if overbuying ammo will add ammo or waste money
+    > bonus for double kill
 - непонятно что враг в волне
 - не понял индикацию аммо
 - загрузочный экран
@@ -11,27 +27,28 @@
 - убил подсказки и не знал как переключить пушку
 - не понял, что пульс восстанавливается 
 
-Continue:
 
-Higher difficulty playthrough:
-- add more initial ammo
-- more frequent drones, like every 2nd wave
-- pulse is the most decent option, early scatter sucks and rarely has good application, snipe is ok
 
-0.5.0
-> rework hub (shop)
-    > fix
-        > change text when fully upgraded
-    > upgrades tree
-        > rework tutorial
-            > no pulse at start
-            > add pulse if skip
-            > hide all other items
-       
+=== Promo ===
+> upload video on yt
+> share in dc
+> share on X and BS
+> write an update devlog
+> invite testers
+> dc server
+
+=== Milestones ===
+0.5.0 Build: prove that concept "right tools for right cases" works
+> rework tutorial
+    > no pulse at start
+    > add pulse if skip
+    > hide all other items
+
 > rework enemy ai
     > upd bonk (oEnemy)
         - aim is increased over time if player stays still
-        - start evading if get hits
+        - start evading/retreating if get hits
+        - charge forward: shorten distance without shooting
     > upd tiny
         - two modes
         - one: fly in circles around player
@@ -39,31 +56,25 @@ Higher difficulty playthrough:
         - swarm behavior
 > ai
     > shoot only if in range
-> rework drop items
-    > drop collectibles: coins, ammo, hps
 > shop text: add "not enough coins"
 > audio
     > add victory music
     > add coins sfx
 > fix ui: make all text transparent if there are enemies
-> fix drops: don't drop ammo if no ammo-ish weapons
-> indicate when drone flies away
 > tutorial
     > don't restore ammo on every Space hit
+> menu
+    > sound settings
+    > difficulty choice
 
 0.5.1
-> difficulty settings
 > impl loading screen
     > make small explosions for tiny
 
-Next versions:
+
+=== Backlog ===
+> indicate when drone flies away
 > show high score
-
-> art
-    > ui shield
-    > ui cross cursor
-    > enemy: clunky
-
 > show previous run waves count
 > add casual difficulty mode
 > vfx
@@ -74,12 +85,15 @@ Next versions:
 > fixes:
     > disable Esc for GX
 
-feedback:
-    > not clear if overbuying ammo will add ammo or waste money
-    > bonus for double kill
+======== IDEAS ========
 
-Future:
-Enemies concepts:
+=== Appeal improvement ideas ===
+> move to 3D + add lighting
+> stay in 2D + add lighting with normal maps
+
+
+
+=== Enemy concepts ===
 > knife
     - small, melee, slams into a player
 > leader
@@ -99,24 +113,6 @@ Enemies concepts:
     - missiles
 > frigate
     - lots of missiles ?
-
-
-
-Ideas:
-> ship weight system: more equipment = less agile
-    - drop weapons on the go to move faster
-> choose color palette?
-> add flaring red effect when < 25% hp
-> penetrating kinetic weapon (like that bugged out pulse)
-> replace ammo with ammo upgrades: restore ratio + amount
-> upd scatter and snipe: autorestore ammo
-> killing spree: add kill combo timer
-
-
-One sentence pitch:
-"Zero Waves Remains is a twin-stick shooter where decisions beat precision"
-
-Enemy concepts:
 > mosquito: you can't kite forever
     - kite-shooting you
     - on distance enters sniper mode: unescapable shot
@@ -134,7 +130,17 @@ Drone concepts:
 > shielded evading drone : average loot
 > shielded drone who attacks if you get closer : a lot of loot
 
-Mechanics:
+
+
+=== Mechanics ===
+> ship weight system: more equipment = less agile
+    - drop weapons on the go to move faster
+> choose color palette?
+> add flaring red effect when < 25% hp
+> penetrating kinetic weapon (like that bugged out pulse)
+> replace ammo with ammo upgrades: restore ratio + amount
+> upd scatter and snipe: autorestore ammo
+> killing spree: add kill combo timer
 > big rocket
     - one shot
     - choose who you just want to delete
@@ -144,5 +150,9 @@ Mechanics:
 > emp weapons
     - disables shields
     - partially disables systems (slows down, messes up weapons)
+
+
+One sentence pitch:
+"Zero Waves Remains is a twin-stick shooter where decisions beat precision"
 
 
