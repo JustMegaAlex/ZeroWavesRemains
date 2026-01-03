@@ -1,11 +1,12 @@
 
 event_inherited()
 
-ammo_percent = global.balance.items.ammo_percent
-ammo_amount = round(oPlayer.weapon.ammo_max * ammo_percent)
-text = $"{press_f_prompt} buy {oPlayer.weapon.name} ammo + {ammo_amount}"
+var key = string_lower(weapon.name) + "_ammo"
+var conf = global.balance.items.costs[$ key]
+cost = conf[0]
+ammo_amount = conf[1]
+text_struct.text = $"{press_f_prompt} buy {weapon.name} ammo +{ammo_amount}"
 icon = sIconAmmo
-cost = global.balance.items.costs.ammo
 image_blend = global.game_colors.item_add_to_shop
 
 

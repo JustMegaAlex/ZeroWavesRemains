@@ -20,7 +20,8 @@ Higher difficulty playthrough:
 
 0.5.0
 > rework hub (shop)
-    > fix healing (seems like wrong cost applied)
+    > fix
+        > change text when fully upgraded
     > upgrades tree
         > rework tutorial
             > no pulse at start

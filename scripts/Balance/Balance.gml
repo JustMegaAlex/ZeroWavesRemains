@@ -19,8 +19,7 @@ balance = {
                 range: [35, 45],
                 dmg: [35, 45],
             },
-            heal: 40,
-            ammo: 0.3,
+            heal: 25,
             // [cost, amount]
             snipe_ammo: [20, 5],
             scatter_ammo: [20, 100],
