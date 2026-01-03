@@ -7,8 +7,8 @@ balance = {
         ammo_percent_drop: 0.3,
         costs: {
             pulse: {
-                fire_rate: [7, 15, 20],
-                bullet_speed: [7, 12, 18],
+                fire_rate: [7, 25, 40],
+                bullet_speed: [7, 21, 35],
             },
             snipe: {
                 weapon_cost: 80,
