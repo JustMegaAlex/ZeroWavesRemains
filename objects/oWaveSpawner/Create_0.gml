@@ -11,15 +11,6 @@ just_spawned = 0
 // ]
 // waves_remains = array_length(waves)
 waves = [
-    {oItemDrone: 1},
-    {oItemDrone: 1},
-    {oItemDrone: 1},
-    {oItemDrone: 1},
-    {oItemDrone: 1},
-    {oItemDrone: 1},
-    {oItemDrone: 1},
-    {oItemDrone: 1},
-    {oItemDrone: 1},
     // {oScout: 2},
     // {oEnemyTiny: 2},
     // {oEnemyTiny: 2},

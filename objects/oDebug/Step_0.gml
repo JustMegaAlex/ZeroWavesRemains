@@ -13,7 +13,7 @@ if toggle {
 
 if active {
 
-
+    var shift_hold = key_hold(vk_shift)
     //// Player part
     if !instance_exists(oPlayer) { exit }
     var arr = oPlayer.weapons_array
@@ -46,7 +46,11 @@ if active {
     }
 
     if key_pressed(ord("X")) {
-        oPlayer.die()
+        if shift_hold {
+            oPlayer.hit({dmg: 10, knockback: 0, image_angle: 0})
+        } else {
+            oPlayer.die()
+        }
     }
 
     if key_pressed(ord("U")) {

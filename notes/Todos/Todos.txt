@@ -19,8 +19,6 @@ Higher difficulty playthrough:
 - pulse is the most decent option, early scatter sucks and rarely has good application, snipe is ok
 
 0.5.0
-> rework drops
-    > implement ammo collectible effect
 > rework hub (shop)
     > fix healing (seems like wrong cost applied)
     > upgrades tree
