@@ -1,4 +1,6 @@
 
+collect_enabled = true
+
 magnet_dist = 500
 sp_max = 32
 acc = 1
@@ -9,6 +11,10 @@ direction = irandom(360)
 
 onCollect = function() {
    
+}
+
+updateCollectEnabled = function() {
+    
 }
 
 SetColor()

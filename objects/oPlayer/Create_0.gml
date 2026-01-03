@@ -288,6 +288,10 @@ heal = function(heal_amount) {
     audio_play_sound(sfxRepair, 2, false)
 }
 
+fillAmmo = function(weapon, ammo_amount) {
+    weapon.ammo = min(weapon.ammo_max, weapon.ammo + ammo_amount)
+}
+
 getObjectCollision = function(obj) {
     var dist = infinity
     var dist_check = 0
