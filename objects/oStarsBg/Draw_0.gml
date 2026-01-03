@@ -15,16 +15,12 @@ for (var i = 0; i < array_length(surfaces); ++i) {
     var move_x = plx_x - (surf_w * 0.5) * oCamera.zoom - dx * (1 - parallax) * (oCamera.zoom - 1)
     var move_y = plx_y - (surf_h * 0.5) * oCamera.zoom - dy * (1 - parallax) * (oCamera.zoom - 1)
 
-    // var x_draw_stars = x_draw_stars_start
-    //                + plx_x
-    //                + move_due_to_scale * surf_w
-    // var y_draw_stars = y_draw_stars_start
-    //                + plx_y
-    //                + move_due_to_scale * surf_h
-
     var x_draw_stars = x_ship_st + move_x
     var y_draw_stars = y_ship_st + move_y
     var surf = surfaces[i]
-    if surface_exists(surf)
-        draw_surface_ext(surf, x_draw_stars, y_draw_stars, 1 + scale_change, 1 + scale_change, 0, c_white, 1)
+    if !surface_exists(surf) {
+        createSurfaces()
+        surf = surfaces[i]
+    }
+    draw_surface_ext(surf, x_draw_stars, y_draw_stars, 1 + scale_change, 1 + scale_change, 0, c_white, 1)
 }

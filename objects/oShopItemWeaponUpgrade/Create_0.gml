@@ -26,22 +26,24 @@ apply = function() {
     upgrade_level++
     var conf = upgrade_conf
     var keys = variable_struct_get_names(conf.stats)
-    var max_upgrades = 0
     for (var i = 0; i < array_length(keys); ++i) {
         var stat_name = keys[i]
         var level_values = conf.stats[$ stat_name] // array
         var value = level_values[upgrade_level]
         weapon[$ stat_name] = value
-
-        max_upgrades = array_length(level_values) - 1
     }
     audio_play_sound(sfxWeaponPickup, 2, false)
     if upgrade_level >= max_upgrades {
-        instance_destroy()
+        text_struct.text = $"{weapon.name} {upgrade_conf.name} fully upgraded"
+        cost_text_struct.text = ""
         return;
     }
     cost = conf.costs[upgrade_level]
     updateText()
+}
+
+can_buy = function() {
+    return upgrade_level < max_upgrades
 }
 
 image_blend = global.game_colors.item_weapon
@@ -51,6 +53,7 @@ var weapon_var_name = splitted[0]
 var upgrade_conf_var_name = splitted[1]
 weapon = inst_get(oPlayer, weapon_var_name)
 upgrade_conf = weapon.upgrade_confs[$ upgrade_conf_var_name]
+max_upgrades = array_length(upgrade_conf.costs) - 1
 
 cost = upgrade_conf.costs[0]
 icon = weapon.sprite
