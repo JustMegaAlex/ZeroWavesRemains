@@ -181,7 +181,7 @@ for (var i = 0; i < array_length(all_weapons); ++i) {
     _weapon_default_field(item, "upgrades_max", array_length(item.upgrade_confs))
 }
 
-
+interactible = noone
 shop_item = noone
 
 

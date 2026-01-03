@@ -83,25 +83,29 @@ for (var i = 0; i < array_length(weapons_array); ++i) {
 
 }
 
-if shop_item {
-    shop_item.highlight = false
+shop_item = noone
+if interactible {
+    interactible.highlight = false
 }
-shop_item = interactingWithItem(oInteractible)
-if shop_item and object_is_ancestor(shop_item.object_index, oShopItem)
-        and !(shop_item.is_unlocked and oShop.is_open) {
-    shop_item = noone
+interactible = interactingWithItem(oInteractible)
+if interactible and object_is_ancestor(interactible.object_index, oShopItem) {
+    if (interactible.is_unlocked and oShop.is_open) {
+        shop_item = interactible
+    } else {
+        interactible = noone
+    }
 }
-if shop_item {
-    if shop_item and InstDist(shop_item) > shot_interact_range {
-        shop_item = noone
+if interactible {
+    if interactible and InstDist(interactible) > shot_interact_range {
+        interactible = noone
     }
-    if shop_item {
-        shop_item.highlight = true
+    if interactible {
+        interactible.highlight = true
     }
-    if shop_item and oInput.Pressed("interact") {
-        shop_item.interact()
-        if !instance_exists(shop_item) {
-            shop_item = noone
+    if interactible and oInput.Pressed("interact") {
+        interactible.interact()
+        if !instance_exists(interactible) {
+            interactible = noone
         }
     }
 }
