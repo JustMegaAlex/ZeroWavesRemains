@@ -14,5 +14,5 @@ if close_to_player {
 
 if dist < speed {
     instance_destroy()
-    oPlayer.money++
+    onCollect()
 }

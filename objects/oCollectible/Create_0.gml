@@ -7,4 +7,8 @@ rot_sp = 12
 speed = sp_max * random_range(.5, 1)
 direction = irandom(360)
 
+onCollect = function() {
+   
+}
+
 SetColor()

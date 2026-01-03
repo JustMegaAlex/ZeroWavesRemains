@@ -240,7 +240,7 @@ die = function() {
     global.gameover = true
     oParticles.explosion_2(x, y)
     repeat money {
-        instance_create_layer(x, y, layer, oCoin)
+        instance_create_layer(x, y, layer, oCollectCoin)
     }
 }
 
