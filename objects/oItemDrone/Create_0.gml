@@ -51,8 +51,9 @@ mover_point = {
 
 mover = mover_point
 
+
 objectDie = function() {
-    instance_create_layer(x, y, layer, oItemDrop)
+    oLootManager.spawnLoot(x, y, irandom_range(12, 18))
 }
 
 //// Create trajectory

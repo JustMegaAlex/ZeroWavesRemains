@@ -163,13 +163,13 @@ steps = [
             if !ArrayEmpty(oUI.hint_arrows) {
                 return;
             }
-            with oCoin {
+            with oCollectCoin {
                 other.arrow = oUI.addHintArrow(id, "coins", global.game_colors.arrow_common)
                 return;
             }
         },
         done: function() {
-            return !instance_exists(oCoin)
+            return !instance_exists(oCollectCoin)
         }
     },
     // define index with search
@@ -359,7 +359,7 @@ finishTutorial = function() {
         display_money = true
     }
     instance_destroy(oEnemyParent)
-    instance_destroy(oCoin)
+    instance_destroy(oCollectCoin)
     instance_destroy(oItemDrop)
     instance_destroy(oItemDropChoice)
     /// ensure to unlock pulse 

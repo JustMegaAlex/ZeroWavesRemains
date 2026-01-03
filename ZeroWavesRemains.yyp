@@ -83,6 +83,7 @@
     {"id":{"name":"oItemDrop","path":"objects/oItemDrop/oItemDrop.yy",},},
     {"id":{"name":"oItemDropChoice","path":"objects/oItemDropChoice/oItemDropChoice.yy",},},
     {"id":{"name":"oLevelEditor","path":"objects/oLevelEditor/oLevelEditor.yy",},},
+    {"id":{"name":"oLootManager","path":"objects/oLootManager/oLootManager.yy",},},
     {"id":{"name":"oMusic","path":"objects/oMusic/oMusic.yy",},},
     {"id":{"name":"oOptionsSlider","path":"objects/oOptionsSlider/oOptionsSlider.yy",},},
     {"id":{"name":"oOptionsSliderKnob","path":"objects/oOptionsSliderKnob/oOptionsSliderKnob.yy",},},

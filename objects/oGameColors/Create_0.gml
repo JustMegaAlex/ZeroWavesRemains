@@ -5,7 +5,7 @@ order = [
     oBullet,
     "space_bg",
     "stars",
-    oCoin,
+    oCollectCoin,
     oShop,
     "item_choice",
     "item_weapon",

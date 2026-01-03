@@ -21,6 +21,8 @@ Higher difficulty playthrough:
 0.5.0
 > rework drops
     > replace drop choices with collectibles
+        > implement ammo collectible effect
+        > spawn collectibles from drone
 > rework hub (shop)
     > upgrades tree
         > rework tutorial
@@ -129,6 +131,11 @@ Enemy concepts:
     - actively evades your shots
     - gains distance very fast
     - fast bullets are hard to evade
+Drone concepts:
+> drone (already done) : low loot
+> shielded evading drone : average loot
+> shielded drone who attacks if you get closer : a lot of loot
+
 Mechanics:
 > big rocket
     - one shot

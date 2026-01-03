@@ -1,21 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"oCollectHp",
+  "%Name":"oLootManager",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oCollectHp",
+  "name":"oLootManager",
   "overriddenProperties":[],
   "parent":{
-    "name":"Collectibles",
-    "path":"folders/Objects/Collectibles.yy",
+    "name":"Systems",
+    "path":"folders/Objects/Systems.yy",
   },
-  "parentObjectId":{
-    "name":"oCollectible",
-    "path":"objects/oCollectible/oCollectible.yy",
-  },
-  "persistent":false,
+  "parentObjectId":null,
+  "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -32,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sIconHeal",
-    "path":"sprites/sIconHeal/sIconHeal.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

@@ -28,14 +28,14 @@ item_ammo = {
 }
 
 item_coins = {
-    color_index: "oCoin",
+    color_index: "oCollectCoin",
     icon: sIconCoins,
     coins: coins,
     prompt_text: $"get {coins} coins",
     apply: function() {
         with oPlayer {
             repeat other.coins {
-                instance_create_layer(x + 50, y, "Instances", oCoin)
+                instance_create_layer(x + 50, y, "Instances", oCollectCoin)
             }
         }
     }

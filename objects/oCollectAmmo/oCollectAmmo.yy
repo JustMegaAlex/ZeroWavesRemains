@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sCoin",
-    "path":"sprites/sCoin/sCoin.yy",
+    "name":"sIconAmmo",
+    "path":"sprites/sIconAmmo/sIconAmmo.yy",
   },
   "spriteMaskId":null,
   "visible":true,

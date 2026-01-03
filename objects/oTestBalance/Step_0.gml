@@ -11,8 +11,8 @@ if is_generating {
         res[$ name] += 1
         die()
     }
-    res.coins = instance_number(oCoin)
-    instance_destroy(oCoin)
+    res.coins = instance_number(oCollectCoin)
+    instance_destroy(oCollectCoin)
     if res.coins > 0 {
         array_push(test_results, res)
     }

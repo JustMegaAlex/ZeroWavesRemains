@@ -129,7 +129,7 @@ die = function() {
     instance_destroy()
     // spawn coins
     repeat irandom_range(coins_min, coins_max) {
-        with instance_create_layer(x, y, layer, oCoin) {
+        with instance_create_layer(x, y, layer, oCollectCoin) {
             direction = other.last_hit_direction + irandom_range(-45, 45)
         }
     }

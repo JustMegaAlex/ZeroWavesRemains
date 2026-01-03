@@ -22,6 +22,7 @@ DEBUG = DEV
 pause = false
 gameover = false
 increase_spawning_speed_between_waves = false
+loot_controlled_randomer = undefined
 shop_links_initialized = false
 tutorial = false
 tutorial_finished = false
