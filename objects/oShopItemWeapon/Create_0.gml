@@ -13,5 +13,6 @@ apply = function() {
     audio_play_sound(sfxWeaponPickup, 2, false)
     is_purchased = true
     show_cost = false
+    cost_text_struct.text = ""
     text_struct.text = $"You already have {weapon.name}"
 }

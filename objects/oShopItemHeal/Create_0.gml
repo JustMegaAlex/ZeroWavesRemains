@@ -7,7 +7,7 @@ icon = sIconHeal
 image_blend = global.game_colors.item_add_to_shop
 
 can_buy = function() {
-    return oPlayer.money >= cost and oPlayer.hp < oPlayer.hp_max
+    return oPlayer.hp < oPlayer.hp_max
 }
 
 apply = function() {

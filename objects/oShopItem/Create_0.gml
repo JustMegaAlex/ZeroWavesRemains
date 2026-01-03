@@ -5,6 +5,7 @@
 event_inherited()
 
 prompt_text = "Press F to buy "
+cost_text_struct = new Text(0, 0, cost, {color: c_red})
 text_struct = new Text(0, 0, "")
 
 
@@ -20,7 +21,7 @@ child_nodes = []
 
 highlight = false
 
-can_buy = function() {}
+can_buy = function() { return true }
 
 can_buy_base = function() {
     return (oPlayer.money >= cost) and can_buy()
@@ -54,6 +55,10 @@ unlock = function() {
 
 promptText = function() {
     return text_struct
+}
+
+costText = function() {
+    return cost_text_struct
 }
 
 if !is_unlocked {

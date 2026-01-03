@@ -10,8 +10,8 @@
   "name":"oUIText",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/Objects/UI.yy",
+    "name":"Text",
+    "path":"folders/Objects/UI/Text.yy",
   },
   "parentObjectId":null,
   "persistent":false,

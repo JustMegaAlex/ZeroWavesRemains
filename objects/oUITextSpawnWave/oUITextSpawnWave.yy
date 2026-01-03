@@ -8,8 +8,8 @@
   "name":"oUITextSpawnWave",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/Objects/UI.yy",
+    "name":"Text",
+    "path":"folders/Objects/UI/Text.yy",
   },
   "parentObjectId":{
     "name":"oUIText",
