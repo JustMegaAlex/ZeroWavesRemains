@@ -4,6 +4,7 @@
 //     draw_circle(x, y, 40, false)
 //     draw_set_colour(c_white)
 // }
-event_inherited();
+event_inherited()
 
-//draw_text(x, y - 200, sp.len())
+// draw_text(x, y - 200, sp.len())
+// draw_line(x, y, mover.to.x, mover.to.y)

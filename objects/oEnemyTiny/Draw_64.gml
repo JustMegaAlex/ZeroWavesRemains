@@ -1,0 +1,1 @@
+DebugDrawVar("", $"sp={sp.len()} dir={mover.circling_dir} timer={mover.change_dir_timer.timer}")

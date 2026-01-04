@@ -7,9 +7,11 @@ if global.debug_tiny == noone {
 hp = 10
 
 move_around_player_dist = 400
-sp_max = 40
-acc_max = 0.37
+sp_max = 24
+acc_max = 0.4
 updateDampening()
+
+is_swarm_mode = false
 
 image_xscale = 0.3
 image_yscale = 0.3
@@ -40,30 +42,45 @@ mover_template = {
         
     }
 }
-mover_point = {
+mover_circle_around = {
     id: id,
     to: new Vec2(0, 0),
-    treshold_dist: 40,
+    actual_to: new Vec2(2, 0),
+    radius: 300,
+    threshold_radius_mult: random_range(1.7, 2.3),
     dist_to: 0,
+    dir_to: 0,
+    circling_dir: 1,
     finished: true,
-    accel_value: 0.5,
+    accel_value: 1,
+    change_dir_timer: MakeTimer(60),
     step: function() {
-        dist_to = point_distance(id.x, id.y, to.x, to.y)
-        if dist_to <= treshold_dist {
+        if !is_struct and !instance_exists(to) {
             finished = true
             return;
         }
-        with id {
-            accelerate(other.accel_value, PointDir(other.to.x, other.to.y))
+        dir_to = point_direction(id.x, id.y, to.x, to.y)
+        dist_to = point_distance(id.x, id.y, to.x, to.y)
+        if !change_dir_timer.update() and (dist_to > (radius * 3)) {
+            circling_dir = choose(-1, 1)
+            change_dir_timer.reset()
         }
+
+
+        var rotation_factor = max(0, (threshold_radius_mult * radius - dist_to) / radius) // from 0 to 1
+        dir_to += 90 * circling_dir * rotation_factor
+        id.accelerate(accel_value, dir_to)
     },
     start: function(x, y) {
         to.set(x, y)
         finished = false
+        circling_dir = choose(1, -1)
     }
 }
 
-mover = mover_point
+mover = mover_circle_around
+mover.start()
+mover.to = oPlayer
 
 
 /// Aim
