@@ -12,6 +12,9 @@ acc_max = 0.4
 updateDampening()
 
 is_swarm_mode = false
+swarm_leader = noone
+swarm_fly_away_timer = MakeTimer(180, 0)
+swarm_switch_to_fly_away_dist = 300
 
 image_xscale = 0.3
 image_yscale = 0.3

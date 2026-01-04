@@ -70,6 +70,7 @@
     {"id":{"name":"oEnemyBehemoth","path":"objects/oEnemyBehemoth/oEnemyBehemoth.yy",},},
     {"id":{"name":"oEnemyBehemothGun","path":"objects/oEnemyBehemothGun/oEnemyBehemothGun.yy",},},
     {"id":{"name":"oEnemyBehemothTurret","path":"objects/oEnemyBehemothTurret/oEnemyBehemothTurret.yy",},},
+    {"id":{"name":"oEnemyGroupAI","path":"objects/oEnemyGroupAI/oEnemyGroupAI.yy",},},
     {"id":{"name":"oEnemyParent","path":"objects/oEnemyParent/oEnemyParent.yy",},},
     {"id":{"name":"oEnemyTiny","path":"objects/oEnemyTiny/oEnemyTiny.yy",},},
     {"id":{"name":"oEntity","path":"objects/oEntity/oEntity.yy",},},
