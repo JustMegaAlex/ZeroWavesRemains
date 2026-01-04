@@ -8,11 +8,10 @@ tiny = {
         swarm_leader = noone
         with oEnemyTiny {
             is_swarm_mode = true
-            if !other.swarm_leader {
+            if !other.swarm_leader and !is_dead {
                 other.swarm_leader = id
             }
             swarm_leader = other.swarm_leader
-            break
         }
     },
     enterSwarmMode: function() {

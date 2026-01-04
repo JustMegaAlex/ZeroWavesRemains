@@ -7,4 +7,4 @@
 event_inherited()
 
 // draw_text(x, y - 200, sp.len())
-draw_line(x, y, mover.to.x, mover.to.y)
+// draw_line(x, y, mover.to.x, mover.to.y)

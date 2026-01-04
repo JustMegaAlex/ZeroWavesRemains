@@ -9,20 +9,25 @@ if active {
     // }
     if is_swarm_mode {
         if swarm_leader == id {
+            /// Lead the swarm
             if swarm_fly_away_timer.update() {
-                if mover.finished {
+                if mover_point.finished {
                     mover_point.start(0, 0)
                     mover_point.to.set_polar(oGameArea.radius * random(1), random(360))
                 }
             } else {
                 mover_point.to.setv(oPlayer)
-                if mover.finished or (PointDist(mover.to.x, mover.to.y) < swarm_switch_to_fly_away_dist) {
+                if mover_point.finished or (PointDist(mover_point.to.x, mover_point.to.y) < swarm_switch_to_fly_away_dist) {
                     mover_point.to.set_polar(oGameArea.radius * random(1), random(360))
                     swarm_fly_away_timer.reset()
                 }
             }
         } else {
-
+            /// Follow the leader
+            if mover_point.finished {
+                mover_point.start(0, 0)
+            }
+            mover_point.to.setv(swarm_leader)
         }
         mover_point.step()
     } else {

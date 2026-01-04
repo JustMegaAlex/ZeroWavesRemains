@@ -15,6 +15,7 @@ dir = 0
 dir_to = 0
 rotary_sp = 6
 mass_factor = 1
+is_dead = false
 
 last_hit_direction = 0
 
@@ -65,6 +66,7 @@ checkPushBackIntoCircle = function() {
 }
 
 die = function() {
+    is_dead = true
     objectDie()
     instance_destroy()
 }

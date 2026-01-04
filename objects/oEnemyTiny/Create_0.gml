@@ -80,6 +80,7 @@ mover_circle_around = {
         circling_dir = choose(1, -1)
     }
 }
+mover_point.accel_value = 1
 
 mover = mover_circle_around
 mover.start()
@@ -106,4 +107,10 @@ function Aim(target) {
         return sight_angle
     }
     return sight_angle + aim_angle + choose(0, 3, 4, 5, 6, 7, 8, 9, 10) * choose(1, -1)
+}
+
+objectDie = function() {
+    if swarm_leader == id {
+        oEnemyGroupAI.tiny.swarmLeaderDeadHook()
+    }
 }
