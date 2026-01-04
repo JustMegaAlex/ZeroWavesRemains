@@ -50,6 +50,12 @@ How do I prove that?
 > menu
     > sound settings
     > difficulty choice
+    > pause menu
+        > restart -> yes/no
+        > go back -> yes/no
+        > sound sliders
+        > controls guide
+> change font
 > shop text: add "not enough coins"
 > audio
     > add victory music
@@ -57,6 +63,7 @@ How do I prove that?
 > fix ui: make all text transparent if there are enemies
 > upd tiny
     > (maybe) spread if far from player
+> implement difficulties
 
 0.5.1
 > impl loading screen
