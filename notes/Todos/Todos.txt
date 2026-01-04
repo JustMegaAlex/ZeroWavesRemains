@@ -51,17 +51,12 @@
 
 > rework enemy ai
     > upd bonk (oEnemy)
+        > shoot only if in range
         - aim is increased over time if player stays still
         - start evading/retreating if get hits
         - charge forward: shorten distance without shooting
     > upd tiny
-        > faster catch up with the swarm leader
-        - two modes
-        - one: fly in circles around player
-        - two: fly-by from long distance
-        - swarm behavior
-> ai
-    > shoot only if in range
+        > (maybe) spread if far from player
 > shop text: add "not enough coins"
 > audio
     > add victory music
@@ -79,6 +74,7 @@
 
 
 === Backlog ===
+> rework aim: apply correction angle gradualy over time
 > indicate when drone flies away
 > show high score
 > show previous run waves count

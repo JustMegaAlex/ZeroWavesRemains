@@ -26,7 +26,7 @@ if active {
     if instance_exists(oPlayer) {
         dir_to = InstDir(oPlayer)
         dirApproach(dir_to)
-        if !weapon.timer.timer {
+        if !weapon.timer.timer and (InstDist(oPlayer) < (weapon.range * 1.1)) {
             shoot(Aim(oPlayer))
             weapon.timer.reset()
         }
