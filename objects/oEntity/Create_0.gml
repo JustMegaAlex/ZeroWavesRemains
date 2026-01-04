@@ -15,6 +15,9 @@ dir = 0
 dir_to = 0
 rotary_sp = 6
 mass_factor = 1
+// readonly
+sp_dir = 0
+sp_len = 0
 is_dead = false
 
 last_hit_direction = 0
@@ -53,6 +56,8 @@ move = function() {
     sp.add(acc)
     dampening.set(sp.x * dampening_val, sp.y * dampening_val)
     sp.sub(dampening)
+    sp_dir = sp.dir()
+    sp_len = sp.len()
     x += sp.x
     y += sp.y
 }

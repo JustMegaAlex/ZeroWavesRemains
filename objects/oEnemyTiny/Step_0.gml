@@ -27,9 +27,15 @@ if active {
             if mover_point.finished {
                 mover_point.start(0, 0)
             }
-            if !swarm_update_shift_timer.update() {
-                mover_point.shift_vec.set(swarm_flollow_shift_distance, random(360))
-            }
+            mover_point.shift_vec.set_polar(
+                swarm_shift_forward_dist*swarm_shift_forward_factor,
+                swarm_leader.sp_dir + swarm_shift_angle)
+            // if !swarm_update_shift_timer.update() {
+            //     mover_point.shift_vec.set(swarm_flollow_shift_distance, random(360))
+            // }
+            var acc_dist_add = min(4, mover_point.dist_to * swarm_accel_add_factor)
+            var acc_sp_add = swarm_leader.sp_len / swarm_leader.sp_max
+            mover_point.accel_value = 1 + acc_dist_add * acc_sp_add
             mover_point.updatev(swarm_leader)
         }
         mover_point.step()

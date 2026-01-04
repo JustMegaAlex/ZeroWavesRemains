@@ -12,8 +12,8 @@ if toggle {
 }
 
 if active {
-
     var shift_hold = key_hold(vk_shift)
+    var ctrl_hold = key_hold(vk_control)
     //// Player part
     if !instance_exists(oPlayer) { exit }
     var arr = oPlayer.weapons_array
@@ -63,5 +63,9 @@ if active {
         with oEnemyParent {
             if active { die() }
         }
+    }
+
+    if ctrl_hold and key_pressed(ord("D")) {
+        draw = !draw
     }
 }

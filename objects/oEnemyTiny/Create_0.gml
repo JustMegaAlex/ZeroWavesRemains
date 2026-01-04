@@ -17,6 +17,10 @@ swarm_fly_away_timer = MakeTimer(180, 0)
 swarm_switch_to_fly_away_dist = 300
 swarm_flollow_shift_distance = 200
 swarm_update_shift_timer = MakeTimer(120, 0, true)
+swarm_shift_forward_dist = 800
+swarm_shift_forward_factor = 1 // from 0 to 1
+swarm_shift_angle = 0
+swarm_accel_add_factor = 1 / 2000
 
 image_xscale = 0.3
 image_yscale = 0.3
@@ -113,6 +117,6 @@ function Aim(target) {
 
 objectDie = function() {
     if swarm_leader == id {
-        oEnemyGroupAI.tiny.swarmLeaderDeadHook()
+        oAIEnemyControl.tiny.swarmTinyDeadHook()
     }
 }
