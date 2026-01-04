@@ -37,5 +37,3 @@ tiny = {
 }
 
 alarm[0] = 1
-
-swarmTinyDeadHookswarmTinyDeadHook

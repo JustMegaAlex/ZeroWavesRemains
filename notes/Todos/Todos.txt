@@ -36,6 +36,11 @@
 > write an update devlog
 > invite testers
 > dc server
+> short videos
+    > swarm behavior
+    > behemoth
+    > circling
+    > shop tree
 
 === Milestones ===
 0.5.0 Build: prove that concept "right tools for right cases" works

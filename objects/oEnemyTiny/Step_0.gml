@@ -46,18 +46,20 @@ if active {
         } else {
             mover_circle_around.step()
         }
-    
-        weapon.timer.update()
-    
-        if instance_exists(oPlayer) {
-            dir_to = InstDir(oPlayer)
-            dirApproach(dir_to)
-            if !weapon.timer.timer {
-                shoot(Aim(oPlayer))
-                weapon.timer.reset()
-            }
-        }
     }
+
+    weapon.timer.update()
+
+    if instance_exists(oPlayer) and InstDist(oPlayer) < (weapon.range * 1.3) {
+        dir_to = InstDir(oPlayer)
+        if !weapon.timer.timer {
+            shoot(Aim(oPlayer))
+            weapon.timer.reset()
+        }
+    } else {
+        dir_to = sp_dir
+    }
+    dirApproach(dir_to)
 }
 
 checkPushBackIntoCircle()
