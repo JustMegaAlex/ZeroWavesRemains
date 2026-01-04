@@ -27,7 +27,10 @@ if active {
             if mover_point.finished {
                 mover_point.start(0, 0)
             }
-            mover_point.to.setv(swarm_leader)
+            if !swarm_update_shift_timer.update() {
+                mover_point.shift_vec.set(swarm_flollow_shift_distance, random(360))
+            }
+            mover_point.updatev(swarm_leader)
         }
         mover_point.step()
     } else {

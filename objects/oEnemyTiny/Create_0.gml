@@ -15,6 +15,8 @@ is_swarm_mode = false
 swarm_leader = noone
 swarm_fly_away_timer = MakeTimer(180, 0)
 swarm_switch_to_fly_away_dist = 300
+swarm_flollow_shift_distance = 200
+swarm_update_shift_timer = MakeTimer(120, 0, true)
 
 image_xscale = 0.3
 image_yscale = 0.3

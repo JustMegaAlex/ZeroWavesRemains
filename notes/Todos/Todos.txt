@@ -50,6 +50,7 @@
         - start evading/retreating if get hits
         - charge forward: shorten distance without shooting
     > upd tiny
+        > faster catch up with the swarm leader
         - two modes
         - one: fly in circles around player
         - two: fly-by from long distance

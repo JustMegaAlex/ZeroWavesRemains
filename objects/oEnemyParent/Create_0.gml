@@ -33,6 +33,7 @@ mover_template = {
 mover_point = {
     id: id,
     to: new Vec2(0, 0),
+    shift_vec: new Vec2(0, 0),
     treshold_dist: 40,
     dist_to: 0,
     finished: true,
@@ -48,8 +49,14 @@ mover_point = {
         }
     },
     start: function(x, y) {
-        to.set(x, y)
+        to.set(x, y).add(shift_vec)
         finished = false
+    },
+    update: function(x, y) {
+        to.set(x, y).add(shift_vec)
+    },
+    updatev: function(vec) {
+        to.setv(vec).add(shift_vec)
     }
 }
 
