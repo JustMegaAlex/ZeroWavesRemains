@@ -16,7 +16,7 @@ var key_right = oInput.Hold("right")
 var key_left = oInput.Hold("left")
 var arrows_input = key_up or key_down or key_right or key_left
 
-if oInput.Hold("rclick") {
+if oInput.Hold("boost") {
     accelerate(1, dir)
 } else if arrows_input {
     accelerate(0.5, point_direction(

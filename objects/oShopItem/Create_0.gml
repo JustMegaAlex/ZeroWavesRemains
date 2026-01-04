@@ -16,6 +16,7 @@ openx = x
 openy = y
 parent_node = noone
 child_nodes = []
+is_unlocked_initially = is_unlocked
 // opensp = 0.03
 // opensp_min = 0.1
 
@@ -63,4 +64,14 @@ costText = function() {
 
 if !is_unlocked {
     image_index = 2
+}
+
+deactivate = function() {
+    visible = false
+    is_unlocked = false
+}
+
+activate = function() {
+    visible = true
+    is_unlocked = is_unlocked_initially
 }

@@ -48,29 +48,26 @@
     > no pulse at start
     > add pulse if skip
     > hide all other items
-
-> rework enemy ai
-    > upd bonk (oEnemy)
-        > shoot only if in range
-        - aim is increased over time if player stays still
-        - start evading/retreating if get hits
-        - charge forward: shorten distance without shooting
-    > upd tiny
-        > (maybe) spread if far from player
+    > don't restore ammo on ev ry Space hit
+> menu
+    > sound settings
+    > difficulty choice
 > shop text: add "not enough coins"
 > audio
     > add victory music
     > add coins sfx
 > fix ui: make all text transparent if there are enemies
-> tutorial
-    > don't restore ammo on every Space hit
-> menu
-    > sound settings
-    > difficulty choice
+> upd tiny
+    > (maybe) spread if far from player
 
 0.5.1
 > impl loading screen
-    > make small explosions for tiny
+> visuals
+    > make varying explosion sizes
+    > add engine jets
+    > (maybe) add manuvering jets
+    > impl circle area effect
+        - particles flying to the center?
 
 
 === Backlog ===
@@ -127,6 +124,17 @@
     - actively evades your shots
     - gains distance very fast
     - fast bullets are hard to evade
+> upd bonk (oEnemy)
+    > shoot only if in range
+    - aim is increased over time if player stays still
+    - start evading/retreating if get hits
+    - charge forward: shorten distance without shooting
+> punisher: boss fight
+    - fast and manuverable
+    - rockets
+    - burst pulse cannon
+    - blinks
+    - play Action 5 from this https://onemansymphony.bandcamp.com/album/collateral-damage-full-version
 Drone concepts:
 > drone (already done) : low loot
 > shielded evading drone : average loot

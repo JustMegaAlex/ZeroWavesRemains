@@ -79,9 +79,9 @@ steps = [
         // define index with search
         time: 60,
         default_gui,
-        text: "Hold right mouse to boost",
+        text: "Hold Right Mouse or Shift to boost",
         step: function() {
-            time -= oInput.Hold("rclick")
+            time -= oInput.Hold("boost")
         },
         done: function() {
             return time < 0
@@ -180,6 +180,7 @@ steps = [
         drone: noone,
         finished: false,
         default_gui,
+        spawn_heal_count: 3,
         start: function() {
             drone = instance_create_layer(0, 0, "Instances", oItemDrone)
             drone.updateSpMax(oTutorial.drone_sp_first)
@@ -187,10 +188,15 @@ steps = [
         },
         step: function() {
             if !instance_exists(drone) {
-                if !instance_exists(oItemDrop) {
+                if !instance_exists(oCollectible) {
                     drone = instance_create_layer(0, 0, "Instances", oItemDrone)
                     oUI.addHintArrow(drone, "drone", global.game_colors.arrow_drone)
                 } else {
+                    /// Spawn 3 hp if not spawned
+                    var hp_spawned = instance_number(oCollectHp)
+                    repeat spawn_heal_count - hp_spawned {
+                        instance_create_layer(oCollectible.x, oCollectible.y, "Instances", oCollectHp)
+                    }
                     finished = true
                 }
             }
@@ -201,86 +207,34 @@ steps = [
     },
     {
         // define index with search
-        text: "Good job! Grab some healing if you need",
+        text: "Good job! Collect the loot",
         default_gui,
+        spawn_heal_count: 3,
         start: function() {
-            with oItemDropChoice {
-                setItem(global.item_heal)
-            }
-            with oItemDrop {
-                oUI.addHintArrow(id, "collect item to heal", global.game_colors.arrow_common)
-            }
         },
         done: function() {
-            return !instance_exists(oItemDropChoice)
+            return !instance_exists(oCollectible) or (!instance_exists(oCollectCoin) and oPlayer.hp == oPlayer.hp_max)
         }
     },
     // define index with search
     spaceToProceed(),
     {
         // define index with search
-        text: "Catch another drop!",
-        drone: noone,
-        finished: false,
-        default_gui,
-        start: function() {
-            drone = instance_create_layer(0, 0, "Instances", oItemDrone)
-            drone.updateSpMax(oTutorial.drone_sp_second)
-            oUI.addHintArrow(drone, "drone", global.game_colors.arrow_drone)
-        },
-        step: function() {
-            if !instance_exists(drone) {
-                if !instance_exists(oItemDrop) {
-                    drone = instance_create_layer(0, 0, "Instances", oItemDrone)
-                    oUI.addHintArrow(drone, "drone", global.game_colors.arrow_drone)
-                } else {
-                    finished = true
-                }
-            }
-        },
-        done: function() {
-            return finished
-        }
-    },
-    {
-        // define index with search
-        text: "Nice! Collect the drop",
-        default_gui,
-        start: function() {
-            var item = noone
-            with oShopItemWeaponUpgrade {
-                if weapon.name == "Pulse" {
-                    item = id
-                    break
-                }
-            }
-            if item == noone {
-                throw "Ooops, tutorial didn't find that pulse upgrade item"
-            }
-            with oItemDropChoice {
-                setItem(item)
-            }
-            with oItemDrop {
-                oUI.addHintArrow(id, "collect the shop upgrade", global.game_colors.arrow_common)
-            }
-        },
-        done: function() {
-            return !instance_exists(oItemDropChoice)
-        }
-    },
-    {
-        // define index with search
         text: "Check out the shop",
+        come_back_text: "",
         default_gui,
         arrow: noone,
         start: function() {
             arrow = oUI.addHintArrow(oShop, "shop", global.game_colors.arrow_common)
+            oPlayer.display_money = true
+            come_back_text = text
         },
         step: function() {
             if oShop.is_open {
                 text = "Upgrade your weapon"
+                come_back_text = "Come back to the shop"
             } else {
-                text = "Come back to the shop"
+                text = come_back_text
             }
         },
         end_: function() {
@@ -289,7 +243,7 @@ steps = [
         done: function() {
             /// any upgrade was made
             with oShopItemWeaponUpgrade {
-                if weapon.upgrades > 0 {
+                if upgrade_level >= 0 {
                     return true
                 }
             }
@@ -347,6 +301,17 @@ startTutorial = function() {
         display_waves = false
         display_money = false
     }
+    var arr = [oShopItemWeapon, oShopItemWeaponUpgrade]
+    with oShopItem {
+        if (array_contains(arr, object_index))
+                and (weapon == oPlayer.weapon_pulse) {
+            continue
+        }
+        deactivate()
+    }
+    with oShopItemLink {
+        visible = parent.visible
+    }
     step.start()
 }
 finishTutorial = function() {
@@ -362,12 +327,12 @@ finishTutorial = function() {
     instance_destroy(oCollectCoin)
     instance_destroy(oItemDrop)
     instance_destroy(oItemDropChoice)
-    /// ensure to unlock pulse 
-    with oShopItemWeaponUpgrade {
-        if weapon.name == "Pulse" {
-            unlock()
-            break
-        }
+    /// ensure to unlock pulse     
+    with oShopItem {
+        activate()
+    }
+    with oShopItemLink {
+        visible = true
     }
     instance_destroy(oWaveSpawner)
     instance_create_layer(0, 0, "Instances", oWaveSpawner)
@@ -380,7 +345,8 @@ alarm[0] = 1
 global.tutorial = true
 
 if DEV {
-    step_index = 3
+    step_index = 15
+    step = steps[step_index]
 }
 
 skip_tutorial = {

@@ -28,7 +28,7 @@ apply = function() {
     var keys = variable_struct_get_names(conf.stats)
     for (var i = 0; i < array_length(keys); ++i) {
         var stat_name = keys[i]
-        var level_values = conf.stats[$ stat_name] // array
+        var level_values = conf.stats[$ stat_name]   // array
         var value = level_values[upgrade_level]
         weapon[$ stat_name] = value
     }

@@ -1,5 +1,6 @@
 
-
+child = noone
+parent = noone
 start = new Vec2(x, y)
 ending = new Vec2(x, y)
 ending.add_polar(sprite_width, image_angle)
