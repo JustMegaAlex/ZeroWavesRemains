@@ -8,8 +8,8 @@
   "name":"oOptionsSliderMusic",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/Objects/UI.yy",
+    "name":"Menu",
+    "path":"folders/Objects/UI/Menu.yy",
   },
   "parentObjectId":{
     "name":"oOptionsSlider",

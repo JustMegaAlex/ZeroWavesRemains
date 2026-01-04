@@ -44,11 +44,9 @@
 
 === Milestones ===
 0.5.0 Build: prove that concept "right tools for right cases" works
-> rework tutorial
-    > no pulse at start
-    > add pulse if skip
-    > hide all other items
-    > don't restore ammo on ev ry Space hit
+How do I prove that? 
+    - balance
+    - try completing with pulse only
 > menu
     > sound settings
     > difficulty choice

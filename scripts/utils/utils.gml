@@ -317,6 +317,10 @@ function MouseCollision(obj_or_inst) {
     return collision_point(mouse_x, mouse_y, obj_or_inst, false, false)
 }
 
+function MouseCollisionGUI(obj_or_inst) {
+    return collision_point(window_mouse_get_x(), window_mouse_get_y(), obj_or_inst, false, false)
+}
+
 function Timer(time, initial=undefined, autoreset=false) constructor {
     /*
     Example usage:
