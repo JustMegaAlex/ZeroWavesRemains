@@ -7,7 +7,7 @@
 
 event_inherited()
 
-if DEV {
+if oDebug.draw {
     if failed { draw_set_colour(c_red) }
     for (var i = 0; i < array_length(trajectory)-1; ++i) {
         var p = trajectory[i]

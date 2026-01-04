@@ -1,3 +1,7 @@
+
+tiny_min_swarm_count = 6
+next_wave_trigger_swarm_mode = false
+
 var sec = 60
 active = true
 spawn_timer = MakeTimer(40 * sec, 0)
@@ -89,6 +93,9 @@ for (var i = 0; i < waves_remains; ++i) {
 ///// @follow-up Behemoth waves
 array_insert(waves, 12, {oEnemyBehemoth: 1})
 array_push(waves, {oEnemyBehemoth: 1, oEnemy: 4, oEnemyTiny: 6})
+///// @follow-up Swarm waves
+array_insert(waves, irandom_range(13, 18), {oEnemyTiny: 8, swarm: true})
+array_insert(waves, irandom_range(13, array_length(waves)-1), {oEnemyTiny: 12, swarm: true})
 
 waves_remains = array_length(waves)
 global.waves_remains = waves_remains
@@ -123,23 +130,29 @@ spawnSingleInstance = function(obj, make_active=false) {
 } 
 
 spawn = function(wave_override=undefined) {
-   array_foreach(next_wave_instances, 
-       function(inst) {
-            inst.active = true
-            inst.invincible = false
-            global.wave_enemies_count++
-            var col = global.game_colors.arrow_enemy
-            var time = 240
-            var text = ""
-            if inst.object_index == oItemDrone {
-                col = global.game_colors.arrow_drone
-                time = infinity
-                text = "drone"
-            }
-            oUI.addHintArrow(inst, text, col, time)
-            show_debug_message($"Activated {object_get_name(inst.object_index)}")
-       }
-   )
+    array_foreach(next_wave_instances, 
+        function(inst) {
+                inst.active = true
+                inst.invincible = false
+                global.wave_enemies_count++
+                var col = global.game_colors.arrow_enemy
+                var time = 240
+                var text = ""
+                if inst.object_index == oItemDrone {
+                    col = global.game_colors.arrow_drone
+                    time = infinity
+                    text = "drone"
+                }
+                oUI.addHintArrow(inst, text, col, time)
+                show_debug_message($"Activated {object_get_name(inst.object_index)}")
+        }
+    )
+
+    /// Apply AI mode
+    if next_wave_trigger_swarm_mode or (Chance(0.5) and (instance_number(oEnemyTiny) > tiny_min_swarm_count)) {
+        oAIEnemyControl.tiny.enterSwarmMode()
+        show_debug_message("Swarm mode triggered")
+    }
 
     var wave
     if wave_override == undefined {
@@ -154,7 +167,12 @@ spawn = function(wave_override=undefined) {
         wave = wave_override
     }
 
+    if struct_has(wave, "swarm") {
+        next_wave_trigger_swarm_mode = wave.swarm
+        struct_del(wave, "swarm")
+    }
     var names = struct_get_names(wave)
+   show_debug_message(string(names))
     for (var i = 0; i < array_length(names); i++) {
         var obj_name = names[i]
         var number = wave[$ obj_name]
@@ -172,3 +190,4 @@ spawn = function(wave_override=undefined) {
         wave_index++
     }
 }
+wave_index = 11
