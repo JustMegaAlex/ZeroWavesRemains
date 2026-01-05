@@ -72,18 +72,17 @@ function Pause() {
     oMenuButton.openSection(macro_menu_section_pause)
     layer_set_visible("ui_text_gameplay", false)
     // layer_set_visible("ui_text", global.pause)
-    // layer_set_visible("ui_buttons", global.pause)
 }
 
 function Unpause() {
     global.pause = false
     oMenuButton.hideAll()
     layer_set_visible("ui_text", false)
-    layer_set_visible("ui_buttons", false)
     layer_set_visible("ui_gameplay_text", true)
 }
 
 function Restart() {
+    Unpause()
     ResetGlobals()
     oMenuButton.hideAll()
     layer_set_visible("ui_text", false)
