@@ -13,7 +13,10 @@
     "name":"Menu",
     "path":"folders/Objects/UI/Menu.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oMenuUI",
+    "path":"objects/oMenuUI/oMenuUI.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

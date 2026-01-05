@@ -1,3 +1,7 @@
+if !active {
+    exit
+}
+
 draw_self()
 draw_sprite(sUISliderKnob, 0, knobx, y)
 

@@ -22,19 +22,3 @@ deactivate = function() {
 activate = function() {
     active = true
 }
-
-hideSection = function(section) {
-    with oMenuButton {
-        if menu_section == section {
-            deactivate()
-        }
-    }
-}
-
-openSection = function(section) {
-    with oMenuButton {
-        if menu_section == section {
-            activate()
-        }
-    }
-}

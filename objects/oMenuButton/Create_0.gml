@@ -7,6 +7,8 @@
 #macro macro_menu_section_yesno "yesno"
 #macro macro_menu_section_howto "howto"
 
+event_inherited()
+
 if section == macro_menu_section_howto
    var dbg = true
 
@@ -20,8 +22,6 @@ image_xscale = scale
 yscale = scale
 yscale_hovered = 50 / 18    // from sprite
 mouse_over_me = false
-activate_delay_timer = MakeTimer(2)
-
 action = function() {
     if yes_no {
         hideSection(section)
@@ -35,16 +35,9 @@ action = function() {
     }
 }
 
-deactivate = function() {
-    active = false
-}
-activate = function() {
-    active = true
-    activate_delay_timer.reset()
-}
 
 hideSection = function(_section) {
-    with oMenuButton {
+    with oMenuUI {
         if section == _section {
             deactivate()
         }
@@ -52,13 +45,13 @@ hideSection = function(_section) {
 }
 
 hideAll = function() {
-    with oMenuButton {
+    with oMenuUI {
         deactivate()
     }
 }
 
 openSection = function(_section) {
-    with oMenuButton {
+    with oMenuUI {
         if section == _section {
             activate()
         }

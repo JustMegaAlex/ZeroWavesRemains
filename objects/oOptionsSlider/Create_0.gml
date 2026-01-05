@@ -1,9 +1,8 @@
+event_inherited()
 
 effective_width_ratio = 0.9
 knob_xmin = x - sprite_width * effective_width_ratio * 0.5
 knob_xmax = x + sprite_width * effective_width_ratio * 0.5
-active = true
-visible = true
 knob_is_dragged = false
 
 function Value() {
