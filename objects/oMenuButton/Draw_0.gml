@@ -10,4 +10,5 @@ draw_sprite_ext(
     image_angle, image_blend, alpha
 )
 
+SetTextAllign(1, 1)
 DrawText(x, y, text)

@@ -1,8 +1,10 @@
 
 #macro macro_menu_section_main "main"
 #macro macro_menu_section_difficulty "difficulty"
-
-menu_section = macro_menu_section_main
+#macro macro_menu_section_pause "pause"
+#macro macro_menu_section_options "options"
+#macro macro_menu_section_guide "guide"
+#macro macro_menu_section_yesno "yesno"
 
 var scale = 1
 image_speed = 0
@@ -16,11 +18,14 @@ yscale_hovered = 50 / 18    // from sprite
 mouse_over_me = false
 
 action = function() {
-    if open_section != undefined {
+    if yes_no {
+        hideSection(section)
+        oMenuButtonYes.callback = callback
+        oMenuButtonNo.open_section = section
+        openSection(macro_menu_section_yesno)
+    } else if open_section != undefined {
         hideSection(section)
         openSection(open_section)
-    }
-    if callback != undefined {
         callback()
     }
 }
@@ -32,17 +37,23 @@ activate = function() {
     active = true
 }
 
-hideSection = function(section) {
+hideSection = function(_section) {
     with oMenuButton {
-        if menu_section == section {
+        if section == _section {
             deactivate()
         }
     }
 }
 
-openSection = function(section) {
+hideAll = function() {
     with oMenuButton {
-        if menu_section == section {
+        deactivate()
+    }
+}
+
+openSection = function(_section) {
+    with oMenuButton {
+        if section == _section {
             activate()
         }
     }

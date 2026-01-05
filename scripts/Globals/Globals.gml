@@ -68,6 +68,20 @@ function SetColor() {
     }
 }
 
+function Pause() {
+    global.pause = true
+    oMenuButton.openSection(macro_menu_section_pause)
+    layer_set_visible("ui_text", global.pause)
+    layer_set_visible("ui_buttons", global.pause)
+}
+
+function Unpause() {
+    global.pause = false
+    oMenuButton.hideAll()
+    layer_set_visible("ui_text", global.pause)
+    layer_set_visible("ui_buttons", global.pause)
+}
+
 /// Shop
 
 
