@@ -16,10 +16,13 @@
 #macro press_f_prompt "Press F to"
 #macro macro_ui_text_spawn_wave_pos ui_text_spawn_wave_pos
 #macro macro_ui_shop_prompt_pos ui_shop_prompt_pos
+#macro macro_difficulty_normal "normal"
+#macro macro_difficulty_hard "hard"
 
 DEBUG = DEV
 
 pause = false
+difficulty = macro_difficulty_normal
 gameover = false
 increase_spawning_speed_between_waves = false
 loot_controlled_randomer = undefined

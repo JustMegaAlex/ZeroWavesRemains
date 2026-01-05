@@ -49,7 +49,6 @@ How do I prove that?
     - try completing with pulse only
 > menu
     > sound settings
-    > difficulty choice
     > pause menu
         > restart -> yes/no
         > go back -> yes/no
