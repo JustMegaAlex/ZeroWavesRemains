@@ -52,6 +52,7 @@ How do I prove that?
     > pause menu
         > restart -> yes/no
         > go back -> yes/no
+        > continue -> yes/no
         > sound sliders
         > controls guide
 > implement difficulties

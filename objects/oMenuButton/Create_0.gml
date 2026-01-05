@@ -16,6 +16,13 @@ yscale_hovered = 50 / 18    // from sprite
 mouse_over_me = false
 
 action = function() {
+    if open_section != undefined {
+        hideSection(section)
+        openSection(open_section)
+    }
+    if callback != undefined {
+        callback()
+    }
 }
 
 deactivate = function() {
