@@ -40,6 +40,9 @@
     {"name":"inst_3F77B07E","path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"Yes","path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"No","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"RestartBtn","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"HowTo","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"HowToBack","path":"roomui/RoomUI/RoomUI.yy",},
   ],
   "isDnd":false,
   "layers":[

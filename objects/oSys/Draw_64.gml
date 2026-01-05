@@ -8,7 +8,7 @@ if global.win {
 } else if global.gameover {
     draw_text(xx, yy, "Lost!\nPress R to restart")
 } else if global.pause {
-    draw_text(xx, yy, "Pause\nYou can restart the game by pressing R")
+    // draw_text(xx, yy, "Pause\nYou can restart the game by pressing R")
 }
 
 //// Skip ui section

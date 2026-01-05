@@ -49,12 +49,10 @@ How do I prove that?
     - try completing with pulse only
 > menu
     > sound settings
-    > pause menu
-        > restart -> yes/no
-        > go back -> yes/no
-        > continue -> yes/no
-        > sound sliders
-        > controls guide
+        > pause menu
+            > restart -> yes/no
+            > sound sliders
+            > controls guide
 > implement difficulties
 > change font
 > shop text: add "not enough coins"

@@ -5,6 +5,10 @@
 #macro macro_menu_section_options "options"
 #macro macro_menu_section_guide "guide"
 #macro macro_menu_section_yesno "yesno"
+#macro macro_menu_section_howto "howto"
+
+if section == macro_menu_section_howto
+   var dbg = true
 
 var scale = 1
 image_speed = 0
@@ -16,6 +20,7 @@ image_xscale = scale
 yscale = scale
 yscale_hovered = 50 / 18    // from sprite
 mouse_over_me = false
+activate_delay_timer = MakeTimer(2)
 
 action = function() {
     if yes_no {
@@ -35,6 +40,7 @@ deactivate = function() {
 }
 activate = function() {
     active = true
+    activate_delay_timer.reset()
 }
 
 hideSection = function(_section) {

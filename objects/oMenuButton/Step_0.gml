@@ -1,5 +1,5 @@
 
-if !active exit
+if !active or activate_delay_timer.update() exit
 
 mouse_over_me = MouseCollisionGUI(id)
 

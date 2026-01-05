@@ -5,9 +5,7 @@ if DEV and key_pressed(ord(vk_f1)) {
 }
 
 if (global.gameover or global.pause or global.win) and oInput.Pressed("reload") {
-    ResetGlobals()
-	room_restart()
-    layer_set_visible("ui_text", false)
+    Restart()
 }
 
 if oInput.Pressed("escape") {

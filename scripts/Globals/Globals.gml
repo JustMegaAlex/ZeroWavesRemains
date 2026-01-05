@@ -55,7 +55,6 @@ function ResetGlobals() {
 game_colors = {}
 
 function SetColor() {
-    
     var col = global.game_colors[$ object_get_name(object_index)]
     if col == undefined {
         var obj = object_get_parent(object_index)
@@ -71,15 +70,34 @@ function SetColor() {
 function Pause() {
     global.pause = true
     oMenuButton.openSection(macro_menu_section_pause)
-    layer_set_visible("ui_text", global.pause)
-    layer_set_visible("ui_buttons", global.pause)
+    layer_set_visible("ui_text_gameplay", false)
+    // layer_set_visible("ui_text", global.pause)
+    // layer_set_visible("ui_buttons", global.pause)
 }
 
 function Unpause() {
     global.pause = false
     oMenuButton.hideAll()
-    layer_set_visible("ui_text", global.pause)
-    layer_set_visible("ui_buttons", global.pause)
+    layer_set_visible("ui_text", false)
+    layer_set_visible("ui_buttons", false)
+    layer_set_visible("ui_gameplay_text", true)
+}
+
+function Restart() {
+    ResetGlobals()
+    oMenuButton.hideAll()
+    layer_set_visible("ui_text", false)
+	room_restart()
+}
+
+function MenuHowTo() {
+    // button callback
+    layer_set_visible("ui_text", true)
+}
+
+function MenuHowToBack() {
+    // button callback
+    layer_set_visible("ui_text", false)
 }
 
 /// Shop
