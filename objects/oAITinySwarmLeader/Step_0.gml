@@ -1,5 +1,7 @@
 macro_pause
 
+no_player_exit
+
 if swarm_fly_away_timer.update() {
     if mover_point.finished {
         mover_point.start(0, 0)

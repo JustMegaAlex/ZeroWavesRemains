@@ -1,6 +1,7 @@
 
 
 macro_pause
+no_player_exit
 
 if active and instance_exists(oPlayer) {
 

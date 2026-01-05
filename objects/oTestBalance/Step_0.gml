@@ -1,4 +1,9 @@
 
+if oInput.Pressed("pause") {
+    room_goto(rmTitleScreen)
+    exit
+}
+
 if is_generating {
     oWaveSpawner.spawn()
     var res = {}

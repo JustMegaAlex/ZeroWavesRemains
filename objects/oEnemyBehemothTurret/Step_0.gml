@@ -1,6 +1,7 @@
 
+no_player_exit
+
 weapon.timer.update()
-if !instance_exists(oPlayer) { exit }
 
 var dist = InstDist(oPlayer)
 if dist < (range * 1.25) {

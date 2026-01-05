@@ -9,6 +9,7 @@
 #macro macro_pause if global.pause {exit}
 #macro no_player_exit if !instance_exists(oPlayer) {exit}
 #macro no_player_return if !instance_exists(oPlayer) {return;}
+#macro no_player_destroy_exit if !instance_exists(oPlayer) { instance_destroy(); exit }
 #macro null undefined
 #macro key_pressed keyboard_check_pressed
 #macro key_released keyboard_check_released
@@ -16,8 +17,9 @@
 #macro press_f_prompt "Press F to"
 #macro macro_ui_text_spawn_wave_pos ui_text_spawn_wave_pos
 #macro macro_ui_shop_prompt_pos ui_shop_prompt_pos
-#macro macro_difficulty_normal "normal"
-#macro macro_difficulty_hard "hard"
+#macro macro_difficulty_normal 0
+#macro macro_difficulty_hard 1
+#macro __diff ByDifficulty
 
 DEBUG = DEV
 
@@ -44,15 +46,22 @@ music_assets = [
 debug_tiny = noone
 
 function ResetGlobals() {
+    InitBalance()
+    InitItems()
     global.wave_enemies_count = 0
     global.gameover = false
     global.win = false
     global.pause = false
     global.shop_links_initialized = false
+    oLootManager.initLoot()
 }
 
 
 game_colors = {}
+
+function ByDifficulty() {
+    return argument[global.difficulty]
+}
 
 function SetColor() {
     var col = global.game_colors[$ object_get_name(object_index)]
@@ -65,6 +74,11 @@ function SetColor() {
     if col != undefined {
         image_blend = col
     }
+}
+
+function Start() {
+    ResetGlobals()
+    room_goto(BALANCE ? rmTestBalance : rmGame)
 }
 
 function Pause() {

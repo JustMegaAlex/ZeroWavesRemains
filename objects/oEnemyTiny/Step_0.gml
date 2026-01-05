@@ -1,6 +1,7 @@
 
 
 macro_pause
+no_player_exit
 
 if active {
     // var too_far = false

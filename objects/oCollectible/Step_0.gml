@@ -3,6 +3,8 @@ if global.gameover {
     exit
 }
 
+no_player_exit
+
 updateCollectEnabled()
 
 

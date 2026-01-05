@@ -47,13 +47,8 @@
 How do I prove that? 
     - balance
     - try completing with pulse only
-> menu
-    > sound settings
-        > pause menu
-            > restart -> yes/no
-            > sound sliders
-            > controls guide
 > implement difficulties
+    > adjust coin drops
 > change font
 > shop text: add "not enough coins"
 > audio
