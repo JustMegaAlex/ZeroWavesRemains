@@ -92,7 +92,7 @@ function Unpause() {
     global.pause = false
     oMenuButton.hideAll()
     layer_set_visible("ui_text", false)
-    layer_set_visible("ui_gameplay_text", true)
+    layer_set_visible("ui_text_gameplay", true)
 }
 
 function Restart() {

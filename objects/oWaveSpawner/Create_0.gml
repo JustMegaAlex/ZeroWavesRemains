@@ -192,5 +192,5 @@ spawn = function(wave_override=undefined) {
 }
 
 if DEV {
-    wave_index = 11
+    // wave_index = 11
 }

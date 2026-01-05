@@ -80,7 +80,7 @@ weapon_pulse = {
         fire_rate: {
             name: "fire rate",
             stats: {
-                timer: [MakeTimer(13), MakeTimer(11), MakeTimer(10)]
+                timer: [MakeTimer(60/4.5), MakeTimer(60/5.2), MakeTimer(60/6)]
             },
             costs: _pulse_costs.fire_rate
         },

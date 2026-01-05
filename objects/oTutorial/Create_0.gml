@@ -211,6 +211,7 @@ steps = [
         default_gui,
         spawn_heal_count: 3,
         start: function() {
+            instance_destroy(oCollectAmmo)
         },
         done: function() {
             return !instance_exists(oCollectible) or (!instance_exists(oCollectCoin) and oPlayer.hp == oPlayer.hp_max)
@@ -345,7 +346,7 @@ alarm[0] = 1
 global.tutorial = true
 
 if DEV {
-    step_index = 15
+    step_index = 12
     step = steps[step_index]
 }
 

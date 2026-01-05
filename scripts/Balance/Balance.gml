@@ -10,17 +10,17 @@ function InitBalance() {
             ammo_percent_drop: 0.3,
             costs: {
                 pulse: {
-                    fire_rate: [7, 25, 40],
-                    bullet_speed: [7, 21, 35],
+                    fire_rate: [25, 50, 80],
+                    bullet_speed: [20, 40, 60],
                 },
                 snipe: {
-                    weapon_cost: 80,
-                    dmg: [80, 90]
+                    weapon_cost: 60,
+                    dmg: [80, 120]
                 },
                 scatter: {
                     weapon_cost: 50,
-                    range: [35, 45],
-                    dmg: [35, 45],
+                    range: [50, 70],
+                    dmg: [50, 80],
                 },
                 heal: 25,
                 // [cost, amount]

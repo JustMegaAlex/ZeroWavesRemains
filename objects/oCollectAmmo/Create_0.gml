@@ -1,7 +1,7 @@
 event_inherited()
 
 no_player_destroy_exit
-
+weapon = choose(oPlayer.weapon_scatter, oPlayer.weapon_snipe)
 image_blend = weapon == oPlayer.weapon_scatter ? #EE2F36 : #EEBE36
 
 onCollect = function() {
@@ -14,4 +14,3 @@ updateCollectEnabled = function() {
 }
 
 
-weapon = choose(oPlayer.weapon_scatter, oPlayer.weapon_snipe)
