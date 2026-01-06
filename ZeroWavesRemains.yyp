@@ -146,6 +146,7 @@
     {"id":{"name":"debug","path":"scripts/debug/debug.yy",},},
     {"id":{"name":"DebugPanel","path":"scripts/DebugPanel/DebugPanel.yy",},},
     {"id":{"name":"DebugTeleport","path":"scripts/DebugTeleport/DebugTeleport.yy",},},
+    {"id":{"name":"GameTransitions","path":"scripts/GameTransitions/GameTransitions.yy",},},
     {"id":{"name":"geometry","path":"scripts/geometry/geometry.yy",},},
     {"id":{"name":"Globals","path":"scripts/Globals/Globals.yy",},},
     {"id":{"name":"Items","path":"scripts/Items/Items.yy",},},

@@ -127,10 +127,10 @@ if !global.tutorial and global.wave_enemies_count <= 0 and oInput.Pressed("next_
     weapon_pulse.ammo = min(weapon_pulse.ammo + weapon_pulse.ammo_max * 0.5, weapon_pulse.ammo_max)
 }
 
-if !global.tutorial
-        and !instance_exists(oEnemyParent)
-        and oWaveSpawner.waves_remains <= 0 {
-    global.win = true
-}
+//if !global.tutorial
+        //and !instance_exists(oEnemyParent)
+        //and oWaveSpawner.waves_remains <= 0 {
+    //Win()
+//}
 
 event_inherited()

@@ -34,6 +34,7 @@ tutorial_finished = false
 wave_enemies_count = 0
 waves_remains = 0
 win = false
+victory_theme = mscVictory
 
 macro_ui_text_spawn_wave_pos = {x: 0, y: 0}
 macro_ui_shop_prompt_pos = {x: 0, y: 0}
@@ -75,51 +76,6 @@ function SetColor() {
         image_blend = col
     }
 }
-
-function Start() {
-    ResetGlobals()
-    layer_set_visible("ui_general", true)
-    room_goto(BALANCE ? rmTestBalance : rmGame)
-}
-
-function Pause() {
-    global.pause = true
-    oMenuButton.openSection(macro_menu_section_pause)
-    layer_set_visible("ui_text_gameplay", false)
-    // layer_set_visible("ui_text", global.pause)
-}
-
-function Unpause() {
-    global.pause = false
-    oMenuButton.hideAll()
-    layer_set_visible("ui_text", false)
-    layer_set_visible("ui_text_gameplay", true)
-}
-
-function Restart() {
-    Unpause()
-    ResetGlobals()
-    oMenuButton.hideAll()
-    layer_set_visible("ui_text", false)
-	room_restart()
-}
-
-function MenuHowTo() {
-    // button callback
-    layer_set_visible("ui_text", true)
-}
-
-function MenuHowToBack() {
-    // button callback
-    layer_set_visible("ui_text", false)
-}
-
-function EndRun() {
-    global.gameover = false
-    global.win = false
-}
-
-/// Shop
 
 
 //// Objects configs
