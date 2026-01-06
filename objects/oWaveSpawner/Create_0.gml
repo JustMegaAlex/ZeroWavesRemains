@@ -6,6 +6,7 @@ var sec = 60
 active = true
 spawn_timer = MakeTimer(40 * sec, 0)
 just_spawned = 0
+helper_vec = new Vec2(0, 0)
 /*
 1. Random waves by wave strength
 2. Can insert custom waves
@@ -14,6 +15,7 @@ just_spawned = 0
 //     {oScout: 1, oEnemy: 1, oEnemyTiny: 1},
 // ]
 // waves_remains = array_length(waves)
+/// @follow-up wave spawner initial waves
 waves = [
     // {oScout: 2},
     // {oEnemyTiny: 2},
@@ -102,9 +104,11 @@ global.waves_remains = waves_remains
 
 
 next_wave_instances = []
+time_between_waves = 60 * 20
+spawn_current_radius = 0
 spawn_extra_radius = 500
 spawn_pos = new Vec2(0, 0)
-spawning_inst_speed = spawn_extra_radius / spawn_timer.time
+spawning_inst_speed = spawn_extra_radius / time_between_waves
 
 dummy = noone
 if instance_exists(oEnemy) {
@@ -113,8 +117,8 @@ if instance_exists(oEnemy) {
 
 spawnSingleInstance = function(obj, make_active=false) {
     var _dir = irandom(360)
-    var dist = oGameArea.radius + spawn_extra_radius
-    spawn_pos.set_polar(dist, _dir)
+    spawn_current_radius = oGameArea.radius + spawn_extra_radius
+    spawn_pos.set_polar(spawn_current_radius, _dir)
     var inst = instance_create_layer(
         spawn_pos.x, spawn_pos.y,
         "Instances", obj
@@ -191,6 +195,21 @@ spawn = function(wave_override=undefined) {
     }
 }
 
+updateSpawningInstance = function(inst) {
+    if inst == undefined { return }
+    var mult = 1 + 3 * (global.wave_enemies_count == 0) * global.increase_spawning_speed_between_waves
+    inst.dir = point_direction(inst.x, inst.y, 0, 0)
+    inst.sp.set(0, 0)
+    helper_vec.set_polar(spawn_current_radius, inst.dir + 180)
+    inst.x = helper_vec.x
+    inst.y = helper_vec.y
+    if !oWaveSpawner.just_spawned and (spawn_current_radius < oGameArea.radius) {
+        show_debug_message($"Activating by distance")
+        oWaveSpawner.spawn()
+        oWaveSpawner.just_spawned = true
+    }
+}
+
 if DEV {
-    wave_index = 11
+    wave_index = 0
 }

@@ -55,11 +55,6 @@ How do I prove that?
 > fix ui: make all text transparent if there are enemies
 > upd tiny
     > (maybe) spread if far from player
-> fix
-    > maybe don't drop ammo if no correspodning weapon
-    > "Press R to restart" -> show pause
-    > Drones seem to have higher spawn speed
-    > change menu cursor
 > balance
     > smoother diff curve: huge spike at the end
 0.5.1

@@ -60,8 +60,12 @@ if active {
     }
 
     if key_pressed(ord("N")) {
-        with oEnemyParent {
-            if active { die() }
+        if ctrl_hold {
+            oPlayer.die()
+        } else {
+            with oEnemyParent {
+                if active { die() }
+            }
         }
     }
 

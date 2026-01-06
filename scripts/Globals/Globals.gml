@@ -78,6 +78,7 @@ function SetColor() {
 
 function Start() {
     ResetGlobals()
+    layer_set_visible("ui_general", true)
     room_goto(BALANCE ? rmTestBalance : rmGame)
 }
 
@@ -111,6 +112,11 @@ function MenuHowTo() {
 function MenuHowToBack() {
     // button callback
     layer_set_visible("ui_text", false)
+}
+
+function EndRun() {
+    global.gameover = false
+    global.win = false
 }
 
 /// Shop

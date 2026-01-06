@@ -6,7 +6,7 @@ no_player_destroy_exit
 var availilbe_weapons = []
 for (var i = 0; i < array_length(oPlayer.weapons_array); ++i) {
     var weap = oPlayer.weapons_array[i]
-    if weap == oPlayer.weapon_pulse {
+    if !weap or (weap == oPlayer.weapon_pulse) {
         continue
     }
     array_push(availilbe_weapons, weap)

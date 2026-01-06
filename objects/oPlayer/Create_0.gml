@@ -239,6 +239,7 @@ die = function() {
     instance_destroy()
     global.gameover = true
     oParticles.explosion_2(x, y)
+    call_later(60, time_source_units_frames, Pause)
     repeat money {
         instance_create_layer(x, y, layer, oCollectCoin)
     }
