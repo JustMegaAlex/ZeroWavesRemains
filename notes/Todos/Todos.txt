@@ -1,5 +1,5 @@
 
-=== Timeline ===
+=== Timeline ===  
 -- 2025.01.10
     - 0.5.0 Build ready, publish and start testing + promo
 
@@ -26,7 +26,10 @@
 - написовать норм спрайты для магаза
 - убил подсказки и не знал как переключить пушку
 - не понял, что пульс восстанавливается 
-
+=== My Feedback ===
+    > upgrades don't feel earned and cool
+        - reflect upgrades visually?
+        - maybe I've played too much already?
 
 
 === Promo ===
@@ -68,6 +71,7 @@ How do I prove that?
 
 
 === Backlog ===
+> ui: glowing screen bounds on low hp
 > rework aim: apply correction angle gradualy over time
 > indicate when drone flies away
 > show high score
@@ -157,9 +161,10 @@ Drone concepts:
 > emp weapons
     - disables shields
     - partially disables systems (slows down, messes up weapons)
-
+> powerful seek bomb
+    - preplace to get rid of some enemies early
 
 One sentence pitch:
-"Zero Waves Remains is a twin-stick shooter where decisions beat precision"
+"Zero Waves Remains is a twin-stick shooter where decision beat precision"
 
 

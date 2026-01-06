@@ -4,9 +4,18 @@ next_wave_trigger_swarm_mode = false
 
 var sec = 60
 active = true
-spawn_timer = MakeTimer(40 * sec, 0)
+spawn_timer = MakeTimer(40 * sec, 0)    // not used for now
 just_spawned = 0
 helper_vec = new Vec2(0, 0)
+
+
+time_between_waves = 60 * __diff(25, 40)
+spawn_current_radius = 0
+spawn_extra_radius = 500
+spawn_pos = new Vec2(0, 0)
+spawning_inst_speed = spawn_extra_radius / time_between_waves
+
+
 /*
 1. Random waves by wave strength
 2. Can insert custom waves
@@ -101,14 +110,8 @@ array_insert(waves, irandom_range(13, array_length(waves)-1), {oEnemyTiny: 12, s
 
 waves_remains = array_length(waves)
 global.waves_remains = waves_remains
-
-
 next_wave_instances = []
-time_between_waves = 60 * 20
-spawn_current_radius = 0
-spawn_extra_radius = 500
-spawn_pos = new Vec2(0, 0)
-spawning_inst_speed = spawn_extra_radius / time_between_waves
+
 
 dummy = noone
 if instance_exists(oEnemy) {
