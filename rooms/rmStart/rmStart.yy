@@ -44,6 +44,7 @@
     {"name":"HowTo","path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"HowToBack","path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"inst_4D29AE9F","path":"rooms/rmStart/rmStart.yy",},
+    {"name":"inst_5035552B","path":"roomui/RoomUI/RoomUI.yy",},
   ],
   "isDnd":false,
   "layers":[

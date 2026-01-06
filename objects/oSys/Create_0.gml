@@ -17,5 +17,7 @@ layers_to_make_visible = [
 
 layer_set_visible("ui_text", false)
 layer_set_visible("ui_sliders", false)
+layer_set_visible("ui_menu", true)
+layer_set_visible("ui_text_gameplay", true)
 
 // show_debug_overlay(true)

@@ -2,6 +2,7 @@ event_inherited()
 
 if !is_purchased {
     cost = global.balance.items.costs[$ string_lower(weapon.name)].weapon_cost
+    cost_text_struct.text = string(cost)
     text_struct.text = prompt_text + $"buy {weapon.name}"
 } else {
     cost = 0

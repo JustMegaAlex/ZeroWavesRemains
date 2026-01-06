@@ -56,12 +56,10 @@ How do I prove that?
 > upd tiny
     > (maybe) spread if far from player
 > fix
-    > turrets shoot from out of circle
     > maybe don't drop ammo if no correspodning weapon
-    > turn off debug panel
     > "Press R to restart" -> show pause
-    > Shop: scatter ui shows 80 cost instead of 60
     > Drones seem to have higher spawn speed
+    > change menu cursor
 > balance
     > smoother diff curve: huge spike at the end
 0.5.1

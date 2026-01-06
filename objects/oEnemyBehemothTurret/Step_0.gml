@@ -1,4 +1,6 @@
 
+if !(host_inst and host_inst.active) { exit }
+
 no_player_exit
 
 weapon.timer.update()

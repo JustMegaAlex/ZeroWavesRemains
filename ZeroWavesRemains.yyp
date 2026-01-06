@@ -124,6 +124,7 @@
     {"id":{"name":"oUIHealthBar","path":"objects/oUIHealthBar/oUIHealthBar.yy",},},
     {"id":{"name":"oUIHitIndicator","path":"objects/oUIHitIndicator/oUIHitIndicator.yy",},},
     {"id":{"name":"oUIText","path":"objects/oUIText/oUIText.yy",},},
+    {"id":{"name":"oUITextEnd","path":"objects/oUITextEnd/oUITextEnd.yy",},},
     {"id":{"name":"oUITextShop","path":"objects/oUITextShop/oUITextShop.yy",},},
     {"id":{"name":"oUITextShopCost","path":"objects/oUITextShopCost/oUITextShopCost.yy",},},
     {"id":{"name":"oUITextSpawnWave","path":"objects/oUITextSpawnWave/oUITextSpawnWave.yy",},},

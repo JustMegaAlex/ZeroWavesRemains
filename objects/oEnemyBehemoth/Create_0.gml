@@ -157,6 +157,7 @@ for (var i = 0; i < array_length(global.behemoth_turret_coords); ++i) {
     turret.battle_side = battle_side
     turret.can_hit = can_hit
     turret.image_blend = image_blend
+    turret.host_inst = id
     array_push(turrets, turret)
 }
 

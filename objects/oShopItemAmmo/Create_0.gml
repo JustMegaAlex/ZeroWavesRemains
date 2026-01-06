@@ -6,6 +6,7 @@ var conf = global.balance.items.costs[$ key]
 cost = conf[0]
 ammo_amount = conf[1]
 text_struct.text = $"{press_f_prompt} buy {weapon.name} ammo +{ammo_amount}"
+cost_text_struct.text = string(cost)
 icon = sIconAmmo
 image_blend = global.game_colors.item_add_to_shop
 

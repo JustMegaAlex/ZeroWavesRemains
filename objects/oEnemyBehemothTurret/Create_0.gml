@@ -1,4 +1,5 @@
 
+active = true
 
 weapon = {
     dmg: 1,
