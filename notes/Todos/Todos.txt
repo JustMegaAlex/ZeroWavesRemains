@@ -30,7 +30,9 @@
     > upgrades don't feel earned and cool
         - reflect upgrades visually?
         - maybe I've played too much already?
-
+    > I don't see enemies and often stumble on strong ones
+        - permanent arrow hints
+        - each type of enemy has unique arrow
 
 === Promo ===
 > upload video on yt
@@ -51,7 +53,6 @@ How do I prove that?
     - balance
     - try completing with pulse only
 > audio
-    > add victory music
     > add coins sfx
 > change font
 > shop text: add "not enough coins"
@@ -60,6 +61,9 @@ How do I prove that?
     > (maybe) spread if far from player
 > balance
     > smoother diff curve: huge spike at the end
+> fix
+    > set volumes to user settings
+
 0.5.1
 > impl loading screen
 > visuals

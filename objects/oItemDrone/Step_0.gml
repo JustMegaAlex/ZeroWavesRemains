@@ -1,10 +1,6 @@
 
 macro_pause
 
-if key_pressed(ord("T")) {
-    event_perform(ev_create, 0)
-}
-
 if active {
     mover.step()
     dirApproach(sp.dir())

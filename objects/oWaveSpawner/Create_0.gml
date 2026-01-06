@@ -108,7 +108,7 @@ array_push(waves, {oEnemyBehemoth: 1, oEnemy: 4, oEnemyTiny: 6})
 array_insert(waves, irandom_range(13, 18), {oEnemyTiny: 8, swarm: true})
 array_insert(waves, irandom_range(13, array_length(waves)-1), {oEnemyTiny: 12, swarm: true})
 
-waves = [{oEnemyTiny: 1}, {oEnemyTiny: 1}]
+// waves = [{oEnemyTiny: 1}, {oEnemyTiny: 1}]
 
 waves_remains = array_length(waves)
 global.waves_remains = waves_remains
