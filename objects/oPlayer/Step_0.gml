@@ -33,7 +33,7 @@ checkPushBackIntoCircle()
 move()
 
 
-if !weapon.timer.update() and (oInput.Hold("lclick") or debug_shoot) {
+if !weapon.timer.timer and (oInput.Hold("lclick") or debug_shoot) {
     playerShoot(dir)
     weapon.timer.reset()
 }
@@ -68,6 +68,7 @@ for (var i = 0; i < array_length(weapons_array); ++i) {
     if weap == noone {
         continue
     }
+    weap.timer.update()
     var timer = weapon[$ "sound_timer"]
     if timer != undefined {
         timer.update()
