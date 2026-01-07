@@ -23,6 +23,14 @@ function Restart() {
     Unpause()
     ResetGlobals()
     oMenuButton.hideAll()
+    /// Room restart causes sound gains to reset
+    /// And Room start event won't shoot for some reason in ui objects (at least in sliders)
+    /// so do it manually
+    with oOptionsSlider {
+        call_later(2, time_source_units_frames, function() {
+            controlFunction(Value())
+        })
+    }
     layer_set_visible("ui_text", false)
 	room_restart()
 }

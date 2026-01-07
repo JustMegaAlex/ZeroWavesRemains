@@ -28,6 +28,10 @@ function get_gain(msc) {
 
 function switch_music(msc, loops = true, transition_time = music_transition_time_ms) {
     if !music_enabled { return }
+        
+    if msc == current_music {
+        return;
+    }
     next_music_transition_time_ms = transition_time
     next_music_loops = loops
     if current_music != noone {
