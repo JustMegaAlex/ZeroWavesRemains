@@ -1,8 +1,10 @@
 
+show_indicator_timer.update()
 
 var toggle = key_pressed(vk_f2)
 if toggle {
     active = !active
+    show_indicator_timer.reset()
     if active {
         oInput.SetInactive()
     }
