@@ -42,10 +42,12 @@
 > invite testers
 > dc server
 > short videos
+    > single video covering all new features
     > swarm behavior
     > behemoth
     > circling
     > shop tree
+> call playtesters
 
 === Milestones ===
 0.5.0 Build: prove that concept "right tools for right cases" works
@@ -61,6 +63,9 @@ How do I prove that?
     > (maybe) spread if far from player
 > balance
     > smoother diff curve: huge spike at the end
+> fix
+    > don't let drones fly away before path ends
+    > music gain resets again?
 
 0.5.1
 > impl loading screen
@@ -70,7 +75,8 @@ How do I prove that?
     > (maybe) add manuvering jets
     > impl circle area effect
         - particles flying to the center?
-
+> discord link
+> feedback form
 
 === Backlog ===
 > ui: glowing screen bounds on low hp
