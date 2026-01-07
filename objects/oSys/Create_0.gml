@@ -23,4 +23,6 @@ layer_set_visible("ui_menu", true)
 layer_set_visible("ui_text_gameplay", true)
 layer_set_visible("ui_text_end", true)
 
+display_set_gui_maximize()
+
 // show_debug_overlay(true)
