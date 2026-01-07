@@ -36,7 +36,7 @@ function InitBalance() {
         },
         progression: {
             total_waves: 23,
-            strength_growth: __diff(1.10, 1.15),
+            strength_growth: __diff(1.08, 1.11, 1.15),
             strength: 1,
             strength_growth_decrease_total: 0.1,
             strength_cost: {

@@ -25,21 +25,38 @@
 - трек немного надоедает
 - написовать норм спрайты для магаза
 - убил подсказки и не знал как переключить пушку
-- не понял, что пульс восстанавливается 
+- не понял, что пульс восстанавливается
+     
 === My Feedback ===
     > upgrades don't feel earned and cool
         - reflect upgrades visually?
         - maybe I've played too much already?
-    > I don't see enemies and often stumble on strong ones
+        - unbalanced coins spawn. you get all strong weapons early (hard)
+    > I don't see enemies and often stumble upon strong ones
         - permanent arrow hints
         - each type of enemy has unique arrow
+    > The whole gameplay leads to mostly constantly switching between scatter/snipe
+        - Ideas how to improve
+            - more interesting enemies: replace quantity with quality
+              different setups, smaller units can be offensive/defence bigger ones, units change their 
+              behavior depending on deployed friendly units
+            - more tools
+            - embrace planning and proper tools choice
+                - make different enemies stronger against certain tools/playstyles
+                - show enemies compositions for the whole phase beforehand
 
 === Promo ===
-> upload video on yt
-> share in dc
+> update video on itch
+> videos:
+    > (V) behemoth
+    > new upgrade tree
+    > new ai
+>(V) upload video on yt
+>(V) share in dc
 > share on X and BS
 > write an update devlog
 > invite testers
+    > pipiper
 > dc server
 > short videos
     > swarm behavior
@@ -54,13 +71,12 @@ How do I prove that?
     - try completing with pulse only
 > audio
     > add coins sfx
+> fix
+    > there was no win state on hard
 > change font
-> shop text: add "not enough coins"
-> fix ui: make all text transparent if there are enemies
-> upd tiny
-    > (maybe) spread if far from player
 > balance
     > smoother diff curve: huge spike at the end
+    > add middle difficulty
 
 0.5.1
 > impl loading screen
@@ -73,6 +89,13 @@ How do I prove that?
 
 
 === Backlog ===
+> rework scouts: they suck
+    - or make a better version for later phases
+> shop text: add "not enough coins"
+> upd tiny
+    > (maybe) spread if far from player
+> fix ui: make all text transparent if there are enemies
+> improve coins balance among difficulties
 > ui: glowing screen bounds on low hp
 > rework aim: apply correction angle gradualy over time
 > indicate when drone flies away
@@ -138,6 +161,7 @@ How do I prove that?
     - burst pulse cannon
     - blinks
     - play Action 5 from this https://onemansymphony.bandcamp.com/album/collateral-damage-full-version
+> stinky: flyes around and leaves acid trail
 Drone concepts:
 > drone (already done) : low loot
 > shielded evading drone : average loot

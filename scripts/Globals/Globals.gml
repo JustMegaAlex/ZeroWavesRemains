@@ -19,6 +19,7 @@
 #macro macro_ui_shop_prompt_pos ui_shop_prompt_pos
 #macro macro_difficulty_normal 0
 #macro macro_difficulty_hard 1
+#macro macro_difficulty_insane 2
 #macro __diff ByDifficulty
 
 DEBUG = DEV
