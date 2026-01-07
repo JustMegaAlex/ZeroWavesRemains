@@ -163,7 +163,7 @@ function getOrCreateBulletTraceParticleType(width, spd, life=60) {
         {
             life: life,
             shape: pt_shape_pixel,
-            alpha: [0.7, 0],
+            alpha: [0.9, 0],
             scale: [spd, width]
         }
     )
