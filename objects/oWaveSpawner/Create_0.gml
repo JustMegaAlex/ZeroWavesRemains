@@ -9,7 +9,7 @@ just_spawned = 0
 helper_vec = new Vec2(0, 0)
 
 
-time_between_waves = 60 * __diff(25, 40)
+time_between_waves = 60 * 40 // __diff(40, 40, 40)
 spawn_current_radius = 0
 spawn_extra_radius = 500
 spawn_pos = new Vec2(0, 0)

@@ -1,6 +1,14 @@
 {
   "$GMWindowsOptions":"v1",
   "%Name":"Windows",
+  "ConfigValues":{
+    "Balance":{
+      "option_windows_start_fullscreen":"true",
+    },
+    "Dev":{
+      "option_windows_start_fullscreen":"true",
+    },
+  },
   "name":"Windows",
   "option_windows_allow_fullscreen_switching":false,
   "option_windows_borderless":false,
