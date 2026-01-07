@@ -74,14 +74,17 @@ How do I prove that?
 > audio
     > add coins sfx
 > fix
-    > there was no win state on hard
 > change font
 > balance
+    > drones are spawned too often
+    > make drones coin amount linear depending on wave
     > smoother diff curve: huge spike at the end
 > fix
+    > snipe: ammo doesn't fill up if snipe is inactive (shop)
+    > there was no win state on hard
+    > win state: hide spawn text
     > don't let drones fly away before path ends
-    > music gain resets again?
-    > add middle difficulty
+> upd spawn: make hardcoded waves depend on __diff
 
 0.5.1
 > impl loading screen
