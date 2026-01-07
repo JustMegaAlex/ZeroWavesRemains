@@ -12,6 +12,6 @@ image_blend = global.game_colors.item_add_to_shop
 
 
 apply = function() {
-    oPlayer.weapon.ammo += ammo_amount
+    weapon.ammo += ammo_amount
     audio_play_sound(sfxWeaponReload, 2, false)
 }
