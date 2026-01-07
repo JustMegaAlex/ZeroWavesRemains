@@ -61,10 +61,6 @@ How do I prove that?
     > (maybe) spread if far from player
 > balance
     > smoother diff curve: huge spike at the end
-> fix
-    > music: don't restart current music
-    > set volumes to user settings
-    > load snipe from the go
 
 0.5.1
 > impl loading screen
