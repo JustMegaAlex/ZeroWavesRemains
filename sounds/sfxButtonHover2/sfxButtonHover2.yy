@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sfxButtonHover2",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.68931973,
+  "exportDir":"",
+  "name":"sfxButtonHover2",
+  "parent":{
+    "name":"ZeroWavesRemains",
+    "path":"ZeroWavesRemains.yyp",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfxButtonHover2.wav",
+  "volume":0.4,
+}

@@ -1,0 +1,218 @@
+4df6088 upd todos
+59097bc upd: - turret bullets trace effect - make global Aim function
+6c61933 fix ammo shop items: reload proper weapon
+efc7dcc upd turrets: use aim
+87af1ae upd turret bullets trace effect
+1e4d9d3 upd oDebug: promtly show debug_on/off  indicator
+89fdbbb upd todos
+e5e200f fix sound: don't restart current music
+d82215a upd: run reload timers for non-active weapons
+444c506 cleanup
+3014195 upd: impl victory music + refactor
+794313b fix: import music assets too
+d253e5c upd: add victory music
+fb09c2b upd: - fix: don't show spawn text in win state - hide debug drawing - upd todos
+eabf1e8 fixes:     > maybe don't drop ammo if no correspodning weapon     > "Press R to restart" -> show pause     > Drones seem to have higher spawn speed     > change menu cursor
+d0e9d1a fixes + upd gitignore
+54c7086 proj: add python script for computing upgrades total cost
+2695b5e fixes and balance
+48c8303 upd: - impl difficulty: enemy number + coins spawn - prevent crash when no player in multiple objects - update balance test
+8a389de upd: sliders parent -> oMenuUI
+cede067 upd: add menu ui parent object
+be66f42 upd pause menu: add howto section
+b1ba78f upd: impl pause menu
+84a6230 refactor buttons
+8795d83 upd difficulty buttons: set difficulty glob var
+cc8b781 upd todos
+dca191c upd todos
+033cbc9 upd: impl title screen
+0a13960 upd: - rework tutorial - upd item shops: activate/deactivate
+5dba2cf upd oEnemy ai: shoot only if in range
+e85009a fix spawner broken wave config
+4f7d4ca upd tiny: handle direction and shoot in swarm mode
+73cacad upd tiny swarm: use an invisible object as swarm leader
+a081771 wip tiny swarm: attempt to form in lines
+c1fb149 upd tiny ai: impl swarm behaviour
+577e843 wip group ai: tiny swarm leader
+e18e916 upd tiny ai: add circling behavior
+6aaa1f7 upd todos
+3e1190f upd pulse upgrades cost
+3c5fc94 fix stars bg: recreate flushed surfaces
+8dcc1f5 upd shop tree
+13933d0 fix: don't crash if player dies when shop item is highlighted
+ad3709a upd ammo collectibles
+341a67a upd: impl drones drop loot
+564d1b4 upd: add more collectible objects
+f4d84f2 upd ui text: show text for all interactibles
+03d4276 upd ui text: add shop cost
+63ae440 upd shop text ui: use Text struct
+f1422e9 ide
+07b5b43 wip: rework ui text
+375c320 upd shop items locked state
+911dd08 upd: impl shop item links'
+1929ea0 ref weapon upgrades: shorter upgrade assign method in room editor
+3bd54f8 ide
+8ab25e6 upd: rework weapon upgrade system
+7b5f639 wip: rework upgrade system
+42471f7 upd todos
+56386e4 ide
+f759bfd upd: finish behemoth gun
+3e347f4 wip: rework behemoth ai
+df97846 upd todos
+7470417 upd: add cursor
+ff6912a upd balance + add behemoth to spawn chain
+7a1ac0c upd behemoth ai
+b9140a1 upd behemoth turrets: reduce knockback
+c2c9abf upd behemoth turrets: use bullets with trace
+d117634 upd behemoth: make main weapon a separate object
+b0e35e2 upd behemoth ai
+534d563 ide
+cdd280e wip behemoth: impl turrets
+7188e48 wip: behemoth
+3d74f32 revert rooms
+5b0a0d1 refactor
+f4e7ac6 off topic:impl ratings error estimation
+2f344d8 upd oInput: add gamepad_enabled switch
+e95cff9 upd: add gamepad controls
+615d846 upd balance: more drones + higher diff growth
+5fe5d6d upd tute text col
+8050bba upd camera zoom + fix tute
+8a476c6 rework item colors
+6011437 upd: impl sound sliders
+b69ae8c fix item non-randomness
+634fdeb fix win state not triggering
+89c74b1 upd test balance
+959555d upd: set up balance debugging
+8c765ba debug balancing
+51325e9 refactor: add Balance script
+5284b98 impl arrow colors
+c7ed61c impl colors
+69f86e5 upd game colors set up
+af31feb upd: reposition shop items
+94319d2 upd items: add shop ammo
+66b56c4 balance snipe dmg
+dfe627d fixes
+c2eb17e fix item drop: rm ps in cleanup
+2ad0aa3 fix game cycle
+b92ce9e debug wave spawning + endgame
+2af13ea upd: add item icons
+313aaa4 upd tute
+e597ac5 upd totoiral: add coins step
+1224303 small fixes
+683e0e0 upd: fix item prompt drawing
+5a59b78 proj: add guides text file
+59b33e7 balance costs
+4f5b2e2 upd: add pause game guide
+d51307b upd: - indicate arriving wave and drones - fix scatter sound
+a3033fd upd ammo and coins drop items
+dfee7b9 upd item drops
+1ebe5b2 upd spawn chain
+dbe0775 upd shop items position
+ec0bc1d upd: highlight shop
+e2bbb62 refactor enemies: add parent + upd scout ai
+5c23123 upd todos
+f70b7f7 wip oScout
+5616ded upd: finalize tutorial
+8196dc0 wip tutorial
+3a9c503 upd: finalize tutorial
+f79badb upd weapon upgrade items logic
+812ed0f wip: upgrades cost
+ad4817a upd: impl weapon upgrades
+d017ba7 wip items: pulse upgrade
+18e94ce upd tute: add healing step
+d875c1d upd tutorial waves step
+cb5250e upd item drops: add particle effect
+e2e0356 upd tutorials
+e0ca9a4 upd tutorial
+83802af impl tutorial system
+325292f upd wave spawner: make possible overriding waves
+c46cfa2 upd: add hint arrows system
+83f42e0 upd shop collision mask
+6ff82b2 upd: finish item drops
+aac0de3 wip item drops: upd prompt text
+2310cd8 wip: item drops
+84f18e7 wip: item drops
+e655bce upd item drone: impl movement
+6a0f5de upd item drone trajectory
+c2c5da2 upd item drone trajectory
+2c18d6e wip: item drone
+b642984 upd shop items: add coloring
+8a6d63e upd shop items: highlight hovered items
+3e9fb02 wip: rework shop interaction
+fe8e3da wip: rework shop
+00a6cb0 upd weapons ui: add choosen weapon checkboxes
+4d4b11e upd ui: add healthbar
+3d21f2c impl weapon ui
+ad53e10 wip weapons ui
+0f037d4 upd player weapons: assign each weapon a static slot
+599e8b1 wip weapons ui
+c987323 upd ui: add weapon ui sprites
+c431584 upd todos
+c9bef88 upd: - fixes - add loose theme and intro music - adjust volumes - items
+6894246 upd: a ton of changes - added sfx - a ton of fixes - shop - vfx - camera shake - other stuff
+7c6ee1f upd todos
+b913746 upd: decrease pulse range + fix oDebug
+87eab8e upd sfx
+97d626f upd snipe: add spark vfx
+8e0b4a6 upd scatter: add spark vfx + fix ignoring connects
+0702240 upd scatter sfx
+a2d34b6 upd: add sfx
+43447e6 upd audio: add main theme
+eb18c37 fix snipe shot
+a2fddbb upd stars bg
+3fff1ae upd explosin vfx
+14b276a wip explosion vfx
+265372e finallygit st! fix bg parallax + scaling
+3268a4c wip: fix stars bg parallax while scaling
+2cf1112 upd: - add new color pallete + add objects colors - impl stars bg
+23555be upd: impl hit knockback
+3c81b85 upd vfx: rework spark vfx
+1fa606e upd vfx: add hit sparks effect
+6322a40 upd ui: use flex panels + ui layers
+a93fbf9 upd ui: use flex panels + ui layers
+71ea3aa impl ui hit indicator
+c667154 impl color system
+65cb091 balance
+1ce85fd fix entities: contact bullets after step logic
+6584a73 upd: fix scatter contact()
+df719bf upd: - move bullet contact code to entity - add debug object
+336f290 ref: move item costs to globals
+2224ef0 fix: workaround input not registering numbers
+8441ffc upd: - spawn next wave by pressing space - add healing shop item
+70c7a8d upd: - add weapon shop item - fix scatter -> tiny dmg
+6c3bfef upd: impl coins
+e1065d0 fix scatter not hitting tiny
+8a80cd4 wip: debugging oEnemyTiny collision with scatter not registering
+fd14931 impl shop
+169b9a4 upd: - suck enemies into circle - and that's all lol
+f6fba8f upd: impl ammo system
+6e44f3c upd:
+50bd183 upd: lose state
+c6d55c2 upd: make scatter bullet collision bigger
+701ee09 fix scatter
+2e198d9 upd:
+650853d impl switching weaopn with Q/E + adjust tiny enemy
+f02bcb5 upd ui: show chosen weapon
+fff9bce upd: add tute text
+98071f9 upd - impl custom scatter bullet - draw healthbar
+8fa8a2b upd: - impl oEnemyTiny - impl simple weapon switching
+111033f impl scatter weapon
+0dc7973 wip snipe weapon
+30849af impl custom weapons system + fixes
+04d06c0 impl wave spawn
+e850f78 impl game area
+71e6286 upd camera: impl delay movement
+8e1dcd7 upd enemy: aim
+f99653c upd shooting + enemy shoot
+2ae4a63 upd enemy ai: movement
+0226308 ide
+cbe4aca upd bullet size and sp
+5c102df upd player: move with arrows
+cda3c03 upd: add damage
+bea1ae4 upd: - bg grid - camera
+1aa7984 upd: impl shooting
+9075eb6 wip: shooting
+bf0f203 upd: - add libs - impl acceleration based movement
+7af8152 ide
+de64547 wip: add sprites and two objects
+c4d462a initial

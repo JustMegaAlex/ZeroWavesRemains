@@ -21,5 +21,5 @@ if close_to_player {
 
 if dist < speed {
     instance_destroy()
-    onCollect()
+    onCollectBase()
 }

@@ -23,6 +23,7 @@ yscale = scale
 yscale_hovered = 50 / 18    // from sprite
 mouse_over_me = false
 action = function() {
+    audio_play_sound(sfxClick2, 2, false)
     if yes_no {
         hideSection(section)
         oMenuButtonYes.callback = callback
