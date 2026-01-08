@@ -39,10 +39,9 @@ waves = [
 ]
 wave_index = 0
 var progression = global.balance.progression
-waves_remains = progression.total_waves
 strength_growth = progression.strength_growth
 strength = progression.strength
-strength_growth_decrease = progression.strength_growth_decrease_total / waves_remains
+strength_growth_decrease = progression.strength_growth_decrease_total / progression.total_waves
 strength_cost = progression.strength_cost
 
 enemy_randomer = new ControlledRandomer({
@@ -59,7 +58,7 @@ for (var i = 0; i < array_length(waves); ++i) {
     wave_strengths[i] = -1
 }
 var _prev_single_drone = false
-for (var i = 0; i < waves_remains; ++i) {
+for (var i = 0; i < progression.total_waves; ++i) {
     var wave = {}
     var _strength = strength + extra_strength_randomer.get()
     array_push(wave_strengths, _strength)
@@ -216,5 +215,6 @@ updateSpawningInstance = function(inst) {
 }
 
 if DEV {
-    wave_index = 0
+    wave_index = 25
+    waves_remains = array_length(waves) - wave_index
 }

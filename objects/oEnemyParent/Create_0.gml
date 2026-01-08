@@ -85,29 +85,6 @@ mover_dir = {
 
 mover = mover_point
 
-
-/// Aim
-function Aim(target) {
-    var sight_angle = point_direction(x, y, target.x, target.y)
-    var evasion_angle = angle_difference(target.sp.dir(), sight_angle)
-    var target_sp_len = target.sp.len()
-    if (abs(evasion_angle) < 5) or (target_sp_len == 0) {
-        return sight_angle
-    }
-    var beta_angle = 180 - abs(evasion_angle)
-    var evasion_dir = sign(evasion_angle)
-    var bullet_sp = weapon.sp
-    var aim_angle_sin = target_sp_len/bullet_sp * lengthdir_y(-1, beta_angle)
-    if abs(aim_angle_sin) > 1 {
-        return sight_angle
-    }
-    var aim_angle = radtodeg(arcsin(aim_angle_sin)) * evasion_dir
-	if (abs(aim_angle) + beta_angle) >= 180 {
-        return sight_angle
-    }
-    return sight_angle + aim_angle + choose(0, 3, 4, 5, 6, 7, 8, 9, 10) * choose(1, -1)
-}
-
 die = function() {
     global.wave_enemies_count--
     is_dead = true

@@ -71,20 +71,19 @@
 How do I prove that? 
     - balance
     - try completing with pulse only
-> audio
-    > add coins sfx
-> fix
-> change font
 > balance
     > drones are spawned too often
     > make drones coin amount linear depending on wave
     > smoother diff curve: huge spike at the end
+    > upd spawn: make hardcoded waves depend on __diff
 > fix
     > snipe: ammo doesn't fill up if snipe is inactive (shop)
     > there was no win state on hard
     > win state: hide spawn text
     > don't let drones fly away before path ends
-> upd spawn: make hardcoded waves depend on __diff
+> audio
+    > add coins sfx
+> change font
 
 0.5.1
 > impl loading screen
