@@ -108,11 +108,11 @@ for (var i = 0; i < progression.total_waves; ++i) {
 
 
 ///// @follow-up Behemoth waves
-array_insert(waves, 12, {oEnemyBehemoth: 1})
-array_push(waves, {oEnemyBehemoth: 1, oEnemy: 4, oEnemyTiny: 6})
+array_insert(waves, 12, {oEnemyBehemoth: 1, oEnemyTiny: __diff(0, 6, 9), oEnemy: __diff(0, 0, 3)})
+array_push(waves, {oEnemyBehemoth: 1, oEnemy: __diff(2, 3, 5), oEnemyTiny: __diff(6, 10, 20), oScout: __diff(0, 3, 6)})
 ///// @follow-up Swarm waves
-array_insert(waves, irandom_range(13, 18), {oEnemyTiny: 8, swarm: true})
-array_insert(waves, irandom_range(13, array_length(waves)-1), {oEnemyTiny: 12, swarm: true})
+array_insert(waves, irandom_range(7, 12), {oEnemyTiny: __diff(8, 10, 12), swarm: true})
+array_insert(waves, irandom_range(13, array_length(waves)-1), {oEnemyTiny: __diff(15, 20, 30), swarm: true})
 
 // waves = [{oEnemyTiny: 1}, {oEnemyTiny: 1}]
 
@@ -155,8 +155,7 @@ droneSetCoinsIncline = function(inst) {
     if mult <= 0 {
         throw $"Bad drone coins incline: {mult}"
     }
-    inst.coins_min *= mult
-    inst.coins_max *= mult
+    inst.loot_multiplier = mult
 }
 
 spawn = function(wave_override=undefined) {

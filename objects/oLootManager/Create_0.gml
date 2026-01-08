@@ -5,10 +5,13 @@ diff_multiplier = 1.5
 
 spawnLoot = function(x, y, amount) {
     var obj
+    var coins = 0
     repeat (amount * diff_multiplier) {
         obj = asset_get_index(loot_randomer.get())
+        coins += obj == oCollectCoin
         instance_create_layer(x, y, "Instances", obj)
     }
+    show_debug_message($"Loot: {coins} coins")
 }
 
 initLoot = function() {

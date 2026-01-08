@@ -72,16 +72,12 @@ How do I prove that?
     - balance
     - try completing with pulse only
 > balance
-    > drones are spawned too often
-    > make drones coin amount linear depending on wave
-    > smoother diff curve: huge spike at the end
+    > check low and normal dfcl
     > upd spawn: make hardcoded waves depend on __diff
 > fix
-    > snipe: ammo doesn't fill up if snipe is inactive (shop)
-    > diff level upgrades cost the same
-    > there was no win state on hard
-    > win state: hide spawn text
-    > don't let drones fly away before path ends
+    > (watch) snipe: ammo doesn't fill up if snipe is inactive (shop)
+    > (check) there was no win state on hard
+    > (check) win state: hide spawn text
 > audio
     > add coins sfx
 > change font
@@ -98,7 +94,10 @@ How do I prove that?
 > feedback form
 
 === Backlog ===
+> improve tinies: increase speed?
+> lose: focus camera on the killer
 > rework scouts: they suck
+    - or maybe it's fine they suck?
     - or make a better version for later phases
 > shop text: add "not enough coins"
 > upd tiny

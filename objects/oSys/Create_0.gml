@@ -1,6 +1,8 @@
 
 EnsureSingleton()
 
+randomise()
+
 DebugDrawIni()
 VAR_BAR_Y_BASE = 150
 

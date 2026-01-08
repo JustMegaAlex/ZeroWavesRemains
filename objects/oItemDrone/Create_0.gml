@@ -14,6 +14,7 @@ x = lengthdir_x(dist, angle)
 y = lengthdir_y(dist, angle)
 
 loot_amount_randomer = irandomer(18, 23)
+loot_multiplier = 1
 
 
 //// Movers
@@ -96,6 +97,7 @@ mover = mover_dir
 mover.accel_value = 1
 acc_max = 1
 traj_index = 0
+traj_ended = false
 sp_max = 15
 next_point = undefined
 dir = 0
@@ -104,6 +106,7 @@ updateDampening()
 updateTraj = function() {
     traj_index++
     if traj_index >= array_length(trajectory) {
+        traj_ended = true
         return;
     }
     var p = trajectory[traj_index]
@@ -119,5 +122,5 @@ updateTraj = function() {
 }
 
 objectDie = function() {
-    oLootManager.spawnLoot(x, y, loot_amount_randomer())
+    oLootManager.spawnLoot(x, y, loot_amount_randomer() * loot_multiplier)
 }

@@ -9,7 +9,7 @@ updateText = function() {
         var stat_name = keys[i]
         var next_value = upgrade_conf.stats[$ stat_name][upgrade_level + 1]
         var value = weapon[$ stat_name]
-        var name = upgrade_conf.name
+        var name = upgrade_conf.name    
         if name == "fire rate" {
             next_value = 60 / next_value.time
             value = 60 / value.time
@@ -38,7 +38,7 @@ apply = function() {
         cost_text_struct.text = ""
         return;
     }
-    cost = conf.costs[upgrade_level]
+    cost = conf.costs[upgrade_level+1]
     updateText()
 }
 

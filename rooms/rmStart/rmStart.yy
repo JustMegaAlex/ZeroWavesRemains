@@ -46,6 +46,8 @@
     {"name":"Instane","path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"inst_392AD3F9","path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"inst_B36F61F","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"inst_F0F2A3B","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"inst_778FF11A","path":"roomui/RoomUI/RoomUI.yy",},
   ],
   "isDnd":false,
   "layers":[
