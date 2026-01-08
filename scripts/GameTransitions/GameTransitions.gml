@@ -55,3 +55,13 @@ function Win() {
     oMusic.switch_music(global.victory_theme)
     global.win = true
 }
+
+function ToggleFullscreen() {
+    window_set_fullscreen(!window_get_fullscreen())
+    call_later(5, time_source_units_frames, display_set_gui_maximize)
+    with oOptionsSlider {
+        knob_xmin = x - sprite_width * effective_width_ratio * 0.5
+        knob_xmax = x + sprite_width * effective_width_ratio * 0.5
+        call_later(10, time_source_units_frames, initKnobPos)
+    }
+}

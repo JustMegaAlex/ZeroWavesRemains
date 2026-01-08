@@ -28,11 +28,12 @@ action = function() {
         oMenuButtonYes.callback = callback
         oMenuButtonNo.open_section = section
         openSection(macro_menu_section_yesno)
+        return;
     } else if open_section != undefined {
         hideSection(section)
         openSection(open_section)
-        callback()
     }
+    callback()
 }
 
 
