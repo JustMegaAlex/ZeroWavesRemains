@@ -32,7 +32,8 @@ function InitBalance() {
             oEnemy: [5,7],
             oScout: [3,4],
             oEnemyTiny: [2,3],
-            oItemDrone: [4,5],
+            // oItemDrone: [12, 18],
+            __drone_incline: 0.6, // -0.5 part of coins in wave 0, +0.5 in the last wave
         },
         progression: {
             total_waves: 23,

@@ -15,6 +15,8 @@ spawn_extra_radius = 500
 spawn_pos = new Vec2(0, 0)
 spawning_inst_speed = spawn_extra_radius / time_between_waves
 
+drones_spawned = 0
+drones_to_spawn_total = 0
 
 /*
 1. Random waves by wave strength
@@ -50,8 +52,10 @@ enemy_randomer = new ControlledRandomer({
 extra_strength_randomer = new ControlledRandomer([
     [0, 10],// [0.5, 5], [1, 3], [2, 2]
 ], true)
+
+/// @follow-up drone waves
 drone_randomer = new ControlledRandomer({
-    in_wave: 1, single:2, none:3
+    in_wave: 2, single:1, none:3
 }, true)
 wave_strengths = []
 for (var i = 0; i < array_length(waves); ++i) {
@@ -80,6 +84,9 @@ for (var i = 0; i < progression.total_waves; ++i) {
             _prev_single_drone = true
             _strength = 0;
         break;
+    }
+    if wave[$ "oItemDrone"] != undefined {
+        drones_to_spawn_total++
     }
     while true {
         object_name = enemy_randomer.get()
@@ -134,8 +141,23 @@ spawnSingleInstance = function(obj, make_active=false) {
             active = false
         }
     }
+
+    if inst.object_index == oItemDrone {
+        drones_spawned++
+        droneSetCoinsIncline(inst)
+    }
     return inst
 } 
+
+droneSetCoinsIncline = function(inst) {
+    var wave_mult = (drones_spawned/drones_to_spawn_total * 2 - 1) // -1 .. 1 
+    var mult = 1 + global.balance.coins.__drone_incline * wave_mult // (1 - incl) .. (1 + incl)
+    if mult <= 0 {
+        throw $"Bad drone coins incline: {mult}"
+    }
+    inst.coins_min *= mult
+    inst.coins_max *= mult
+}
 
 spawn = function(wave_override=undefined) {
     array_foreach(next_wave_instances, 
@@ -215,6 +237,6 @@ updateSpawningInstance = function(inst) {
 }
 
 if DEV {
-    wave_index = 25
+    wave_index = 0
     waves_remains = array_length(waves) - wave_index
 }

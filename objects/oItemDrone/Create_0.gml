@@ -13,6 +13,8 @@ var dist = oGameArea.radius * 1.1
 x = lengthdir_x(dist, angle)
 y = lengthdir_y(dist, angle)
 
+loot_amount_randomer = irandomer(18, 23)
+
 
 //// Movers
 mover_template = {
@@ -51,10 +53,6 @@ mover_point = {
 
 mover = mover_point
 
-
-objectDie = function() {
-    oLootManager.spawnLoot(x, y, irandom_range(12, 18))
-}
 
 //// Create trajectory
 chunk_len = 300
@@ -118,4 +116,8 @@ updateTraj = function() {
     // dir = PointDir(next_point.x, next_point.y)
     dist_to_next_point = PointDist(p.x, p.y)
     // sp.set_polar(sp_max, dir)
+}
+
+objectDie = function() {
+    oLootManager.spawnLoot(x, y, loot_amount_randomer())
 }

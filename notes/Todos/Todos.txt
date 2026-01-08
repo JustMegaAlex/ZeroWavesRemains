@@ -78,6 +78,7 @@ How do I prove that?
     > upd spawn: make hardcoded waves depend on __diff
 > fix
     > snipe: ammo doesn't fill up if snipe is inactive (shop)
+    > diff level upgrades cost the same
     > there was no win state on hard
     > win state: hide spawn text
     > don't let drones fly away before path ends
@@ -178,6 +179,7 @@ Drone concepts:
 
 
 === Mechanics ===
+> shield break: drain shield almost to 0 and then use a strong weapon to overload and cause emp stun
 > ship weight system: more equipment = less agile
     - drop weapons on the go to move faster
 > choose color palette?
@@ -197,6 +199,9 @@ Drone concepts:
     - partially disables systems (slows down, messes up weapons)
 > powerful seek bomb
     - preplace to get rid of some enemies early
+> drone
+    - glass cannon ?
+    - isn't targeted by scouts, so good to clear them out
 
 One sentence pitch:
 "Zero Waves Remains is a twin-stick shooter where decision beat precision"

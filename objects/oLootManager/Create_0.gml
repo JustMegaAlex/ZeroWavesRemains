@@ -12,7 +12,7 @@ spawnLoot = function(x, y, amount) {
 }
 
 initLoot = function() {
-    diff_multiplier = __diff(2.8, 2.4, 1)
+    diff_multiplier = __diff(2.5, 2, 0.7)
     loot_randomer = new ControlledRandomer({
         oCollectCoin: 50 * diff_multiplier,
         oCollectAmmo: 5,
