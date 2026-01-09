@@ -84,3 +84,8 @@ function SetColor() {
 behemoth_turret_coords = [] // defined in oEnemyBehemoth in rmStart
 behemoth_gun_shoot_point = {}
 behemoth_gun_position = {}
+
+
+//// Metrics
+plays_total = 0
+play_start_time = -1

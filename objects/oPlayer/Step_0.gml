@@ -18,6 +18,7 @@ var arrows_input = key_up or key_down or key_right or key_left
 
 if oInput.Hold("boost") {
     accelerate(1, dir)
+    boost_time_used += delta_time / 1000000
 } else if arrows_input {
     accelerate(0.5, point_direction(
         0, 0,
@@ -135,3 +136,7 @@ if !global.tutorial and global.wave_enemies_count <= 0 and oInput.Pressed("next_
 //}
 
 event_inherited()
+
+
+//// @follow-up player metrics
+weapon.active_usage_time += delta_time / 1000000

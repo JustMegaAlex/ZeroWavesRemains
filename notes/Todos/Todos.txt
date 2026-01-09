@@ -71,13 +71,9 @@
 How do I prove that? 
     - balance
     - try completing with pulse only
-> fix
-    > (watch) snipe: ammo doesn't fill up if snipe is inactive (shop)
-    > (check) there was no win state on hard
-    > (check) win state: hide spawn text
-    > sliders fullscreen switching bug (try controlling knobs via flex?)
 
-0.5.1
+0.5.2
+> (watch) snipe: ammo doesn't fill up if snipe is inactive (shop)
 > impl loading screen
 > visuals
     > make varying explosion sizes
@@ -87,6 +83,9 @@ How do I prove that?
         - particles flying to the center?
 > discord link
 > feedback form
+> fix
+    > when pressing "Back" in hints you can accidentaly change volume
+> analytics ?
 
 === Backlog ===
 > improve tinies: increase speed?

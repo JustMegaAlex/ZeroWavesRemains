@@ -179,6 +179,9 @@ for (var i = 0; i < array_length(all_weapons); ++i) {
     _weapon_default_field(item, "upgrades", 0)
     _weapon_default_field(item, "upgrade_confs", [])
     _weapon_default_field(item, "upgrades_max", array_length(item.upgrade_confs))
+
+    /// @follow-up player metrics weapons
+    _weapon_default_field(item, "active_usage_time", 0)
 }
 
 interactible = noone
@@ -313,3 +316,7 @@ getObjectCollision = function(obj) {
 
 // interactingWithItem = MouseCollision
 interactingWithItem = getObjectCollision
+
+
+/// Metrics
+boost_time_used = 0

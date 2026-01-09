@@ -3,6 +3,9 @@ function Start() {
     ResetGlobals()
     layer_set_visible("ui_general", true)
     room_goto(BALANCE ? rmTestBalance : rmGame)
+
+    global.play_start_time = current_time
+    global.plays_total++
 }
 
 function Pause() {
