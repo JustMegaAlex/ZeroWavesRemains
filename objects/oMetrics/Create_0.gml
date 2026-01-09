@@ -1,10 +1,15 @@
 
 EnsureSingleton()
 
-if os_type == os_windows {
+if !DEV and os_type == os_windows {
     instance_destroy()
     exit
 }
+
+dry_run = false
+
+var f = file_text_open_read("metrics_endpoint.txt")
+endpoint = file_text_readln(f)
 
 send_period = 3
 
@@ -37,8 +42,6 @@ collectMetrics = function() {
     var player_exists = instance_exists(oPlayer)
     var metrics = {
         v: "0.5.2",
-        user_id: user_id,
-        session_id: session_id,
         time_total: ct,
         play_time: ct - global.play_start_time / 1000,
         plays_total: global.plays_total,
@@ -67,19 +70,49 @@ collectMetrics = function() {
     if global.tutorial and instance_exists(oTutorial) {
         metrics.tute_step = oTutorial.step_index
     }
+    var cur_sec = current_second >= 10 ? current_second : $"0{current_second}"
+    var cur_minute = current_minute >= 10 ? current_minute: $"0{current_minute}"
+    var cur_hour = current_hour >= 10 ? current_hour: $"0{current_hour}"
+    var cur_month = current_month >= 10 ? current_month: $"0{current_month}"
+    var cur_day = current_day >= 10 ? current_day: $"0{current_day}"
+    return {
+        user_id: user_id,
+        session_id: session_id,
+        datetime: $"{current_year}-{cur_month}-{cur_day} {cur_sec}:{cur_hour}:{cur_minute}",
+        data: metrics
+    }
+}
 
-    return metrics
+request = function(metrics) {
+    http_request(endpoint, "POST", -1, json_stringify(metrics))
+}
+
+_sendMetrics = function() {
+    var metrics = collectMetrics()
+    if dry_run {
+        show_debug_message($"Dry run send metrics: {metrics}")
+    } else {
+        request(metrics)
+    }
 }
 
 sendMetrics = function() {
-    var metrics = collectMetrics()
-    // send
-    show_debug_message($"Dry run send metrics: {metrics}")
-    try {
-        // collect
-    } catch (e) {
-        // handle errors
+    /// Dry run with crash on error
+    if dry_run {
+        _sendMetrics()
+        return;
     }
+        
+    if DEV {
+        _sendMetrics()
+    } else {
+       try {
+           _sendMetrics()
+       } catch(err) {
+           
+       }
+    }
+    // Keep sending
     call_later(send_period, time_source_units_seconds, sendMetrics)
 }
 

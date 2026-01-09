@@ -1,4 +1,5 @@
 builds/*
+datafiles/*
 cost.json
 
 # Windows thumbnail cache files
