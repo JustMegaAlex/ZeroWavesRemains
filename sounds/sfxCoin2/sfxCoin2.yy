@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"sfxCoin2",
   "parent":{
-    "name":"ZeroWavesRemains",
-    "path":"ZeroWavesRemains.yyp",
+    "name":"Audio",
+    "path":"folders/Audio.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

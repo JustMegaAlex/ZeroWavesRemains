@@ -1,5 +1,5 @@
 event_inherited()
-sfx = sfxCoin
+sfx = sfxCoin2
 
 onCollect = function() {
    oPlayer.money++
