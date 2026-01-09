@@ -2,8 +2,8 @@
 set_visible()
 
 if global.gameover {
-    text = "Lost!"
+    text = text_lost
 }
 if global.win {
-    text = "Victory!"
+    text = text_victory
 }
