@@ -204,4 +204,7 @@ Drone concepts:
 One sentence pitch:
 "Zero Waves Remains is a twin-stick shooter where decision beat precision"
 
-
+==== Coin Talk ====
+To play again you need only one thing - scale up the difficulty and make me die early
+Then move me to permanent upgrade screen
+And make me angry that I died and excited for upgrades
