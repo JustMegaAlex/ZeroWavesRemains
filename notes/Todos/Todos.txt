@@ -71,15 +71,11 @@
 How do I prove that? 
     - balance
     - try completing with pulse only
-> balance
-    > check low and normal dfcl
-    > upd spawn: make hardcoded waves depend on __diff
 > fix
     > (watch) snipe: ammo doesn't fill up if snipe is inactive (shop)
     > (check) there was no win state on hard
     > (check) win state: hide spawn text
     > sliders fullscreen switching bug (try controlling knobs via flex?)
-> change font
 
 0.5.1
 > impl loading screen

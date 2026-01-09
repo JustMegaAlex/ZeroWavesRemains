@@ -9,6 +9,7 @@ function Pause() {
     global.pause = true
     oMenuButton.openSection(macro_menu_section_pause)
     layer_set_visible("ui_text_gameplay", false)
+    AdjustSliders() // in case we went fullscreen in main menu
     // layer_set_visible("ui_text", global.pause)
 }
 
@@ -59,6 +60,12 @@ function Win() {
 function ToggleFullscreen() {
     window_set_fullscreen(!window_get_fullscreen())
     call_later(5, time_source_units_frames, display_set_gui_maximize)
+    AdjustSliders()
+}
+
+function AdjustSliders() {
+    /// knobs are drawn using gui event
+    /// we need to adjust their positions when changing window size
     with oOptionsSlider {
         knob_xmin = x - sprite_width * effective_width_ratio * 0.5
         knob_xmax = x + sprite_width * effective_width_ratio * 0.5
