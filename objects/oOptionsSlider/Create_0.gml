@@ -6,7 +6,7 @@ knob_xmax = x + sprite_width * effective_width_ratio * 0.5
 knob_is_dragged = false
 
 function Value() {
-    return (knobx - knob_xmin) / (knob_xmax - knob_xmin)
+    return value
 }
 
 function Activate() {
@@ -21,6 +21,11 @@ function Deactivate() {
 
 initKnobPos = function() {
     knobx = knob_xmin + (knob_xmax - knob_xmin) * value
+}
+
+updateValue = function() {
+    value = (knobx - knob_xmin) / (knob_xmax - knob_xmin)
+    return value
 }
 
 array = []

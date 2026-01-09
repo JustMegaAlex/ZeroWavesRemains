@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"sfxCoin3",
+  "%Name":"mscFinalBattle",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,9 +10,9 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.7033333,
+  "duration":110.442474,
   "exportDir":"",
-  "name":"sfxCoin3",
+  "name":"mscFinalBattle",
   "parent":{
     "name":"Audio",
     "path":"folders/Audio.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sfxCoin3.wav",
+  "soundFile":"mscFinalBattle.mp3",
   "volume":1.0,
 }

@@ -685,6 +685,7 @@ function Text(relx, rely, text, args={}) constructor {
     self.valign = args[$ "valign"] ?? 1
     self.color = args[$ "color"] ?? c_white
     self.alpha = args[$ "alpha"] ?? 1
+    self.font = args[$ "font"] ?? noone
 }
 
 function DrawText(x, y, text) {
@@ -696,7 +697,13 @@ function DrawText(x, y, text) {
     var alpha = draw_get_alpha()
     draw_set_color(text.color)
     draw_set_alpha(text.alpha)
+    var prev_font = noone
+    if text.font {
+        prev_font = draw_get_font()
+        draw_set_font(text.font)
+    }
     draw_text(x + text.relx, y + text.rely, text.text)
     draw_set_color(col)
     draw_set_alpha(alpha)
+    draw_set_font(prev_font)
 }

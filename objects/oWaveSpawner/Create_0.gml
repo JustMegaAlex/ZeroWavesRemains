@@ -189,6 +189,7 @@ spawn = function(wave_override=undefined) {
         global.waves_remains = waves_remains
         ArrayClear(next_wave_instances)
         if waves_remains <= 0 {
+            lastWaveCallback()
             return;
         }
         wave = waves[wave_index]
@@ -235,8 +236,12 @@ updateSpawningInstance = function(inst) {
     }
 }
 
+nextWaveIsLast = function() {
+    return waves_remains == 1
+}
+
 lastWaveCallback = function() {
-    oMusic.switch_music()
+    oMusic.switch_music(mscFinalBattle)
 }
 
 if DEV {

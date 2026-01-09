@@ -104,6 +104,11 @@ die = function() {
     if instance_exists(oCamera) {
         oCamera.shake()
     }
+    /// Stop playing music before the last wave
+    show_debug_message($"Enemies left: {instance_number(oEnemyParent)}, last wave: {oWaveSpawner.nextWaveIsLast()}")
+    if (!global.wave_enemies_count) and oWaveSpawner.nextWaveIsLast() {
+        oMusic.switch_music(noone)
+    }
 }
 
 setCoins = function(cmin, cmax) {
