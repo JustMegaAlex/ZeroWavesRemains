@@ -2,8 +2,8 @@
   "$GMSound":"v2",
   "%Name":"mscStealthTheme",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"audiogroup_load_after",
+    "path":"audiogroups/audiogroup_load_after",
   },
   "bitDepth":1,
   "channelFormat":0,

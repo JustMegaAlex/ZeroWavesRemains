@@ -17,7 +17,7 @@ layers_to_make_visible = [
     "Instances", "BackObjects", "Parallax", //"Assets"
 ]
 
-layer_set_visible("ui_text", false)
+layer_set_visible("ui_text", true)
 layer_set_visible("ui_sliders", false)
 layer_set_visible("ui_general", false)
 
