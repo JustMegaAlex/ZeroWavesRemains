@@ -1,3 +1,4 @@
+draw_set_font(global.ui_font)
 
 draw_set_alpha(show_indicator_timer.timer/show_indicator_timer.time)
 draw_text(

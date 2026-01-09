@@ -27,4 +27,6 @@ layer_set_visible("ui_text_end", true)
 
 display_set_gui_maximize()
 
+draw_set_font(global.ui_font)
+
 // show_debug_overlay(true)

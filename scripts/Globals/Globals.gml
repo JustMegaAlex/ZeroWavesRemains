@@ -36,6 +36,7 @@ wave_enemies_count = 0
 waves_remains = 0
 win = false
 victory_theme = mscVictory
+ui_font = fntUI
 
 macro_ui_text_spawn_wave_pos = {x: 0, y: 0}
 macro_ui_shop_prompt_pos = {x: 0, y: 0}

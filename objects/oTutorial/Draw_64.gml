@@ -1,6 +1,7 @@
 macro_pause
 if !global.tutorial exit
 
+draw_set_font(global.ui_font)
 var w = display_get_gui_width()
 var h = display_get_gui_height()
 draw_set_color(c_yellow)

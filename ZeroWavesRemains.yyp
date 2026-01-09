@@ -51,8 +51,7 @@
   },
   "name":"ZeroWavesRemains",
   "resources":[
-    {"id":{"name":"fntUIBig","path":"fonts/fntUIBig/fntUIBig.yy",},},
-    {"id":{"name":"Font1","path":"fonts/Font1/Font1.yy",},},
+    {"id":{"name":"fntUI","path":"fonts/fntUI/fntUI.yy",},},
     {"id":{"name":"Todos","path":"notes/Todos/Todos.yy",},},
     {"id":{"name":"oAIEnemyControl","path":"objects/oAIEnemyControl/oAIEnemyControl.yy",},},
     {"id":{"name":"oAITinySwarmLeader","path":"objects/oAITinySwarmLeader/oAITinySwarmLeader.yy",},},

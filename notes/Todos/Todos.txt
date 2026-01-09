@@ -79,8 +79,6 @@ How do I prove that?
     > (check) there was no win state on hard
     > (check) win state: hide spawn text
     > sliders fullscreen switching bug (try controlling knobs via flex?)
-> audio
-    > add coins sfx
 > change font
 
 0.5.1

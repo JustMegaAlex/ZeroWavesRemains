@@ -235,7 +235,11 @@ updateSpawningInstance = function(inst) {
     }
 }
 
+lastWaveCallback = function() {
+    oMusic.switch_music()
+}
+
 if DEV {
-    wave_index = 0
+    wave_index = 25
     waves_remains = array_length(waves) - wave_index
 }
