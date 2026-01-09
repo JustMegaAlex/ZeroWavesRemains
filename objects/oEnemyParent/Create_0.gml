@@ -104,6 +104,10 @@ die = function() {
     if instance_exists(oCamera) {
         oCamera.shake()
     }
+    /// Stop playing music before the last wave
+    if oWaveSpawner.nextWaveIsLast() {
+        oMusic.switch_music(noone)
+    }
 }
 
 setCoins = function(cmin, cmax) {

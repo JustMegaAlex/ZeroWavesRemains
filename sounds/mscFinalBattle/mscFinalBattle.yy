@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"attlalBmscFine",
+  "%Name":"mscFinalBattle",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -12,7 +12,7 @@
   "conversionMode":0,
   "duration":110.442474,
   "exportDir":"",
-  "name":"attlalBmscFine",
+  "name":"mscFinalBattle",
   "parent":{
     "name":"Audio",
     "path":"folders/Audio.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"attlalBmscFine.mp3",
+  "soundFile":"mscFinalBattle.mp3",
   "volume":1.0,
 }
