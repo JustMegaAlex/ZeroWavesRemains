@@ -1,12 +1,16 @@
 
 EnsureSingleton()
 
-if !DEV and os_type == os_windows {
+if !DEV and array_contains([os_windows, os_macosx], os_type) {
     instance_destroy()
     exit
 }
 
 dry_run = false
+
+is_dev = false
+is_dev_secret_input = 0
+image_alpha = 0
 
 var f = file_text_open_read("metrics_endpoint.txt")
 endpoint = file_text_readln(f)
@@ -50,6 +54,7 @@ collectMetrics = function() {
         player_exists: player_exists,
         waves_remains: global.waves_remains,
         difficulty: global.difficulty,
+        is_dev: is_dev,
     }
     if player_exists {
         var weapons = {}
