@@ -95,8 +95,9 @@ How do I prove that?
 
 0.5.3
 > communicate weapons better
-    > how to switch
     > indicate ammo empty
+        > sfx
+        > shake ammo bar
 > ui
     > coins
     > waves remains
@@ -110,11 +111,6 @@ How do I prove that?
 > change "Shop" to "Hub"
 > discord link
 > feedback form
-> communicate weapons better
-    > how to switch
-    > indicate ammo empty
-        > sfx
-        > shake ammo bar
 > indicate wave start
 > check problem with hold shift -> can't switch weapons
 > pause menu: fill hints section
@@ -163,6 +159,12 @@ How do I prove that?
 > finish gp controls
 > fixes:
     > disable Esc for GX
+
+======== Research ========
+> 3D -> 2D
+> lighting with normal maps
+> blender
+
 
 ======== IDEAS ========
 > endless mode
