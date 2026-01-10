@@ -1,3 +1,8 @@
+
+if !DEV {
+    exit
+}
+
 var status = async_load[? "status"]
 var result = async_load[? "result"]
 var http_status = async_load[? "http_status"]

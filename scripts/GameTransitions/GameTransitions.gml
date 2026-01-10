@@ -11,7 +11,7 @@ function Start() {
 function Pause() {
     global.pause = true
     oMenuButton.openSection(macro_menu_section_pause)
-    layer_set_visible("ui_text_gameplay", false)
+    // layer_set_visible("ui_text_gameplay", false)
     AdjustSliders() // in case we went fullscreen in main menu
     // layer_set_visible("ui_text", global.pause)
 }
@@ -20,7 +20,7 @@ function Unpause() {
     global.pause = false
     oMenuButton.hideAll()
     layer_set_visible("ui_text", false)
-    layer_set_visible("ui_text_gameplay", true)
+    // layer_set_visible("ui_text_gameplay", true)
 }
 
 function Restart() {

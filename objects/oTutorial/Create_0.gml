@@ -314,7 +314,7 @@ startTutorial = function() {
         visible = parent.visible
     }
     step.start()
-    layer_set_visible("ui_text_gameplay", false)
+    // // layer_set_visible("ui_text_gameplay", false)
 }
 finishTutorial = function() {
     // global.tutorial_finished = true
@@ -338,7 +338,7 @@ finishTutorial = function() {
     }
     instance_destroy(oWaveSpawner)
     instance_create_layer(0, 0, "Instances", oWaveSpawner)
-    layer_set_visible("ui_text_gameplay", true)
+    // // layer_set_visible("ui_text_gameplay", true)
     oWaveSpawner.spawn()
 }
 

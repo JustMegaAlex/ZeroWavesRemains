@@ -11,7 +11,7 @@ dry_run = false
 var f = file_text_open_read("metrics_endpoint.txt")
 endpoint = file_text_readln(f)
 
-send_period = 3
+send_period = 10
 
 generateGUID = function() {
     var r = "";
@@ -78,7 +78,7 @@ collectMetrics = function() {
     return {
         user_id: user_id,
         session_id: session_id,
-        datetime: $"{current_year}-{cur_month}-{cur_day} {cur_sec}:{cur_hour}:{cur_minute}",
+        datetime: $"{current_year}-{cur_month}-{cur_day} {cur_hour}:{cur_sec}:{cur_minute}",
         data: metrics
     }
 }

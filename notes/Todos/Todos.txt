@@ -45,6 +45,31 @@
                 - make different enemies stronger against certain tools/playstyles
                 - show enemies compositions for the whole phase beforehand
 
+Playtest
+(Sab)
+> sound/indication for behemoth appear
+> "Press F to open shop" -> also change to "hub"
+> zoom fixed and max by default + zoom in in hub
+> communicate weapons better
+    > how to switch
+    > indicate ammo empty
+> scale ui with screen size
+> tinies waves: gather somewhere far from player ?
+> hold shift -> can't switch weapons
+> indicate wave start
+
+Coin:
+- didn't want to play 3rd time
+- constant stress because waves come and come
+- no progression between two runs -> not motivated to play the 3rd time
+- lack of shot feedback, didn't understand if snipe hit or not
+- kinda hard to get the right upgrade in the tree
+
+
+Ideas:
+> endless mode
+
+
 === Promo ===
 > update video on itch
 > videos:

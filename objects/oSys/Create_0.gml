@@ -22,7 +22,7 @@ layer_set_visible("ui_sliders", false)
 layer_set_visible("ui_general", false)
 
 layer_set_visible("ui_menu", true)
-layer_set_visible("ui_text_gameplay", true)
+// layer_set_visible("ui_text_gameplay", true)
 layer_set_visible("ui_text_end", true)
 
 display_set_gui_maximize()
