@@ -66,14 +66,10 @@ Coin:
 - kinda hard to get the right upgrade in the tree
 
 
-Ideas:
-> endless mode
-
 
 === Promo ===
 > update video on itch
 > videos:
-    > (V) behemoth
     > new upgrade tree
     > new ai
 >(V) upload video on yt
@@ -92,15 +88,34 @@ Ideas:
 > call playtesters
 
 === Milestones ===
-0.5.0 Build: prove that concept "right tools for right cases" works
+0.5.x Build: prove that concept "right tools for right cases" works
 How do I prove that? 
     - balance
     - try completing with pulse only
 
-0.5.2
+0.5.3
+> change "Shop" to "Hub"
+> ammo: change sprites to smth more readable
+> communicate weapons better
+    > how to switch
+    > indicate ammo empty
+> ui
+    > coins
+    > waves remains
+    > scale ui with screen size
+
+> add next wave countdown
+> add settings section
+    > zoom
+    > sound
+> fix zoom by default
 > (watch) snipe: ammo doesn't fill up if snipe is inactive (shop)
 > impl loading screen
 > visuals
+    > improve shot vfx
+        > add small explosions
+        > move bullet into an enemy
+        > try a bit of hit flash on enemies?
     > make varying explosion sizes
     > add engine jets
     > (maybe) add manuvering jets
@@ -110,9 +125,19 @@ How do I prove that?
 > feedback form
 > fix
     > when pressing "Back" in hints you can accidentaly change volume
-> analytics ?
+> communicate weapons better
+    > how to switch
+    > indicate ammo empty
+        > sfx
+        > shake ammo bar
+> upd tiny crown ai: gather somewhere far from player first?
+    - don't overwhelm players from the go
+> check problem with hold shift -> can't switch weapons
+> indicate wave start
 
 === Backlog ===
+> rework waves: impl phases
+    - no time limit between phases
 > improve tinies: increase speed?
 > lose: focus camera on the killer
 > rework scouts: they suck
@@ -138,6 +163,8 @@ How do I prove that?
     > disable Esc for GX
 
 ======== IDEAS ========
+> endless mode
+
 
 === Appeal improvement ideas ===
 > move to 3D + add lighting
