@@ -8,7 +8,7 @@ if !DEV and array_contains([os_windows, os_macosx], os_type) {
 
 dry_run = false
 
-is_dev = false
+is_dev = false or DEV
 is_dev_secret_input = 0
 image_alpha = 0
 
