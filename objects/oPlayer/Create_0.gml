@@ -189,6 +189,7 @@ shop_item = noone
 
 
 function unlockWeapon(weapon) {
+    global.player_bought_weapon = true
     var ind = array_get_index(all_weapons, weapon)
     weapons_array[ind] = weapon
 }
@@ -207,6 +208,7 @@ inputSwitchWeapon = function(slot) {
     }
     weapon = weapons_array[slot]
     weapon_index = slot
+    global.player_hint_switch_weapon_showed = true
 }
 
 inputSwtichWeaponDir = function(switch_weapon_dir) {
@@ -220,6 +222,7 @@ inputSwtichWeaponDir = function(switch_weapon_dir) {
     }
     weapon = weapons_array[new_ind]
     weapon_index = new_ind
+    global.player_hint_switch_weapon_showed = true
 }
 
 playerShoot = function(dir) {

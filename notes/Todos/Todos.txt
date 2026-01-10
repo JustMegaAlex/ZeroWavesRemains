@@ -94,8 +94,6 @@ How do I prove that?
     - try completing with pulse only
 
 0.5.3
-> change "Shop" to "Hub"
-> ammo: change sprites to smth more readable
 > communicate weapons better
     > how to switch
     > indicate ammo empty
@@ -103,14 +101,30 @@ How do I prove that?
     > coins
     > waves remains
     > scale ui with screen size
-
 > add next wave countdown
 > add settings section
     > zoom
     > sound
-> fix zoom by default
-> (watch) snipe: ammo doesn't fill up if snipe is inactive (shop)
-> impl loading screen
+> ammo: change sprites to smth more readable
+> make fixed zoom by default
+> change "Shop" to "Hub"
+> discord link
+> feedback form
+> communicate weapons better
+    > how to switch
+    > indicate ammo empty
+        > sfx
+        > shake ammo bar
+> indicate wave start
+> check problem with hold shift -> can't switch weapons
+> pause menu: fill hints section
+> upd tiny crown ai: gather somewhere far from player first?
+    - don't overwhelm players from the go
+> fix
+    > when pressing "Back" in hints you can accidentaly change volume
+
+0.6.x Build: improve visuals and overall appeal
+0.6.0
 > visuals
     > improve shot vfx
         > add small explosions
@@ -121,19 +135,7 @@ How do I prove that?
     > (maybe) add manuvering jets
     > impl circle area effect
         - particles flying to the center?
-> discord link
-> feedback form
-> fix
-    > when pressing "Back" in hints you can accidentaly change volume
-> communicate weapons better
-    > how to switch
-    > indicate ammo empty
-        > sfx
-        > shake ammo bar
-> upd tiny crown ai: gather somewhere far from player first?
-    - don't overwhelm players from the go
-> check problem with hold shift -> can't switch weapons
-> indicate wave start
+
 
 === Backlog ===
 > rework waves: impl phases

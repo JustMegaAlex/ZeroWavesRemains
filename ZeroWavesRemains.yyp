@@ -45,7 +45,6 @@
     {"link":"io.gamemaker.gmparticlepresets-1.0.0","name":"io.gamemaker.gmparticlepresets-1.0.0","path":"io.gamemaker.gmparticlepresets-1.0.0.yyp",},
   ],
   "IncludedFiles":[
-    {"$GMIncludedFile":"","%Name":"endpoint.txt","CopyToMask":-1,"filePath":"datafiles","name":"endpoint.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"metrics_endpoint.txt","CopyToMask":-1,"filePath":"datafiles","name":"metrics_endpoint.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
@@ -135,6 +134,7 @@
     {"id":{"name":"oUITextShop","path":"objects/oUITextShop/oUITextShop.yy",},},
     {"id":{"name":"oUITextShopCost","path":"objects/oUITextShopCost/oUITextShopCost.yy",},},
     {"id":{"name":"oUITextSpawnWave","path":"objects/oUITextSpawnWave/oUITextSpawnWave.yy",},},
+    {"id":{"name":"oUITextSwtichWeapons","path":"objects/oUITextSwtichWeapons/oUITextSwtichWeapons.yy",},},
     {"id":{"name":"oUIWeaponAmmoBar","path":"objects/oUIWeaponAmmoBar/oUIWeaponAmmoBar.yy",},},
     {"id":{"name":"oUIWeaponSegment","path":"objects/oUIWeaponSegment/oUIWeaponSegment.yy",},},
     {"id":{"name":"oWaveSpawner","path":"objects/oWaveSpawner/oWaveSpawner.yy",},},
