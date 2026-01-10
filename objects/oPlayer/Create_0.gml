@@ -4,7 +4,7 @@ debug_shoot = false
 display_waves = true
 display_money = true
 
-kb_prev_char = ""
+kb_prev_key = ""
 
 money = 0
 
@@ -195,7 +195,7 @@ function unlockWeapon(weapon) {
 }
 
 inputSwitchWeapon = function(slot) {
-    if median(1, 5, slot) != slot {
+    if median(1, 3, slot) != slot {
         show_debug_message($"Wrong weapon slot {slot}")
         return;
     }

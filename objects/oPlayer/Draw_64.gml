@@ -9,7 +9,8 @@
 // draw_set_color(c_white)
 // DebugDrawVar("dir")
 // DebugDrawVar("pull_angle", gp_dir.pull_angle)
-// DebugDrawVar("en dirs", gp_dir.enemy_dirs)
+// DebugDrawVar("last", keyboard_lastkey)
+// DebugDrawVar("key", keyboard_key)
 
 
 SetTextAllign(0, 1)

@@ -30,16 +30,16 @@ if active {
     if int != -1 {
         var test = 1
     }
-    if median(int, 1, 5) == int {
-        int--
-        if int < array_length(all_arr) {
-            var add_weapon = all_arr[int]
-            if array_get_index(arr, add_weapon) == -1 {
-                array_push(arr, add_weapon)
-                show_debug_message($"Debug: added weapon {add_weapon.name}")
-            }
-        }
-    }
+    // if ctrl_hold and median(int, 1, 5) == int {
+    //     int--
+    //     if int < array_length(all_arr) {
+    //         var add_weapon = all_arr[int]
+    //         if array_get_index(arr, add_weapon) == -1 {
+    //             oPlayer.unlockWeapon(all_arr[int])
+    //             show_debug_message($"Debug: added weapon {add_weapon.name}")
+    //         }
+    //     }
+    // }
     if key_pressed(ord("M")) {
         oPlayer.money += 30
     }

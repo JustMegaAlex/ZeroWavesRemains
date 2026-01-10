@@ -49,13 +49,15 @@ var int = -1
 try {
     int = int64(keyboard_lastchar)
 } catch (e) {}
-if kb_prev_char != keyboard_lastchar and median(int, 1, 5) == int {
+// if kb_prev_key != keyboard_lastchar and median(int, 1, 5) == int {
+//     inputSwitchWeapon(int)
+// }
+if keyboard_key and (keyboard_key != kb_prev_key) {
+    // 1 on keyboard -> 48
+    int = keyboard_key - 48
     inputSwitchWeapon(int)
 }
-kb_prev_char = keyboard_lastchar
-//if oInput.Pressed("switch_weapon") {
-    //inputSwitchWeapon()
-//}
+kb_prev_key = keyboard_key
 
 var switch_weapon_dir = oInput.Pressed("switch_weapon_fwd") - oInput.Pressed("switch_weapon_back")
 if switch_weapon_dir != 0 {
