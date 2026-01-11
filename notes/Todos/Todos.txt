@@ -131,6 +131,13 @@ How do I prove that?
     > (maybe) add manuvering jets
     > impl circle area effect
         - particles flying to the center?
+    > rework sprites with blender
+        > player ship
+        > bonk
+        > tiny
+        > scout
+        > behemoth
+        > tech hub
 
 
 === Backlog ===
@@ -161,9 +168,8 @@ How do I prove that?
     > disable Esc for GX
 
 ======== Research ========
-> 3D -> 2D
 > lighting with normal maps
-> blender
+> blender: coloring
 
 
 ======== IDEAS ========
