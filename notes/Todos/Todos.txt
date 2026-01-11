@@ -65,6 +65,8 @@ Coin:
 - lack of shot feedback, didn't understand if snipe hit or not
 - kinda hard to get the right upgrade in the tree
 
+More feedback:
+- scatter sucks: some players don't get how to properly use it and it seems to weak to them
 
 
 === Promo ===
@@ -118,6 +120,8 @@ How do I prove that?
     - don't overwhelm players from the go
 > fix
     > when pressing "Back" in hints you can accidentaly change volume
+    > tutorial: shop arrow didn't disappear
+> permanent arrows for enemies off screeen
 
 0.6.x Build: improve visuals and overall appeal
 0.6.0
@@ -162,8 +166,11 @@ How do I prove that?
 
 ======== Research ========
 > 3D -> 2D
-> lighting with normal maps
-> blender
+    > blender
+        > texturing (or using materials ?)
+        > render to 2D (with composite ?)
+> Lighting
+    > lighting with normal maps in GM
 
 
 ======== IDEAS ========
