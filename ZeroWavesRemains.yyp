@@ -192,6 +192,7 @@
     {"id":{"name":"libSTopDownPlayer","path":"sprites/libSTopDownPlayer/libSTopDownPlayer.yy",},},
     {"id":{"name":"sAimCursor","path":"sprites/sAimCursor/sAimCursor.yy",},},
     {"id":{"name":"sBGGrid","path":"sprites/sBGGrid/sBGGrid.yy",},},
+    {"id":{"name":"sBomber","path":"sprites/sBomber/sBomber.yy",},},
     {"id":{"name":"sBulletScatter","path":"sprites/sBulletScatter/sBulletScatter.yy",},},
     {"id":{"name":"sButton","path":"sprites/sButton/sButton.yy",},},
     {"id":{"name":"sCoin","path":"sprites/sCoin/sCoin.yy",},},
