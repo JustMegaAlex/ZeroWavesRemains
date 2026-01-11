@@ -38,8 +38,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sPlayer",
-    "path":"sprites/sPlayer/sPlayer.yy",
+    "name":"sBomber",
+    "path":"sprites/sBomber/sBomber.yy",
   },
   "spriteMaskId":null,
   "visible":true,

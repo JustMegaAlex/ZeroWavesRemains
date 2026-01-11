@@ -51,7 +51,7 @@ try {
 } catch (e) {}
 // if kb_prev_key != keyboard_lastchar and median(int, 1, 5) == int {
 //     inputSwitchWeapon(int)
-// }
+// }   
 if keyboard_key and (keyboard_key != kb_prev_key) {
     // 1 on keyboard -> 48
     int = keyboard_key - 48
