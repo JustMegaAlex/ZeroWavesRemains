@@ -3,13 +3,21 @@
 -- 2025.01.10
     - 0.5.0 Build ready, publish and start testing + promo
 
--- 2025.01.24
-    - Finish active feature development
+-- 2025.01.10
     - Start working on appeal
+    - Keep fixing bugs and making small improvements
 
+-- 2025.01.24
+    - Plan next set of features and start working
 
 -- 2025.02.15
     Evaluate the project and make a decision for further development
+
+
+=== 3D -> 2D process limits ===
+- Modelling a ship - 30 minutes max (40 for behemoth)
+- Coloring - 20 minutes
+- Render -> import in GM
 
 
 === Feedback ===
@@ -135,6 +143,13 @@ How do I prove that?
     > (maybe) add manuvering jets
     > impl circle area effect
         - particles flying to the center?
+    > rework sprites with blender
+        > player ship
+        > bonk
+        > tiny
+        > scout
+        > behemoth
+        > tech hub
 
 
 === Backlog ===
@@ -165,12 +180,10 @@ How do I prove that?
     > disable Esc for GX
 
 ======== Research ========
-> 3D -> 2D
-    > blender
-        > texturing (or using materials ?)
-        > render to 2D (with composite ?)
 > Lighting
     > lighting with normal maps in GM
+> lighting with normal maps
+> blender: coloring with UV ? (that 10 min challenge video)
 
 
 ======== IDEAS ========
