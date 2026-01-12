@@ -1,6 +1,7 @@
 builds/*
 datafiles/*
-cost.json
+*.json
+__pycache__
 
 # Windows thumbnail cache files
 Thumbs.db

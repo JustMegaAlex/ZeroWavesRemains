@@ -3,13 +3,21 @@
 -- 2025.01.10
     - 0.5.0 Build ready, publish and start testing + promo
 
--- 2025.01.24
-    - Finish active feature development
+-- 2025.01.10
     - Start working on appeal
+    - Keep fixing bugs and making small improvements
 
+-- 2025.01.24
+    - Plan next set of features and start working
 
 -- 2025.02.15
     Evaluate the project and make a decision for further development
+
+
+=== 3D -> 2D process limits ===
+- Modelling a ship - 30 minutes max (40 for behemoth)
+- Coloring - 20 minutes
+- Render -> import in GM
 
 
 === Feedback ===
@@ -65,6 +73,8 @@ Coin:
 - lack of shot feedback, didn't understand if snipe hit or not
 - kinda hard to get the right upgrade in the tree
 
+More feedback:
+- scatter sucks: some players don't get how to properly use it and it seems to weak to them
 
 
 === Promo ===
@@ -118,6 +128,8 @@ How do I prove that?
     - don't overwhelm players from the go
 > fix
     > when pressing "Back" in hints you can accidentaly change volume
+    > tutorial: shop arrow didn't disappear
+> permanent arrows for enemies off screeen
 
 0.6.x Build: improve visuals and overall appeal
 0.6.0
@@ -168,8 +180,10 @@ How do I prove that?
     > disable Esc for GX
 
 ======== Research ========
+> Lighting
+    > lighting with normal maps in GM
 > lighting with normal maps
-> blender: coloring
+> blender: coloring with UV ? (that 10 min challenge video)
 
 
 ======== IDEAS ========
