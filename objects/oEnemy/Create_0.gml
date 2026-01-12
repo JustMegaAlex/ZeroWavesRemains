@@ -5,6 +5,8 @@ macro_pause
 battle_side = battle_side_enemy
 move_around_player_dist = 1000
 
+image_blend = c_white
+
 
 weapon = {
     dmg: 5,
