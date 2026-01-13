@@ -12,8 +12,15 @@ var playerLightSize = oGameArea
 
 NMamb = make_colour_rgb(AMBIANCE_R,AMBIANCE_G,AMBIANCE_B)//Set ambiance color
 
-// upd lights array
 numLights = 1
+NM_set_light(numLights++, 
+        // oPlayer.x, oPlayer.y,
+        //mouse_x, mouse_y,
+        0, 0,
+        oGameArea.radius, 
+                 make_colour_rgb(playerLightColors[0],playerLightColors[1],playerLightColors[2]))
+
+// upd lights array
 if instance_exists(oPlayer) {
     // NM_set_light(other.numLights++, 
     //     // oPlayer.x, oPlayer.y,
@@ -69,8 +76,8 @@ shader_set_uniform_f_array(ulights,NMlights)
 shader_set_uniform_f_array(ucolor,NMcolor)
 shader_set_uniform_f(uamb,colour_get_red(NMamb)/255,colour_get_green(NMamb)/255,colour_get_blue(NMamb)/255)
 shader_set_uniform_i(uNumEnabled, min(numLights,8))
-draw_surface(surf_diff, CamX(), CamY())
-// draw_surface_stretched(surf_diff, CamX(), CamY(), CamW(), CamH())
+// draw_surface(surf_diff, CamX(), CamY())
+draw_surface_stretched(surf_diff, CamX(), CamY(), CamW(), CamH())
 
 shader_reset()
 
