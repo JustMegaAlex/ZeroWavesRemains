@@ -1,0 +1,1 @@
+/// Drawing is handled by lighting system

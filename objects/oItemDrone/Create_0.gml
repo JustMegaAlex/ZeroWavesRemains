@@ -1,5 +1,7 @@
 event_inherited()
 
+sprite_index_norm = sDroneNM
+
 hp = 120
 
 move_around_player_dist = 400
@@ -8,10 +10,12 @@ sp = new Vec2(0, 0)
 acc_max = 0.37
 updateDampening()
 
-var angle = random(360)
-var dist = oGameArea.radius * 1.1
-x = lengthdir_x(dist, angle)
-y = lengthdir_y(dist, angle)
+if active {
+    var angle = random(360)
+    var dist = oGameArea.radius * 1.1
+    x = lengthdir_x(dist, angle)
+    y = lengthdir_y(dist, angle)
+}
 
 loot_amount_randomer = irandomer(18, 23)
 loot_multiplier = 1

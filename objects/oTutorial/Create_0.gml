@@ -348,7 +348,7 @@ alarm[0] = 1
 global.tutorial = true
 
 if DEV {
-    step_index = 12
+    step_index = 0 // 12 // drone
     step = steps[step_index]
 }
 

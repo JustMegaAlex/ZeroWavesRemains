@@ -2,6 +2,8 @@ event_inherited()
 
 macro_pause
 
+sprite_index_norm = sScoutNM
+
 battle_side = battle_side_enemy
 move_around_player_dist = 2800
 
