@@ -2,6 +2,11 @@
 draw_set_alpha(1)
 draw_set_color(c_white)
 
+makeSureExistsAndSize(surf_diff)
+makeSureExistsAndSize(surf_norm)
+
+var scale = window_get_width() / CamW()
+
 //set lights
 var playerLightSize = oGameArea
 
@@ -18,20 +23,23 @@ if instance_exists(oPlayer) {
 }
 
 
-makeSureExistsAndSize(surf_diff)
 surface_set_target(surf_diff)
 draw_clear_alpha(0,0)
 renderPass = RP_DIFFUSE
 
 
 with oEnemy {
-    draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha)
+    draw_sprite_ext(
+        sprite_index, image_index,
+        (x - CamX()) * scale,
+        (y - CamY()) * scale,
+        scale, scale,
+        image_angle, image_blend, image_alpha)
 }
 
 
 surface_reset_target()
 
-makeSureExistsAndSize(surf_diff)
 shader_set(shdRotate)
 var angle = 0
 surface_set_target(surf_norm)
@@ -41,7 +49,12 @@ renderPass = RP_NORMAL
 
 with oEnemy {
     shader_set_uniform_f(other.uangle, -image_angle)
-    draw_sprite_ext(sprite_index_norm, image_index, x, y, image_xscale, image_yscale, image_angle, c_white, 1)
+    draw_sprite_ext(
+        sprite_index_norm, image_index,
+        (x - CamX()) * scale,
+        (y - CamY()) * scale,
+        scale, scale,
+        image_angle, c_white, 1)
 }
 
 surface_reset_target()
@@ -56,7 +69,8 @@ shader_set_uniform_f_array(ulights,NMlights)
 shader_set_uniform_f_array(ucolor,NMcolor)
 shader_set_uniform_f(uamb,colour_get_red(NMamb)/255,colour_get_green(NMamb)/255,colour_get_blue(NMamb)/255)
 shader_set_uniform_i(uNumEnabled, min(numLights,8))
-draw_surface(surf_diff,0, 0)
+draw_surface(surf_diff, CamX(), CamY())
+// draw_surface_stretched(surf_diff, CamX(), CamY(), CamW(), CamH())
 
 shader_reset()
 
