@@ -182,8 +182,12 @@ How do I prove that?
 ======== Research ========
 > Lighting
     > lighting with normal maps in GM
-> lighting with normal maps
+        > rotation
+        > import normals and sprites from blender
+        > set up lighting in this project
+    > specular maps?
 > blender: coloring with UV ? (that 10 min challenge video)
+> blender: rendering with no lights/shadows
 
 
 ======== IDEAS ========
