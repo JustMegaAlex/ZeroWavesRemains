@@ -1,0 +1,74 @@
+/// @description Diffuse
+draw_set_alpha(1);
+draw_set_color(c_white);
+
+//set lights
+var playerLightSize = 700;
+
+NMamb = make_colour_rgb(AMBIANCE_R,AMBIANCE_G,AMBIANCE_B)//Set ambiance color
+
+// upd lights array
+numLights = 1;
+if instance_exists(oPlayer) {
+    NM_set_light(other.numLights++, 
+        // oPlayer.x, oPlayer.y,
+        mouse_x, mouse_y,
+        playerLightSize, 
+                 make_colour_rgb(playerLightColors[0],playerLightColors[1],playerLightColors[2]));
+}
+
+
+
+if (!surface_exists(NMdif))
+{
+    NMdif = surface_create(room_width, room_height);
+}
+surface_set_target(NMdif)
+draw_clear_alpha(0,0);
+renderPass = RP_DIFFUSE;
+
+
+with oEnemy {
+    draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+}
+
+
+
+/// @desc Normal
+surface_reset_target()
+
+// NM_normal(1,0);
+if (!surface_exists(NMnorm))
+{
+    NMnorm = surface_create(room_width, room_height);
+}
+shader_set(shdRotate)
+var angle = 0
+surface_set_target(NMnorm)
+draw_clear_alpha(0,0);
+renderPass = RP_NORMAL;
+
+
+
+with oEnemy {
+    shader_set_uniform_f(other.uangle, -image_angle)
+    draw_sprite_ext(sprite_index_norm, image_index, x, y, image_xscale, image_yscale, image_angle, c_white, 1);
+}
+
+surface_reset_target()
+
+//NM_draw(0, 0);
+
+
+//draw_clear_alpha(0,0);
+shader_set(shdNormal)
+texture_set_stage(unorm,surface_get_texture(NMnorm))
+shader_set_uniform_f_array(ulights,NMlights)
+shader_set_uniform_f_array(ucolor,NMcolor)
+shader_set_uniform_f(uamb,colour_get_red(NMamb)/255,colour_get_green(NMamb)/255,colour_get_blue(NMamb)/255)
+shader_set_uniform_i(uNumEnabled, min(numLights,8));
+draw_surface(NMdif,0, 0)
+
+shader_reset()
+
+draw_circle(mouse_x, mouse_y, playerLightSize, true)
