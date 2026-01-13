@@ -1,9 +1,9 @@
-if (surface_exists(NMdif))
+if (surface_exists(surf_diff))
 {
-	surface_free(NMdif);
+	surface_free(surf_diff);
 }
-if (surface_exists(NMnorm))
+if (surface_exists(surf_norm))
 {
-	surface_free(NMnorm);
+	surface_free(surf_norm);
 }
 
