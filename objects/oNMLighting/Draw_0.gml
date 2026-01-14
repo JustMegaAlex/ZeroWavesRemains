@@ -35,7 +35,7 @@ draw_clear_alpha(0,0)
 renderPass = RP_DIFFUSE
 
 
-with oEnemyParent {
+with oEntity {
     draw_sprite_ext(
         sprite_index, image_index,
         (x - CamX()) * scale,
@@ -54,12 +54,14 @@ draw_clear_alpha(0,0)
 renderPass = RP_NORMAL
 
 
-with oEnemyParent {
+with oEntity {
     if sprite_index_norm == noone {
         continue
     }
-    dir += 1
-    image_angle += 1
+    if object_index != oPlayer {
+        dir += 1
+        image_angle += 1
+    }
     shader_set_uniform_f(other.uangle, -image_angle)
     draw_sprite_ext(
         sprite_index_norm, image_index,

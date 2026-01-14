@@ -37,8 +37,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sEnemyBasic",
-    "path":"sprites/sEnemyBasic/sEnemyBasic.yy",
+    "name":"sEnemyTiny",
+    "path":"sprites/sEnemyTiny/sEnemyTiny.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,7 +1,5 @@
 event_inherited()
 
-sprite_index_norm = sDroneNM
-
 hp = 120
 
 move_around_player_dist = 400

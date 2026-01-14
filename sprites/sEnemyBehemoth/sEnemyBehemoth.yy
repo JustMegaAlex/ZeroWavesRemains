@@ -3,8 +3,8 @@
   "%Name":"sEnemyBehemoth",
   "bboxMode":0,
   "bbox_bottom":357,
-  "bbox_left":62,
-  "bbox_right":436,
+  "bbox_left":0,
+  "bbox_right":374,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -13,6 +13,8 @@
   "For3D":false,
   "frames":[
     {"$GMSpriteFrame":"v1","%Name":"2b70ff61-8a6e-46a0-88db-65106a3e45e3","name":"2b70ff61-8a6e-46a0-88db-65106a3e45e3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"27498677-ce16-48f0-90c6-b78a906947ba","name":"27498677-ce16-48f0-90c6-b78a906947ba","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a2a744cb-587e-4da7-bc89-d479fd6d3c5f","name":"a2a744cb-587e-4da7-bc89-d479fd6d3c5f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -51,7 +53,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":1.0,
+    "length":3.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -73,11 +75,17 @@
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2b70ff61-8a6e-46a0-88db-65106a3e45e3","path":"sprites/sEnemyBehemoth/sEnemyBehemoth.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"0ecbca41-3b8a-46b8-b2a5-f5460ca2ce0f","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"27498677-ce16-48f0-90c6-b78a906947ba","path":"sprites/sEnemyBehemoth/sEnemyBehemoth.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"cce719fa-c81a-41e1-9a4a-0048f9fb312d","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a2a744cb-587e-4da7-bc89-d479fd6d3c5f","path":"sprites/sEnemyBehemoth/sEnemyBehemoth.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"568cd8df-eb2e-4430-b696-fcf67ab6d069","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":207,
+    "xorigin":145,
     "yorigin":180,
   },
   "swatchColours":null,
@@ -88,5 +96,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":500,
+  "width":375,
 }

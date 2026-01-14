@@ -1,4 +1,6 @@
 
+image_speed = 0
+
 invincible = false
 deny_killing_shot = false
 
@@ -122,3 +124,13 @@ catchBullet = function() {
 alarm[0] = 1
 
 SetColor()
+
+
+if sprite_index_norm == noone {
+    var name = sprite_get_name(sprite_index) + "NM"
+    var spr = asset_get_index(name)
+    if spr {
+        sprite_index_norm = spr
+    }
+}
+

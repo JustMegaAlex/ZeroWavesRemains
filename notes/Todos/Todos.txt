@@ -103,6 +103,13 @@ How do I prove that?
     - balance
     - try completing with pulse only
 
+NM lighting
+> redraw bonk sprite
+> remodel bonk + NM
+> redraw tech hub
+> model tech hub
+> model player
+
 0.5.3
 > communicate weapons better
     > indicate ammo empty
@@ -181,9 +188,6 @@ How do I prove that?
 
 ======== Research ========
 > Lighting
-    > lighting with normal maps in GM
-        > try white models + blend
-
     > specular maps?
 > blender: coloring with UV ? (that 10 min challenge video)
 > blender: rendering with no lights/shadows

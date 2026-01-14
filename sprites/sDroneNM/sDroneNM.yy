@@ -85,6 +85,9 @@
   },
   "swatchColours":null,
   "swfPrecision":0.5,
+  "tags":[
+    "used",
+  ],
   "textureGroupId":{
     "name":"Default",
     "path":"texturegroups/Default",

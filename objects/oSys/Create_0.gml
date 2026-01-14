@@ -1,3 +1,4 @@
+gml_pragma("MarkTagAsUsed", "used")
 
 EnsureSingleton()
 

@@ -5,8 +5,6 @@ macro_pause
 battle_side = battle_side_enemy
 move_around_player_dist = 1000
 
-sprite_index_norm = noone
-
 
 weapon = {
     dmg: 5,

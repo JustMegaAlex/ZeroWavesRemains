@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sScout",
-    "path":"sprites/sScout/sScout.yy",
+    "name":"sEnemyScout",
+    "path":"sprites/sEnemyScout/sEnemyScout.yy",
   },
   "spriteMaskId":null,
   "visible":true,
