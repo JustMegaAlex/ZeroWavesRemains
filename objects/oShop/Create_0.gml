@@ -14,3 +14,14 @@ highlight = false
 open = function() {
     is_open = true
 }
+
+
+
+drawSegment = function(angle) {
+    draw_sprite_ext(
+        sprite_index, 0,
+        size*lengthdir_x(1, angle+90),
+        size*lengthdir_y(1, angle+90),
+        image_xscale,
+        image_yscale, angle, image_blend, 1)
+}

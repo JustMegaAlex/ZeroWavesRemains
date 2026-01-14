@@ -51,6 +51,11 @@ with oEnemyBehemothGun {
         scale, scale,
         image_angle, image_blend, image_alpha)
 }
+with oShop {
+    repeat 4 {
+        
+    }
+}
 
 surface_reset_target()
 

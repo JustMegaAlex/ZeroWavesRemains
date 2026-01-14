@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sShopSegment",
-    "path":"sprites/sShopSegment/sShopSegment.yy",
+    "name":"sTechHub",
+    "path":"sprites/sTechHub/sTechHub.yy",
   },
   "spriteMaskId":null,
   "visible":true,
