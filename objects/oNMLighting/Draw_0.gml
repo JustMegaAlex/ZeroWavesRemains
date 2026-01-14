@@ -43,7 +43,14 @@ with oEntity {
         scale, scale,
         image_angle, image_blend, image_alpha)
 }
-
+with oEnemyBehemothGun {
+    draw_sprite_ext(
+        sprite_index, image_index,
+        (x - CamX()) * scale,
+        (y - CamY()) * scale,
+        scale, scale,
+        image_angle, image_blend, image_alpha)
+}
 
 surface_reset_target()
 
@@ -61,6 +68,18 @@ with oEntity {
     if object_index != oPlayer {
         dir += 1
         image_angle += 1
+    }
+    shader_set_uniform_f(other.uangle, -image_angle)
+    draw_sprite_ext(
+        sprite_index_norm, image_index,
+        (x - CamX()) * scale,
+        (y - CamY()) * scale,
+        scale, scale,
+        image_angle, c_white, 1)
+}
+with oEnemyBehemothGun {
+    if sprite_index_norm == noone {
+        continue
     }
     shader_set_uniform_f(other.uangle, -image_angle)
     draw_sprite_ext(

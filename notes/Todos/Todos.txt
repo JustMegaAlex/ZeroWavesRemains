@@ -104,11 +104,9 @@ How do I prove that?
     - try completing with pulse only
 
 NM lighting
-> redraw bonk sprite
-> remodel bonk + NM
-> redraw tech hub
-> model tech hub
-> model player
+> behemoth gun NM
+> tech hub NM ( + player light source ?)
+> light bursts from shots
 
 0.5.3
 > communicate weapons better
@@ -195,6 +193,8 @@ NM lighting
 
 ======== IDEAS ========
 > endless mode
+> draw players' shadow on objects
+    - can simply repeat draw "zero" NM of the ship, move it according to the light source so it feels being cast
 
 
 === Appeal improvement ideas ===

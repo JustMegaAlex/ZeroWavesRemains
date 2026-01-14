@@ -207,6 +207,7 @@
     {"id":{"name":"sDroneNM","path":"sprites/sDroneNM/sDroneNM.yy",},},
     {"id":{"name":"sEnemyBehemoth","path":"sprites/sEnemyBehemoth/sEnemyBehemoth.yy",},},
     {"id":{"name":"sEnemyBehemothGun","path":"sprites/sEnemyBehemothGun/sEnemyBehemothGun.yy",},},
+    {"id":{"name":"sEnemyBehemothGunNM","path":"sprites/sEnemyBehemothGunNM/sEnemyBehemothGunNM.yy",},},
     {"id":{"name":"sEnemyBehemothNM","path":"sprites/sEnemyBehemothNM/sEnemyBehemothNM.yy",},},
     {"id":{"name":"sEnemyBehemothTurret","path":"sprites/sEnemyBehemothTurret/sEnemyBehemothTurret.yy",},},
     {"id":{"name":"sEnemyBonk","path":"sprites/sEnemyBonk/sEnemyBonk.yy",},},

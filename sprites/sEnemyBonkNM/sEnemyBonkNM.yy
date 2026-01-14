@@ -3,8 +3,8 @@
   "%Name":"sEnemyBonkNM",
   "bboxMode":0,
   "bbox_bottom":170,
-  "bbox_left":0,
-  "bbox_right":170,
+  "bbox_left":26,
+  "bbox_right":143,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -19,6 +19,7 @@
   "height":171,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"56aebb2a-89ca-4eb2-bee4-9a6ded8a96b3","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"56aebb2a-89ca-4eb2-bee4-9a6ded8a96b3","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
     {"$GMImageLayer":"","%Name":"4a431166-5900-472a-ae74-fe0b5c4e75c6","blendMode":0,"displayName":"default","isLocked":false,"name":"4a431166-5900-472a-ae74-fe0b5c4e75c6","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"sEnemyBonkNM",

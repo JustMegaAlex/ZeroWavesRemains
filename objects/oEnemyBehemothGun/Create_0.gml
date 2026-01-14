@@ -1,6 +1,8 @@
 
 // shoot_args - passed as args
 
+sprite_index_norm = sEnemyBehemothGunNM
+
 shoot = function() {
     main_weapon.shoot(image_angle)
 }
