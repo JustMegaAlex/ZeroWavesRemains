@@ -8,7 +8,7 @@
 global.renderPass = RP_DIFFUSE
 #macro AMBIANCE_R 160
 #macro AMBIANCE_G 160
-#macro AMBIANCE_B 144 * 1.75
+#macro AMBIANCE_B 160
 global.playerLightColors[0] = 255
 global.playerLightColors[1] = 255
 global.playerLightColors[2] = 255
@@ -58,12 +58,8 @@ uamb = shader_get_uniform(shdNormal,"ambiance")
 ulights = shader_get_uniform(shdNormal,"lights")
 ucolor = shader_get_uniform(shdNormal,"lcolor")
 uNumEnabled = shader_get_uniform(shdNormal,"numEnabled")
+ulight_z = shader_get_uniform(shdNormal,"light_z")
 uangle = shader_get_uniform(shdRotate,"angle")
-
-
-playerLightColors[0] = 1
-playerLightColors[1] = 255
-playerLightColors[2] = 255
 
 
 NMamb = make_colour_rgb(AMBIANCE_R,AMBIANCE_G,AMBIANCE_B) //Set ambiance color
@@ -71,11 +67,7 @@ NMamb = make_colour_rgb(AMBIANCE_R,AMBIANCE_G,AMBIANCE_B) //Set ambiance color
 numLights = 1
 dynamicLights = ds_list_create()
 
-NM_set_light(numLights++, 
-        // oPlayer.x, oPlayer.y,
-        //mouse_x, mouse_y,
-        0, 0,
-        oGameArea.radius, 
-                 make_colour_rgb(playerLightColors[0],playerLightColors[1],playerLightColors[2]))
-
-
+ambience = {
+    r: 200, g: 200, b: 200
+}
+light_z = -400

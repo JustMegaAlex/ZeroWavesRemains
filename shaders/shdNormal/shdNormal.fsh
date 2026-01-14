@@ -11,6 +11,7 @@ uniform float lights[LN*3];//x,y,range
 uniform float lcolor[LN*3];//r,g,b
 uniform vec3 ambiance;//r,g,b
 uniform int numEnabled;
+uniform float light_z;
 
 void main()
 {
@@ -21,7 +22,7 @@ void main()
 	int i = 0;
 	for(i=0; i < numEnabled; i++)
 	{
-		vec3 lightPos = vec3(lights[i*3], lights[i*3+1], -30.0);
+		vec3 lightPos = vec3(lights[i*3], lights[i*3+1], light_z);
 		float range = lights[i*3+2];
 		// smooth attenuation
 		float attenuation = max(1.0-length(vec2(v_vPosition)-lightPos.xy)/range,0.0);

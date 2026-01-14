@@ -18,7 +18,7 @@ NM_set_light(numLights++,
         //mouse_x, mouse_y,
         0, 0,
         oGameArea.radius, 
-                 make_colour_rgb(playerLightColors[0],playerLightColors[1],playerLightColors[2]))
+        make_colour_rgb(ambience.r, ambience.g, ambience.b))
 
 // upd lights array
 if instance_exists(oPlayer) {
@@ -65,7 +65,7 @@ with oEntity {
     if sprite_index_norm == noone {
         continue
     }
-    if object_index != oPlayer {
+    if !active and object_index != oPlayer {
         dir += 1
         image_angle += 1
     }
@@ -102,6 +102,7 @@ shader_set_uniform_f_array(ulights,NMlights)
 shader_set_uniform_f_array(ucolor,NMcolor)
 shader_set_uniform_f(uamb,colour_get_red(NMamb)/255,colour_get_green(NMamb)/255,colour_get_blue(NMamb)/255)
 shader_set_uniform_i(uNumEnabled, min(numLights,8))
+shader_set_uniform_f(ulight_z, light_z)
 // draw_surface(surf_diff, CamX(), CamY())
 draw_surface_stretched(surf_diff, CamX(), CamY(), CamW(), CamH())
 
