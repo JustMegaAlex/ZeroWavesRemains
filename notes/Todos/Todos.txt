@@ -103,10 +103,11 @@ How do I prove that?
     - balance
     - try completing with pulse only
 
-NM lighting
+Visuals rework
 > behemoth gun NM
 > tech hub NM ( + player light source ?)
 > light bursts from shots
+> find space backgrounds
 
 0.5.3
 > communicate weapons better
