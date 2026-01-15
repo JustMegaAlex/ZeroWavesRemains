@@ -15,13 +15,21 @@ open = function() {
     is_open = true
 }
 
+sprite_index_norm = sTechHubNM
 
-
-drawSegment = function(angle) {
+drawSegment = function(angle, dx, dy, scale) {
     draw_sprite_ext(
         sprite_index, 0,
-        size*lengthdir_x(1, angle+90),
-        size*lengthdir_y(1, angle+90),
-        image_xscale,
-        image_yscale, angle, image_blend, 1)
+        (size*lengthdir_x(1, angle+90) + dx) * scale,
+        (size*lengthdir_y(1, angle+90) + dy) * scale,
+        scale, scale,
+        angle, image_blend, 1)
+}
+drawSegmentNM = function(angle, dx, dy, scale) {
+    draw_sprite_ext(
+        sprite_index_norm, 0,
+        (size*lengthdir_x(1, angle+90) + dx) * scale,
+        (size*lengthdir_y(1, angle+90) + dy) * scale,
+        scale, scale,
+        angle, c_white, 1)
 }

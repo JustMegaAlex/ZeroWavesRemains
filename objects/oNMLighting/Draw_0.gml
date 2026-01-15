@@ -52,8 +52,10 @@ with oEnemyBehemothGun {
         image_angle, image_blend, image_alpha)
 }
 with oShop {
+    var angle = 0
     repeat 4 {
-        
+        drawSegment(angle, -CamX(), -CamY(), scale)
+        angle += 90
     }
 }
 
@@ -93,6 +95,14 @@ with oEnemyBehemothGun {
         (y - CamY()) * scale,
         scale, scale,
         image_angle, c_white, 1)
+}
+with oShop {
+    var angle = 0
+    repeat 4 {
+        shader_set_uniform_f(other.uangle, -angle)
+        drawSegmentNM(angle, -CamX(), -CamY(), scale)
+        angle += 90
+    }
 }
 
 surface_reset_target()
