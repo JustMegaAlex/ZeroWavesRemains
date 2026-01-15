@@ -19,10 +19,10 @@ NM_set_light(numLights++,
              make_colour_rgb(ambience.r, ambience.g, ambience.b))
 
 
-draw_line(
-    light_pos.x, light_pos.y,
-    light_pos.x * 0.1, light_pos.y * 0.1
-)
+// draw_line(
+//     light_pos.x, light_pos.y,
+//     light_pos.x * 0.1, light_pos.y * 0.1
+// )
 light_pos.rotate(light_angular_sp)
 
 
@@ -77,10 +77,6 @@ renderPass = RP_NORMAL
 with oEntity {
     if sprite_index_norm == noone {
         continue
-    }
-    if !active and object_index != oPlayer {
-        dir += 1
-        image_angle += 1
     }
     shader_set_uniform_f(other.uangle, -image_angle)
     draw_sprite_ext(

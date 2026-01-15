@@ -18,3 +18,5 @@ if active {
 
 move()
 catchBullet()
+
+event_inherited()
