@@ -10,15 +10,21 @@ var scale = window_get_width() / CamW()
 //set lights
 var playerLightSize = oGameArea
 
-NMamb = make_colour_rgb(AMBIANCE_R,AMBIANCE_G,AMBIANCE_B)//Set ambiance color
+NMamb = make_colour_rgb(AMBIANCE_R,AMBIANCE_G,AMBIANCE_B) // Set ambiance color
 
 numLights = 1
 NM_set_light(numLights++, 
-        // oPlayer.x, oPlayer.y,
-        //mouse_x, mouse_y,
-        0, 0,
-        oGameArea.radius, 
-        make_colour_rgb(ambience.r, ambience.g, ambience.b))
+             light_pos.x, light_pos.y,
+             light_radius, 
+             make_colour_rgb(ambience.r, ambience.g, ambience.b))
+
+
+draw_line(
+    light_pos.x, light_pos.y,
+    light_pos.x * 0.1, light_pos.y * 0.1
+)
+light_pos.rotate(light_angular_sp)
+
 
 // upd lights array
 if instance_exists(oPlayer) {

@@ -71,3 +71,7 @@ ambience = {
     r: 200, g: 200, b: 200
 }
 light_z = -400
+light_pos = new Vec2(oGameArea.radius*1.5, random(360), true)
+var light_rotation_time = 60 * 60
+light_angular_sp = 360 / light_rotation_time
+light_radius = oGameArea.radius * 3
