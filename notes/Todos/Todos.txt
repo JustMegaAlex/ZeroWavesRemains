@@ -104,10 +104,16 @@ How do I prove that?
     - try completing with pulse only
 
 Visuals rework
-> behemoth gun NM
-> tech hub NM ( + player light source ?)
 > light bursts from shots
-> find space backgrounds
+    - easy and cheap: simply use the existing limit for lights and see how it goes
+    - if a light created in radius of another light, merge them
+
+    - every light affects only entities in radius -> only for them pass to shader
+    - oLightManager: limit per-step number light created to lower number of collision checks
+    - scatter: keep single light in the middle of shots?
+> choose space background
+> rework color pallete
+
 
 0.5.3
 > communicate weapons better

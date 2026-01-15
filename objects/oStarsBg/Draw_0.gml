@@ -1,6 +1,20 @@
 var scale_change = (oCamera.zoom - 1) * scale_parallax
 var move_due_to_scale = (scale_change) * 0.5
+//
+//var scale = 4 * oCamera.zoom
+//draw_sprite_ext(
+    //Green_Nebula_02_1024x1024, 0,
+    //CamX() * 0.9, CamY() * 0.9,
+    //scale, scale, 0, c_white, 1
+//)
 
+layer_x("Backgrounds_1", CamX() * 0.9)
+layer_y("Backgrounds_1", CamY() * 0.9)
+var layid = layer_get_id("Backgrounds_1")
+layer_background_xscale(layid, oCamera.zoom)
+layer_background_yscale(layid, oCamera.zoom)
+
+exit
 //draw
 for (var i = 0; i < array_length(surfaces); ++i) {
     var parallax = parallaxes[i]
