@@ -69,3 +69,7 @@ CameraSetPos(
     x + shaking.vec.x * max(1, zoom) + relx*0,
     y + shaking.vec.y * max(1, zoom) + rely*0
 )
+
+with oStarsBg {
+    updateBackground()
+}

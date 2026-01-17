@@ -1,6 +1,7 @@
 
 parallaxes = [1, 1, 1]
 parallaxes = [0.9, 0.89, 0.88]
+parallaxes = [0.97, 0.95, 0.94]
 surfaces = []
 surf_count = arrlen(parallaxes)
 //// background
@@ -18,7 +19,7 @@ function createSurfaces() {
     ArrayClear(surfaces)
     var stars_num = 300
     var stars_alpha = 0.65
-    var space_bg_filled = false
+    var space_bg_filled = true
     repeat surf_count {
         var surf_stars = surface_create(surf_w, surf_h)
         array_push(surfaces, surf_stars)
@@ -41,6 +42,20 @@ function createSurfaces() {
     }
 }
 
+_updateBackground = function(name) {
+    layer_x(name, CamX() * 0.9)
+    layer_y(name, CamY() * 0.9)
+    var layid = layer_background_get_id(layer_get_id(name))
+    var bgzoom = oCamera.zoom / 2
+    layer_background_xscale(layid, bgzoom)
+    layer_background_yscale(layid, bgzoom)
+}
+
+updateBackground = function() {
+    _updateBackground("Backgrounds_1")
+    _updateBackground("Backgrounds_2")
+    _updateBackground("Backgrounds_3")
+}
 // for surface drawing
 x_ship_st = 0	// ship's starting location
 y_ship_st = 0

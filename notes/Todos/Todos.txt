@@ -79,23 +79,10 @@ More feedback:
 
 === Promo ===
 > update video on itch
-> videos:
-    > new upgrade tree
-    > new ai
->(V) upload video on yt
->(V) share in dc
-> share on X and BS
-> write an update devlog
-> invite testers
-    > pipiper
-> dc server
-> short videos
-    > single video covering all new features
-    > swarm behavior
-    > behemoth
-    > circling
-    > shop tree
-> call playtesters
+> yt
+    > finish and upload a short
+    > change acc picture
+> next promo: overall visuals rehaul
 
 === Milestones ===
 0.5.x Build: prove that concept "right tools for right cases" works
@@ -142,6 +129,7 @@ Visuals rework
     > when pressing "Back" in hints you can accidentaly change volume
     > tutorial: shop arrow didn't disappear
 > permanent arrows for enemies off screeen
+
 
 0.6.x Build: improve visuals and overall appeal
 0.6.0
