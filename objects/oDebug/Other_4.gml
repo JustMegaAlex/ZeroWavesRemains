@@ -10,6 +10,17 @@ DebugViewAddRefs([oNMLighting, "ambience"], [
     ["g", dbg_slider, 0, 255],
     ["b", dbg_slider, 0, 255],
 ])
+
+
+DebugViewAddRefs([oUICoins, "anim"], [
+    ["start_sp", dbg_slider, 0, 5],
+    ["dissip", dbg_slider, 0, 1],
+    ["spring", dbg_slider, 0, 1],
+])
+
+
+
+
 //// Buttons to toggle instance layers' visibility
 dbg_section("Layers", false)
 var layers = layer_get_all()

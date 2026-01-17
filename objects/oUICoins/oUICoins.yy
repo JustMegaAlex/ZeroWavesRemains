@@ -1,21 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"oCollectCoin",
+  "%Name":"oUICoins",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oCollectCoin",
+  "name":"oUICoins",
   "overriddenProperties":[],
   "parent":{
-    "name":"Collectibles",
-    "path":"folders/Objects/Collectibles.yy",
+    "name":"UI",
+    "path":"folders/Objects/UI.yy",
   },
-  "parentObjectId":{
-    "name":"oCollectible",
-    "path":"objects/oCollectible/oCollectible.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -34,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sCoin",
-    "path":"sprites/sCoin/sCoin.yy",
+    "name":"sUICoins",
+    "path":"sprites/sUICoins/sUICoins.yy",
   },
   "spriteMaskId":null,
   "visible":true,
