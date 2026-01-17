@@ -1,11 +1,11 @@
 {
   "$GMSprite":"v2",
-  "%Name":"sUIWeaponsDraft",
+  "%Name":"sUIDraft",
   "bboxMode":0,
-  "bbox_bottom":1179,
+  "bbox_bottom":1091,
   "bbox_left":7,
-  "bbox_right":641,
-  "bbox_top":205,
+  "bbox_right":602,
+  "bbox_top":136,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
@@ -13,20 +13,19 @@
   "For3D":false,
   "frames":[
     {"$GMSpriteFrame":"v1","%Name":"36d19f6f-82f6-4bf7-8f08-a488345e768b","name":"36d19f6f-82f6-4bf7-8f08-a488345e768b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"v1","%Name":"ba18f61e-1db1-4612-a727-4178c3e37478","name":"ba18f61e-1db1-4612-a727-4178c3e37478","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
-  "gridX":0,
-  "gridY":0,
+  "gridX":64,
+  "gridY":64,
   "height":1200,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"01883807-eeb7-4a8f-bb4c-41244bc07070","blendMode":0,"displayName":"Layer 4","isLocked":false,"name":"01883807-eeb7-4a8f-bb4c-41244bc07070","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"dfa79930-47d5-43ce-96de-62297f6240ec","blendMode":0,"displayName":"Layer 3","isLocked":false,"name":"dfa79930-47d5-43ce-96de-62297f6240ec","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"b3896bfe-bd52-4c2a-bbd0-277bc0f55009","blendMode":0,"displayName":"Layer 2","isLocked":false,"name":"b3896bfe-bd52-4c2a-bbd0-277bc0f55009","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
-    {"$GMImageLayer":"","%Name":"4bcdeb24-ce70-4803-ac55-554d2e870266","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"4bcdeb24-ce70-4803-ac55-554d2e870266","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"4bcdeb24-ce70-4803-ac55-554d2e870266","blendMode":0,"displayName":"Layer 1","isLocked":true,"name":"4bcdeb24-ce70-4803-ac55-554d2e870266","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"71a4dc5f-e544-4ea5-a0b8-7dbc1b83cb23","blendMode":0,"displayName":"default","isLocked":false,"name":"71a4dc5f-e544-4ea5-a0b8-7dbc1b83cb23","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"sUIWeaponsDraft",
+  "name":"sUIDraft",
   "nineSlice":null,
   "origin":9,
   "parent":{
@@ -38,7 +37,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"sUIWeaponsDraft",
+    "%Name":"sUIDraft",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -54,7 +53,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":2.0,
+    "length":1.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -62,7 +61,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"sUIWeaponsDraft",
+    "name":"sUIDraft",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -74,11 +73,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"36d19f6f-82f6-4bf7-8f08-a488345e768b","path":"sprites/sUIWeaponsDraft/sUIWeaponsDraft.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"36d19f6f-82f6-4bf7-8f08-a488345e768b","path":"sprites/sUIDraft/sUIDraft.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"ff51d2c7-8206-4ee5-a3c2-113bcd2e96cc","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ba18f61e-1db1-4612-a727-4178c3e37478","path":"sprites/sUIWeaponsDraft/sUIWeaponsDraft.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"62472b3a-ba17-47fd-8110-7feabf7eac13","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

@@ -102,7 +102,6 @@ Visuals rework
 
 0.5.3
 > ui
-    > coins
     > waves remains
     > scale ui with screen size
 > add next wave countdown
