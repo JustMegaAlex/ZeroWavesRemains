@@ -98,37 +98,34 @@ Visuals rework
     - every light affects only entities in radius -> only for them pass to shader
     - oLightManager: limit per-step number light created to lower number of collision checks
     - scatter: keep single light in the middle of shots?
-> choose space background
-> rework color pallete
 
 
 0.5.3
-> communicate weapons better
-    > indicate ammo empty
-        > sfx
-        > shake ammo bar
 > ui
     > coins
     > waves remains
     > scale ui with screen size
 > add next wave countdown
-> add settings section
-    > zoom
-    > sound
-> ammo: change sprites to smth more readable
 > make fixed zoom by default
-> change "Shop" to "Hub"
-> discord link
-> feedback form
-> indicate wave start
-> check problem with hold shift -> can't switch weapons
 > pause menu: fill hints section
-> upd tiny crown ai: gather somewhere far from player first?
-    - don't overwhelm players from the go
 > fix
     > when pressing "Back" in hints you can accidentaly change volume
     > tutorial: shop arrow didn't disappear
 > permanent arrows for enemies off screeen
+> communicate weapons better
+    > indicate ammo empty
+        > sfx
+        > shake ammo bar
+> add settings section
+    > zoom
+    > sound
+> ammo: change sprites to smth more readable
+> change "Shop" to "Hub"
+> discord link
+> feedback form
+> indicate wave start
+> upd tiny crowв ai: gather somewhere far from player first?
+    - don't overwhelm players from the go
 
 
 0.6.x Build: improve visuals and overall appeal
@@ -137,22 +134,28 @@ Visuals rework
     > improve shot vfx
         > add small explosions
         > move bullet into an enemy
-        > try a bit of hit flash on enemies?
+        > NM: make'em flash a little
     > make varying explosion sizes
     > add engine jets
     > (maybe) add manuvering jets
     > impl circle area effect
         - particles flying to the center?
-    > rework sprites with blender
-        > player ship
-        > bonk
-        > tiny
-        > scout
-        > behemoth
-        > tech hub
-
+    > try at least 5 different color palletes
+    > research: explosions
+        > find good refs
+        > play with particles
+    > rework scatter shots
+        - distinct bullets with traces
+    > rework snipe shot (rail gun)
+        - projectile
 
 === Backlog ===
+> rework tech hub mechanic
+    > hold ship in one place
+    > mouse interact with ui
+> rework tech hub visuals
+    - main section is placed a bit deeper with a small parallax
+    - heavy a bit clunky animations
 > rework waves: impl phases
     - no time limit between phases
 > improve tinies: increase speed?
