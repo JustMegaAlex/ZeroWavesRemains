@@ -159,6 +159,9 @@ droneSetCoinsIncline = function(inst) {
 }
 
 spawn = function(wave_override=undefined) {
+    with oUIWaves {
+        animate()
+    }
     array_foreach(next_wave_instances, 
         function(inst) {
                 inst.active = true

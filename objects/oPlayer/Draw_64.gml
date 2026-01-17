@@ -15,9 +15,3 @@
 
 SetTextAllign(0, 1)
 draw_set_font(global.ui_font)
-if display_waves {
-    draw_text(10, 160, $"Waves remains: {global.waves_remains}")
-}
-if display_money {
-    draw_text(10, 200, $"Money: {money}")
-}

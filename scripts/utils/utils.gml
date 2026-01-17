@@ -686,6 +686,8 @@ function Text(relx, rely, text, args={}) constructor {
     self.color = args[$ "color"] ?? c_white
     self.alpha = args[$ "alpha"] ?? 1
     self.font = args[$ "font"] ?? noone
+    self.scale = args[$ "scale"] ?? 1
+    self.angle = args[$ "angle"] ?? 0
 }
 
 function DrawText(x, y, text) {
@@ -702,7 +704,11 @@ function DrawText(x, y, text) {
         prev_font = draw_get_font()
         draw_set_font(text.font)
     }
-    draw_text(x + text.relx, y + text.rely, text.text)
+    draw_text_transformed(
+        x + text.relx, y + text.rely,
+        text.text, text.scale, text.scale,
+        text.angle
+    )
     draw_set_color(col)
     draw_set_alpha(alpha)
     draw_set_font(prev_font)
