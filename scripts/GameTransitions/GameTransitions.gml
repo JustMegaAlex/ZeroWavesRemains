@@ -2,10 +2,19 @@
 function Start() {
     ResetGlobals()
     layer_set_visible("ui_general", true)
+    layer_set_visible("ui_gameplay_waves", true)
     room_goto(BALANCE ? rmTestBalance : rmGame)
 
     global.play_start_time = current_time
     global.plays_total++
+}
+
+function BackToTitle() {
+    Unpause()
+    EndRun()
+    room_goto(rmTitleScreen)
+    layer_set_visible("ui_general", false)
+    layer_set_visible("ui_gameplay_waves", false)
 }
 
 function Pause() {

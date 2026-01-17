@@ -57,6 +57,7 @@
   "name":"ZeroWavesRemains",
   "resources":[
     {"id":{"name":"fntUI","path":"fonts/fntUI/fntUI.yy",},},
+    {"id":{"name":"fntUIWavesRemains","path":"fonts/fntUIWavesRemains/fntUIWavesRemains.yy",},},
     {"id":{"name":"fntVictory","path":"fonts/fntVictory/fntVictory.yy",},},
     {"id":{"name":"Todos","path":"notes/Todos/Todos.yy",},},
     {"id":{"name":"oAIEnemyControl","path":"objects/oAIEnemyControl/oAIEnemyControl.yy",},},
