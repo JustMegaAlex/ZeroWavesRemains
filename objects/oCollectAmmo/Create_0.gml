@@ -18,7 +18,9 @@ if ArrayEmpty(availilbe_weapons) {
 }
 
 weapon = ArrayChoose(availilbe_weapons)
-image_blend = weapon == oPlayer.weapon_scatter ? #EE2F36 : #EEBE36
+// image_blend = #EEBE36
+image_blend = weapon == oPlayer.weapon_scatter ? #ee7e2f : #EEBE36
+sprite_index = weapon == oPlayer.weapon_scatter ? sIconAmmoScatter : sIconAmmoSnipe
 
 onCollect = function() {
     oPlayer.fillAmmo(weapon, round(weapon.ammo_max * 0.15))

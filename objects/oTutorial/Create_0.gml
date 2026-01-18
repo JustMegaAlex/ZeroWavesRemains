@@ -344,6 +344,7 @@ finishTutorial = function() {
     instance_create_layer(0, 0, "Instances", oWaveSpawner)
     // // layer_set_visible("ui_text_gameplay", true)
     oWaveSpawner.spawn()
+    oUI.removeAllHintArrows()
 }
 
 step_index = 0

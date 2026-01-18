@@ -30,4 +30,9 @@ removeHintArrow = function(arrow) {
     ArrayRemove(hint_arrows, arrow)
 }
 
+removeAllHintArrows = function() {
+    ArrayClear(hint_arrows)
+}
+
+
 // addHintArrow(oShop, "Shop is there!", c_green)

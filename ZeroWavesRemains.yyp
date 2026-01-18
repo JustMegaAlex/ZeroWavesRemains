@@ -232,6 +232,8 @@
     {"id":{"name":"sFullnessBar","path":"sprites/sFullnessBar/sFullnessBar.yy",},},
     {"id":{"name":"sGameColors","path":"sprites/sGameColors/sGameColors.yy",},},
     {"id":{"name":"sIconAmmo","path":"sprites/sIconAmmo/sIconAmmo.yy",},},
+    {"id":{"name":"sIconAmmoScatter","path":"sprites/sIconAmmoScatter/sIconAmmoScatter.yy",},},
+    {"id":{"name":"sIconAmmoSnipe","path":"sprites/sIconAmmoSnipe/sIconAmmoSnipe.yy",},},
     {"id":{"name":"sIconCoins","path":"sprites/sIconCoins/sIconCoins.yy",},},
     {"id":{"name":"sIconHeal","path":"sprites/sIconHeal/sIconHeal.yy",},},
     {"id":{"name":"sMenuButton","path":"sprites/sMenuButton/sMenuButton.yy",},},
