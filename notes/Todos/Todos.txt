@@ -101,7 +101,6 @@ Visuals rework
 
 
 0.5.3
-> add next wave countdown
 > make fixed zoom by default
 > pause menu: fill hints section
 > fix

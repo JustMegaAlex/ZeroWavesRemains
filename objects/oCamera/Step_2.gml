@@ -43,8 +43,16 @@ if target {
 //}
 
 if !is_mouse_over_debug_overlay() {
-    zoom_to += (oInput.Pressed("zoom_out") - oInput.Pressed("zoom_in")) * zoom_factor
-    zoom_to = clamp(zoom_to, zoom_min, zoom_max)
+    if oGameSettings.allow_zoom_change {
+        zoom_to += (oInput.Pressed("zoom_out") - oInput.Pressed("zoom_in")) * zoom_factor
+        zoom_to = clamp(zoom_to, zoom_min, zoom_max)
+    } else {
+        if (global.wave_enemies_count <= 0) and oShop.is_open {
+            zoom_to = zoom_min
+        } else {
+            zoom_to = oGameSettings.camera_zoom
+        }
+    }
 }
 zoom = Approach2(zoom, zoom_to, 0.04, 0.01)
 SetZoom(zoom)
