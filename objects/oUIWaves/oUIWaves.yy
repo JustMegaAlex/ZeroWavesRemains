@@ -36,5 +36,5 @@
     "path":"sprites/sUIWaves/sUIWaves.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

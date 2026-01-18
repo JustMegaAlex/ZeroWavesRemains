@@ -9,7 +9,8 @@ anim_text = new Text(
         valign: text.valign,
         color: text.color,
         font: text.font,
-        alpha: 0.7
+        alpha_anim: 0.5,
+        alpha: 0,
     }
 )
 
@@ -31,4 +32,5 @@ animation_timer = MakeTimer(60, 0)
 
 animate = function() {
     animation_timer.reset()
+    anim_text.alpha = 0.5
 }
