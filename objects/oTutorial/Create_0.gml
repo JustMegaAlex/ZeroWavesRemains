@@ -298,9 +298,11 @@ for (var i = 0; i < array_length(steps); ++i) {
 }
 
 startTutorial = function() {
-    with oPlayer {
-        display_waves = false
-        display_money = false
+    with oUICoins {
+        visible = false
+    }
+    with oUIWaves {
+        visible = false
     }
     var arr = [oShopItemWeapon, oShopItemWeaponUpgrade]
     with oShopItem {
@@ -321,9 +323,11 @@ finishTutorial = function() {
     global.tutorial = false
     global.wave_enemies_count = 0
     step = step_template
-    with oPlayer {
-        display_waves = true
-        display_money = true
+    with oUICoins {
+        visible = true
+    }
+    with oUIWaves {
+        visible = true
     }
     instance_destroy(oEnemyParent)
     instance_destroy(oCollectCoin)
