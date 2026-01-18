@@ -33,7 +33,9 @@ checkPushBackIntoCircle()
 
 move()
 
-
+if !oInput.Hold("lclick", false) {
+    showed_no_ammo = false
+}
 if !weapon.timer.timer and (oInput.Hold("lclick") or debug_shoot) {
     playerShoot(dir)
     weapon.timer.reset()

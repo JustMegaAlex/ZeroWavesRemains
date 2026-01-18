@@ -69,7 +69,7 @@ weapon_pulse = {
     sp: 60,
     object: oBullet,
     name: "Pulse",
-    ammo: 40,
+    ammo: 5,
     ammo_restore_timer: MakeTimer(40),
     knockback: 7,
     sound: sfxSingleShot,
@@ -135,7 +135,7 @@ weapon_snipe = {
     object: oSnipeShot,
     range: 6000,
     name: "Snipe",
-    ammo: 16,
+    ammo: 2,
     sound: sfxSnipeShot,
     sprite: sUIWeaponSnipe,
     upgrades: 0,
@@ -225,13 +225,23 @@ inputSwtichWeaponDir = function(switch_weapon_dir) {
     global.player_hint_switch_weapon_showed = true
 }
 
+showed_no_ammo = false
 playerShoot = function(dir) {
     if weapon.ammo <= 0 {
+        // if just pressed
+        if !showed_no_ammo {
+            audio_play_sound(sfxNoAmmo, 3, false)
+            showed_no_ammo = true
+        }
+        oUITextNoAmmo.show()
         return;
     }
     shoot(dir)
     weapon.ammo--
     playShotSound(weapon)
+    if weapon.ammo <= 0 {
+        oUITextNoAmmo.show()
+    }
 }
 
 objectHit = function() {

@@ -296,23 +296,23 @@ for (var i = 0; i < array_length(keys); ++i) {
     }
 }
 
-function Pressed(key) {
+function Pressed(key, _read_once=read_once) {
     var res = self.mapping[$ key].pressed
-    if read_once {
+    if _read_once {
         self.mapping[$ key].pressed = false
     }
     return res
 }
-function Released(key) {
+function Released(key, _read_once=read_once) {
     var res = self.mapping[$ key].released
-    if read_once {
+    if _read_once {
         self.mapping[$ key].released = false
     }
     return res
 }
-function Hold(key) {
+function Hold(key, _read_once=read_once) {
     var res = self.mapping[$ key].hold
-    if read_once {
+    if _read_once {
         self.mapping[$ key].hold = false
     }
     return res
