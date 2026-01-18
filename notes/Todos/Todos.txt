@@ -108,17 +108,20 @@ Visuals rework
     > indicate ammo empty
         > sfx
         > shake ammo bar
-> ammo: change sprites to smth more readable
 > change "Shop" to "Hub"
 > discord link
 > feedback form
-> indicate wave start
+
+
+
 > upd tiny crowd ai: gather somewhere far from player first?
     - don't overwhelm players from the go
 > ui
     > keep gui size + adjust for different screen sizes
 > pause menu: fill hints section
 > permanent arrows for enemies off screen
+> fix
+    > when pressing "Back" in hints you can accidentaly change volume
 
 
 0.6.x Build: improve visuals and overall appeal

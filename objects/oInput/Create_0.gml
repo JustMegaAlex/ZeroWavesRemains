@@ -14,6 +14,7 @@ mouse_y_prev = mouse_y
 gamepad_enabled = false
 
 active = true
+read_once = true // after a key is checked, it's value becomes false
 
 enum GmType {
     none, xbox, playstation
@@ -296,13 +297,25 @@ for (var i = 0; i < array_length(keys); ++i) {
 }
 
 function Pressed(key) {
-    return self.mapping[$ key].pressed
+    var res = self.mapping[$ key].pressed
+    if read_once {
+        self.mapping[$ key].pressed = false
+    }
+    return res
 }
 function Released(key) {
-    return self.mapping[$ key].released
+    var res = self.mapping[$ key].released
+    if read_once {
+        self.mapping[$ key].released = false
+    }
+    return res
 }
 function Hold(key) {
-    return self.mapping[$ key].hold
+    var res = self.mapping[$ key].hold
+    if read_once {
+        self.mapping[$ key].hold = false
+    }
+    return res
 }
 
 
