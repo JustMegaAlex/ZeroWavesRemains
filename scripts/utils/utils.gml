@@ -703,7 +703,7 @@ function DrawText(x, y, text) {
     draw_set_color(text.color)
     draw_set_alpha(text.alpha)
     var prev_font = noone
-    if text.font {
+    if text.font != noone {
         prev_font = draw_get_font()
         draw_set_font(text.font)
     }

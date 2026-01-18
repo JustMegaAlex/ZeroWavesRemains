@@ -1,11 +1,13 @@
 event_inherited()
 
-text = new Text(0, 0, "Press Space for the next wave!", {halign: 1, valigh: 1})
+text = new Text(0, 0, "Press Space for the next wave!", {font: fntUI})
 
 set_visible = function() {
-    visible = !oPlayer.shop_item
+    visible = !(oPlayer.interactible
+                    or oShop.highlight)
                 and oWaveSpawner.active 
                 and (global.wave_enemies_count <= 0)
+                and !global.pause
                 and !global.tutorial
                 and !global.win
 }

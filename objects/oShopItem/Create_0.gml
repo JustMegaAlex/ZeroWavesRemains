@@ -5,8 +5,8 @@
 event_inherited()
 
 prompt_text = "Press F to buy "
-cost_text_struct = new Text(0, 0, cost, {color: c_red})
-text_struct = new Text(0, 0, "")
+cost_text_struct = new Text(0, 0, cost, {color: c_red, font: fntUI})
+text_struct = new Text(0, 0, "", {font: fntUI})
 
 
 icon = noone

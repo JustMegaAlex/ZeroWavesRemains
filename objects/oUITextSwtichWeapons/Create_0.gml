@@ -1,7 +1,7 @@
 
 event_inherited()
 
-text = new Text(0, 0, "Press 1-2-3 or E/Q to switch weapons", {color: c_lime})
+text = new Text(0, 0, "Press 1-2-3 or E/Q to switch weapons", {color: c_lime, font: fntUI})
 
 set_visible = function() {
     no_player_exit
