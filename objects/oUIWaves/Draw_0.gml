@@ -15,7 +15,9 @@ text.text = string(global.waves_remains)
 
 if animation_timer.update() {
     anim_text.text = text.text
-    anim_text.scale = 1 + animation_timer.timer/animation_timer.time * 0.5
+    anim_text.scale = 1 + animation_timer.timer/animation_timer.time * 1
+    DrawText(x, y, anim_text)
+    anim_text.scale = 1 + animation_timer.timer/animation_timer.time * 2
     DrawText(x, y, anim_text)
 }
 
