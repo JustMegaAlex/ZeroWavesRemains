@@ -11,6 +11,12 @@ icon = sIconAmmo
 image_blend = global.game_colors.item_add_to_shop
 
 
+can_buy = function() {
+    no_player_return
+    return array_contains(oPlayer.weapons_array, weapon) and (weapon.ammo < weapon.ammo_max)
+}
+
+
 apply = function() {
     weapon.ammo += ammo_amount
     audio_play_sound(sfxWeaponReload, 2, false)

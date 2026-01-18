@@ -14,7 +14,7 @@ draw_self()
 text.text = string(global.waves_remains)
 
 if animation_timer.update() {
-    var test = true
+    //var test = true
     // anim_text.text = text.text
     // anim_text.alpha = anim_text.alpha_anim * animation_timer.timer / animation_timer.time
     // anim_text.scale = 1 + animation_timer.timer/animation_timer.time * 1

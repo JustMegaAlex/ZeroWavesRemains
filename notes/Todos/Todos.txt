@@ -102,8 +102,6 @@ Visuals rework
 
 0.5.3
 > fix tech hub: don't allow buying ammo if a gun isn't owned yet
-> ui
-    > keep gui size + adjust for different screen sizes
 > add next wave countdown
 > make fixed zoom by default
 > pause menu: fill hints section
@@ -123,8 +121,10 @@ Visuals rework
 > discord link
 > feedback form
 > indicate wave start
-> upd tiny crowв ai: gather somewhere far from player first?
+> upd tiny crowd ai: gather somewhere far from player first?
     - don't overwhelm players from the go
+> ui
+    > keep gui size + adjust for different screen sizes
 
 
 0.6.x Build: improve visuals and overall appeal
