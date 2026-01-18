@@ -192,6 +192,7 @@
     {"id":{"name":"sfxLastHit","path":"sounds/sfxLastHit/sfxLastHit.yy",},},
     {"id":{"name":"sfxMetalImpact","path":"sounds/sfxMetalImpact/sfxMetalImpact.yy",},},
     {"id":{"name":"sfxMetalImpactHeavy","path":"sounds/sfxMetalImpactHeavy/sfxMetalImpactHeavy.yy",},},
+    {"id":{"name":"sfxNoAmmo","path":"sounds/sfxNoAmmo/sfxNoAmmo.yy",},},
     {"id":{"name":"sfxRepair","path":"sounds/sfxRepair/sfxRepair.yy",},},
     {"id":{"name":"sfxShotContactFeedback","path":"sounds/sfxShotContactFeedback/sfxShotContactFeedback.yy",},},
     {"id":{"name":"sfxSingleShot","path":"sounds/sfxSingleShot/sfxSingleShot.yy",},},
