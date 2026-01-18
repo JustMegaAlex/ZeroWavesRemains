@@ -101,7 +101,6 @@ Visuals rework
 
 
 0.5.3
-> fix tech hub: don't allow buying ammo if a gun isn't owned yet
 > add next wave countdown
 > make fixed zoom by default
 > pause menu: fill hints section

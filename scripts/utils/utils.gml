@@ -357,6 +357,9 @@ function Timer(time, initial=undefined, autoreset=false) constructor {
     function stop() {
         self.timer = 0
     }
+    function ratio() {
+        return self.timer / self.time
+    }
 }
 
 function _animGetTreshold() {

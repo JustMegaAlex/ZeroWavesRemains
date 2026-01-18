@@ -239,6 +239,10 @@ updateSpawningInstance = function(inst) {
     }
 }
 
+getSpawnCycleProgress = function() {
+    return 1 - (spawn_current_radius - oGameArea.radius) / spawn_extra_radius
+}
+
 nextWaveIsLast = function() {
     return waves_remains == 1
 }
