@@ -14,13 +14,20 @@ draw_self()
 text.text = string(global.waves_remains)
 
 if animation_timer.update() {
-    anim_text.text = text.text
-    anim_text.alpha = animation_timer.timer/animation_timer.time * anim_text.alpha_anim
-    anim_text.scale = 2 // 1 + animation_timer.timer/animation_timer.time * 0.5
-    DrawText(x, y, anim_text)
-    anim_text.scale = 3 // 1 + animation_timer.timer/animation_timer.time * 0.5
-    DrawText(x, y, anim_text)
+    var test = true
+    // anim_text.text = text.text
+    // anim_text.alpha = anim_text.alpha_anim * animation_timer.timer / animation_timer.time
+    // anim_text.scale = 1 + animation_timer.timer/animation_timer.time * 1
+    // DrawText(x, y, anim_text)
+    // anim_text.scale = 1 + animation_timer.timer/animation_timer.time * 1.7
+    // DrawText(x, y, anim_text)
 }
+
+
+anim_text.text = text.text
+// anim_text.alpha = anim_text.alpha_anim * animation_timer.timer / animation_timer.time
+anim_text.scale = Approach2(anim_text.scale, 1, 0.05, 0.01)
+DrawText(x, y, anim_text)
 
 
 DrawText(x, y, text)

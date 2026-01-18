@@ -9,10 +9,10 @@ anim_text = new Text(
         valign: text.valign,
         color: text.color,
         font: text.font,
-        alpha_anim: 0.5,
-        alpha: 0,
+        alpha: 0.7,
     }
 )
+anim_text.alpha_anim = 0.5
 
 blend_anim = {
     r: 255, g: 180, b: 0
@@ -32,5 +32,6 @@ animation_timer = MakeTimer(60, 0)
 
 animate = function() {
     animation_timer.reset()
-    anim_text.alpha = 0.5
+    // anim_text.alpha = 0.5
+    anim_text.scale = 2
 }
