@@ -221,19 +221,19 @@ steps = [
     spaceToProceed(),
     {
         // define index with search
-        text: "Check out the shop",
+        text: "Check out the tech hub",
         come_back_text: "",
         default_gui,
         arrow: noone,
         start: function() {
-            arrow = oUI.addHintArrow(oShop, "shop", global.game_colors.arrow_common)
+            arrow = oUI.addHintArrow(oShop, "tech hub", global.game_colors.arrow_common)
             oPlayer.display_money = true
             come_back_text = text
         },
         step: function() {
             if oShop.is_open {
                 text = "Upgrade your weapon"
-                come_back_text = "Come back to the shop"
+                come_back_text = "Come back to the hub"
             } else {
                 text = come_back_text
             }
@@ -353,7 +353,7 @@ alarm[0] = 1
 global.tutorial = true
 
 if DEV {
-    step_index = 0 // 12 // drone
+    step_index = 14 // 12 // drone
     step = steps[step_index]
 }
 

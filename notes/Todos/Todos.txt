@@ -102,7 +102,6 @@ Visuals rework
 
 0.5.3
 > fix
-    > when pressing "Back" in hints you can accidentaly change volume
     > tutorial: shop arrow didn't disappear
 > communicate weapons better
     > indicate ammo empty
