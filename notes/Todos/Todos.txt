@@ -100,27 +100,11 @@ Visuals rework
     - scatter: keep single light in the middle of shots?
 
 
-0.5.3
-> fix
-    > tutorial: shop arrow didn't disappear
-> communicate weapons better
-    > indicate ammo empty
-        > sfx
-        > shake ammo bar
-> change "Shop" to "Hub"
+0.5.4
 > discord link
 > feedback form
 
 
-
-> upd tiny crowd ai: gather somewhere far from player first?
-    - don't overwhelm players from the go
-> ui
-    > keep gui size + adjust for different screen sizes
-> pause menu: fill hints section
-> permanent arrows for enemies off screen
-> fix
-    > when pressing "Back" in hints you can accidentaly change volume
 
 
 0.6.x Build: improve visuals and overall appeal
@@ -145,6 +129,18 @@ Visuals rework
         - projectile
 
 === Backlog ===
+> upd tiny crowd ai: gather somewhere far from player first?
+    - don't overwhelm players from the go
+> ui
+    > keep gui size + adjust for different screen sizes
+> pause menu: fill hints section
+> permanent arrows for enemies off screen
+> fix
+    > when pressing "Back" in hints you can accidentaly change volume
+> rework final wave: make longer and stronger
+    - warp in more enemies?
+    - make Behemoth Elder?
+
 > rework tech hub mechanic
     > hold ship in one place
     > mouse interact with ui

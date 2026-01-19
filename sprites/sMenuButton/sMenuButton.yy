@@ -48,8 +48,8 @@
   },
   "origin":4,
   "parent":{
-    "name":"UI",
-    "path":"folders/Sprites/UI.yy",
+    "name":"Meu",
+    "path":"folders/Sprites/UI/Meu.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

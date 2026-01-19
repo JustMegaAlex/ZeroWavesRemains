@@ -30,7 +30,7 @@ action = function() {
         oMenuButtonNo.open_section = section
         openSection(macro_menu_section_yesno)
         return;
-    } else if open_section != undefined {
+    } else if (open_section != undefined) or close_my_section {
         hideSection(section)
         openSection(open_section)
     }

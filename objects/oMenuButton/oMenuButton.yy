@@ -33,9 +33,10 @@
   "physicsStartAwake":true,
   "properties":[
     {"$GMObjectProperty":"v2","%Name":"text","filters":[],"listItems":[],"multiselect":false,"name":"text","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":2,},
-    {"$GMObjectProperty":"v2","%Name":"open_section","filters":[],"listItems":[],"multiselect":false,"name":"open_section","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":4,},
+    {"$GMObjectProperty":"v2","%Name":"open_section","filters":[],"listItems":[],"multiselect":false,"name":"open_section","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"undefined","varType":4,},
     {"$GMObjectProperty":"v2","%Name":"yes_no","filters":[],"listItems":[],"multiselect":false,"name":"yes_no","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
     {"$GMObjectProperty":"v2","%Name":"callback","filters":[],"listItems":[],"multiselect":false,"name":"callback","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":4,},
+    {"$GMObjectProperty":"v2","%Name":"close_my_section","filters":[],"listItems":[],"multiselect":false,"name":"close_my_section","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
