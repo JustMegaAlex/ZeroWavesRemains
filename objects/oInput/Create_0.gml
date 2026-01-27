@@ -14,7 +14,7 @@ mouse_y_prev = mouse_y
 gamepad_enabled = false
 
 active = true
-read_once = true // after a key is checked, it's value becomes false
+read_once = false // after a key is checked, it's value becomes false
 
 enum GmType {
     none, xbox, playstation
