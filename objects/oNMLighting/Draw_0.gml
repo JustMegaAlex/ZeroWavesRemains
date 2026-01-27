@@ -121,7 +121,7 @@ shader_set_uniform_f(uamb,colour_get_red(NMamb)/255,colour_get_green(NMamb)/255,
 shader_set_uniform_i(uNumEnabled, min(numLights,8))
 shader_set_uniform_f(ulight_z, light_z)
 // draw_surface(surf_diff, CamX(), CamY())
-draw_surface_stretched(surf_diff, CamX(), CamY(), CamW(), CamH())
+draw_surface_stretched(surf_norm, CamX(), CamY(), CamW(), CamH())
 
 shader_reset()
 

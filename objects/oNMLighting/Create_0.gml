@@ -30,16 +30,24 @@ function NM_set_light(argument0, argument1, argument2, argument3, argument4) {
 }
 
 function makeSureExistsAndSize(surf) {
-    if (!surface_exists(surf)) {
-        surf = surface_create(w, h)
-    }
     var w = window_get_width()
     var h = window_get_height()
     if (w <= 0 or h <= 0) {
         return;
     }
-    if !(surface_get_width(surf) == w and surface_get_height(surf) == h) {
+    if (!surface_exists(surf)) {
+        surf = surface_create(w, h)
+    }
+    var surfw = surface_get_width(surf)
+    var surfh = surface_get_height(surf)
+    if surfw != w {
         surface_resize(surf, w, h)
+    }
+    var wratio = CamW() / surfw
+    var hratio = CamH() / surfh
+    if wratio != hratio {
+        surfh = CamH() / wratio
+        surface_resize(surf, surfw, surfh)
     }
 }
 
