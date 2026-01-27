@@ -2,6 +2,7 @@ builds/*
 datafiles/*
 *.json
 __pycache__
+.vs
 
 # Windows thumbnail cache files
 Thumbs.db
