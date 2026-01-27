@@ -253,6 +253,6 @@ lastWaveCallback = function() {
 
 /// @follow-up wave spawner DEV
 if DEV {
-    // wave_index = 0
-    // waves_remains = array_length(waves) - wave_index
+    wave_index = 25
+    waves_remains = array_length(waves) - wave_index
 }

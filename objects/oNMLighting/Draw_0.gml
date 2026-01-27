@@ -125,4 +125,4 @@ draw_surface_stretched(surf_diff, CamX(), CamY(), CamW(), CamH())
 
 shader_reset()
 
-draw_circle(mouse_x, mouse_y, playerLightSize, true)
+// draw_circle(mouse_x, mouse_y, playerLightSize, true)
