@@ -7,7 +7,7 @@
   "managed":true,
   "name":"oMenuCheckboxZoom",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oMenuButton","path":"objects/oMenuButton/oMenuButton.yy",},"propertyId":{"name":"text","path":"objects/oMenuButton/oMenuButton.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Scroll to zoom",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oMenuButton","path":"objects/oMenuButton/oMenuButton.yy",},"propertyId":{"name":"text","path":"objects/oMenuButton/oMenuButton.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Zoom via mouse scroll",},
   ],
   "parent":{
     "name":"Menu",
