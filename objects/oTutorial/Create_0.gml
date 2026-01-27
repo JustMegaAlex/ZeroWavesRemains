@@ -62,19 +62,19 @@ steps = [
             return pressed
         }
     },
-    {
-        // define index with search
-        in: 0, out: 0,
-        default_gui,
-        text: "Mouse scroll to zoom in/out",
-        step: function() {
-            in = in or oInput.Pressed("zoom_in")
-            out = out or oInput.Pressed("zoom_out")
-        },
-        done: function() {
-            return (in + out) == 2
-        }
-    },
+    // {
+    //     // define index with search
+    //     in: 0, out: 0,
+    //     default_gui,
+    //     text: "Mouse scroll to zoom in/out",
+    //     step: function() {
+    //         in = in or oInput.Pressed("zoom_in")
+    //         out = out or oInput.Pressed("zoom_out")
+    //     },
+    //     done: function() {
+    //         return (in + out) == 2
+    //     }
+    // },
     {
         // define index with search
         time: 60,
