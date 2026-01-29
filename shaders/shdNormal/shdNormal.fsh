@@ -4,7 +4,6 @@ varying vec2 v_vPosition;
 
 #define LN 8//Number of lights
 
-uniform sampler2D spec;//specular map
 uniform sampler2D norm;//normal map
 
 uniform float lights[LN*3];//x,y,range

@@ -12,12 +12,12 @@ var playerLightSize = oGameArea
 
 NMamb = make_colour_rgb(AMBIANCE_R,AMBIANCE_G,AMBIANCE_B) // Set ambiance color
 
-numLights = 1
-NM_set_light(numLights++, 
+numLights = 0
+NM_set_light(numLights, 
              light_pos.x, light_pos.y,
              light_radius, 
              make_colour_rgb(ambience.r, ambience.g, ambience.b))
-
+numLights++
 
 // draw_line(
 //     light_pos.x, light_pos.y,
@@ -113,15 +113,21 @@ surface_reset_target()
 
 
 //draw_clear_alpha(0,0)
-shader_set(shdNormal)
-texture_set_stage(unorm,surface_get_texture(surf_norm))
-shader_set_uniform_f_array(ulights,NMlights)
-shader_set_uniform_f_array(ucolor,NMcolor)
-shader_set_uniform_f(uamb,colour_get_red(NMamb)/255,colour_get_green(NMamb)/255,colour_get_blue(NMamb)/255)
-shader_set_uniform_i(uNumEnabled, min(numLights,8))
-shader_set_uniform_f(ulight_z, light_z)
+//shader_set(shdNormal)
+//texture_set_stage(unorm,surface_get_texture(surf_norm))
+//shader_set_uniform_f_array(ulights,NMlights)
+//shader_set_uniform_f_array(ucolor,NMcolor)
+//shader_set_uniform_f(uamb,colour_get_red(NMamb)/255,colour_get_green(NMamb)/255,colour_get_blue(NMamb)/255)
+//shader_set_uniform_i(uNumEnabled, min(numLights,8))
+//shader_set_uniform_f(ulight_z, light_z)
+
+shader_set(shdReplace)
+texture_set_stage(utex, surface_get_texture(surf_norm))
+shader_set_uniform_f(ulights1, light_pos.x, light_pos.y, light_radius)
+shader_set_uniform_f(ucolor, )
+
 // draw_surface(surf_diff, CamX(), CamY())
-draw_surface_stretched(surf_norm, CamX(), CamY(), CamW(), CamH())
+draw_surface_stretched(surf_diff, CamX(), CamY(), CamW(), CamH())
 
 shader_reset()
 

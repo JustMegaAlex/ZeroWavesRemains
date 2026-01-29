@@ -54,8 +54,9 @@ function makeSureExistsAndSize(surf) {
 
 
 //NM_start()//Setup for required variables
-NMlights = array_create(24, 0)
-NMcolor = array_create(24, 0)
+max_lights = 1
+NMlights = array_create(3 * max_lights, 0)
+NMcolor = array_create(3 * max_lights, 0)
 NMamb = c_black
 var width = window_get_width()
 var height = window_get_height()
@@ -69,6 +70,9 @@ uNumEnabled = shader_get_uniform(shdNormal,"numEnabled")
 ulight_z = shader_get_uniform(shdNormal,"light_z")
 uangle = shader_get_uniform(shdRotate,"angle")
 
+utex = shader_get_sampler_index(shdReplace, "tex")
+ulights1 = shader_get_uniform(shdReplace,"lights")
+ucolor = shader_get_uniform(shdReplace,"lcolor")
 
 NMamb = make_colour_rgb(AMBIANCE_R,AMBIANCE_G,AMBIANCE_B) //Set ambiance color
 
