@@ -73,6 +73,7 @@ uangle = shader_get_uniform(shdRotate,"angle")
 utex = shader_get_sampler_index(shdReplace, "tex")
 ulights1 = shader_get_uniform(shdReplace,"lights")
 ucolor = shader_get_uniform(shdReplace,"lcolor")
+ulight_z1 = shader_get_uniform(shdReplace,"light_z")
 
 NMamb = make_colour_rgb(AMBIANCE_R,AMBIANCE_G,AMBIANCE_B) //Set ambiance color
 

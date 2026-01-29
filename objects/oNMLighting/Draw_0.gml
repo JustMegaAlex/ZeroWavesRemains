@@ -124,7 +124,7 @@ surface_reset_target()
 shader_set(shdReplace)
 texture_set_stage(utex, surface_get_texture(surf_norm))
 shader_set_uniform_f(ulights1, light_pos.x, light_pos.y, light_radius)
-shader_set_uniform_f(ucolor, )
+shader_set_uniform_f(ulight_z1, light_z)
 
 // draw_surface(surf_diff, CamX(), CamY())
 draw_surface_stretched(surf_diff, CamX(), CamY(), CamW(), CamH())
