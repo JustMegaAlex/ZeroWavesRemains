@@ -109,19 +109,7 @@ with oShop {
 
 surface_reset_target()
 
-//NM_draw(0, 0)
-
-
-//draw_clear_alpha(0,0)
-//shader_set(shdNormal)
-//texture_set_stage(unorm,surface_get_texture(surf_norm))
-//shader_set_uniform_f_array(ulights,NMlights)
-//shader_set_uniform_f_array(ucolor,NMcolor)
-//shader_set_uniform_f(uamb,colour_get_red(NMamb)/255,colour_get_green(NMamb)/255,colour_get_blue(NMamb)/255)
-//shader_set_uniform_i(uNumEnabled, min(numLights,8))
-//shader_set_uniform_f(ulight_z, light_z)
-
-shader_set(shdReplace)
+shader_set(shdNormal)
 texture_set_stage(utex, surface_get_texture(surf_norm))
 shader_set_uniform_f(ulights1, light_pos.x, light_pos.y, light_radius)
 shader_set_uniform_f(ulight_z1, light_z)
@@ -130,5 +118,3 @@ shader_set_uniform_f(ulight_z1, light_z)
 draw_surface_stretched(surf_diff, CamX(), CamY(), CamW(), CamH())
 
 shader_reset()
-
-// draw_circle(mouse_x, mouse_y, playerLightSize, true)

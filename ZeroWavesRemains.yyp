@@ -177,7 +177,6 @@
     {"id":{"name":"ui","path":"scripts/ui/ui.yy",},},
     {"id":{"name":"utils","path":"scripts/utils/utils.yy",},},
     {"id":{"name":"shdNormal","path":"shaders/shdNormal/shdNormal.yy",},},
-    {"id":{"name":"shdReplace","path":"shaders/shdReplace/shdReplace.yy",},},
     {"id":{"name":"shdRotate","path":"shaders/shdRotate/shdRotate.yy",},},
     {"id":{"name":"mscFinalBattle","path":"sounds/mscFinalBattle/mscFinalBattle.yy",},},
     {"id":{"name":"mscIntro","path":"sounds/mscIntro/mscIntro.yy",},},

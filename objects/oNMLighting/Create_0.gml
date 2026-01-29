@@ -70,10 +70,10 @@ uNumEnabled = shader_get_uniform(shdNormal,"numEnabled")
 ulight_z = shader_get_uniform(shdNormal,"light_z")
 uangle = shader_get_uniform(shdRotate,"angle")
 
-utex = shader_get_sampler_index(shdReplace, "tex")
-ulights1 = shader_get_uniform(shdReplace,"lights")
-ucolor = shader_get_uniform(shdReplace,"lcolor")
-ulight_z1 = shader_get_uniform(shdReplace,"light_z")
+utex = shader_get_sampler_index(shdNormal, "tex")
+ulights1 = shader_get_uniform(shdNormal,"lights")
+ucolor = shader_get_uniform(shdNormal,"lcolor")
+ulight_z1 = shader_get_uniform(shdNormal,"light_z")
 
 NMamb = make_colour_rgb(AMBIANCE_R,AMBIANCE_G,AMBIANCE_B) //Set ambiance color
 
