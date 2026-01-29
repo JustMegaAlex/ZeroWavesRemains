@@ -2,8 +2,8 @@
 draw_set_alpha(1)
 draw_set_color(c_white)
 
-makeSureExistsAndSize(surf_diff)
-makeSureExistsAndSize(surf_norm)
+surf_diff = makeSureExistsAndSize(surf_diff)
+surf_norm = makeSureExistsAndSize(surf_norm)
 
 var scale = window_get_width() / CamW()
 

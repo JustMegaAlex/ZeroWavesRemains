@@ -33,7 +33,8 @@ function makeSureExistsAndSize(surf) {
     var w = window_get_width()
     var h = window_get_height()
     if (w <= 0 or h <= 0) {
-        return;
+        surf = surface_create(1, 1)
+        return surf
     }
     if (!surface_exists(surf)) {
         surf = surface_create(w, h)
@@ -45,10 +46,11 @@ function makeSureExistsAndSize(surf) {
     }
     var wratio = CamW() / surfw
     var hratio = CamH() / surfh
-    if wratio != hratio {
+    if abs(wratio - hratio) > 0.01 {
         surfh = CamH() / wratio
         surface_resize(surf, surfw, surfh)
     }
+    return surf
 }
 
 
