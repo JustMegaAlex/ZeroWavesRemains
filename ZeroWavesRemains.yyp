@@ -53,10 +53,11 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.2.213",
+    "IDEVersion":"2024.14.3.217",
   },
   "name":"ZeroWavesRemains",
   "resources":[
+    {"id":{"name":"HTMLSaveLoad","path":"extensions/HTMLSaveLoad/HTMLSaveLoad.yy",},},
     {"id":{"name":"fntUI","path":"fonts/fntUI/fntUI.yy",},},
     {"id":{"name":"fntUIWavesRemains","path":"fonts/fntUIWavesRemains/fntUIWavesRemains.yy",},},
     {"id":{"name":"fntVictory","path":"fonts/fntVictory/fntVictory.yy",},},

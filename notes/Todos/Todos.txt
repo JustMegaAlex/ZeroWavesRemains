@@ -100,11 +100,6 @@ Visuals rework
     - scatter: keep single light in the middle of shots?
 
 
-0.5.4
-> discord link
-> feedback form
-
-
 
 
 0.6.x Build: improve visuals and overall appeal
@@ -114,11 +109,9 @@ Visuals rework
         > add small explosions
         > move bullet into an enemy
         > NM: make'em flash a little
-    > make varying explosion sizes
     > add engine jets
-    > (maybe) add manuvering jets
-    > impl circle area effect
-        - particles flying to the center?
+    > rework explosion effects
+    > make varying explosion sizes
     > try at least 5 different color palletes
     > research: explosions
         > find good refs
@@ -127,8 +120,12 @@ Visuals rework
         - distinct bullets with traces
     > rework snipe shot (rail gun)
         - projectile
+    > impl circle area effect
+        - particles flying to the center?
+    > (maybe) add manuvering jets
 
 === Backlog ===
+> feedback form
 > upd tiny crowd ai: gather somewhere far from player first?
     - don't overwhelm players from the go
 > ui
@@ -247,7 +244,7 @@ Drone concepts:
 > shield break: drain shield almost to 0 and then use a strong weapon to overload and cause emp stun
 > ship weight system: more equipment = less agile
     - drop weapons on the go to move faster
-> choose color palette?
+> let players choose color palette?
 > add flaring red effect when < 25% hp
 > penetrating kinetic weapon (like that bugged out pulse)
 > replace ammo with ammo upgrades: restore ratio + amount
