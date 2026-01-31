@@ -74,6 +74,14 @@ draw_clear_alpha(0,0)
 renderPass = RP_NORMAL
 
 
+with oShop {
+    var angle = 0
+    repeat 4 {
+        shader_set_uniform_f(other.uangle, -angle)
+        drawSegmentNM(angle, -CamX(), -CamY(), scale)
+        angle += 90
+    }
+}
 with oEntity {
     if sprite_index_norm == noone {
         continue
@@ -98,15 +106,6 @@ with oEnemyBehemothGun {
         scale, scale,
         image_angle, c_white, 1)
 }
-with oShop {
-    var angle = 0
-    repeat 4 {
-        shader_set_uniform_f(other.uangle, -angle)
-        drawSegmentNM(angle, -CamX(), -CamY(), scale)
-        angle += 90
-    }
-}
-
 surface_reset_target()
 
 shader_set(shdNormal)
