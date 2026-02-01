@@ -104,9 +104,6 @@ Visuals rework
 
 0.6.x Build: add more content; new enemies, new tools and meta progression
 0.6.0-p (prototype)
-> rework shop interaction
-    > fixate ship in one place
-    > mouse cursor to interact
 > new enemies
     > mosquito
         - wants to gain distance
