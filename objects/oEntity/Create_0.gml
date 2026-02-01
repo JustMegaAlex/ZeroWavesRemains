@@ -109,7 +109,7 @@ hit = function(bullet) {
 objectHit = function() {}
 
 shoot = function(dir) {
-    Shoot(dir, weapon.object, weapon)
+    return Shoot(dir, weapon.object, weapon)
 }
 
 list = ds_list_create()

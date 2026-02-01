@@ -4,20 +4,59 @@ macro_pause
 
 
 battle_side = battle_side_enemy
-move_around_player_dist = 1000
+hp = 150
+acc_max = 2
+updateSpMax(50)
 
 //image_blend = c_white
 
+state = "missiles"
 
-weapon = {
-    dmg: 5,
-    timer: MakeTimer(45),
+weapon_burst = {
+    dmg: 3,
+    timer: MakeTimer(180),
+    burst_timer: MakeTimer(10),
+    burst_count: 4,
+    shots_left: 0,
     sp: 40,
     range: 2000,
     object: oBullet,
-    knockback: 7,
+    image_xscale: 0.8,
+    image_yscale: 0.3,
+    knockback: 5,
 }
 
+weapon_missiles = {
+    dmg: 8,
+    timer: MakeTimer(300, 0),
+    burst_timer: MakeTimer(60),
+    burst_count: 2,
+    shots_left: 0,
+    sp: 55,
+    range: 4000,
+    object: oBulletMissile,
+    knockback: 8,
+    target: oPlayer,
+}
+
+blink = {
+    timer: MakeTimer(300),
+
+}
+
+hang_in_place_timer = MakeTimer(30)
+blink = {
+    random_timer: MakeTimer(60 * random_range(2, 3)),
+    startup_timer: MakeTimer(60),
+    to: new Vec2(0, 0),
+    initialized: false,
+}
+
+burst_dist = weapon_burst.range * 0.8
+missile_dist = weapon_missiles.range
+missiles_out = false
+
+move_around_player_dist = burst_dist
 
 
 
@@ -37,7 +76,7 @@ mover_template = {
 mover_dir = {
     id: id,
     dir: 0,
-    accel_value: 0.5,
+    accel_value: 1,
     dist_left: 0,
     finished: false,
     step: function() {
