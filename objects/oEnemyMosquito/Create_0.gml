@@ -2,9 +2,17 @@ event_inherited()
 
 macro_pause
 
+hp = 80
+
 
 battle_side = battle_side_enemy
-move_around_player_dist = 1000
+long_range_dist = 2300
+start_range_increase_dist = 1400
+is_long_range_state = false
+avoid_boundary_dist = oGameArea.radius * 0.5
+avoid_boundary_zone_length = oGameArea.radius - avoid_boundary_dist
+
+updateSpMax(36)
 
 //image_blend = c_white
 
@@ -34,27 +42,19 @@ mover_template = {
     }
 }
 
-mover_dir = {
+mover_dir_simple = {
     id: id,
     dir: 0,
-    accel_value: 0.5,
-    dist_left: 0,
-    finished: false,
+    accel_value: 1,
+    finished: false, // never true
     step: function() {
-        self.dist_left -= id.sp.len()
-        if self.dist_left <= 0 {
-            self.finished = true
-            return;
-        }
         with id {
             accelerate(other.accel_value, other.dir)
         }
     },
     start: function(dir, dist_left) {
         self.dir = dir
-        self.dist_left = dist_left
-        self.finished = false
     }
 }
 
-mover = mover_point
+mover = mover_dir_simple

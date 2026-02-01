@@ -106,6 +106,9 @@ Visuals rework
 0.6.0-p (prototype)
 > new enemies
     > mosquito
+        > gain distance behaviour
+        > slow spread shot
+        > sniper shot
         - wants to gain distance
         - unescapable sniper shot at distance
         - if you get close, sprays with slow projectiles and runs away
