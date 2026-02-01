@@ -16,15 +16,18 @@ updateSpMax(36)
 
 //image_blend = c_white
 
-
-weapon = {
-    dmg: 5,
-    timer: MakeTimer(45),
-    sp: 40,
-    range: 2000,
-    object: oBullet,
-    knockback: 7,
+weapon_snipe = {
+    dmg: 20,
+    timer: MakeTimer(180),
+    object: oSnipeShot,
+    range: 3000,
+    name: "Snipe",
+    knockback: 9,
 }
+
+weapon = weapon_snipe
+
+
 
 
 
