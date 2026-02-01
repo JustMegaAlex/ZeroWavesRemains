@@ -23,6 +23,8 @@ weapon_snipe = {
     range: 3000,
     name: "Snipe",
     knockback: 9,
+    image_yscale: 0.5,
+    penetrate: false,
 }
 
 weapon = weapon_snipe
