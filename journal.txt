@@ -1,0 +1,45 @@
+
+==== 2025.01.31 ====
+0.6.0 Final vision
+1. Improvements:
+    - shop control with mouse
+2. More enemies and tools
+3. Add meta progression
+    - only small part of tech tree is unlocked from beginning
+    - during playthrough new tools can be dropped
+    - these dropped tools appear in meta progression screen after loose/win
+    - you collect special orbs to spend them on meta progression
+4. Remove difficulties (maybe)
+5. New wave spawning logic
+    - hard stop spawning every 5 waves
+    - stop countdown if current wave is secured
+
+I have approx 7 days of active development left (I have 15 calendar days but I'll be in a trip to Thailand so effectively I have less time).
+I have to decide what I want to add during this time.
+How do I do that? Well, what is my goal for this period?
+After playtesting and watching my charts I can say the game didn't win a lot of fame.
+So in the next 7 days I want to add something that will make to most impact, i.e. attract more players.
+If I would to define the reasons of low interest to the game I would say there are two factors:
+1. The main one. No magic. The game just doesn't have it.
+2. Friction. Bugs, lack of clarity, imbalance. Everything that kills fun.
+
+With 2. it's simple. Just fix and improve.
+
+But 1. What do I do to fix 1. ?
+What info do I have?
+- there's a group of players who enjoy the game, including challenge
+- there's not a lot of replayability
+    - skilled players can win the game in a few runs
+    - non-skilled get killed early and are not motivated to try again
+
+My gut feeling tells me that the game is just too small.
+The whole game can be beaten in 15-20 minutes on highest difficulty. And then you can only just repeat the same gameplay.
+I know 2 ways to solve this:
+1. Meta progression
+2. Randomisation (aka make it a roguelike)
+
+Despite the fact that I'm not the biggest fun of 1. my second gut feeling suggests that it's the better choice to try. I can experiment both with rng (random drops) AND meta progression.
+So right now my hypothesis is: adding more content (enemies and tools) + meta progression will increase replayability and gain more players.
+
+Another way of gainig interest is improving visuals and fantasy (adding narration). But these are two fields I'm not very experienced in. I can build and test stuff. So I'm sticking with more content and new mechanics.
+

@@ -74,7 +74,7 @@ Coin:
 - kinda hard to get the right upgrade in the tree
 
 More feedback:
-- scatter sucks: some players don't get how to properly use it and it seems to weak to them
+- scatter sucks: some players don't get how to properly use it and it seems too weak to them
 
 
 === Promo ===
@@ -102,8 +102,55 @@ Visuals rework
 
 
 
-0.6.x Build: improve visuals and overall appeal
-0.6.0
+0.6.x Build: add more content; new enemies, new tools and meta progression
+0.6.0-p (prototype)
+> rework shop interaction
+    > fixate ship in one place
+    > mouse cursor to interact
+> new enemies
+    > mosquito
+        - wants to gain distance
+        - unescapable sniper shot at distance
+        - if you get close, sprays with slow projectiles and runs away
+    > fighter 2.0
+        - rechargible boost
+        - boosts if you're far away
+        - shoots bursts of projectiles + gain distance and launch missiles
+    > stinky
+> upd drone
+    > turret option
+    > shield option
+> new tools
+    > usual missiles
+    > "Deleter" rocket projectile
+    > shield
+    > blink?
+> upd boost: make rechargeable
+> new upgrades
+    > mobility
+        > turn speed
+        > WASD speed
+        > boost max speed
+        > boost acceleration
+        > boost charge
+> reactive ui
+    > shields
+    > boost charge
+
+0.6.1
+> meta porgression
+    > meta progression screen
+    > random item drops
+    > player data
+        - obtained upgrades
+        - collected orbs
+    > save/load
+    > orb drops
+    > shop: fetch upgrades from player data
+
+
+=== Backlog ===
+
 > visuals
     > improve shot vfx
         > add small explosions
@@ -124,7 +171,7 @@ Visuals rework
         - particles flying to the center?
     > (maybe) add manuvering jets
 
-=== Backlog ===
+
 > feedback form
 > upd tiny crowd ai: gather somewhere far from player first?
     - don't overwhelm players from the go
@@ -226,7 +273,7 @@ Visuals rework
     - aim is increased over time if player stays still
     - start evading/retreating if get hits
     - charge forward: shorten distance without shooting
-> punisher: boss fight
+> punisher: boss fight (aka ultimate fighter)
     - fast and manuverable
     - rockets
     - burst pulse cannon

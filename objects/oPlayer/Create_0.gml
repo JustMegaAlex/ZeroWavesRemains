@@ -327,8 +327,25 @@ getObjectCollision = function(obj) {
 }
 
 
-// interactingWithItem = MouseCollision
-interactingWithItem = getObjectCollision
+hub_interaction = {
+    attached: false,
+    holding_force: 0.05,
+}
+
+hubOpen = function() {
+    hub_interaction.attached = true
+    oCamera.target = oShop
+    dampening_val = 0.2
+}
+
+hubClose = function() {
+    hub_interaction.attached = false
+    oCamera.target = id
+    dampening_val = dampening_val_initial
+}
+
+// interactingWithItem = getObjectCollision
+interactingWithItem = MouseCollision
 
 
 /// Metrics

@@ -1,4 +1,6 @@
 
+help_vec = new Vec2(0, 0) // for general geometry computing purposes
+
 image_speed = 0
 
 invincible = false
@@ -10,6 +12,7 @@ hp = hp_max
 acc_max = 0.5
 sp_max = 24
 dampening_val = acc_max / sp_max
+dampening_val_initial = dampening_val
 acc = new Vec2(0, 0)
 dampening = new Vec2(0, 0)
 sp = new Vec2(0, 0)
@@ -39,6 +42,7 @@ updateSpMax = function(_sp) {
 
 updateDampening = function() {
     dampening_val = acc_max / sp_max
+    dampening_val_initial = dampening_val
 }
 
 dirApproach = function(dir_to, rot_sp=rotary_sp) {
