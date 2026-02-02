@@ -74,7 +74,7 @@ Coin:
 - kinda hard to get the right upgrade in the tree
 
 More feedback:
-- scatter sucks: some players don't get how to properly use it and it seems to weak to them
+- scatter sucks: some players don't get how to properly use it and it seems too weak to them
 
 
 === Promo ===
@@ -100,25 +100,65 @@ Visuals rework
     - scatter: keep single light in the middle of shots?
 
 
-0.5.4
-> discord link
-> feedback form
 
 
+0.6.x Build: add more content; new enemies, new tools and meta progression
+0.6.0-p (prototype)
+> new enemies
+    > mosquito
+        > gain distance behaviour
+        > slow spread shot
+        > sniper shot
+        - wants to gain distance
+        - unescapable sniper shot at distance
+        - if you get close, sprays with slow projectiles and runs away
+    > fighter 2.0
+        - rechargible boost
+        - boosts if you're far away
+        - shoots bursts of projectiles + gain distance and launch missiles
+    > stinky
+> upd drone
+    > turret option
+    > shield option
+> new tools
+    > usual missiles
+    > "Deleter" rocket projectile
+    > shield
+    > blink?
+> upd boost: make rechargeable
+> new upgrades
+    > mobility
+        > turn speed
+        > WASD speed
+        > boost max speed
+        > boost acceleration
+        > boost charge
+> reactive ui
+    > shields
+    > boost charge
+
+0.6.1
+> meta porgression
+    > meta progression screen
+    > random item drops
+    > player data
+        - obtained upgrades
+        - collected orbs
+    > save/load
+    > orb drops
+    > shop: fetch upgrades from player data
 
 
-0.6.x Build: improve visuals and overall appeal
-0.6.0
+=== Backlog ===
+
 > visuals
     > improve shot vfx
         > add small explosions
         > move bullet into an enemy
         > NM: make'em flash a little
-    > make varying explosion sizes
     > add engine jets
-    > (maybe) add manuvering jets
-    > impl circle area effect
-        - particles flying to the center?
+    > rework explosion effects
+    > make varying explosion sizes
     > try at least 5 different color palletes
     > research: explosions
         > find good refs
@@ -127,8 +167,12 @@ Visuals rework
         - distinct bullets with traces
     > rework snipe shot (rail gun)
         - projectile
+    > impl circle area effect
+        - particles flying to the center?
+    > (maybe) add manuvering jets
 
-=== Backlog ===
+
+> feedback form
 > upd tiny crowd ai: gather somewhere far from player first?
     - don't overwhelm players from the go
 > ui
@@ -229,7 +273,7 @@ Visuals rework
     - aim is increased over time if player stays still
     - start evading/retreating if get hits
     - charge forward: shorten distance without shooting
-> punisher: boss fight
+> punisher: boss fight (aka ultimate fighter)
     - fast and manuverable
     - rockets
     - burst pulse cannon
@@ -247,7 +291,7 @@ Drone concepts:
 > shield break: drain shield almost to 0 and then use a strong weapon to overload and cause emp stun
 > ship weight system: more equipment = less agile
     - drop weapons on the go to move faster
-> choose color palette?
+> let players choose color palette?
 > add flaring red effect when < 25% hp
 > penetrating kinetic weapon (like that bugged out pulse)
 > replace ammo with ammo upgrades: restore ratio + amount

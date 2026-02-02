@@ -11,6 +11,10 @@ contact = function(inst) {
         } else {
             oParticles.hitSparks(xx, yy, image_angle + 180, 12)
         }
+        if !penetrate {
+            range = PointDist(xx, yy) + 100
+            image_xscale = range / sprite_get_width(sprite_index)
+        }
 	}
 }
 

@@ -31,12 +31,18 @@ if oInput.Hold("boost") {
 
 checkPushBackIntoCircle()
 
+if hub_interaction.attached {
+    help_vec.set(x, y).mult(-hub_interaction.holding_force)
+    acc.add(help_vec)
+}
+
+
 move()
 
 if !oInput.Hold("lclick", false) {
     showed_no_ammo = false
 }
-if !weapon.timer.timer and (oInput.Hold("lclick") or debug_shoot) {
+if !hub_interaction.attached and !weapon.timer.timer and (oInput.Hold("lclick") or debug_shoot) {
     playerShoot(dir)
     weapon.timer.reset()
 }
@@ -108,7 +114,7 @@ if interactible {
     if interactible {
         interactible.highlight = true
     }
-    if interactible and oInput.Pressed("interact") {
+    if interactible and oInput.Pressed("lclick") {
         interactible.interact()
         if !instance_exists(interactible) {
             interactible = noone
@@ -117,10 +123,16 @@ if interactible {
 }
 
 oShop.highlight = false
-if !oShop.is_open and place_meeting(x, y, oShop) {
+if !hub_interaction.attached and place_meeting(x, y, oShop) {
     oShop.highlight = true
     if oInput.Pressed("interact") {
         oShop.open()
+        hubOpen()
+    }
+} else {
+    if oInput.Pressed("interact") {
+        oShop.close()
+        hubClose()
     }
 }
 

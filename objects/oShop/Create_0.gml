@@ -15,6 +15,10 @@ open = function() {
     is_open = true
 }
 
+close = function() {
+    is_open = false
+}
+
 sprite_index_norm = sTechHubNM
 
 drawSegment = function(angle, dx, dy, scale) {

@@ -1,16 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"oSnipeShot",
+  "%Name":"oBulletMissile",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":2,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oSnipeShot",
-  "overriddenProperties":[],
+  "name":"oBulletMissile",
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBulletParent","path":"objects/oBulletParent/oBulletParent.yy",},"propertyId":{"name":"sp","path":"objects/oBulletParent/oBulletParent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"50",},
+  ],
   "parent":{
     "name":"Bullets",
     "path":"folders/Objects/Bullets.yy",
@@ -33,14 +34,15 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v2","%Name":"penetrate","filters":[],"listItems":[],"multiselect":false,"name":"penetrate","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
+    {"$GMObjectProperty":"v2","%Name":"target","filters":[],"listItems":[],"multiselect":false,"name":"target","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+    {"$GMObjectProperty":"v2","%Name":"dir","filters":[],"listItems":[],"multiselect":false,"name":"dir","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sProjectile",
-    "path":"sprites/sProjectile/sProjectile.yy",
+    "name":"sMissile",
+    "path":"sprites/sMissile/sMissile.yy",
   },
   "spriteMaskId":null,
   "visible":true,
