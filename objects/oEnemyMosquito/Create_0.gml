@@ -1,6 +1,11 @@
 event_inherited()
 
-macro_pause
+
+run = false
+objectHit = function() {
+    run = true
+}
+
 
 hp = 80
 

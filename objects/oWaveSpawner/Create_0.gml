@@ -43,6 +43,7 @@ wave_index = 0
 var progression = global.balance.progression
 strength_growth = progression.strength_growth
 strength = progression.strength
+leftover_strength = 0
 strength_growth_decrease = progression.strength_growth_decrease_total / progression.total_waves
 strength_cost = progression.strength_cost
 
@@ -72,7 +73,7 @@ for (var i = 0; i < array_length(waves); ++i) {
 var _prev_single_drone = false
 for (var i = 0; i < progression.total_waves; ++i) {
     var wave = {}
-    var _strength = strength + extra_strength_randomer.get()
+    var _strength = strength + extra_strength_randomer.get() + leftover_strength
     array_push(wave_strengths, _strength)
     var cost = 1
     if i == 20 {
@@ -97,16 +98,21 @@ for (var i = 0; i < progression.total_waves; ++i) {
         drones_to_spawn_total++
     }
 
-    if i > 10 {
+    if i > 8 {
         enemy_randomer = enemy_randomer_1
-    } else if i > 20 {
+        show_debug_message("upped difficulty 1")
+    }
+    if i > 19 {
         enemy_randomer = enemy_randomer_2
+        show_debug_message("upped difficulty 2")
     }
 
     while true {
         object_name = enemy_randomer.get()
         cost = strength_cost[$ object_name]
         if _strength < cost {
+            leftover_strength = _strength
+            enemy_randomer.shift(object_name)
             break
         }
         if !struct_has(wave, object_name) {
@@ -269,6 +275,6 @@ lastWaveCallback = function() {
 
 /// @follow-up wave spawner DEV
 if DEV {
-    wave_index = 25
-    waves_remains = array_length(waves) - wave_index
+    // wave_index = 0
+    // waves_remains = array_length(waves) - wave_index
 }

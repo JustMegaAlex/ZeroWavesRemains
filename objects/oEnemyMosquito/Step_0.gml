@@ -26,8 +26,9 @@ if active {
         var player_in_shoot_range = dist < weapon_snipe.range
         accelerate(!player_in_shoot_range, player_dir)
         dirApproach(player_dir)
-        if dist < start_range_increase_dist {
+        if (dist < start_range_increase_dist) or run {
             is_long_range_state = false
+            run = false
         }
         if player_in_shoot_range and !weapon_snipe.timer.update() {
             shoot(player_dir)
