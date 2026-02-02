@@ -109,6 +109,7 @@ hit = function(bullet) {
 objectHit = function() {}
 
 shoot = function(dir) {
+    weapon.battle_side = battle_side
     return Shoot(dir, weapon.object, weapon)
 }
 

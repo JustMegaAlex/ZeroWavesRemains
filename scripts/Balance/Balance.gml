@@ -32,6 +32,8 @@ function InitBalance() {
             oEnemy: [5,7],
             oScout: [3,4],
             oEnemyTiny: [2,3],
+            oEnemyFighter: [7, 10],
+            oEnemyMosquito: [7, 10],
             // oItemDrone: [12, 18],
             __drone_incline: 0.6, // -0.5 part of coins in wave 0, +0.5 in the last wave
         },
@@ -41,7 +43,8 @@ function InitBalance() {
             strength: 1,
             strength_growth_decrease_total: 0.1,
             strength_cost: {
-                oEnemy: 1, oScout: 0.45, oEnemyTiny: 0.27
+                oEnemy: 1, oScout: 0.45, oEnemyTiny: 0.27,
+                oEnemyFighter: 1.5, oEnemyMosquito: 1.5
             }
         }
     }

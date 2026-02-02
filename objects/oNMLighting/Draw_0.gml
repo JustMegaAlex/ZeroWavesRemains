@@ -42,6 +42,7 @@ renderPass = RP_DIFFUSE
 
 
 with oEntity {
+    if !visible { continue }
     draw_sprite_ext(
         sprite_index, image_index,
         (x - CamX()) * scale,
@@ -83,6 +84,7 @@ with oShop {
     }
 }
 with oEntity {
+    if !visible { continue }
     if sprite_index_norm == noone {
         continue
     }

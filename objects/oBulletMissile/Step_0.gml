@@ -22,3 +22,5 @@ dir = image_angle
 
 xprev = x
 yprev = y
+
+updateEntityCollider()

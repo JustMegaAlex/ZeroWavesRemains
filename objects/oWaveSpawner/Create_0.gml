@@ -46,9 +46,17 @@ strength = progression.strength
 strength_growth_decrease = progression.strength_growth_decrease_total / progression.total_waves
 strength_cost = progression.strength_cost
 
-enemy_randomer = new ControlledRandomer({
+enemy_randomer_0 = new ControlledRandomer({
     oEnemy: 3, oScout: 6, oEnemyTiny: 12
 }, true)
+enemy_randomer_1 = new ControlledRandomer({
+    oEnemy: 3, oScout: 5, oEnemyTiny: 10, oEnemyFighter: 2, oEnemyMosquito: 2
+}, true)
+enemy_randomer_2 = new ControlledRandomer({
+    oEnemy: 2, oScout: 4, oEnemyTiny: 9, oEnemyFighter: 3, oEnemyMosquito: 3
+}, true)
+enemy_randomer = enemy_randomer_0
+
 extra_strength_randomer = new ControlledRandomer([
     [0, 10],// [0.5, 5], [1, 3], [2, 2]
 ], true)
@@ -88,6 +96,13 @@ for (var i = 0; i < progression.total_waves; ++i) {
     if wave[$ "oItemDrone"] != undefined {
         drones_to_spawn_total++
     }
+
+    if i > 10 {
+        enemy_randomer = enemy_randomer_1
+    } else if i > 20 {
+        enemy_randomer = enemy_randomer_2
+    }
+
     while true {
         object_name = enemy_randomer.get()
         cost = strength_cost[$ object_name]
@@ -205,7 +220,8 @@ spawn = function(wave_override=undefined) {
         struct_del(wave, "swarm")
     }
     var names = struct_get_names(wave)
-   show_debug_message(string(names))
+    show_debug_message(string(names))
+
     for (var i = 0; i < array_length(names); i++) {
         var obj_name = names[i]
         var number = wave[$ obj_name]
