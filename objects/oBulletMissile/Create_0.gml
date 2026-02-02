@@ -31,3 +31,4 @@ sp = 0
 SetColor()
 
 createEntityCollider()
+//entity_collider.image_blend = c_red
