@@ -4,5 +4,5 @@ event_inherited();
 //yscale_hovered = 82 / 18
 
 callback = function() {
-    url_open("https://discord.com/invite/32dKKArq")
+    url_open("https://discord.gg/cRWRj29AHU")
 }
