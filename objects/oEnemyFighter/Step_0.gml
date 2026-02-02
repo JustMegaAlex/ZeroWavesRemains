@@ -5,7 +5,9 @@ no_player_exit
 
 if active {
 
-    if !blink.random_timer.update() {
+    under_attack = max(under_attack - under_attack_decr, 0)
+
+    if !blink.reload_timer.update() and (!blink.random_timer.update() or (under_attack > 200)) {
         state = "blink"
         blink.random_timer.time = 1000
         blink.random_timer.reset()
@@ -13,7 +15,7 @@ if active {
     }
 
     switch state {
-        case "engage":  
+        case "engage": 
             dir_to = InstDir(oPlayer)
             dirApproach(dir_to)
             if !weapon_burst.shots_left and !weapon_burst.timer.update() and (InstDist(oPlayer) < (weapon_burst.range * 1.1)) {
@@ -61,6 +63,8 @@ if active {
             weapon_missiles.shots_left = weapon_missiles.burst_count
             blink.initialized = false
             state = "missiles"
+            weapon_burst.shots_left = 0
+            blink.reload_timer.reset()
             mover.finished = true
         break
         case "missiles":
@@ -111,8 +115,8 @@ if weapon_burst.shots_left {
 
 if weapon_missiles.shots_left {
     if !weapon_missiles.burst_timer.update() {
-        var missile = shoot(Aim(oPlayer))
         weapon = weapon_missiles
+        var missile = shoot(Aim(oPlayer))
         weapon_missiles.shots_left--
         weapon_missiles.burst_timer.reset()
         missile.dir = image_angle + choose(-90, 90)

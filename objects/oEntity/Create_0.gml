@@ -96,7 +96,7 @@ hit = function(bullet) {
     if bullet.knockback > 0 {
         sp.add_polar(bullet.knockback / mass_factor, bullet.image_angle)
     }
-    objectHit()
+    objectHit(bullet)
     if hp <= 0 {
         die()
     }

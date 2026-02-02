@@ -10,7 +10,8 @@ updateSpMax(50)
 
 //image_blend = c_white
 
-state = "missiles"
+// state = "missiles"
+state = "engage"
 
 weapon_burst = {
     dmg: 3,
@@ -39,15 +40,14 @@ weapon_missiles = {
     target: oPlayer,
 }
 
-blink = {
-    timer: MakeTimer(300),
-
-}
+under_attack = 0
+under_attack_decr = 100 / 60
 
 hang_in_place_timer = MakeTimer(30)
 blink = {
-    random_timer: MakeTimer(60 * random_range(2, 3)),
-    startup_timer: MakeTimer(60),
+    random_timer: MakeTimer(60 * random_range(5, 15)),
+    reload_timer: MakeTimer(300, 0),
+    startup_timer: MakeTimer(20),
     to: new Vec2(0, 0),
     initialized: false,
 }
@@ -97,3 +97,7 @@ mover_dir = {
 }
 
 mover = mover_point
+
+objectHit = function(bullet) {
+    under_attack += 100
+}
