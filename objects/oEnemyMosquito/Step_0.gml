@@ -8,6 +8,7 @@ if active {
     var player_dir = InstDir(oPlayer)
     var dist = InstDist(oPlayer)
     if !is_long_range_state {
+        weapon_snipe.timer.timer = Approach(weapon_snipe.timer.timer, 0, 1)
         var center_dist = PointDist(0, 0)
         var dir_to = player_dir + 180
         if center_dist > avoid_boundary_dist {
@@ -25,8 +26,9 @@ if active {
         var player_in_shoot_range = dist < weapon_snipe.range
         accelerate(!player_in_shoot_range, player_dir)
         dirApproach(player_dir)
-        if dist < start_range_increase_dist {
+        if (dist < start_range_increase_dist) or run {
             is_long_range_state = false
+            run = false
         }
         if player_in_shoot_range and !weapon_snipe.timer.update() {
             shoot(player_dir)
@@ -35,37 +37,6 @@ if active {
     }
 }
 
-
-if false {
-    var too_far = false
-    if instance_exists(oPlayer) and InstDist(oPlayer, mover.to) > move_around_player_dist {
-        too_far = true
-    }
-    if mover.finished or too_far 
-            or point_distance(mover.to.x, mover.to.y, 0, 0) > oGameArea.radius {
-        accelerate(0, 0)
-        if instance_exists(oPlayer) {
-            var dir_from_player = point_direction(
-                oPlayer.x, oPlayer.y, x, y
-            ) + irandom_range(-90, 90)
-            mover.to.setv(oPlayer).add_polar(move_around_player_dist, dir_from_player)
-            mover.start(mover.to.x, mover.to.y)
-        }
-    } else {
-        mover.step()
-    }
-
-    weapon.timer.update()
-
-    if instance_exists(oPlayer) {
-        dir_to = InstDir(oPlayer)
-        dirApproach(dir_to)
-        if !weapon.timer.timer and (InstDist(oPlayer) < (weapon.range * 1.1)) {
-            shoot(Aim(oPlayer))
-            weapon.timer.reset()
-        }
-    }
-}
 
 checkPushBackIntoCircle()
 

@@ -13,7 +13,6 @@ visible = false
 image_speed = 0
 // become visible back
 alarm[0] = 1
-battle_side = -1
 can_hit = 0
 object_to_hit = oEntity
 shooter = noone
@@ -30,3 +29,6 @@ sp = 0
 
 
 SetColor()
+
+createEntityCollider()
+//entity_collider.image_blend = c_red

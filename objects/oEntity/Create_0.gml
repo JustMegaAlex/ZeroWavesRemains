@@ -96,7 +96,7 @@ hit = function(bullet) {
     if bullet.knockback > 0 {
         sp.add_polar(bullet.knockback / mass_factor, bullet.image_angle)
     }
-    objectHit()
+    objectHit(bullet)
     if hp <= 0 {
         die()
     }
@@ -109,6 +109,7 @@ hit = function(bullet) {
 objectHit = function() {}
 
 shoot = function(dir) {
+    weapon.battle_side = battle_side
     return Shoot(dir, weapon.object, weapon)
 }
 

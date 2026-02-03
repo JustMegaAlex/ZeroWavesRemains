@@ -1,10 +1,12 @@
 macro_pause
 
 Move(sp, dir)
+ 
+updateEntityCollider()
 
 range -= sp
 if range <= 0 {
-    instance_destroy()
+    destroy()
     exit
 }
 
@@ -22,3 +24,4 @@ dir = image_angle
 
 xprev = x
 yprev = y
+

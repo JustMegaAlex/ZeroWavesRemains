@@ -674,6 +674,10 @@ function ControlledRandomer(config, auto=false) constructor {
         return value
     }
 
+    shift = function(value) {
+        ds_list_insert(list, 0, value)
+    }
+
     empty = function() {
         return ds_list_empty(list)
     }

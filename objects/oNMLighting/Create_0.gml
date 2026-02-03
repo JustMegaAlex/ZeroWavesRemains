@@ -48,6 +48,7 @@ function makeSureExistsAndSize(surf) {
     var hratio = CamH() / surfh
     if abs(wratio - hratio) > 0.01 {
         surfh = CamH() / wratio
+        surfh = max(round(surfh), 1)
         surface_resize(surf, surfw, surfh)
     }
     return surf

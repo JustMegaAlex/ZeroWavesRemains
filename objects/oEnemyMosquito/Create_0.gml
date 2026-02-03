@@ -1,6 +1,11 @@
 event_inherited()
 
-macro_pause
+
+run = false
+objectHit = function() {
+    run = true
+}
+
 
 hp = 80
 
@@ -17,13 +22,13 @@ updateSpMax(36)
 //image_blend = c_white
 
 weapon_snipe = {
-    dmg: 20,
+    dmg: 12,
     timer: MakeTimer(180),
     object: oSnipeShot,
     range: 3000,
     name: "Snipe",
     knockback: 9,
-    image_yscale: 0.5,
+    image_yscale: 0.3,
     penetrate: false,
 }
 
