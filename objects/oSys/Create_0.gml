@@ -3,6 +3,7 @@ gml_pragma("MarkTagAsUsed", "used")
 EnsureSingleton()
 
 randomise()
+bool("false")
 
 DebugDrawIni()
 VAR_BAR_Y_BASE = 150

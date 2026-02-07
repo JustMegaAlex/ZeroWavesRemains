@@ -52,7 +52,7 @@ Visuals rework
     > global state (gs)
     > tech tree depends on gs
     > save/load gs
-    > drop tech on each X wave
+        > make save/load for desktop
 > new enemies
     > stinky
 > upd drone
