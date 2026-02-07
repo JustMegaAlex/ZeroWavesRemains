@@ -19,8 +19,7 @@ function getUnlockableByTier(tier) {
         return undefined
     }
     var tech = ArrayChoose(unlockable_tiers[tier])
-    ArrayRemove(unlockable_tiers[tier], tech)
-    return tech
+    return ArrayRemove(unlockable_tiers[tier], tech)
 }
 
 function techUnlocked(name) {

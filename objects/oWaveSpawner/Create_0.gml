@@ -27,6 +27,7 @@ drones_to_spawn_total = 0
 // ]
 // waves_remains = array_length(waves)
 /// @follow-up wave spawner initial waves
+
 waves = [
     // {oScout: 2},
     // {oEnemyTiny: 2},
@@ -201,6 +202,13 @@ spawn = function(wave_override=undefined) {
         }
     )
 
+    if unlockable_tier <= 2 and !ArrayEmpty(unlockable_wave_indices)
+            and wave_index == unlockable_wave_indices[0] {
+        array_shift(unlockable_wave_indices)
+        wave_unlock_tech = oGameState.getUnlockableByTier(unlockable_tier)
+        unlockable_tier++
+    }
+
     /// Apply AI mode
     if next_wave_trigger_swarm_mode or (Chance(0.5) and (instance_number(oEnemyTiny) > tiny_min_swarm_count)) {
         oAIEnemyControl.tiny.enterSwarmMode()
@@ -275,6 +283,10 @@ lastWaveCallback = function() {
 
 /// @follow-up wave spawner DEV
 if DEV {
-    // wave_index = 0
-    // waves_remains = array_length(waves) - wave_index
+    wave_index = 13
+    waves_remains = array_length(waves) - wave_index
 }
+
+unlockable_wave_indices = [14, 26]
+wave_unlock_tech = undefined
+unlockable_tier = 0
