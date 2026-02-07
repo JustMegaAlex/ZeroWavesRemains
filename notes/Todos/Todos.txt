@@ -47,27 +47,21 @@ Visuals rework
 
 
 0.6.x Build: add more content; new enemies, new tools and meta progression
-0.6.0-p (prototype)
+0.6.0
+> meta progression system
+    > global state (gs)
+    > tech tree depends on gs
+    > save/load gs
+    > drop tech on each X wave
 > new enemies
-    > mosquito
-        > gain distance behaviour
-        > slow spread shot
-        > sniper shot
-        - wants to gain distance
-        - unescapable sniper shot at distance
-        - if you get close, sprays with slow projectiles and runs away
-    > fighter 2.0
-        - rechargible boost
-        - boosts if you're far away
-        - shoots bursts of projectiles + gain distance and launch missiles
     > stinky
 > upd drone
     > turret option
     > shield option
 > new tools
+    > shield
     > usual missiles
     > "Deleter" rocket projectile
-    > shield
     > blink?
 > upd boost: make rechargeable
 > new upgrades
@@ -80,6 +74,10 @@ Visuals rework
 > reactive ui
     > shields
     > boost charge
+> remove wave countdown
+> fix
+    > show money during tutorial
+
 
 0.6.1
 > meta porgression

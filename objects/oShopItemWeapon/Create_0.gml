@@ -22,3 +22,5 @@ apply = function() {
     cost_text_struct.text = ""
     text_struct.text = $"You already have {weapon.name}"
 }
+
+is_unlocked = oGameState.techUnlocked(weapon.name)

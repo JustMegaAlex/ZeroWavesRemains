@@ -2,8 +2,8 @@
   "$GMProject":"v1",
   "%Name":"ZeroWavesRemains",
   "AudioGroups":[
-    {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
-    {"$GMAudioGroup":"","%Name":"audiogroup_load_after","name":"audiogroup_load_after","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMAudioGroup":"v1","%Name":"audiogroup_load_after","exportDir":"","name":"audiogroup_load_after","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
   "configs":{
     "children":[
@@ -54,7 +54,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.3.217",
+    "IDEVersion":"2024.14.2.213",
   },
   "name":"ZeroWavesRemains",
   "resources":[
@@ -93,6 +93,7 @@
     {"id":{"name":"oGameArea","path":"objects/oGameArea/oGameArea.yy",},},
     {"id":{"name":"oGameColors","path":"objects/oGameColors/oGameColors.yy",},},
     {"id":{"name":"oGameSettings","path":"objects/oGameSettings/oGameSettings.yy",},},
+    {"id":{"name":"oGameState","path":"objects/oGameState/oGameState.yy",},},
     {"id":{"name":"oInput","path":"objects/oInput/oInput.yy",},},
     {"id":{"name":"oInteractible","path":"objects/oInteractible/oInteractible.yy",},},
     {"id":{"name":"oItemDrone","path":"objects/oItemDrone/oItemDrone.yy",},},
