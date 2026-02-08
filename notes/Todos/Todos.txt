@@ -48,8 +48,6 @@ Visuals rework
 
 0.6.x Build: add more content; new enemies, new tools and meta progression
 0.6.0-p (prototype)
-> meta progression system
-    > show hint text "[Persistent progression]\nNew tech unlocked"
 > new enemies
     > stinky
 > upd drone

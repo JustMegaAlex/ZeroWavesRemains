@@ -261,6 +261,7 @@
     {"id":{"name":"sProjectile","path":"sprites/sProjectile/sProjectile.yy",},},
     {"id":{"name":"sProjectileCircle","path":"sprites/sProjectileCircle/sProjectileCircle.yy",},},
     {"id":{"name":"sRhombusStructure","path":"sprites/sRhombusStructure/sRhombusStructure.yy",},},
+    {"id":{"name":"sShield","path":"sprites/sShield/sShield.yy",},},
     {"id":{"name":"sShopHighlight","path":"sprites/sShopHighlight/sShopHighlight.yy",},},
     {"id":{"name":"sShopItem","path":"sprites/sShopItem/sShopItem.yy",},},
     {"id":{"name":"sShopItemLink","path":"sprites/sShopItemLink/sShopItemLink.yy",},},
