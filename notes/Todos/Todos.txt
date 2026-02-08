@@ -55,6 +55,11 @@ Visuals rework
     > shield option
 > new tools
     > shield
+        > input
+        > icon
+        > shop item
+        > shop upgrades
+        > meta progression
     > usual missiles
     > "Deleter" rocket projectile
     > blink?

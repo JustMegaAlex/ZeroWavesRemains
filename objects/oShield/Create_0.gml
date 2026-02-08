@@ -8,11 +8,13 @@ alpha_drown = 0.3
 
 hp = 30
 hp_max = hp
-battle_side_initial = 0
+battle_side_initial = battle_side
+battle_side = battle_side_ignore
 blink_timer = MakeTimer(5, 0)
+is_up = false
 
 isUp = function() {
-    return regen_timer.timer <= 0 and hp > 0
+    return is_up
 }
 
 hit = function(bullet) {
@@ -21,7 +23,27 @@ hit = function(bullet) {
     if hp <= 0 {
         hp = 0
         regen_timer.reset()
-        battle_side_initial = battle_side
-        battle_side = battle_side_ingore
+        deactivate()
+    }
+}
+
+activate = function() {
+    if hp <= 0 {
+        blink_timer.reset()
+        return;
+    }
+    if hp < hp_max {
+        regen_timer.reset()
+    }
+    is_up = true
+    battle_side = battle_side_initial
+}
+
+deactivate = function() {
+    is_up = false
+    battle_side_initial = battle_side
+    battle_side = battle_side_ignore
+    if hp < hp_max {
+        regen_timer.reset()
     }
 }
