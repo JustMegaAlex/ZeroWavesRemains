@@ -43,4 +43,6 @@ interact = function() {
     unlockable.unlock()
     is_used = true
     oGameState.unlockTech(tech)
+    oUITextTechUnlocked.show()
+    oUI.addHintArrow(oShop, "New tech!", c_lime, 300)
 }

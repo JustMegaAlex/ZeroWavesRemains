@@ -77,6 +77,7 @@ Visuals rework
 > fix
     > show money during tutorial
     > mosquito: reload only when aiming
+    > shop items: remove "Press F"
 > upd tinies: nerf shooting rate
 > make all coins slowly move towards player when no enemies left
 

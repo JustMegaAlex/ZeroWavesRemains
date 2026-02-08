@@ -154,6 +154,7 @@
     {"id":{"name":"oUITextShopExit","path":"objects/oUITextShopExit/oUITextShopExit.yy",},},
     {"id":{"name":"oUITextSpawnWave","path":"objects/oUITextSpawnWave/oUITextSpawnWave.yy",},},
     {"id":{"name":"oUITextSwtichWeapons","path":"objects/oUITextSwtichWeapons/oUITextSwtichWeapons.yy",},},
+    {"id":{"name":"oUITextTechUnlocked","path":"objects/oUITextTechUnlocked/oUITextTechUnlocked.yy",},},
     {"id":{"name":"oUIWaveCountdown","path":"objects/oUIWaveCountdown/oUIWaveCountdown.yy",},},
     {"id":{"name":"oUIWaveCountdownFrame","path":"objects/oUIWaveCountdownFrame/oUIWaveCountdownFrame.yy",},},
     {"id":{"name":"oUIWaves","path":"objects/oUIWaves/oUIWaves.yy",},},
