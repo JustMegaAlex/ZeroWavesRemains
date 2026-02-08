@@ -10,10 +10,11 @@ config = {
     },
     scatter: {
         icon: sUIWeaponScatter,
+        id: id,
         name: "Scatter gun",
         unlock: function() {
             with oShopItemWeapon {
-                if string_lower(weapon.name) == other.tech {
+                if string_lower(weapon.name) == other.id.tech {
                     unlock()
                 }
             }
@@ -21,10 +22,11 @@ config = {
     },
     snipe: {
         icon: sUIWeaponSnipe,
+        id: id,
         name: "Snipe gun",
         unlock: function() {
             with oShopItemWeapon {
-                if string_lower(weapon.name) == other.tech {
+                if string_lower(weapon.name) == other.id.tech {
                     unlock()
                 }
             }

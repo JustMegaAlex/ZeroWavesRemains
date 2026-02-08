@@ -72,4 +72,11 @@ activate = function() {
     is_unlocked = is_unlocked_initially
 }
 
+unlock_children = function() {
+    for (var i = 0; i < array_length(child_nodes); ++i) {
+        var child = child_nodes[i]
+        child.unlock()
+    }
+}
+
 alarm[0] = 1

@@ -24,3 +24,4 @@ apply = function() {
 }
 
 is_unlocked = oGameState.techUnlocked(weapon.name)
+is_unlocked_initially = is_unlocked

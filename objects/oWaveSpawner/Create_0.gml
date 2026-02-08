@@ -129,11 +129,15 @@ for (var i = 0; i < progression.total_waves; ++i) {
 }
 
 
+///// @follow-up custom waves
+var num = choose(0, 1)
+array_insert(waves, 7, {oEnemyFighter: num, oEnemyMosquito: 1 - num})
+
 ///// @follow-up Behemoth waves
 array_insert(waves, 12, {oEnemyBehemoth: 1, oEnemyTiny: __diff(0, 6, 9), oEnemy: __diff(0, 0, 3)})
 array_push(waves, {oEnemyBehemoth: 1, oEnemy: __diff(2, 3, 5), oEnemyTiny: __diff(6, 10, 20), oScout: __diff(0, 3, 6)})
 ///// @follow-up Swarm waves
-array_insert(waves, irandom_range(7, 12), {oEnemyTiny: __diff(8, 10, 12), swarm: true})
+array_insert(waves, irandom_range(8, 12), {oEnemyTiny: __diff(8, 10, 12), swarm: true})
 array_insert(waves, irandom_range(13, array_length(waves)-1), {oEnemyTiny: __diff(15, 20, 30), swarm: true})
 
 // waves = [{oEnemyTiny: 1}, {oEnemyTiny: 1}]
@@ -201,9 +205,10 @@ spawn = function(wave_override=undefined) {
                 show_debug_message($"Activated {object_get_name(inst.object_index)}")
         }
     )
-
+    
+    var active_wave_index = wave_index - 1 // because units from wave_index are deployed to outer circle in "wait" state
     if unlockable_tier <= 2 and !ArrayEmpty(unlockable_wave_indices)
-            and wave_index == unlockable_wave_indices[0] {
+            and active_wave_index == unlockable_wave_indices[0] {
         array_shift(unlockable_wave_indices)
         wave_unlock_tech = oGameState.getUnlockableByTier(unlockable_tier)
         unlockable_tier++
@@ -287,6 +292,12 @@ if DEV {
     waves_remains = array_length(waves) - wave_index
 }
 
-unlockable_wave_indices = [14, 26]
+unlockable_wave_indices = [7]
+for (var i = 0; i < array_length(waves); ++i) {
+    var item = waves[i]
+    if array_contains(struct_get_names(waves[i]), "oEnemyBehemoth") {
+        array_push(unlockable_wave_indices, i)
+    }
+}
 wave_unlock_tech = undefined
 unlockable_tier = 0

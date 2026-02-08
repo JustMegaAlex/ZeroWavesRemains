@@ -13,6 +13,14 @@ DebugViewAddRefs([oNMLighting, "ambience"], [
 
 dbg_section("Game state", true)
 dbg_button("Reset", oGameState.reset)
+var keys = variable_struct_get_names(oGameState.state)
+for (var i = 0; i < array_length(keys); ++i) {
+    var key = keys[i]
+    var value = oGameState.state[$ key]
+    DebugViewAddRefs(oGameState.state, [
+        [key, dbg_checkbox, key]
+    ])
+}
 
 
 
