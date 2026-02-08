@@ -10,7 +10,9 @@ if range <= 0 {
     exit
 }
 
-dir_to = InstDir(target)
+if instance_exists(target) {
+    dir_to = InstDir(target)
+}
 
 if startup_timer.update() or !instance_exists(target) {
     sp *= 0.94
