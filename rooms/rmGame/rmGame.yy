@@ -47,7 +47,6 @@
     {"name":"inst_26A208B5","path":"rooms/rmGame/rmGame.yy",},
     {"name":"inst_730E9857","path":"rooms/rmGame/rmGame.yy",},
     {"name":"inst_2B672CB","path":"rooms/rmGame/rmGame.yy",},
-    {"name":"inst_76B0E5A6","path":"rooms/rmGame/rmGame.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -133,9 +132,6 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oShopItemWeaponUpgrade","path":"objects/oShopItemWeaponUpgrade/oShopItemWeaponUpgrade.yy",},"propertyId":{"name":"upgrade_string","path":"objects/oShopItemWeaponUpgrade/oShopItemWeaponUpgrade.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"weapon_pulse.fire_rate",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oShopItem","path":"objects/oShopItem/oShopItem.yy",},"propertyId":{"name":"is_unlocked","path":"objects/oShopItem/oShopItem.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-352.0,"y":0.0,},
-        {"$GMRInstance":"v4","%Name":"inst_76B0E5A6","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_76B0E5A6","objectId":{"name":"oItemDropTech","path":"objects/oItemDropTech/oItemDropTech.yy",},"properties":[
-            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oItemDropTech","path":"objects/oItemDropTech/oItemDropTech.yy",},"propertyId":{"name":"tech","path":"objects/oItemDropTech/oItemDropTech.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"hp",},
-          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":768.0,"y":-384.0,},
       ],"layers":[],"name":"Shop","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"ShopItemLinks","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_19CE6992","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_19CE6992","objectId":{"name":"oShopItemLink","path":"objects/oShopItemLink/oShopItemLink.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":-230.96414,"scaleX":2.265625,"scaleY":1.0,"x":0.0,"y":-192.0,},

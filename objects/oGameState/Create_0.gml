@@ -1,11 +1,15 @@
 
 EnsureSingleton()
 
-state = {
-    tech_scatter: false,
-    tech_snipe: false,
-    tech_hp: false,
+get_default_state = function() {
+    return {
+        tech_scatter: false,
+        tech_snipe: false,
+        tech_hp: false,
+    }
 }
+
+state = get_default_state()
 
 unlockable_tiers = [
     ["hp"],
@@ -69,6 +73,11 @@ function load_html() {
             state[$ key_val[0]] = parse_cookie_value(key_val[1])
         }
     }
+}
+
+function reset() {
+    state = get_default_state()
+    save()
 }
 
 function parse_cookie_value(value) {

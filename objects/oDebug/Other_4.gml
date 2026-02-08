@@ -11,12 +11,8 @@ DebugViewAddRefs([oNMLighting, "ambience"], [
     ["b", dbg_slider, 0, 255],
 ])
 
-
-DebugViewAddRefs([oUICoins, "anim"], [
-    ["start_sp", dbg_slider, 0, 5],
-    ["dissip", dbg_slider, 0, 1],
-    ["spring", dbg_slider, 0, 1],
-])
+dbg_section("Game state", true)
+dbg_button("Reset", oGameState.reset)
 
 
 
