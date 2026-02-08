@@ -62,10 +62,6 @@ costText = function() {
     return cost_text_struct
 }
 
-if !is_unlocked {
-    image_index = 2
-}
-
 deactivate = function() {
     visible = false
     is_unlocked = false
@@ -75,3 +71,5 @@ activate = function() {
     visible = true
     is_unlocked = is_unlocked_initially
 }
+
+alarm[0] = 1

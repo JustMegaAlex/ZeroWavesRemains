@@ -4,6 +4,7 @@ EnsureSingleton()
 state = {
     tech_scatter: false,
     tech_snipe: false,
+    tech_hp: false,
 }
 
 unlockable_tiers = [
@@ -25,7 +26,30 @@ function techUnlocked(name) {
     return state[$ name]
 }
 
-function save() {
+function unlockTech(tech) {
+    tech = $"tech_{tech}"
+    if !struct_has(state, tech) {
+        throw $"Error: no such field: {tech}"
+    }
+    state[$ tech] = true
+    save()
+}
+
+save_file = "state.sav"
+function save_desktop() {
+    var file = file_text_open_write(save_file)
+    file_text_write_string(file, json_stringify(state))
+}
+
+function load_desktop() {
+    if !file_exists(save_file) {
+        return;
+    }
+    var file = file_text_open_read(save_file)
+    state = json_parse(file_text_read_string(file))
+}
+
+function save_html() {
     var keys = variable_struct_get_names(state)
     for (var i = 0; i < array_length(keys); ++i) {
         var key = keys[i]
@@ -34,7 +58,7 @@ function save() {
     }
 }
 
-function load() {
+function load_html() {
     var raw_cookie = html_load_progress()
     var splitted = string_split(raw_cookie, ";", true)
     for (var i = 0; i < array_length(splitted); ++i) {
@@ -60,4 +84,13 @@ function parse_cookie_value(value) {
     return value
 }
 
+save = save_desktop
+load = load_desktop
+if (os_type == os_browser) or (os_type == os_operagx) {
+    save = save_html
+    load = load_html
+}
+
+
 load()
+

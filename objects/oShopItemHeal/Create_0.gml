@@ -14,3 +14,6 @@ can_buy = function() {
 apply = function() {
     oPlayer.heal(heal_amount)
 }
+
+is_unlocked = oGameState.techUnlocked("hp")
+is_unlocked_initially = is_unlocked

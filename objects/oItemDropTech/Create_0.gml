@@ -40,4 +40,5 @@ text = $"New tech: {unlockable.name} (Press F)"
 interact = function() {
     unlockable.unlock()
     is_used = true
+    oGameState.unlockTech(tech)
 }
