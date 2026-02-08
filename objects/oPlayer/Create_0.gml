@@ -350,3 +350,6 @@ interactingWithItem = MouseCollision
 
 /// Metrics
 boost_time_used = 0
+
+createShield()
+

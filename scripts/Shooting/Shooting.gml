@@ -3,6 +3,7 @@
 #macro battle_side_neutral 1
 #macro battle_side_enemy 2
 #macro battle_side_player 4
+#macro battle_side_ingore 8
 #macro can_hit_all 7
 
 function Shoot(dir=0, obj=oBullet, args={}) {

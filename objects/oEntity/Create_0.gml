@@ -32,8 +32,7 @@ weapon = {
     object: oBullet,
 }
 
-battle_side = battle_side_none
-can_hit = can_hit_all
+shield = noone
 
 updateSpMax = function(_sp) {
     sp_max = _sp
@@ -88,6 +87,10 @@ hit = function(bullet) {
     if invincible {
         return;
     }
+    if shield and shield.isUp() {
+        shield.hit(bullet)
+        return;
+    }
     if deny_killing_shot and hp <= bullet.dmg {
         return;
     }
@@ -123,6 +126,13 @@ catchBullet = function() {
             return
         }
     }
+}
+
+createShield = function() {
+    var scale = 2 * max(sprite_width, sprite_height) / sprite_get_width(sShield)
+    shield = instance_create_layer(x, y, layer, oShield, {
+        battle_side: battle_side, image_xscale: scale, image_yscale: scale
+    })
 }
 
 /// Late init

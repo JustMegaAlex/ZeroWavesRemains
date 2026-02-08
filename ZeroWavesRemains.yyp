@@ -127,6 +127,7 @@
     {"id":{"name":"oRoomSelectButton","path":"objects/oRoomSelectButton/oRoomSelectButton.yy",},},
     {"id":{"name":"oRoomSelectMenu","path":"objects/oRoomSelectMenu/oRoomSelectMenu.yy",},},
     {"id":{"name":"oScout","path":"objects/oScout/oScout.yy",},},
+    {"id":{"name":"oShield","path":"objects/oShield/oShield.yy",},},
     {"id":{"name":"oShop","path":"objects/oShop/oShop.yy",},},
     {"id":{"name":"oShopItem","path":"objects/oShopItem/oShopItem.yy",},},
     {"id":{"name":"oShopItemAmmo","path":"objects/oShopItemAmmo/oShopItemAmmo.yy",},},
