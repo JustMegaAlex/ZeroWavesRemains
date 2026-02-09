@@ -29,9 +29,10 @@ if active {
         if (dist < start_range_increase_dist) or run {
             is_long_range_state = false
             run = false
+            weapon_snipe.timer.reset()
         }
         if player_in_shoot_range and !weapon_snipe.timer.update() {
-            shoot(player_dir)
+            shoot(dir)
             weapon_snipe.timer.reset()
         }
     }

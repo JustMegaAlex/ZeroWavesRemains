@@ -49,11 +49,6 @@ Visuals rework
 0.6.x Build: add more content; new enemies, new tools and meta progression
 0.6.0-p (prototype)
 > new tools
-    > shield
-        > icon
-        > shop item
-        > shop upgrades
-        > meta progression
     > usual missiles
     > "Deleter" rocket projectile
     > blink?
