@@ -1,7 +1,7 @@
 event_inherited()
 
 updateText = function() {
-    text = $"(Press F) Upgrade {weapon.name} {upgrade_conf.name} to level {upgrade_level + 2}"
+    text = $"Upgrade {weapon.name} {upgrade_conf.name} to level {upgrade_level + 2}"
     var next_upgrade_cost = upgrade_conf.costs[upgrade_level + 1]
     var keys = variable_struct_get_names(upgrade_conf.stats)
     /// Legacy structure: it's supposed to have only one stat

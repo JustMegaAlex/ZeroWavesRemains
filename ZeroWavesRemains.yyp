@@ -134,6 +134,7 @@
     {"id":{"name":"oShopItemHeal","path":"objects/oShopItemHeal/oShopItemHeal.yy",},},
     {"id":{"name":"oShopItemLink","path":"objects/oShopItemLink/oShopItemLink.yy",},},
     {"id":{"name":"oShopItemShield","path":"objects/oShopItemShield/oShopItemShield.yy",},},
+    {"id":{"name":"oShopItemShieldUpgrade","path":"objects/oShopItemShieldUpgrade/oShopItemShieldUpgrade.yy",},},
     {"id":{"name":"oShopItemWeapon","path":"objects/oShopItemWeapon/oShopItemWeapon.yy",},},
     {"id":{"name":"oShopItemWeaponUpgrade","path":"objects/oShopItemWeaponUpgrade/oShopItemWeaponUpgrade.yy",},},
     {"id":{"name":"oSnipeShot","path":"objects/oSnipeShot/oSnipeShot.yy",},},

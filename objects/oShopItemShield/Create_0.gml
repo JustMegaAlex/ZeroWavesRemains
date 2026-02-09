@@ -1,7 +1,7 @@
 event_inherited()
 
 if !is_purchased {
-    cost = global.balance.items.costs.shield
+    cost = global.balance.items.costs.shield[0]
     cost_text_struct.text = string(cost)
     text_struct.text = prompt_text + $"buy shield"
 } else {

@@ -63,6 +63,8 @@ gp_dir = {
 }
 
 is_shield_unlocked = false
+shield_default_hp = 30
+shield_upgrades = [45, 60]
 
 var _pulse_costs = global.balance.items.costs.pulse
 weapon_pulse = {
@@ -152,6 +154,7 @@ weapon_snipe = {
     }
 }
 
+
 weapon = weapon_pulse
 weapon_index = 0
 
@@ -202,6 +205,8 @@ function unlockShield() {
         return;
     }
     createShield()
+    shield.hp = shield_default_hp
+    shield.hp_max = shield_default_hp
 }
 
 inputSwitchWeapon = function(slot) {
