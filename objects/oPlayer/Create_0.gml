@@ -62,6 +62,8 @@ gp_dir = {
     }
 }
 
+is_shield_unlocked = false
+
 var _pulse_costs = global.balance.items.costs.pulse
 weapon_pulse = {
     dmg: 20,
@@ -192,6 +194,14 @@ function unlockWeapon(weapon) {
     global.player_bought_weapon = true
     var ind = array_get_index(all_weapons, weapon)
     weapons_array[ind] = weapon
+}
+
+function unlockShield() {
+    if shield != noone {
+        show_debug_message("unlockShield called while shield is already unlocked ")
+        return;
+    }
+    createShield()
 }
 
 inputSwitchWeapon = function(slot) {
@@ -350,6 +360,3 @@ interactingWithItem = MouseCollision
 
 /// Metrics
 boost_time_used = 0
-
-createShield()
-

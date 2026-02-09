@@ -32,6 +32,14 @@ config = {
             }
         }
     },
+    shield: {
+        icon: sIconShield,
+        id: id,
+        name: "Shield",
+        unlock: function() {
+            oShopItemShield.unlock()
+        }
+    },
 }
 
 is_used = false

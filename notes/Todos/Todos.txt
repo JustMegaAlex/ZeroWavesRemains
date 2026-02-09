@@ -48,14 +48,8 @@ Visuals rework
 
 0.6.x Build: add more content; new enemies, new tools and meta progression
 0.6.0-p (prototype)
-> new enemies
-    > stinky
-> upd drone
-    > turret option
-    > shield option
 > new tools
     > shield
-        > input
         > icon
         > shop item
         > shop upgrades
@@ -84,6 +78,11 @@ Visuals rework
 > upd tinies: nerf shooting rate
 > make all coins slowly move towards player when no enemies left
 
+> new enemies
+    > stinky
+> upd drone
+    > turret option
+    > shield option
 
 0.6.1
 > meta porgression

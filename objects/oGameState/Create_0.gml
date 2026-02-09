@@ -6,6 +6,7 @@ get_default_state = function() {
         tech_scatter: false,
         tech_snipe: false,
         tech_hp: false,
+        tech_shield: false
     }
 }
 

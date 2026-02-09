@@ -54,7 +54,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.2.213",
+    "IDEVersion":"2024.14.3.217",
   },
   "name":"ZeroWavesRemains",
   "resources":[
@@ -133,6 +133,7 @@
     {"id":{"name":"oShopItemAmmo","path":"objects/oShopItemAmmo/oShopItemAmmo.yy",},},
     {"id":{"name":"oShopItemHeal","path":"objects/oShopItemHeal/oShopItemHeal.yy",},},
     {"id":{"name":"oShopItemLink","path":"objects/oShopItemLink/oShopItemLink.yy",},},
+    {"id":{"name":"oShopItemShield","path":"objects/oShopItemShield/oShopItemShield.yy",},},
     {"id":{"name":"oShopItemWeapon","path":"objects/oShopItemWeapon/oShopItemWeapon.yy",},},
     {"id":{"name":"oShopItemWeaponUpgrade","path":"objects/oShopItemWeaponUpgrade/oShopItemWeaponUpgrade.yy",},},
     {"id":{"name":"oSnipeShot","path":"objects/oSnipeShot/oSnipeShot.yy",},},
@@ -253,6 +254,7 @@
     {"id":{"name":"sIconAmmoSnipe","path":"sprites/sIconAmmoSnipe/sIconAmmoSnipe.yy",},},
     {"id":{"name":"sIconCoins","path":"sprites/sIconCoins/sIconCoins.yy",},},
     {"id":{"name":"sIconHeal","path":"sprites/sIconHeal/sIconHeal.yy",},},
+    {"id":{"name":"sIconShield","path":"sprites/sIconShield/sIconShield.yy",},},
     {"id":{"name":"sMenuButton","path":"sprites/sMenuButton/sMenuButton.yy",},},
     {"id":{"name":"sMenuButtonJoinDC","path":"sprites/sMenuButtonJoinDC/sMenuButtonJoinDC.yy",},},
     {"id":{"name":"sMenuCheckbox","path":"sprites/sMenuCheckbox/sMenuCheckbox.yy",},},
