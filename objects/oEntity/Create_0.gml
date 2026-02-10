@@ -35,7 +35,14 @@ weapon = {
 shield = noone
 
 is_emp_stunned = false
+emp_timer = MakeTimer(0)
 emp_particle_timer = MakeTimer(12)
+
+applyEmp = function(time) {
+    is_emp_stunned = true
+    emp_timer.time = time
+    emp_timer.reset()
+}
 
 updateSpMax = function(_sp) {
     sp_max = _sp

@@ -3,7 +3,9 @@
 macro_pause
 no_player_exit
 
-if active {
+if is_emp_stunned {
+    accelerate(0, 0)
+} else if active {
 
     under_attack = max(under_attack - under_attack_decr, 0)
 

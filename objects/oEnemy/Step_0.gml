@@ -3,7 +3,9 @@
 macro_pause
 no_player_exit
 
-if active {
+if is_emp_stunned {
+    accelerate(0, 0)
+} else if active {
     var too_far = false
     if instance_exists(oPlayer) and InstDist(oPlayer, mover.to) > move_around_player_dist {
         too_far = true

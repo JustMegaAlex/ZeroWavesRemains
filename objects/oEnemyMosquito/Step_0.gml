@@ -4,7 +4,9 @@ macro_pause
 no_player_exit
 
 
-if active {
+if is_emp_stunned {
+    accelerate(0, 0)
+} else if active {
     var player_dir = InstDir(oPlayer)
     var dist = InstDist(oPlayer)
     if !is_long_range_state {
