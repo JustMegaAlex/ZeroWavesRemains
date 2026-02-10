@@ -279,6 +279,7 @@ mapping_config = {
     interact: [new Key(ord("F")), new Gamepad(gp_face1)],
     next_wave: [new Key(vk_space), new Gamepad(gp_face2)],
     device1: [new Key(ord("C"))],
+    device2: [new Key(ord("X"))],
 }
 //// Initialize key mapping
 mapping = {}

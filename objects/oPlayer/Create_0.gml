@@ -154,6 +154,21 @@ weapon_snipe = {
     }
 }
 
+weapon_emp_missile = {
+    dmg: 10,
+    timer: MakeTimer(60),
+    object: oBulletMissile,
+    range: 6000,
+    emp: 300,
+    name: "EMP missile",
+    ammo: 5,
+    sound: noone,
+    sprite: noone,
+    upgrades: 0,
+    upgrade_confs: {
+    }
+}
+
 
 weapon = weapon_pulse
 weapon_index = 0
@@ -162,6 +177,12 @@ all_weapons = [
     weapon_pulse,
     weapon_scatter, 
     weapon_snipe
+]
+_all_weapons = [
+    weapon_pulse,
+    weapon_scatter, 
+    weapon_snipe,
+    weapon_emp_missile
 ]
 
 weapons_array = [
@@ -176,8 +197,8 @@ _weapon_default_field = function(weapon_item, key, value) {
     }
 }
 
-for (var i = 0; i < array_length(all_weapons); ++i) {
-    var item = all_weapons[i]
+for (var i = 0; i < array_length(_all_weapons); ++i) {
+    var item = _all_weapons[i]
     _weapon_default_field(item, "knockback", 0)
     _weapon_default_field(item, "sprite", noone)
     _weapon_default_field(item, "ammo_max", item.ammo)

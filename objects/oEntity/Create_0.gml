@@ -109,6 +109,9 @@ hit = function(bullet) {
     if bullet.knockback > 0 {
         sp.add_polar(bullet.knockback / mass_factor, bullet.image_angle)
     }
+    if bullet.emp > 0 {
+        applyEmp(bullet.emp)
+    }
     objectHit(bullet)
     if hp <= 0 {
         die()
@@ -124,6 +127,14 @@ objectHit = function() {}
 shoot = function(dir) {
     weapon.battle_side = battle_side
     return Shoot(dir, weapon.object, weapon)
+}
+
+shootWeapon = function(dir, weap) {
+    var prev_weap = weapon
+    weapon = weap
+    var bullet = shoot(dir)
+    weapon = prev_weap
+    return bullet
 }
 
 list = ds_list_create()

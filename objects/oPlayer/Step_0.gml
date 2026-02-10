@@ -153,6 +153,13 @@ if shield != noone and oInput.Pressed("device1") {
     }
 }
 
+if oInput.Pressed("device2") {
+    var missile = shootWeapon(dir, weapon_emp_missile)
+    if instance_exists(oEnemyParent) {
+        missile.target = oEnemyParent
+    }
+}
+
 //if !global.tutorial
         //and !instance_exists(oEnemyParent)
         //and oWaveSpawner.waves_remains <= 0 {
