@@ -49,6 +49,13 @@ Visuals rework
 0.6.x Build: add more content; new enemies, new tools and meta progression
 0.6.0-p (prototype)
 > new tools
+    > shield
+        > basic ui
+    > emp missiles
+        > emp mechanic
+        > player input
+        > meta progression
+        > shop item+upgrades
     > usual missiles
     > "Deleter" rocket projectile
     > blink?
@@ -72,24 +79,13 @@ Visuals rework
     > shop items: remove "Press F"
 > upd tinies: nerf shooting rate
 > make all coins slowly move towards player when no enemies left
+> restore full pulse after wave
 
 > new enemies
     > stinky
 > upd drone
     > turret option
     > shield option
-
-0.6.1
-> meta porgression
-    > meta progression screen
-    > random item drops
-    > player data
-        - obtained upgrades
-        - collected orbs
-    > save/load
-    > orb drops
-    > shop: fetch upgrades from player data
-
 
 === Backlog ===
 

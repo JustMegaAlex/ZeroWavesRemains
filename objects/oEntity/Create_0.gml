@@ -34,6 +34,9 @@ weapon = {
 
 shield = noone
 
+is_emp_stunned = false
+emp_particle_timer = MakeTimer(12)
+
 updateSpMax = function(_sp) {
     sp_max = _sp
     updateDampening()

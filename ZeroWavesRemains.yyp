@@ -260,6 +260,7 @@
     {"id":{"name":"sMenuButtonJoinDC","path":"sprites/sMenuButtonJoinDC/sMenuButtonJoinDC.yy",},},
     {"id":{"name":"sMenuCheckbox","path":"sprites/sMenuCheckbox/sMenuCheckbox.yy",},},
     {"id":{"name":"sMissile","path":"sprites/sMissile/sMissile.yy",},},
+    {"id":{"name":"sParticleEmp","path":"sprites/sParticleEmp/sParticleEmp.yy",},},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
     {"id":{"name":"sPlayerNM","path":"sprites/sPlayerNM/sPlayerNM.yy",},},
     {"id":{"name":"sProjectile","path":"sprites/sProjectile/sProjectile.yy",},},

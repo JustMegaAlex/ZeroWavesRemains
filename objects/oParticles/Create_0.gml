@@ -178,7 +178,18 @@ function bulletTrace(pt, xx, yy, angle) {
 
 
 
-
+pt_emp = createPartType(psys,
+    {
+        life: 20,
+        sprite: [sParticleEmp, false, false, false],
+        alpha: [0.8, 0],
+        color: c_white,
+        angle: [0, 360]
+    }
+)
+function emp(xx, yy) {
+    part_particles_create(psys, xx, yy, pt_emp, 1)
+}
 
 
 
