@@ -24,6 +24,12 @@ contactExtra = function(inst) {
     }
 }
 
+setDir = function(dir_) {
+    image_angle = dir_
+    dir_to = dir_
+    dir = dir_
+}
+
 visible = false
 image_speed = 0
 // become visible back

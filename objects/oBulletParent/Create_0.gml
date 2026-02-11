@@ -62,6 +62,11 @@ function updateEntityCollider() {
     entity_collider.image_yscale = image_yscale
 }
 
+setDir = function(dir_) {
+    image_angle = dir_
+    dir = dir_
+}
+
 visible = false
 image_speed = 0
 // become visible back
