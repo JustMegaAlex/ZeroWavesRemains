@@ -14,7 +14,7 @@ if instance_exists(target) {
     dir_to = InstDir(target)
 }
 
-if startup_timer.update() or !instance_exists(target) {
+if startup_timer.update() {
     sp *= 0.94
     image_angle = ApproachAngle2(image_angle, dir_to, 0.1)
     exit
