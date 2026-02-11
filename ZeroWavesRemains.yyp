@@ -228,6 +228,7 @@
     {"id":{"name":"sBomber","path":"sprites/sBomber/sBomber.yy",},},
     {"id":{"name":"sBulletScatter","path":"sprites/sBulletScatter/sBulletScatter.yy",},},
     {"id":{"name":"sButton","path":"sprites/sButton/sButton.yy",},},
+    {"id":{"name":"sCircleHollow","path":"sprites/sCircleHollow/sCircleHollow.yy",},},
     {"id":{"name":"sCoin","path":"sprites/sCoin/sCoin.yy",},},
     {"id":{"name":"sCursor","path":"sprites/sCursor/sCursor.yy",},},
     {"id":{"name":"sDCOrig","path":"sprites/sDCOrig/sDCOrig.yy",},},

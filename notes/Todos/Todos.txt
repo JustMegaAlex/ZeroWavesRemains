@@ -48,18 +48,19 @@ Visuals rework
 
 0.6.x Build: add more content; new enemies, new tools and meta progression
 0.6.0-p (prototype)
+> enable newly obtained tech
 > new tools
     > shield
         > basic ui
     > emp missiles
-        > emp mechanic
-        > player input
         > meta progression
-        > shop item+upgrades
-    > usual missiles
-    > "Deleter" rocket projectile
-    > blink?
-    > ammo regen (enter volnurable state)
+        > shop item
+        > shop upgrades
+            > radius
+            > duration (strength)
+        > target lock
+        > reload timer
+        > restore timer
 > upd boost: make rechargeable
 > new upgrades
     > mobility
@@ -86,6 +87,11 @@ Visuals rework
 > upd drone
     > turret option
     > shield option
+> tools
+    > usual missiles
+    > "Deleter" rocket projectile
+    > blink?
+    > ammo regen (enter volnurable state)
 
 === Backlog ===
 

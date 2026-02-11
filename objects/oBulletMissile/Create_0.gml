@@ -9,6 +9,21 @@ destroy = function() {
     instance_destroy()
 }
 
+contactExtra = function(inst) {
+    if effect_radius > 0 {
+        oParticles.empShockwave(x, y, effect_radius*1.3)
+        var list = ds_list_create()
+        var count = collision_circle_list(x, y, effect_radius, oEntity, false, true, list, false)
+        for (var i = 0; i < count; ++i) {
+            var inst_ = list[| i]
+            if inst_ != shooter and CanHit(inst_) {
+                inst_.hit(id)
+            }
+        }
+        ds_list_destroy(list)
+    }
+}
+
 visible = false
 image_speed = 0
 // become visible back

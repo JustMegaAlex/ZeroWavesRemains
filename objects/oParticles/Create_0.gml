@@ -190,6 +190,22 @@ pt_emp = createPartType(psys,
 function emp(xx, yy) {
     part_particles_create(psys, xx, yy, pt_emp, 1)
 }
+pt_emp_shockwave_params = {
+    life: 7,
+    sprite: [sCircleHollow, false, false, false],
+    alpha: [0.5, 0.0],
+    color: c_white,
+    size: 0.1
+}
+pt_emp_shockwave = createPartType(psys, pt_emp_shockwave_params)
+function empShockwave(xx, yy, rad) {
+    var params = pt_emp_shockwave_params
+    var max_size = rad / sprite_get_width(params.sprite[0])
+    var start_size = max_size * 0.5
+    var size_incr = (max_size - start_size) / params.life
+    part_type_size(pt_emp_shockwave, start_size, start_size, size_incr, 0)
+    part_particles_create(psys, xx, yy, pt_emp_shockwave, 1)
+}
 
 
 

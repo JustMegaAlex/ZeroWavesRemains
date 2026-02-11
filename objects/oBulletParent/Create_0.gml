@@ -21,10 +21,15 @@ contact = function(inst) {
         if dmg {
             audio_play_sound(sfxShotContactFeedback, 2, false)
         }
+        contactExtra(inst)
         if destroy_on_contact {
             destroy()
         }
 	}
+}
+
+contactExtra = function(inst) {
+
 }
 
 function createEntityCollider(entity_hit_callback=destroy) {

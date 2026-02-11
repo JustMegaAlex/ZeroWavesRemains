@@ -165,6 +165,7 @@ weapon_emp_missile = {
     sound: noone,
     sprite: noone,
     upgrades: 0,
+    effect_radius: 700,
     upgrade_confs: {
     }
 }
