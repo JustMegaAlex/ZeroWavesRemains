@@ -1,4 +1,6 @@
 
+event_inherited()
+
 // bringDamage = function() {
 // 	var inst = instance_place(x, y, object_to_hit)
 // 	if inst { contact(inst) }

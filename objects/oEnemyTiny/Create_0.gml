@@ -27,7 +27,7 @@ image_yscale = 0.3
 
 weapon = {
     dmg: 1,
-    timer: MakeTimer(15),
+    timer: MakeTimer(35),
     sp: 40,
     range: 600,
     object: oBullet,
