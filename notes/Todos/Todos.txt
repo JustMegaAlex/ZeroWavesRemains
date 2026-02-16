@@ -48,10 +48,7 @@ Visuals rework
 
 0.6.x Build: add more content; new enemies, new tools and meta progression
 0.6.0-p (prototype)
-> enable newly obtained tech
 > new tools
-    > shield
-        > basic ui
     > emp missiles
         > meta progression
         > shop item
@@ -61,6 +58,15 @@ Visuals rework
         > target lock
         > reload timer
         > restore timer
+> input: pick new teck on F
+> ui: shields
+> ui: missiles
+> restore full pulse after wave
+> enable newly obtained tech
+    > turn on
+    > signalize to player ("Press C to shield up")
+
+> ui: boost charge
 > upd boost: make rechargeable
 > new upgrades
     > mobility
@@ -70,17 +76,11 @@ Visuals rework
         > boost acceleration
         > boost charge
     > shop shield
-> reactive ui
-    > shields
-    > boost charge
-> remove wave countdown
 > fix
     > show money during tutorial
     > mosquito: reload only when aiming
     > shop items: remove "Press F"
-> upd tinies: nerf shooting rate
 > make all coins slowly move towards player when no enemies left
-> restore full pulse after wave
 
 > new enemies
     > stinky
