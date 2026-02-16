@@ -3,6 +3,8 @@ macro_pause
 
 deny_killing_shot = global.tutorial
 
+weapon_emp_missile.timer.update()
+
 if oInput.is_user_input_keyboard {
     dir_to = MouseDir()
 } else {
@@ -79,20 +81,7 @@ for (var i = 0; i < array_length(weapons_array); ++i) {
     if weap == noone {
         continue
     }
-    weap.timer.update()
-    var timer = weapon[$ "sound_timer"]
-    if timer != undefined {
-        timer.update()
-    }
-    if (weap.ammo >= weap.ammo_max) or (weap.timer.timer > 0) {
-        continue
-    }
-    timer = weap[$ "ammo_restore_timer"]
-    if timer != undefined and !timer.update() {
-        timer.reset()
-        weap.ammo++
-    }
-
+    stepUpdateWeapon(weap)
 }
 
 shop_item = noone
@@ -153,8 +142,12 @@ if shield != noone and oInput.Pressed("device1") {
     }
 }
 
-if is_emp_unlocked and oInput.Pressed("device2") {
+stepUpdateWeapon(weapon_emp_missile)
+if is_emp_unlocked and oInput.Pressed("device2")
+        and !weapon_emp_missile.timer.timer and weapon_emp_missile.ammo {
     var missile = shootWeapon(dir, weapon_emp_missile)
+    weapon_emp_missile.ammo--
+    weapon_emp_missile.timer.reset()
     if instance_exists(oEnemyParent) {
         missile.target = oEnemyParent
     }

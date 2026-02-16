@@ -164,7 +164,8 @@ weapon_emp_missile = {
     range: 6000,
     emp: 300,
     name: "EMP",
-    ammo: 5,
+    ammo: 3,
+    ammo_restore_timer: MakeTimer(500),
     sound: noone,
     sprite: noone,
     upgrades: 0,
@@ -232,6 +233,21 @@ for (var i = 0; i < array_length(_all_weapons); ++i) {
 interactible = noone
 shop_item = noone
 
+function stepUpdateWeapon(weap) {
+    weap.timer.update()
+    var timer = weapon[$ "sound_timer"]
+    if timer != undefined {
+        timer.update()
+    }
+    if (weap.ammo >= weap.ammo_max) or (weap.timer.timer > 0) {
+        return;
+    }
+    timer = weap[$ "ammo_restore_timer"]
+    if timer != undefined and !timer.update() {
+        timer.reset()
+        weap.ammo++
+    }
+}
 
 function unlockWeapon(weapon) {
     global.player_bought_weapon = true

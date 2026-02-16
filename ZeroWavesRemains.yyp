@@ -148,6 +148,7 @@
     {"id":{"name":"oUICoins","path":"objects/oUICoins/oUICoins.yy",},},
     {"id":{"name":"oUIHealthBar","path":"objects/oUIHealthBar/oUIHealthBar.yy",},},
     {"id":{"name":"oUIHitIndicator","path":"objects/oUIHitIndicator/oUIHitIndicator.yy",},},
+    {"id":{"name":"oUIMissiles","path":"objects/oUIMissiles/oUIMissiles.yy",},},
     {"id":{"name":"oUIText","path":"objects/oUIText/oUIText.yy",},},
     {"id":{"name":"oUITextEnd","path":"objects/oUITextEnd/oUITextEnd.yy",},},
     {"id":{"name":"oUITextLoadingSound","path":"objects/oUITextLoadingSound/oUITextLoadingSound.yy",},},
