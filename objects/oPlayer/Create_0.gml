@@ -250,9 +250,9 @@ function stepUpdateWeapon(weap) {
 }
 
 function unlockWeapon(weapon) {
-    global.player_bought_weapon = true
     var ind = array_get_index(all_weapons, weapon)
     if ind > -1 {
+        global.player_bought_weapon = true
         weapons_array[ind] = weapon
         return;
     }

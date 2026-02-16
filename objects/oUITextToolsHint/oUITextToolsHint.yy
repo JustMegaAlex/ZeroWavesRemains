@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"oUITextSwtichWeapons",
+  "%Name":"oUITextToolsHint",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oUITextSwtichWeapons",
+  "name":"oUITextToolsHint",
   "overriddenProperties":[],
   "parent":{
     "name":"Text",
