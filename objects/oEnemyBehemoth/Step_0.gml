@@ -3,12 +3,14 @@
 macro_pause
 no_player_exit
 
-if active and instance_exists(oPlayer) {
+if is_emp_stunned {
+    accelerate(0, 0)
+}
+else if active and instance_exists(oPlayer) {
 
     if !is_firing {
         weapon.recharge_timer.update()
     }
-
     // if is_long_distance_fire_state {
     // } else {
     // }

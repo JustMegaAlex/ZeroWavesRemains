@@ -40,6 +40,18 @@ config = {
             oShopItemShield.unlock()
         }
     },
+    emp: {
+        icon: sIconShield,
+        id: id,
+        name: "EMP missile",
+        unlock: function() {
+            with oShopItemWeapon {
+                if string_lower(weapon.name) == other.id.tech {
+                    unlock()
+                }
+            }
+        }
+    }
 }
 
 is_used = false

@@ -66,6 +66,8 @@ is_shield_unlocked = false
 shield_default_hp = 30
 shield_upgrades = [45, 60]
 
+is_emp_unlocked = false
+
 var _pulse_costs = global.balance.items.costs.pulse
 weapon_pulse = {
     dmg: 20,
@@ -154,19 +156,34 @@ weapon_snipe = {
     }
 }
 
+var _emp_costs = global.balance.items.costs.emp
 weapon_emp_missile = {
     dmg: 10,
     timer: MakeTimer(60),
     object: oBulletMissile,
     range: 6000,
     emp: 300,
-    name: "EMP missile",
+    name: "EMP",
     ammo: 5,
     sound: noone,
     sprite: noone,
     upgrades: 0,
     effect_radius: 700,
     upgrade_confs: {
+        radius: {
+            name: "shock radius",
+            stats: {
+                effect_radius: [820, 980]
+            },
+            costs: _emp_costs.radius
+        },
+        emp: {
+            name: "stun charge",
+            stats: {
+                emp: [360, 420]
+            },
+            costs: _emp_costs.emp
+        },
     }
 }
 
@@ -206,7 +223,8 @@ for (var i = 0; i < array_length(_all_weapons); ++i) {
     _weapon_default_field(item, "upgrades", 0)
     _weapon_default_field(item, "upgrade_confs", [])
     _weapon_default_field(item, "upgrades_max", array_length(item.upgrade_confs))
-
+    _weapon_default_field(item, "emp", 0)
+    
     /// @follow-up player metrics weapons
     _weapon_default_field(item, "active_usage_time", 0)
 }
@@ -218,7 +236,14 @@ shop_item = noone
 function unlockWeapon(weapon) {
     global.player_bought_weapon = true
     var ind = array_get_index(all_weapons, weapon)
-    weapons_array[ind] = weapon
+    if ind > -1 {
+        weapons_array[ind] = weapon
+        return;
+    }
+    if weapon == weapon_emp_missile {
+        is_emp_unlocked = true
+        return;
+    }
 }
 
 function unlockShield() {

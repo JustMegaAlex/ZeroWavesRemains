@@ -22,6 +22,11 @@ function InitBalance() {
                     range: [50, 70],
                     dmg: [50, 80],
                 },
+                emp: {
+                    weapon_cost: 40,
+                    radius: [30, 45],
+                    emp: [35, 50],
+                },
                 heal: 25,
                 // [cost, amount]
                 snipe_ammo: [20, 5],
