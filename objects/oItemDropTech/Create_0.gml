@@ -16,6 +16,7 @@ config = {
             with oShopItemWeapon {
                 if string_lower(weapon.name) == other.id.tech {
                     unlock()
+                    apply()
                 }
             }
         }
@@ -28,6 +29,7 @@ config = {
             with oShopItemWeapon {
                 if string_lower(weapon.name) == other.id.tech {
                     unlock()
+                    apply()
                 }
             }
         }
@@ -37,6 +39,7 @@ config = {
         id: id,
         name: "Shield",
         unlock: function() {
+            oPlayer.unlockShield()
             oShopItemShield.unlock()
         }
     },
@@ -45,9 +48,11 @@ config = {
         id: id,
         name: "EMP missile",
         unlock: function() {
+            oPlayer.unlockWeapon(oPlayer.weapon_emp_missile)
             with oShopItemWeapon {
                 if string_lower(weapon.name) == other.id.tech {
                     unlock()
+                    apply()
                 }
             }
         }
