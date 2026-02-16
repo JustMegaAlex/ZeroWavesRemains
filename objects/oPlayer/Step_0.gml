@@ -148,9 +148,8 @@ if is_emp_unlocked and oInput.Pressed("device2")
     var missile = shootWeapon(dir, weapon_emp_missile)
     weapon_emp_missile.ammo--
     weapon_emp_missile.timer.reset()
-    if instance_exists(oEnemyParent) {
-        missile.target = oEnemyParent
-    }
+    missile.target = getMissileTarget()
+    oUITargetLock.target = missile.target
 }
 
 //if !global.tutorial

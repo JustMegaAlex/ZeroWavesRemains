@@ -51,20 +51,10 @@ Visuals rework
 > new tools
     > emp missiles
         > meta progression
-        > shop item
-        > shop upgrades
-            > radius
-            > duration (strength)
         > target lock
-        > reload timer
-        > restore timer
 > input: pick new teck on F
 > ui: shields
-> ui: missiles
 > restore full pulse after wave
-> enable newly obtained tech
-    > turn on
-    > signalize to player ("Press C to shield up")
 
 > ui: boost charge
 > upd boost: make rechargeable

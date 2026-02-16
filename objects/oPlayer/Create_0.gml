@@ -258,6 +258,7 @@ function unlockWeapon(weapon) {
     }
     if weapon == weapon_emp_missile {
         is_emp_unlocked = true
+        instance_create_layer(0, 0, layer, oUITargetLock)
         return;
     }
 }
@@ -404,6 +405,23 @@ getObjectCollision = function(obj) {
     return noone
 }
 
+getMissileTarget = function() {
+    var chosen = MouseCollision(oEnemyParent)
+    if chosen {
+        return chosen
+    }
+    var max_score = 0
+    with oEnemyParent {
+        var angle_diff = abs(angle_difference(oPlayer.image_angle, InstInstDir(oPlayer, id) ))
+        var dist = max(InstDist(oPlayer), 1)
+        var score_ = min(50 / dist, 1) + (1 - angle_diff / 360)
+        if score_ > max_score {
+            max_score = score_
+            chosen = id
+        }
+    }
+    return chosen
+}
 
 hub_interaction = {
     attached: false,
@@ -430,3 +448,6 @@ interactingWithItem = MouseCollision
 boost_time_used = 0
 
 is_emp_stunned = true
+
+unlockShield()
+unlockWeapon(weapon_emp_missile)
