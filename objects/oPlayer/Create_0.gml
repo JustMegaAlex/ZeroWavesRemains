@@ -449,5 +449,5 @@ boost_time_used = 0
 
 is_emp_stunned = true
 
-unlockShield()
-unlockWeapon(weapon_emp_missile)
+// unlockShield()
+// unlockWeapon(weapon_emp_missile)

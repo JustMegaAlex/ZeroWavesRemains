@@ -50,7 +50,6 @@ Visuals rework
 0.6.0-p (prototype)
 > new tools
     > emp missiles
-        > meta progression
         > target lock
 > input: pick new teck on F
 > ui: shields

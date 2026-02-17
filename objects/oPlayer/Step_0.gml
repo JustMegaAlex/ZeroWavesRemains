@@ -143,13 +143,15 @@ if shield != noone and oInput.Pressed("device1") {
 }
 
 stepUpdateWeapon(weapon_emp_missile)
-if is_emp_unlocked and oInput.Pressed("device2")
-        and !weapon_emp_missile.timer.timer and weapon_emp_missile.ammo {
-    var missile = shootWeapon(dir, weapon_emp_missile)
-    weapon_emp_missile.ammo--
-    weapon_emp_missile.timer.reset()
-    missile.target = getMissileTarget()
-    oUITargetLock.target = missile.target
+if is_emp_unlocked {
+    oUITargetLock.target = getMissileTarget()
+    if oInput.Pressed("device2")
+            and !weapon_emp_missile.timer.timer and weapon_emp_missile.ammo {
+        var missile = shootWeapon(dir, weapon_emp_missile)
+        weapon_emp_missile.ammo--
+        weapon_emp_missile.timer.reset()
+        missile.target = oUITargetLock.target
+    }
 }
 
 //if !global.tutorial
