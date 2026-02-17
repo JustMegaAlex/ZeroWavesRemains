@@ -286,6 +286,7 @@
     {"id":{"name":"sUIhealthbar","path":"sprites/sUIhealthbar/sUIhealthbar.yy",},},
     {"id":{"name":"sUIhealthbarFrame","path":"sprites/sUIhealthbarFrame/sUIhealthbarFrame.yy",},},
     {"id":{"name":"sUIHitIndication","path":"sprites/sUIHitIndication/sUIHitIndication.yy",},},
+    {"id":{"name":"sUIShieldBar","path":"sprites/sUIShieldBar/sUIShieldBar.yy",},},
     {"id":{"name":"sUISlider","path":"sprites/sUISlider/sUISlider.yy",},},
     {"id":{"name":"sUISliderKnob","path":"sprites/sUISliderKnob/sUISliderKnob.yy",},},
     {"id":{"name":"sUIWaveCountdown","path":"sprites/sUIWaveCountdown/sUIWaveCountdown.yy",},},

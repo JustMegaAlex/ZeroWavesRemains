@@ -48,11 +48,7 @@ Visuals rework
 
 0.6.x Build: add more content; new enemies, new tools and meta progression
 0.6.0-p (prototype)
-> new tools
-    > emp missiles
-        > target lock
 > input: pick new teck on F
-> ui: shields
 > restore full pulse after wave
 
 > ui: boost charge
