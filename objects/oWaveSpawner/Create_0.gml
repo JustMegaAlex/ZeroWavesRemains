@@ -123,6 +123,15 @@ for (var i = 0; i < progression.total_waves; ++i) {
         }
         _strength -= cost
     }
+    switch i {
+        case 24:
+        case 34:
+            wave.oEnemyBehemoth = 1
+        break
+        case 44:
+            wave.oEnemyBehemoth = 3
+        break
+    }
     array_push(waves, wave)
     strength *= strength_growth
     strength_growth -= strength_growth_decrease
@@ -207,11 +216,9 @@ spawn = function(wave_override=undefined) {
     )
     
     var active_wave_index = wave_index - 1 // because units from wave_index are deployed to outer circle in "wait" state
-    if unlockable_tier <= 2 and !ArrayEmpty(unlockable_wave_indices)
-            and active_wave_index == unlockable_wave_indices[0] {
-        array_shift(unlockable_wave_indices)
-        wave_unlock_tech = oGameState.getUnlockableByTier(unlockable_tier)
-        unlockable_tier++
+    if !ArrayEmpty(unlockable_wave_indices) and active_wave_index == unlockable_wave_indices[0][0] {
+        var _tier = array_shift(unlockable_wave_indices)[1]
+        wave_unlock_tech = oGameState.getUnlockableByTier(_tier)
     }
 
     /// Apply AI mode
@@ -292,12 +299,6 @@ if DEV {
     // waves_remains = array_length(waves) - wave_index
 }
 
-unlockable_wave_indices = [7]
-for (var i = 0; i < array_length(waves); ++i) {
-    var item = waves[i]
-    if array_contains(struct_get_names(waves[i]), "oEnemyBehemoth") {
-        array_push(unlockable_wave_indices, i)
-    }
-}
+unlockable_wave_indices = [[9, 0], [24, 1], [34, 2], [44, 2]]
+
 wave_unlock_tech = undefined
-unlockable_tier = 0

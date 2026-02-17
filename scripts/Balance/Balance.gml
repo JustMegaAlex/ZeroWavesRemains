@@ -44,10 +44,10 @@ function InitBalance() {
             __drone_incline: 0.6, // -0.5 part of coins in wave 0, +0.5 in the last wave
         },
         progression: {
-            total_waves: 23,
+            total_waves: 45,
             strength_growth: __diff(1.08, 1.11, 1.15),
             strength: 1,
-            strength_growth_decrease_total: 0.1,
+            strength_growth_decrease_total: 0.025,
             strength_cost: {
                 oEnemy: 1, oScout: 0.45, oEnemyTiny: 0.27,
                 oEnemyFighter: 1.5, oEnemyMosquito: 1.5
