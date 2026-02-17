@@ -288,8 +288,8 @@ lastWaveCallback = function() {
 
 /// @follow-up wave spawner DEV
 if DEV {
-    wave_index = 13
-    waves_remains = array_length(waves) - wave_index
+    // wave_index = 13
+    // waves_remains = array_length(waves) - wave_index
 }
 
 unlockable_wave_indices = [7]

@@ -1,19 +1,7 @@
-​Hey everybody and Happy New Year!
 
-Thank you all for your honest feedback and kind words! I've enjoyed participating in GameOff jam and engaging with its community big time.​
-
-My initial goal for this project was to make a fairly simple game but make it juicy as hell!  And according to my fellow co-jammers I succeeded in some extent. 
-
-So what's next?
-
-We devs often put our jam entries on a long hold. But this time I decided to go on and push this project a little further.
-
-My new goals are:
- - prove the core concept of the game "Decision beats precision". Which implies that right tools'n'guns will bring you victory faster than general "being good at shooters"
-- get a substantial number of plays (I aim at 600 in a month)
-- having at least one person asking "I want more of this!"
-
-The deadline for evaluating the results is mid-Feb. Until that moment I will spend about two weeks on improving the core of the game and adding content. After that I'll focus on upgrading the appeal of the game as well as beautifying the itch page
-
-And hell yeah, I'm gonna promote this time! Need to go full-on public.
-
+Retrospecitve
+- the genre: not the best choice
+- graphics update: no significant impact
+- good first impressions and jam ratings, but slowly and steadily sinked over a couple months
+- deadlines are good: missing a deadline is not a failure but a learning experience
+- my main evaluation: the game doesn't have "The Magic"; moving on

@@ -15,16 +15,21 @@ state = get_default_state()
 
 unlockable_tiers = [
     ["hp"],
-    ["scatter", "snipe"],
-    [],
+    ["scatter", "emp"],
+    ["snipe", "shield"],
 ]
 
 function getUnlockableByTier(tier) {
-    if ArrayEmpty(unlockable_tiers[tier]) {
-        return undefined
+    var arr = unlockable_tiers[tier]
+    while ArrayEmpty(arr) {
+        tier--
+        if tier < 0 {
+            return undefined
+        }
+        arr = unlockable_tiers[tier]
     }
-    var tech = ArrayChoose(unlockable_tiers[tier])
-    return ArrayRemove(unlockable_tiers[tier], tech)
+    var tech = ArrayChoose(arr)
+    return ArrayRemove(arr, tech)
 }
 
 function techUnlocked(name) {

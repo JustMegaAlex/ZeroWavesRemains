@@ -132,6 +132,7 @@ if !hub_interaction.attached and place_meeting(x, y, oShop) {
 }
 
 if !global.tutorial and global.wave_enemies_count <= 0 and oInput.Pressed("next_wave") {
+    weapon_pulse.ammo = weapon_pulse.ammo_max
     if instance_exists(oEnemyParent) and !audio_is_playing(mscStealthTheme) {
         oMusic.switch_music(mscStealthTheme)
     }
