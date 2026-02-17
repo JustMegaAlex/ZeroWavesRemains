@@ -88,7 +88,12 @@ shop_item = noone
 if interactible {
     interactible.highlight = false
 }
-interactible = interactingWithItem(oInteractible)
+var interact_with_mouse = true
+interactible = MouseCollision(oShopItem)
+if interactible == noone {
+    interactible = instance_place(x, y, oItemDropTech)
+    interact_with_mouse = false
+}
 if interactible and object_is_ancestor(interactible.object_index, oShopItem) {
     if (interactible.is_unlocked and oShop.is_open) {
         shop_item = interactible
@@ -103,7 +108,8 @@ if interactible {
     if interactible {
         interactible.highlight = true
     }
-    if interactible and oInput.Pressed("lclick") {
+    var interact_input = (interact_with_mouse and oInput.Pressed("lclick")) or (!interact_with_mouse and oInput.Pressed("interact"))
+    if interactible and interact_input {
         interactible.interact()
         if !instance_exists(interactible) {
             interactible = noone
@@ -153,12 +159,6 @@ if is_emp_unlocked {
         missile.target = oUITargetLock.target
     }
 }
-
-//if !global.tutorial
-        //and !instance_exists(oEnemyParent)
-        //and oWaveSpawner.waves_remains <= 0 {
-    //Win()
-//}
 
 event_inherited()
 
