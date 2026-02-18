@@ -167,6 +167,7 @@
     {"id":{"name":"oUIWeaponSegment","path":"objects/oUIWeaponSegment/oUIWeaponSegment.yy",},},
     {"id":{"name":"oWaveSpawner","path":"objects/oWaveSpawner/oWaveSpawner.yy",},},
     {"id":{"name":"psItemDrop","path":"particles/psItemDrop/psItemDrop.yy",},},
+    {"id":{"name":"pthDifficulty","path":"paths/pthDifficulty/pthDifficulty.yy",},},
     {"id":{"name":"rmGame","path":"rooms/rmGame/rmGame.yy",},},
     {"id":{"name":"rmStart","path":"rooms/rmStart/rmStart.yy",},},
     {"id":{"name":"rmTest","path":"rooms/rmTest/rmTest.yy",},},

@@ -75,6 +75,8 @@ var _prev_single_drone = false
 for (var i = 0; i < progression.total_waves; ++i) {
     var wave = {}
     var _strength = strength + extra_strength_randomer.get() + leftover_strength
+    var path_pos = i / progression.total_waves
+    _strength = path_get_y(pthDifficulty, path_pos) + leftover_strength
     array_push(wave_strengths, _strength)
     var cost = 1
     if i == 20 {
@@ -193,6 +195,19 @@ droneSetCoinsIncline = function(inst) {
     inst.loot_multiplier = mult
 }
 
+mergeSpawnStruct = function(into, from) {
+    var keys = variable_struct_get_names(from)
+    for (var i = 0; i < array_length(keys); ++i) {
+        var key = keys[i]
+        var value = from[$ key]
+        if struct_has(into, key) {
+            into[$ key] += value
+        } else {
+            into[$ key] = value
+        }
+    }
+}
+
 spawn = function(wave_override=undefined) {
     with oUIWaves {
         animate()
@@ -215,9 +230,12 @@ spawn = function(wave_override=undefined) {
         }
     )
     
+    var extra_spawn = {}
     var active_wave_index = wave_index - 1 // because units from wave_index are deployed to outer circle in "wait" state
-    if !ArrayEmpty(unlockable_wave_indices) and active_wave_index == unlockable_wave_indices[0][0] {
-        var _tier = array_shift(unlockable_wave_indices)[1]
+    if !ArrayEmpty(unlockable_tech_config) and active_wave_index == unlockable_tech_config[0].wave {
+        var _conf = array_shift(unlockable_tech_config)
+        var _tier = _conf.tier
+        extra_spawn = _conf.extra_spawn
         wave_unlock_tech = oGameState.getUnlockableByTier(_tier)
     }
 
@@ -245,9 +263,9 @@ spawn = function(wave_override=undefined) {
         next_wave_trigger_swarm_mode = wave.swarm
         struct_del(wave, "swarm")
     }
-    var names = struct_get_names(wave)
-    show_debug_message(string(names))
 
+    mergeSpawnStruct(wave, extra_spawn)
+    var names = struct_get_names(wave)
     for (var i = 0; i < array_length(names); i++) {
         var obj_name = names[i]
         var number = wave[$ obj_name]
@@ -299,6 +317,14 @@ if DEV {
     // waves_remains = array_length(waves) - wave_index
 }
 
-unlockable_wave_indices = [[9, 0], [24, 1], [34, 2], [44, 2]]
+var _first_tech_enemy = choose("oEnemyFighter", "oEnemyMosquito")
+var _first_extra_spawn = {}
+_first_extra_spawn[$ _first_tech_enemy] = 1
+unlockable_tech_config = [
+    {wave: 9, tier: 0, extra_spawn: _first_extra_spawn},
+    {wave: 24, tier: 1, extra_spawn: {oEnemyBehemoth: 1}},
+    {wave: 34, tier: 2, extra_spawn: {oEnemyBehemoth: 1}},
+    {wave: 44, tier: 2, extra_spawn: {oEnemyBehemoth: 3}},
+]
 
 wave_unlock_tech = undefined

@@ -1,0 +1,24 @@
+{
+  "$GMPath":"",
+  "%Name":"pthDifficulty",
+  "closed":false,
+  "kind":0,
+  "name":"pthDifficulty",
+  "parent":{
+    "name":"ZeroWavesRemains",
+    "path":"ZeroWavesRemains.yyp",
+  },
+  "points":[
+    {"speed":100.0,"x":0.0,"y":0.8,},
+    {"speed":100.0,"x":5.0,"y":1.0,},
+    {"speed":100.0,"x":10.0,"y":1.5,},
+    {"speed":100.0,"x":20.0,"y":4.0,},
+    {"speed":100.0,"x":30.0,"y":6.0,},
+    {"speed":100.0,"x":35.0,"y":8.0,},
+    {"speed":100.0,"x":40.0,"y":10.0,},
+    {"speed":100.0,"x":45.0,"y":12.0,},
+  ],
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}
