@@ -30,6 +30,10 @@ drones_to_spawn_total = 0
 
 
 mergeSpawnStruct = function(into, from) {
+    if from[$ "replace"] ?? false {
+        StructClear(into)
+        struct_remove(from, "replace")
+    }
     var keys = variable_struct_get_names(from)
     for (var i = 0; i < array_length(keys); ++i) {
         var key = keys[i]
@@ -227,12 +231,17 @@ spawn = function(wave_override=undefined) {
         }
     )
     
+    //// Tech drops
+    // 1. Inject spawn units to the next wave
     var extra_spawn = {}
-    var active_wave_index = wave_index - 1 // because units from wave_index are deployed to outer circle in "wait" state
-    if !ArrayEmpty(unlockable_tech_config) and active_wave_index == unlockable_tech_config[0].wave {
+    if !ArrayEmpty(unlockable_tech_config) and (wave_index + 1) == unlockable_tech_config[0].wave {
+        var _conf = unlockable_tech_config[0]
+        extra_spawn = _conf.extra_spawn
+    }
+    // 2. Set drop in current wave (when injected units become active)
+    if !ArrayEmpty(unlockable_tech_config) and wave_index == unlockable_tech_config[0].wave {
         var _conf = array_shift(unlockable_tech_config)
         var _tier = _conf.tier
-        extra_spawn = _conf.extra_spawn
         wave_unlock_tech = oGameState.getUnlockableByTier(_tier)
     }
 
@@ -315,13 +324,13 @@ if DEV {
 }
 
 var _first_tech_enemy = choose("oEnemyFighter", "oEnemyMosquito")
-var _first_extra_spawn = {}
+var _first_extra_spawn = {replace: true}
 _first_extra_spawn[$ _first_tech_enemy] = 1
 unlockable_tech_config = [
-    {wave: 9, tier: 0, extra_spawn: _first_extra_spawn},
-    {wave: 24, tier: 1, extra_spawn: {oEnemyBehemoth: 1}},
-    {wave: 34, tier: 2, extra_spawn: {oEnemyBehemoth: 1}},
-    {wave: 44, tier: 2, extra_spawn: {oEnemyBehemoth: 3}},
+    {wave: 10, tier: 0, extra_spawn: _first_extra_spawn},
+    {wave: 25, tier: 1, extra_spawn: {oEnemyBehemoth: 1}},
+    {wave: 35, tier: 2, extra_spawn: {oEnemyBehemoth: 1}},
+    {wave: 45, tier: 2, extra_spawn: {oEnemyBehemoth: 3}},
 ]
 
 wave_unlock_tech = undefined

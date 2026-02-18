@@ -160,6 +160,14 @@ function ArrayClear(arr) {
     return array_resize(arr, 0)
 }
 
+function StructClear(struct) {
+    var keys = variable_struct_get_names(struct)
+    for (var i = 0; i < array_length(keys); ++i) {
+        var key = keys[i]
+        struct_remove(struct, key)
+    }
+}
+
 function Chance(p) {
     return random(1) < p
 }

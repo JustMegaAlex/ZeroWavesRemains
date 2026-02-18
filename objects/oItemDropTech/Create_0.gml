@@ -71,3 +71,5 @@ interact = function() {
     oUITextTechUnlocked.show()
     oUI.addHintArrow(oShop, "New tech!", c_lime, 300)
 }
+
+oUI.addHintArrow(id, "New tech", c_green, 300)
