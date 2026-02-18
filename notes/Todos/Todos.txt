@@ -48,16 +48,9 @@ Visuals rework
 
 0.6.x Build: add more content; new enemies, new tools and meta progression
 0.6.0-p (prototype)
-> rebalance
-    > 45 waves
-    > no difficulties
-    > ensure tech spawning
-> fixes
-    > scatter upgrades don't unlock
-    > emp upgrades unlocked themselves??
-
-
-
+> shop items: add control hint for shield and emp
+> emp: don't target next wave enemies
+> emp: set dmg to 0
 
 > ui: boost charge
 > upd boost: make rechargeable

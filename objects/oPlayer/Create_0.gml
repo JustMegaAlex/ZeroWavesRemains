@@ -158,7 +158,7 @@ weapon_snipe = {
 
 var _emp_costs = global.balance.items.costs.emp
 weapon_emp_missile = {
-    dmg: 10,
+    dmg: 1,
     timer: MakeTimer(60),
     object: oBulletMissile,
     range: 6000,
@@ -407,11 +407,17 @@ getObjectCollision = function(obj) {
 
 getMissileTarget = function() {
     var chosen = MouseCollision(oEnemyParent)
+    if chosen and !chosen.active {
+        chosen = noone
+    }
     if chosen {
         return chosen
     }
     var max_score = 0
     with oEnemyParent {
+        if !active {
+            continue
+        }
         var angle_diff = abs(angle_difference(oPlayer.image_angle, InstInstDir(oPlayer, id) ))
         var dist = max(InstDist(oPlayer), 1)
         var score_ = min(50 / dist, 1) + (1 - angle_diff / 360)
