@@ -26,8 +26,24 @@ drones_to_spawn_total = 0
 //     {oScout: 1, oEnemy: 1, oEnemyTiny: 1},
 // ]
 // waves_remains = array_length(waves)
-/// @follow-up wave spawner initial waves
 
+
+
+mergeSpawnStruct = function(into, from) {
+    var keys = variable_struct_get_names(from)
+    for (var i = 0; i < array_length(keys); ++i) {
+        var key = keys[i]
+        var value = from[$ key]
+        if struct_has(into, key) {
+            into[$ key] += value
+        } else {
+            into[$ key] = value
+        }
+    }
+}
+
+
+/// @follow-up wave spawner initial waves
 waves = [
     // {oScout: 2},
     // {oEnemyTiny: 2},
@@ -52,10 +68,10 @@ enemy_randomer_0 = new ControlledRandomer({
     oEnemy: 3, oScout: 6, oEnemyTiny: 12
 }, true)
 enemy_randomer_1 = new ControlledRandomer({
-    oEnemy: 3, oScout: 5, oEnemyTiny: 10, oEnemyFighter: 2, oEnemyMosquito: 2
+    oEnemy: 3, oScout: 5, oEnemyTiny: 10, oEnemyFighter: 2, oEnemyMosquito: 2, swarm: 3
 }, true)
 enemy_randomer_2 = new ControlledRandomer({
-    oEnemy: 2, oScout: 4, oEnemyTiny: 9, oEnemyFighter: 3, oEnemyMosquito: 3
+    oEnemy: 2, oScout: 4, oEnemyTiny: 9, oEnemyFighter: 3, oEnemyMosquito: 3, swarm: 3
 }, true)
 enemy_randomer = enemy_randomer_0
 
@@ -77,6 +93,7 @@ for (var i = 0; i < progression.total_waves; ++i) {
     var _strength = strength + extra_strength_randomer.get() + leftover_strength
     var path_pos = i / progression.total_waves
     _strength = path_get_y(pthDifficulty, path_pos) + leftover_strength
+    var initial_strength = _strength
     array_push(wave_strengths, _strength)
     var cost = 1
     if i == 20 {
@@ -101,55 +118,48 @@ for (var i = 0; i < progression.total_waves; ++i) {
         drones_to_spawn_total++
     }
 
-    if i > 8 {
+    if i > 9 {
         enemy_randomer = enemy_randomer_1
-        show_debug_message("upped difficulty 1")
     }
     if i > 19 {
         enemy_randomer = enemy_randomer_2
-        show_debug_message("upped difficulty 2")
     }
 
     while true {
         object_name = enemy_randomer.get()
+        if object_name = "swarm" {
+            var count = floor(initial_strength / strength_cost.oEnemyTiny)
+            wave = {oEnemyTiny: count}
+            leftover_strength = initial_strength - strength_cost.oEnemyTiny * count
+            break
+        }
         cost = strength_cost[$ object_name]
         if _strength < cost {
             leftover_strength = _strength
             enemy_randomer.shift(object_name)
             break
         }
-        if !struct_has(wave, object_name) {
-            wave[$ object_name] = 1
-        } else {
-            wave[$ object_name] += 1
-        }
+        var _add_enemy = {}
+        _add_enemy[$ object_name] = 1
+        mergeSpawnStruct(wave, _add_enemy)
         _strength -= cost
     }
-    switch i {
-        case 24:
-        case 34:
-            wave.oEnemyBehemoth = 1
-        break
-        case 44:
-            wave.oEnemyBehemoth = 3
-        break
-    }
     array_push(waves, wave)
-    strength *= strength_growth
-    strength_growth -= strength_growth_decrease
+    // strength *= strength_growth
+    // strength_growth -= strength_growth_decrease
 }
 
 
 ///// @follow-up custom waves
-var num = choose(0, 1)
-array_insert(waves, 7, {oEnemyFighter: num, oEnemyMosquito: 1 - num})
+// var num = choose(0, 1)
+// array_insert(waves, 7, {oEnemyFighter: num, oEnemyMosquito: 1 - num})
 
-///// @follow-up Behemoth waves
-array_insert(waves, 12, {oEnemyBehemoth: 1, oEnemyTiny: __diff(0, 6, 9), oEnemy: __diff(0, 0, 3)})
-array_push(waves, {oEnemyBehemoth: 1, oEnemy: __diff(2, 3, 5), oEnemyTiny: __diff(6, 10, 20), oScout: __diff(0, 3, 6)})
-///// @follow-up Swarm waves
-array_insert(waves, irandom_range(8, 12), {oEnemyTiny: __diff(8, 10, 12), swarm: true})
-array_insert(waves, irandom_range(13, array_length(waves)-1), {oEnemyTiny: __diff(15, 20, 30), swarm: true})
+// ///// @follow-up Behemoth waves
+// array_insert(waves, 12, {oEnemyBehemoth: 1, oEnemyTiny: __diff(0, 6, 9), oEnemy: __diff(0, 0, 3)})
+// array_push(waves, {oEnemyBehemoth: 1, oEnemy: __diff(2, 3, 5), oEnemyTiny: __diff(6, 10, 20), oScout: __diff(0, 3, 6)})
+// ///// @follow-up Swarm waves
+// array_insert(waves, irandom_range(8, 12), {oEnemyTiny: __diff(8, 10, 12), swarm: true})
+// array_insert(waves, irandom_range(13, array_length(waves)-1), {oEnemyTiny: __diff(15, 20, 30), swarm: true})
 
 // waves = [{oEnemyTiny: 1}, {oEnemyTiny: 1}]
 
@@ -193,19 +203,6 @@ droneSetCoinsIncline = function(inst) {
         throw $"Bad drone coins incline: {mult}"
     }
     inst.loot_multiplier = mult
-}
-
-mergeSpawnStruct = function(into, from) {
-    var keys = variable_struct_get_names(from)
-    for (var i = 0; i < array_length(keys); ++i) {
-        var key = keys[i]
-        var value = from[$ key]
-        if struct_has(into, key) {
-            into[$ key] += value
-        } else {
-            into[$ key] = value
-        }
-    }
 }
 
 spawn = function(wave_override=undefined) {
