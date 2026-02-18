@@ -21,6 +21,7 @@ apply = function() {
     show_cost = false
     cost_text_struct.text = ""
     text_struct.text = $"You already have shield"
+    unlock_children()
 }
 
 is_unlocked = oGameState.techUnlocked("shield")

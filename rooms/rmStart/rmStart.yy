@@ -30,7 +30,7 @@
     {"name":"inst_47A4A397","path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"inst_3C69E8DE","path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"inst_13D3EAAC","path":"roomui/RoomUI/RoomUI.yy",},
-    {"name":"Start","path":"roomui/RoomUI/RoomUI.yy",},
+    {"name":"StartButton","path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"Normal","path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"Hard","path":"roomui/RoomUI/RoomUI.yy",},
     {"name":"Continue","path":"roomui/RoomUI/RoomUI.yy",},

@@ -53,7 +53,9 @@ Visuals rework
     > no difficulties
     > ensure tech spawning
 > fixes
-    
+    > scatter upgrades don't unlock
+    > emp upgrades unlocked themselves??
+
 
 
 
