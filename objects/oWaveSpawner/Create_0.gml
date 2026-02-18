@@ -71,11 +71,12 @@ strength_cost = progression.strength_cost
 enemy_randomer_0 = new ControlledRandomer({
     oEnemy: 3, oScout: 6, oEnemyTiny: 12
 }, true)
+var mult = 2
 enemy_randomer_1 = new ControlledRandomer({
-    oEnemy: 3, oScout: 5, oEnemyTiny: 10, oEnemyFighter: 2, oEnemyMosquito: 2, swarm: 3
+    oEnemy: 3*mult, oScout: 5*mult, oEnemyTiny: 1*mult, oEnemyFighter: 2*mult, oEnemyMosquito: 2*mult, swarm: 1
 }, true)
 enemy_randomer_2 = new ControlledRandomer({
-    oEnemy: 2, oScout: 4, oEnemyTiny: 9, oEnemyFighter: 3, oEnemyMosquito: 3, swarm: 3
+    oEnemy: 2*mult, oScout: 4*mult, oEnemyTiny: 9*mult, oEnemyFighter: 3*mult, oEnemyMosquito: 3*mult, swarm: 1
 }, true)
 enemy_randomer = enemy_randomer_0
 
@@ -139,6 +140,10 @@ for (var i = 0; i < progression.total_waves; ++i) {
         }
         cost = strength_cost[$ object_name]
         if _strength < cost {
+            // go on until at least one unit in wave
+            if struct_names_count(wave) == 0 {
+                continue
+            }
             leftover_strength = _strength
             enemy_randomer.shift(object_name)
             break
@@ -250,10 +255,18 @@ spawn = function(wave_override=undefined) {
         oAIEnemyControl.tiny.enterSwarmMode()
         show_debug_message("Swarm mode triggered")
     }
+    
+    if ArrayEmpty(next_wave_instances) and wave_index != 0 {
+        test = true
+    }
 
     var wave
     if wave_override == undefined {
+        var waves_remains_prev = waves_remains
         waves_remains -= !ArrayEmpty(next_wave_instances)
+        if waves_remains == waves_remains_prev {
+            test = true
+        }
         global.waves_remains = waves_remains
         ArrayClear(next_wave_instances)
         if waves_remains <= 0 {
@@ -281,6 +294,9 @@ spawn = function(wave_override=undefined) {
             array_push(next_wave_instances, inst)
             show_debug_message($"Prespawned {object_get_name(inst.object_index)}")
         }
+    }
+    if ArrayEmpty(next_wave_instances) {
+        var test = true
     }
     if wave_override == undefined {
         if wave_index > 0 {
@@ -323,13 +339,18 @@ if DEV {
     // waves_remains = array_length(waves) - wave_index
 }
 
-var _first_tech_enemy = choose("oEnemyFighter", "oEnemyMosquito")
+var _extra_enemy = choose("oEnemyFighter", "oEnemyMosquito")
 var _first_extra_spawn = {replace: true}
-_first_extra_spawn[$ _first_tech_enemy] = 1
+_first_extra_spawn[$ _extra_enemy] = 1
+
+var count = 0
+var _second_extra_spawn = {oEnemyBehemoth: 1, replace: true}
+_extra_enemy = choose(["oEnemyTiny", 5], ["oEnemy", 2])
+_second_extra_spawn[$ _extra_enemy[0]] = _extra_enemy[1]
 unlockable_tech_config = [
     {wave: 10, tier: 0, extra_spawn: _first_extra_spawn},
-    {wave: 25, tier: 1, extra_spawn: {oEnemyBehemoth: 1}},
-    {wave: 35, tier: 2, extra_spawn: {oEnemyBehemoth: 1}},
+    {wave: 20, tier: 1, extra_spawn: _second_extra_spawn},
+    {wave: 30, tier: 2, extra_spawn: {oEnemyBehemoth: 1}},
     {wave: 45, tier: 2, extra_spawn: {oEnemyBehemoth: 3}},
 ]
 

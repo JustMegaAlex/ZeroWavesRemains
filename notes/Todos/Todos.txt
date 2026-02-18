@@ -52,6 +52,8 @@ Visuals rework
     > 45 waves
     > no difficulties
     > ensure tech spawning
+> fixes
+    
 
 
 
