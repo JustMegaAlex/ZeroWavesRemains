@@ -1,7 +1,9 @@
 
 macro_pause
 
-if active {
+if is_emp_stunned {
+    accelerate(0, 0)
+} else if active {
     mover.step()
     dirApproach(sp.dir())
 
