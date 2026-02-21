@@ -161,6 +161,7 @@ var _emp_costs = global.balance.items.costs.emp
 weapon_emp_missile = {
     dmg: 1,
     timer: MakeTimer(60),
+    startup_time: 15,
     object: oBulletMissile,
     range: 6000,
     emp: 300,

@@ -41,7 +41,7 @@ shooter = noone
 xprev = x
 yprev = y
 
-startup_timer = MakeTimer(60)
+startup_timer = MakeTimer(startup_time)
 accel = 0.5
 rotsp = 10
 dir_to = image_angle
@@ -51,5 +51,7 @@ sp = 0
 
 SetColor()
 
-createEntityCollider()
+with createEntityCollider() {
+    image_blend = other.image_blend
+}
 //entity_collider.image_blend = c_red

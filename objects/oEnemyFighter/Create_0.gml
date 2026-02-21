@@ -38,6 +38,7 @@ weapon_missiles = {
     object: oBulletMissile,
     knockback: 21,
     target: oPlayer,
+    image_blend: #7A8299,
 }
 
 under_attack = 0
