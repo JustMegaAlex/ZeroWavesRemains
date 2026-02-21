@@ -1,7 +1,6 @@
 macro_pause
 
 
-range -= sp
 if final_fly_inst {
     final_fly_steps--
     if final_fly_steps <= 0 {

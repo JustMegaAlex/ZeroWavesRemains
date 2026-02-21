@@ -7,6 +7,8 @@
 // 	}
 // }
 
+help_vec = new Vec2(0, 0)
+
 destroy_on_contact = true
 fadeout = false
 
@@ -16,7 +18,9 @@ destroy = function() {
 }
 
 emitExposion = function() {
-    oParticles.emitExplosion(x, y, explosion_size)
+    help_vec.set(x, y).add_polar(sprite_width*0.5, image_angle)
+    oParticles.emitExplosion(help_vec.x, help_vec.y, explosion_size)
+    oParticles.emitExplosionFade(help_vec.x, help_vec.y, 3, explosion_size * 0.75)
 }
 
 

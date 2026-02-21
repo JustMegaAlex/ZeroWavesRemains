@@ -99,7 +99,7 @@ die = function() {
             direction = other.last_hit_direction + irandom_range(-45, 45)
         }
     }
-    oParticles.explosion_2(x, y)
+    oParticles.explosion_2(x, y, max(sprite_width, sprite_height)*0.5)
     audio_play_sound(sfxExplosion1, 3, false)
     if instance_exists(oCamera) {
         oCamera.shake()

@@ -334,7 +334,7 @@ die = function() {
     oMusic.switch_music(mscLooseTheme)
     instance_destroy()
     global.gameover = true
-    oParticles.explosion_2(x, y)
+    oParticles.explosion_2(x, y, max(sprite_width, sprite_height)*0.5)
     call_later(60, time_source_units_frames, Pause)
     repeat money {
         instance_create_layer(x, y, layer, oCollectCoin)

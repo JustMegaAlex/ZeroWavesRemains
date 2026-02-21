@@ -98,6 +98,16 @@ pt_explosion = createPartType(ps_sparks,
         alpha: [1, 0],
     }
 )
+
+_explosion_fade_life = 20
+pt_explosion_fade = createPartType(ps_sparks,
+    {
+        life: _explosion_fade_life,
+        sprite: [sExplosion, false, false, false],
+        alpha: [1, 0.7],
+    }
+)
+
 pt_explosion_smoke = createPartType(ps_sparks,
     {
         life: 120,
@@ -106,6 +116,24 @@ pt_explosion_smoke = createPartType(ps_sparks,
         color: c_black,
     }
 )
+
+function emitExplosionFade(x, y, num=1, size=1, radius=undefined) {
+    part_type_size(pt_explosion_fade, size*.8, size, -size/_explosion_fade_life, 0)
+    if num == 1 {
+        part_particles_create(psys, x, y, pt_explosion_fade, 1)
+        return
+    }
+    if radius == undefined {
+        radius = sprite_get_width(sExplosion) * size * 0.5
+    }
+    repeat num {
+        part_particles_create(
+            psys, 
+            x+random_range(-radius, radius),
+            y+random_range(-radius, radius),
+            pt_explosion_fade, 1)
+    }
+}
 
 
 function _explosion_beam(x, y, angle, len, count, size_start, size_end) {
@@ -122,17 +150,28 @@ function _explosion_beam(x, y, angle, len, count, size_start, size_end) {
     }
 }
 _core_randomer = randomer(-50, 50)
-function explosion_2(x, y) {
-    var beam_len = 150
+_explosion_size_base = 150
+function explosion_2(x, y, size=_explosion_size_base) {
+    size = size / _explosion_size_base // turn to relative
+    emitExplosionFade(
+        x, y,
+        4 + irandom(4) * size,
+        size * 3.5, size*220)
+    emitExplosionFade(
+        x, y,
+        8 + irandom(8) * size,
+        size*1.5, size*220)
+    return;
+    var beam_len = 150 * size
     var beam_count = choose(7, 9)
     var beam_particles_amount = 6
-    var beam_size_start = 0.6
-    var beam_size_end = 0.2
+    var beam_size_start = 0.6 * size
+    var beam_size_end = 0.2 * size
     var angle_delta = 360 / beam_count
     var angle_rand = angle_delta * 0.2
     var base_angle = irandom(angle_delta)
 
-    var core_size_base = 1.3
+    var core_size_base = 1.3 * size
     var core_count = 5
     repeat core_count {
         vec.set(x, y)
