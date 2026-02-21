@@ -7,6 +7,7 @@ fadeout = false
 
 destroy = function() {
     instance_destroy()
+    emitExposion()
 }
 
 contactExtra = function(inst) {

@@ -4,6 +4,14 @@ Move(sp, dir)
  
 updateEntityCollider()
 
+
+contact = function(inst) {
+	if inst and inst != shooter and CanHit(inst) {
+        final_fly_inst = inst
+        contactFinal()
+	}
+}
+
 range -= sp
 if range <= 0 {
     destroy()

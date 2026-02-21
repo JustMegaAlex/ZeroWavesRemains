@@ -48,9 +48,6 @@ Visuals rework
 
 0.6.x Build: add more content; new enemies, new tools and meta progression
 0.6.0-p (prototype)
-> shop items: add control hint for shield and emp
-> emp: don't target next wave enemies
-> emp: set dmg to 0
 > missiles: set colors
 
 > ui: boost charge

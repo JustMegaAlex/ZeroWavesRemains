@@ -142,6 +142,12 @@ catchBullet = function() {
     ds_list_clear(list)
     var count = instance_place_list(x, y, oBulletParent, list, false)
     for (var i = 0; i < ds_list_size(list); ++i) {
+        if object_index == oEntity {
+            continue
+        }
+        if object_index != oPlayer {
+            test =true
+        }
         list[| i].contact(id)
         if !instance_exists(id) {
             return
