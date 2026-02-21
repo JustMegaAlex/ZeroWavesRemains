@@ -95,6 +95,7 @@ with oEntity {
         (y - CamY()) * scale,
         scale, scale,
         image_angle, c_white, 1)
+    
 }
 with oEnemyBehemothGun {
     if sprite_index_norm == noone {

@@ -1,6 +1,14 @@
 macro_pause
 
-if fadeout {
+
+range -= sp
+if final_fly_inst {
+    final_fly_steps--
+    if final_fly_steps <= 0 {
+        contactFinal()
+    }
+}
+else if fadeout {
     image_yscale -= 0.15
     if image_yscale <= 0 {
         instance_destroy()

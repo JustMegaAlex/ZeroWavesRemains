@@ -8,24 +8,41 @@
 // }
 
 destroy_on_contact = true
+fadeout = false
 
 destroy = function() {
+    emitExposion()
     instance_destroy()
 }
 
+emitExposion = function() {
+    oParticles.emitExplosion(x, y, explosion_size)
+}
+
+
+final_fly_steps = 2
+final_fly_inst = noone
+
 sparks_count = 6
 contact = function(inst) {
+    if fadeout or final_fly_inst {
+        return;
+    }
 	if inst and inst != shooter and CanHit(inst) {
-		inst.hit(id)
-        oParticles.hitSparks(x, y, image_angle + 180, sparks_count)
-        if dmg {
-            audio_play_sound(sfxShotContactFeedback, 2, false)
-        }
-        contactExtra(inst)
-        if destroy_on_contact {
-            destroy()
-        }
+        final_fly_inst = inst
 	}
+}
+
+contactFinal = function() {
+    final_fly_inst.hit(id)
+    oParticles.hitSparks(x, y, image_angle + 180, sparks_count)
+    if dmg {
+        audio_play_sound(sfxShotContactFeedback, 2, false)
+    }
+    contactExtra(final_fly_inst)
+    if destroy_on_contact {
+        destroy()
+    }
 }
 
 contactExtra = function(inst) {

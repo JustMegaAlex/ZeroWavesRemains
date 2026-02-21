@@ -103,6 +103,7 @@ weapon_pulse = {
 var _scatter_costs = global.balance.items.costs.scatter
 weapon_scatter = {
     dmg: 4,
+    explosion_size: 0.5,
     timer: MakeTimer(2),
     range: 1200,
     object: oBulletScatter,

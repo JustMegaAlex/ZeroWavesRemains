@@ -19,20 +19,15 @@ function emitShootBurst(x, y, dir) {
     part_particles_create(psys, x, y, p_shoot_burst, 1)
 }
 
-p_explosion = part_type_create()
-var lifetime = 40,
-    size = 1,
-    size_incr = 0
-var sp = 0
-part_type_sprite(p_explosion, libSExplosion, true, true, false)
-part_type_speed(p_explosion, sp, sp, 0, 0)
-part_type_life(p_explosion, lifetime, lifetime)
-part_type_size(p_explosion, size, size, size_incr, 0)
-
-function emitExplosion(x, y) {
+p_explosion = createPartType(psys, {
+    life: 5,
+    // alpha: [1, 0],
+    sprite: sExplosion,
+})
+function emitExplosion(x, y, size=1) {
+    part_type_size(p_explosion, size, size, 0, 0)
     part_particles_create(psys, x, y, p_explosion, 1)
 }
-
 
 p_explosion_big = part_type_create()
 var lifetime = 40,

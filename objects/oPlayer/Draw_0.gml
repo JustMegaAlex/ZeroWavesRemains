@@ -16,6 +16,7 @@ if !oInput.is_user_input_keyboard {
 }
 
 if DEV {
+    draw_circle(x, y, weapon_pulse.range, true)
     // with oEnemyParent {
     //     draw_line(x, y, other.x, other.y)
     // }

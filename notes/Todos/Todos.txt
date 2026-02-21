@@ -51,6 +51,7 @@ Visuals rework
 > shop items: add control hint for shield and emp
 > emp: don't target next wave enemies
 > emp: set dmg to 0
+> missiles: set colors
 
 > ui: boost charge
 > upd boost: make rechargeable

@@ -7,10 +7,6 @@ fadeout = false
 
 entity_collider = noone
 
-destroy = function() {
-    instance_destroy()
-}
-
 
 visible = false
 image_speed = 0
@@ -22,6 +18,7 @@ shooter = noone
 
 xprev = x
 yprev = y
+
 
 
 SetColor()
