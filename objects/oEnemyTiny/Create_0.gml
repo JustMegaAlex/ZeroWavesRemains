@@ -6,7 +6,7 @@ if global.debug_tiny == noone {
 
 hp = 10
 
-var scale = 1.5
+var scale = 1.3
 image_xscale = scale
 image_yscale = scale
 

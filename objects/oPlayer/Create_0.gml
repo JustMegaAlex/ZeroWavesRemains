@@ -166,7 +166,7 @@ weapon_emp_missile = {
     range: 6000,
     emp: 300,
     name: "EMP",
-    ammo: 3,
+    ammo: 1,
     ammo_restore_timer: MakeTimer(500),
     sound: noone,
     sprite: noone,
@@ -186,6 +186,13 @@ weapon_emp_missile = {
                 emp: [360, 420]
             },
             costs: _emp_costs.emp
+        },
+        ammo: {
+            name: "max ammo",
+            stats: {
+                ammo_max: [2, 3]
+            },
+            costs: _emp_costs.ammo
         },
     }
 }

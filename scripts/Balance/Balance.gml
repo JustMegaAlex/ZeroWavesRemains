@@ -26,6 +26,7 @@ function InitBalance() {
                     weapon_cost: 40,
                     radius: [30, 45],
                     emp: [35, 50],
+                    ammo: [35, 70]
                 },
                 heal: 25,
                 // [cost, amount]

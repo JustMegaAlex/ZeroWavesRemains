@@ -38,12 +38,14 @@ contact = function(inst) {
 }
 
 contactFinal = function() {
-    final_fly_inst.hit(id)
+    if instance_exists(final_fly_inst) {
+        final_fly_inst.hit(id)
+        contactExtra(final_fly_inst)
+    }
     oParticles.hitSparks(x, y, image_angle + 180, sparks_count)
     if dmg {
         audio_play_sound(sfxShotContactFeedback, 2, false)
     }
-    contactExtra(final_fly_inst)
     if destroy_on_contact {
         destroy()
     }
