@@ -50,9 +50,6 @@ Visuals rework
 0.6.0-p (prototype)
 > missiles: set colors
 > fix missiles: make killable
-> hub:
-    > add "Use mouse" hint
-    > add "tech locked" hints
 
 
 
