@@ -6,6 +6,10 @@ if global.debug_tiny == noone {
 
 hp = 10
 
+var scale = 1.5
+image_xscale = scale
+image_yscale = scale
+
 move_around_player_dist = 400
 sp_max = 24
 acc_max = 0.4
@@ -22,8 +26,6 @@ swarm_shift_forward_factor = 1 // from 0 to 1
 swarm_shift_angle = 0
 swarm_accel_add_factor = 1 / 2000
 
-image_xscale = 0.3
-image_yscale = 0.3
 
 weapon = {
     dmg: 1,

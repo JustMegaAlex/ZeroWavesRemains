@@ -47,7 +47,7 @@ with oEntity {
         sprite_index, image_index,
         (x - CamX()) * scale,
         (y - CamY()) * scale,
-        scale, scale,
+        scale*image_xscale, scale*image_yscale,
         image_angle, image_blend, image_alpha)
 }
 with oEnemyBehemothGun {
@@ -55,7 +55,7 @@ with oEnemyBehemothGun {
         sprite_index, image_index,
         (x - CamX()) * scale,
         (y - CamY()) * scale,
-        scale, scale,
+        scale*image_xscale, scale*image_yscale,
         image_angle, image_blend, image_alpha)
 }
 with oShop {
@@ -93,7 +93,7 @@ with oEntity {
         sprite_index_norm, image_index,
         (x - CamX()) * scale,
         (y - CamY()) * scale,
-        scale, scale,
+        scale*image_xscale, scale*image_yscale,
         image_angle, c_white, 1)
     
 }
