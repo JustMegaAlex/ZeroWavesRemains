@@ -120,7 +120,7 @@ if interactible {
 oShop.highlight = false
 if !hub_interaction.attached and place_meeting(x, y, oShop) {
     oShop.highlight = true
-    if oInput.Pressed("interact") {
+    if oShop.available and oInput.Pressed("interact") {
         oShop.open()
         hubOpen()
     }

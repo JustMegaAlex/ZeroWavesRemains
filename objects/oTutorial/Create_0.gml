@@ -226,6 +226,7 @@ steps = [
         default_gui,
         arrow: noone,
         start: function() {
+            oShop.available = true
             arrow = oUI.addHintArrow(oShop, "tech hub", global.game_colors.arrow_common)
             oPlayer.display_money = true
             come_back_text = text
@@ -298,6 +299,7 @@ for (var i = 0; i < array_length(steps); ++i) {
 }
 
 startTutorial = function() {
+    oShop.available = false
     with oUICoins {
         visible = false
     }
@@ -319,6 +321,7 @@ startTutorial = function() {
     // // layer_set_visible("ui_text_gameplay", false)
 }
 finishTutorial = function() {
+    oShop.available = true
     // global.tutorial_finished = true
     global.tutorial = false
     global.wave_enemies_count = 0
