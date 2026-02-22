@@ -49,6 +49,13 @@ Visuals rework
 0.6.x Build: add more content; new enemies, new tools and meta progression
 0.6.0-p (prototype)
 > missiles: set colors
+> fix missiles: make killable
+> hub:
+    > add "Use mouse" hint
+    > add "tech locked" hints
+
+
+
 
 > ui: boost charge
 > upd boost: make rechargeable

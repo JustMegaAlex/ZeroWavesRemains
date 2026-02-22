@@ -95,7 +95,7 @@ if interactible == noone {
     interact_with_mouse = false
 }
 if interactible and object_is_ancestor(interactible.object_index, oShopItem) {
-    if (interactible.is_unlocked and oShop.is_open) {
+    if (oShop.is_open) {
         shop_item = interactible
     } else {
         interactible = noone
@@ -108,7 +108,8 @@ if interactible {
     if interactible {
         interactible.highlight = true
     }
-    var interact_input = (interact_with_mouse and oInput.Pressed("lclick")) or (!interact_with_mouse and oInput.Pressed("interact"))
+    var interact_input = (interact_with_mouse and oInput.Pressed("lclick"))
+            or (!interact_with_mouse and oInput.Pressed("interact"))
     if interactible and interact_input {
         interactible.interact()
         if !instance_exists(interactible) {
@@ -131,7 +132,8 @@ if !hub_interaction.attached and place_meeting(x, y, oShop) {
     }
 }
 
-if !global.tutorial and global.wave_enemies_count <= 0 and oInput.Pressed("next_wave") {
+if !global.tutorial and global.wave_enemies_count <= 0 and oInput.Pressed("next_wave")
+        and !hub_interaction.attached {
     weapon_pulse.ammo = weapon_pulse.ammo_max
     if instance_exists(oEnemyParent) and !audio_is_playing(mscStealthTheme) {
         oMusic.switch_music(mscStealthTheme)

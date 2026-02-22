@@ -61,3 +61,13 @@ Bumblebee (2026.02.01 googledrive)
 
 More feedback:
 - scatter sucks: some players don't get how to properly use it and it seems too weak to them
+
+
+
+==== Rim ====
+> убрать магазин до этапа магазина
+> убрать "продолжить" после смерти
+> show drone time to despawn
+> change tech hub text to "Open Tech hub"
+> reduce tutorial waves to 2
+> add "tech locked" hint in hub

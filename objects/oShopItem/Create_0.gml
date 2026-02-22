@@ -38,6 +38,9 @@ apply_base = function() {
 }
 
 interact = function() {
+    if !is_unlocked {
+        return;
+    }
     if can_buy_base() {
         oPlayer.money -= cost
         apply_base()
