@@ -50,7 +50,9 @@ Visuals rework
 0.6.0-p (prototype)
 > missiles: set colors
 > fix missiles: make killable
-
+> fix sniper: make the shot visible
+> fix fighter: slower blink recharge rate
+> upd fighter: blink animation
 
 
 
