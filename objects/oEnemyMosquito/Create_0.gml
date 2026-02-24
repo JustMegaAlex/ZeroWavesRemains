@@ -7,7 +7,7 @@ objectHit = function() {
 }
 
 
-hp = 80
+hp = 90
 
 
 battle_side = battle_side_enemy
@@ -22,7 +22,7 @@ updateSpMax(36)
 //image_blend = c_white
 
 weapon_snipe = {
-    dmg: 12,
+    dmg: 8,
     timer: MakeTimer(180),
     object: oSnipeShot,
     range: 3000,

@@ -10,7 +10,7 @@ if is_emp_stunned {
     var player_dir = InstDir(oPlayer)
     var dist = InstDist(oPlayer)
     if !is_long_range_state {
-        weapon_snipe.timer.timer = Approach(weapon_snipe.timer.timer, 0, 1)
+        weapon_snipe.timer.timer = Approach(weapon_snipe.timer.timer, weapon_snipe.timer.time, 1)
         var center_dist = PointDist(0, 0)
         var dir_to = player_dir + 180
         if center_dist > avoid_boundary_dist {
@@ -26,7 +26,7 @@ if is_emp_stunned {
         }
     } else {
         var player_in_shoot_range = dist < weapon_snipe.range
-        accelerate(!player_in_shoot_range, player_dir)
+        accelerate(player_in_shoot_range ? 0 : 1, player_dir)
         dirApproach(player_dir)
         if (dist < start_range_increase_dist) or run {
             is_long_range_state = false

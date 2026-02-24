@@ -47,7 +47,7 @@ under_attack_decr = 100 / 60
 hang_in_place_timer = MakeTimer(30)
 blink = {
     random_timer: MakeTimer(60 * random_range(5, 15)),
-    reload_timer: MakeTimer(300, 0),
+    reload_timer: MakeTimer(420, 0),
     startup_timer: MakeTimer(20),
     to: new Vec2(0, 0),
     initialized: false,
