@@ -102,3 +102,14 @@ mover = mover_point
 objectHit = function(bullet) {
     under_attack += 100
 }
+
+emitBlinkParticles = function() {
+    var angle = image_angle + 90
+    help_vec.set(sprite_width*0.5, 0).rotate(angle)
+    oParticles.blinkTrace(
+        x+help_vec.x, y+help_vec.y, blink.to.x+help_vec.x, blink.to.y+help_vec.y)
+    oParticles.blinkTrace(
+        x-help_vec.x, y-help_vec.y, blink.to.x-help_vec.x, blink.to.y-help_vec.y)
+    oParticles.blinkTrace(
+        x, y, blink.to.x, blink.to.y, 8)
+}

@@ -19,6 +19,7 @@ contact = function(inst) {
 	}
 }
 
+visible = true
 image_speed = 0
 battle_side = -1
 can_hit = 0

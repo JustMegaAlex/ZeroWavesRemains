@@ -71,3 +71,8 @@ More feedback:
 > change tech hub text to "Open Tech hub"
 > reduce tutorial waves to 2
 > add "tech locked" hint in hub
+
+
+
+====== Coin ======
+> didn't see the first tiny (what's hitting me)

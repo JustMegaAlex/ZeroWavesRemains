@@ -60,6 +60,7 @@ if is_emp_stunned {
             if blink.startup_timer.update() {
                 break
             }
+            emitBlinkParticles()
             x = blink.to.x
             y = blink.to.y
             weapon_missiles.shots_left = weapon_missiles.burst_count

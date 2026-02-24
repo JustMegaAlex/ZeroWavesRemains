@@ -242,8 +242,18 @@ function empShockwave(xx, yy, rad) {
 }
 
 
+pt_blink = createPartType(psys, {
+    life: 30,
+    sprite: sPixel,
+    alpha: [0.8, 0],
+    color: #FF5A23,
+})
 
-
-
-
+function blinkTrace(x0, y0, x1, y1, width=5) {
+    var size = point_distance(x0, y0, x1, y1)
+    var angle = point_direction(x0, y0, x1, y1)
+    part_type_scale(pt_blink, size, width)
+    part_type_orientation(pt_blink, angle, angle, 0, 0, true)
+    part_particles_create(psys, x0, y0, pt_blink, 1)
+}
 

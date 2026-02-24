@@ -53,7 +53,7 @@ Visuals rework
 > fix sniper: make the shot visible
 > fix fighter: slower blink recharge rate
 > upd fighter: blink animation
-
+> fix: repair dropped twice
 
 
 > ui: boost charge
