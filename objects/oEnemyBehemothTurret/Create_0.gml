@@ -2,7 +2,7 @@
 active = true
 
 weapon = {
-    dmg: 1,
+    dmg: 3,
     timer: MakeTimer(60 / fire_ratio),
     sp: 40,
     range: range,

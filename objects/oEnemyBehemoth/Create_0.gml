@@ -107,7 +107,8 @@ turret_helper_vec = new Vec2(0, 0)
 for (var i = 0; i < array_length(global.behemoth_turret_coords); ++i) {
     var vec = global.behemoth_turret_coords[i]
     var turret = instance_create_layer(
-        x + vec.x, y + vec.y, "FrontInstances", oEnemyBehemothTurret
+        x + vec.x, y + vec.y, "FrontInstances", oEnemyBehemothTurret,
+        {fire_ratio: 3}
     )
     turret.rel_vec = new Vec2(vec.x, vec.y)
     turret.battle_side = battle_side

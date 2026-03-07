@@ -48,7 +48,10 @@ Visuals rework
 
 0.6.x Build: add more content; new enemies, new tools and meta progression
 0.6.0-p (prototype)
-> fix: repair dropped twice
+> cook NM:
+    > fighter
+    > mosquito
+> upd behemoth: nerf turrets
 
 0.6.0 Build
 > upd tiny
