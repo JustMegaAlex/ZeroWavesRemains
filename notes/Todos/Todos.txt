@@ -48,12 +48,15 @@ Visuals rework
 
 0.6.x Build: add more content; new enemies, new tools and meta progression
 0.6.0-p (prototype)
-> missiles: set colors
-> fix missiles: make killable
-> fix sniper: make the shot visible
-> fix fighter: slower blink recharge rate
-> upd fighter: blink animation
 > fix: repair dropped twice
+
+0.6.0 Build
+> upd tiny
+    > multiple swarms
+    > faster ?
+    > longer shot range?
+> scout 2.0: spred shot of 10 bullets?
+> 
 
 
 > ui: boost charge
@@ -65,7 +68,12 @@ Visuals rework
         > boost max speed
         > boost acceleration
         > boost charge
-    > shop shield
+    > radar: constantly highlight enemies
+        > up: show enemy types
+        > up: show missiles
+        > up: aim assist
+    > missile up: more hp
+    > shop shield mode during combat
 > fix
     > show money during tutorial
     > mosquito: reload only when aiming

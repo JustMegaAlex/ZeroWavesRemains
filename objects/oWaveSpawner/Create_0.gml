@@ -335,8 +335,8 @@ lastWaveCallback = function() {
 
 /// @follow-up wave spawner DEV
 if DEV {
-    // wave_index = 13
-    // waves_remains = array_length(waves) - wave_index
+    wave_index = 8
+    waves_remains = array_length(waves) - wave_index
 }
 
 var _extra_enemy = choose("oEnemyFighter", "oEnemyMosquito")

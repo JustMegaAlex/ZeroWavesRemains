@@ -20,16 +20,36 @@ unlockable_tiers = [
 ]
 
 function getUnlockableByTier(tier) {
-    var arr = unlockable_tiers[tier]
-    while ArrayEmpty(arr) {
+    while tier >= array_length(unlockable_tiers) {
         tier--
         if tier < 0 {
             return undefined
         }
-        arr = unlockable_tiers[tier]
     }
+    var arr = unlockable_tiers[tier]
     var tech = ArrayChoose(arr)
-    return ArrayRemove(arr, tech)
+    ArrayRemove(arr, tech)
+    if ArrayEmpty(arr) {
+        ArrayRemove(unlockable_tiers, arr)
+    }
+    return tech
+}
+
+function updateUnlockablesFromState() {
+    for (var i = 0; i < array_length(unlockable_tiers); ++i) {
+        var tier_items = unlockable_tiers[i]
+        for (var j = 0; j < array_length(tier_items); ++j) {
+            var tech = tier_items[j]
+            if struct_has(state, $"tech_{tech}") {
+                ArrayRemove(tier_items, tech)
+                j--
+                if ArrayEmpty(tier_items) {
+                    ArrayRemove(unlockable_tiers, tier_items)
+                    i--
+                }
+            }
+        }
+    }
 }
 
 function techUnlocked(name) {
