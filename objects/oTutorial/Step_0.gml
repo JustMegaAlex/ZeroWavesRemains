@@ -19,6 +19,5 @@ with skip_tutorial {
     if value >= 1 {
         other.finishTutorial()
     }
-
 }
 

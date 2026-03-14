@@ -172,6 +172,7 @@ weapon_emp_missile = {
     sprite: noone,
     upgrades: 0,
     effect_radius: 700,
+    hp: 1,
     upgrade_confs: {
         radius: {
             name: "shock radius",
@@ -194,6 +195,13 @@ weapon_emp_missile = {
             },
             costs: _emp_costs.ammo
         },
+        hp: {
+            name: "hit resistance",
+            stats: {
+                hp: [2, 3],
+            },
+            costs: [40, 70],
+        }
     }
 }
 

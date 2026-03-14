@@ -50,6 +50,7 @@
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"endpoint.txt","CopyToMask":-1,"filePath":"datafiles","name":"endpoint.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"metrics_endpoint.txt","CopyToMask":-1,"filePath":"datafiles","name":"metrics_endpoint.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"state.sav","CopyToMask":-1,"filePath":"datafiles","name":"state.sav","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
   "LibraryEmitters":[],
@@ -246,7 +247,9 @@
     {"id":{"name":"sEnemyBonk","path":"sprites/sEnemyBonk/sEnemyBonk.yy",},},
     {"id":{"name":"sEnemyBonkNM","path":"sprites/sEnemyBonkNM/sEnemyBonkNM.yy",},},
     {"id":{"name":"sEnemyFighter","path":"sprites/sEnemyFighter/sEnemyFighter.yy",},},
+    {"id":{"name":"sEnemyFighterNM","path":"sprites/sEnemyFighterNM/sEnemyFighterNM.yy",},},
     {"id":{"name":"sEnemyMosquito","path":"sprites/sEnemyMosquito/sEnemyMosquito.yy",},},
+    {"id":{"name":"sEnemyMosquitoNM","path":"sprites/sEnemyMosquitoNM/sEnemyMosquitoNM.yy",},},
     {"id":{"name":"sEnemyScout","path":"sprites/sEnemyScout/sEnemyScout.yy",},},
     {"id":{"name":"sEnemyScoutNM","path":"sprites/sEnemyScoutNM/sEnemyScoutNM.yy",},},
     {"id":{"name":"sEnemyTiny","path":"sprites/sEnemyTiny/sEnemyTiny.yy",},},

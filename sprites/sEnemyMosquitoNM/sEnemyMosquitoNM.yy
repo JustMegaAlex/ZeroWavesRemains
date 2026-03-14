@@ -1,33 +1,27 @@
 {
   "$GMSprite":"v2",
-  "%Name":"sEnemyMosquito",
+  "%Name":"sEnemyMosquitoNM",
   "bboxMode":0,
-  "bbox_bottom":206,
+  "bbox_bottom":204,
   "bbox_left":0,
   "bbox_right":239,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
-  "ConfigValues":{
-    "Dev":{
-      "textureGroupId":"{ \"name\":\"Default\", \"path\":\"texturegroups/Default\" }",
-    },
-  },
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"4b95dfae-fcd1-4c60-89a1-4e2779146301","name":"4b95dfae-fcd1-4c60-89a1-4e2779146301","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"2d15dd4f-50f5-4be7-9993-4e3207f032db","name":"2d15dd4f-50f5-4be7-9993-4e3207f032db","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":207,
+  "height":205,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"56e3ee0a-a955-481f-b0b1-dc58c45265ad","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"56e3ee0a-a955-481f-b0b1-dc58c45265ad","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
-    {"$GMImageLayer":"","%Name":"1b560af4-023f-4de5-9e7a-341212a21736","blendMode":0,"displayName":"default","isLocked":false,"name":"1b560af4-023f-4de5-9e7a-341212a21736","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"189a6698-a575-420d-bad0-e3201667407a","blendMode":0,"displayName":"default","isLocked":false,"name":"189a6698-a575-420d-bad0-e3201667407a","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"sEnemyMosquito",
+  "name":"sEnemyMosquitoNM",
   "nineSlice":null,
   "origin":9,
   "parent":{
@@ -39,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"sEnemyMosquito",
+    "%Name":"sEnemyMosquitoNM",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -63,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"sEnemyMosquito",
+    "name":"sEnemyMosquitoNM",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -75,17 +69,20 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4b95dfae-fcd1-4c60-89a1-4e2779146301","path":"sprites/sEnemyMosquito/sEnemyMosquito.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"ec9d6516-cb2c-4bf6-a84a-d7585a7141b1","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2d15dd4f-50f5-4be7-9993-4e3207f032db","path":"sprites/sEnemyMosquitoNM/sEnemyMosquitoNM.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"c0be48d5-a7eb-4062-9386-14985f2b1d34","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":68,
-    "yorigin":104,
+    "xorigin":59,
+    "yorigin":74,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
+  "tags":[
+    "used",
+  ],
   "textureGroupId":{
     "name":"Default",
     "path":"texturegroups/Default",

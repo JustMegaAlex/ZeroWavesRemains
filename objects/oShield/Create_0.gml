@@ -1,7 +1,8 @@
 event_inherited()
 
 is_regenerating = false
-regen_timer = MakeTimer(300, 0)
+regen_time = 600
+dissipate_time = 60 * 30
 
 alpha_full = 0.85
 alpha_drown = 0.5
@@ -22,7 +23,6 @@ hit = function(bullet) {
     blink_timer.reset()
     if hp <= 0 {
         hp = 0
-        regen_timer.reset()
         deactivate()
     }
 }
@@ -32,9 +32,6 @@ activate = function() {
         blink_timer.reset()
         return;
     }
-    if hp < hp_max {
-        regen_timer.reset()
-    }
     is_up = true
     battle_side = battle_side_initial
 }
@@ -43,7 +40,4 @@ deactivate = function() {
     is_up = false
     battle_side_initial = battle_side
     battle_side = battle_side_ignore
-    if hp < hp_max {
-        regen_timer.reset()
-    }
 }

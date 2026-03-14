@@ -54,5 +54,6 @@ SetColor()
 
 with createEntityCollider() {
     image_blend = other.image_blend
+    hp = other.hp
 }
 //entity_collider.image_blend = c_red

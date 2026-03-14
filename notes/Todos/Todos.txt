@@ -51,15 +51,7 @@ Visuals rework
 > cook NM:
     > fighter
     > mosquito
-> upd missile: add hp upgrade
-> fix tech drops: don't drop twice (happens after web reload page)
-> fix tute: show coins in the first wave
-> create red arrows when current wave is cleared
-> fix hub:
-    > disable all purchased items
-    > ammo text: show amount (percent)
-    > items: add "purchased state": no highlight
-> tell about shooting rockets
+
 
 0.6.1 Build
 > upd tiny
@@ -104,6 +96,8 @@ Visuals rework
     > shop items: remove "Press F"
 > make all coins slowly move towards player when no enemies left
 
+> create red arrows when current wave is cleared
+> tell about shooting rockets
 > new enemies
     > stinky
 > upd drone

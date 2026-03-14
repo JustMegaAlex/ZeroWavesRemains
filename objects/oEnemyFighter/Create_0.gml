@@ -39,6 +39,7 @@ weapon_missiles = {
     knockback: 21,
     target: oPlayer,
     image_blend: #D73D2A,
+    hp: 1,
 }
 
 under_attack = 0

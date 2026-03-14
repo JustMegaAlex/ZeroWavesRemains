@@ -40,7 +40,8 @@ function updateUnlockablesFromState() {
         var tier_items = unlockable_tiers[i]
         for (var j = 0; j < array_length(tier_items); ++j) {
             var tech = tier_items[j]
-            if struct_has(state, $"tech_{tech}") {
+            var key = $"tech_{tech}"
+            if state[$ key] == true {
                 ArrayRemove(tier_items, tech)
                 j--
                 if ArrayEmpty(tier_items) {
@@ -73,11 +74,18 @@ function save_desktop() {
 }
 
 function load_desktop() {
+    show_debug_message("Loading desktop")
     if !file_exists(save_file) {
+        show_debug_message("No save file")
         return;
     }
     var file = file_text_open_read(save_file)
-    state = json_parse(file_text_read_string(file))
+    show_debug_message("Loaded file")
+    var text = file_text_read_string(file)
+    show_debug_message($"Loaded text: {text}")
+    state = json_parse(text)
+    show_debug_message($"Loaded state: {state}")
+
 }
 
 function save_html() {
@@ -129,4 +137,6 @@ if (os_type == os_browser) or (os_type == os_operagx) {
 
 
 load()
+updateUnlockablesFromState()
 
+show_debug_message($"Unlockables: {unlockable_tiers}")

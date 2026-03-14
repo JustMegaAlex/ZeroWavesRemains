@@ -84,6 +84,7 @@ for (var i = 0; i < array_length(weapons_array); ++i) {
     stepUpdateWeapon(weap)
 }
 
+var interact_range = shot_interact_range
 shop_item = noone
 if interactible {
     interactible.highlight = false
@@ -97,12 +98,13 @@ if interactible == noone {
 if interactible and object_is_ancestor(interactible.object_index, oShopItem) {
     if (oShop.is_open) {
         shop_item = interactible
+        interact_range = infinity
     } else {
         interactible = noone
     }
 }
 if interactible {
-    if interactible and InstDist(interactible) > shot_interact_range {
+    if interactible and InstDist(interactible) > interact_range {
         interactible = noone
     }
     if interactible {

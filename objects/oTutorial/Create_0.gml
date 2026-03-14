@@ -136,6 +136,9 @@ steps = [
         start: function() {
             global.waves_remains = 3
             oPlayer.display_money = true
+            with oUICoins {
+                visible = true
+            }
         }, 
         done: function() {
             if instance_exists(oScout) {
