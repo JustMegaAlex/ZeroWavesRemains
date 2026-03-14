@@ -15,7 +15,7 @@ if step.done() {
 }
 
 with skip_tutorial {
-    value = Approach(value, oInput.Hold("skip_tutorial"), ratio)
+    value = Approach(value, oInput.Hold("skip_tutorial"), ratio * (1 + 100 * DEV))
     if value >= 1 {
         other.finishTutorial()
     }

@@ -24,5 +24,5 @@ apply = function() {
     unlock_children()
 }
 
-is_unlocked = oGameState.techUnlocked(weapon.name)
+is_unlocked = is_unlocked or oGameState.techUnlocked(weapon.name)
 is_unlocked_initially = is_unlocked

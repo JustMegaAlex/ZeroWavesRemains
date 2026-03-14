@@ -3,8 +3,8 @@ event_inherited()
 is_regenerating = false
 regen_timer = MakeTimer(300, 0)
 
-alpha_full = 0.75
-alpha_drown = 0.3
+alpha_full = 0.85
+alpha_drown = 0.5
 
 hp = 30
 hp_max = hp

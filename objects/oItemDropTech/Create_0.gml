@@ -39,8 +39,9 @@ config = {
         id: id,
         name: "Shield",
         unlock: function() {
-            oPlayer.unlockShield()
+            // oPlayer.unlockShield()
             oShopItemShield.unlock()
+            oShopItemShield.apply()
         }
     },
     emp: {

@@ -34,3 +34,4 @@ max_upgrades = array_length(oPlayer.shield_upgrades) - 1
 icon = sIconShield
 upgrade_level = -1
 updateText()
+cost = global.balance.items.costs.shield[upgrade_level + 1]

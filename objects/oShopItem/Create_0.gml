@@ -4,7 +4,7 @@
 
 event_inherited()
 
-prompt_text = "Press F to buy "
+prompt_text = "Click to buy "
 cost_text_struct = new Text(0, 0, cost, {color: c_red, font: fntUI})
 text_struct = new Text(0, 0, "", {font: fntUI})
 

@@ -14,7 +14,7 @@
 #macro key_pressed keyboard_check_pressed
 #macro key_released keyboard_check_released
 #macro key_hold keyboard_check
-#macro press_f_prompt "Press F to"
+#macro press_f_prompt "Click to"
 #macro macro_ui_text_spawn_wave_pos ui_text_spawn_wave_pos
 #macro macro_ui_shop_prompt_pos ui_shop_prompt_pos
 #macro macro_difficulty_normal 0

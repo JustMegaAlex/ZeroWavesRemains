@@ -8,7 +8,7 @@ if (global.gameover or global.pause or global.win) and oInput.Pressed("reload") 
     Restart()
 }
 
-if oInput.Pressed("escape") {
+if false and oInput.Pressed("escape") {
     if IsHtmlBuild() or (os_type == os_gxgames) {
         global.pause = !global.pause
     } else {

@@ -2,7 +2,7 @@ draw_self()
 
 if !is_unlocked { exit }
 
-if highlight {
+if highlight and !is_purchased {
     draw_sprite(sprite_index, 1, x, y)
 }
 

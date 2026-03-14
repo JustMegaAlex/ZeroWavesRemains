@@ -47,23 +47,44 @@ Visuals rework
 
 
 0.6.x Build: add more content; new enemies, new tools and meta progression
-0.6.0-p (prototype)
+0.6.0
 > cook NM:
     > fighter
     > mosquito
-> upd behemoth: nerf turrets
+> upd missile: add hp upgrade
+> fix tech drops: don't drop twice (happens after web reload page)
+> fix tute: show coins in the first wave
+> create red arrows when current wave is cleared
+> fix hub:
+    > disable all purchased items
+    > ammo text: show amount (percent)
+    > items: add "purchased state": no highlight
+> tell about shooting rockets
 
-0.6.0 Build
+0.6.1 Build
 > upd tiny
     > multiple swarms
     > faster ?
     > longer shot range?
 > scout 2.0: spred shot of 10 bullets?
-> 
+> missile:
+    > launch sfx
+    > explode sfx
+    > emp sfx
+> shield:
+    > better visualise recharge
 
-
-> ui: boost charge
+> check black bars in web build
+> scatter: add sound feedback
+> menu
+    > move "toggle fullscreen" aside and "continue" to the top
+    > loose: disable "continue" and highlight "restart"
+> tutorial: learn about healing
+    > hp drops
+    > repair tech (add some text steps after tech step)
 > upd boost: make rechargeable
+> ui: boost charge
+> ui hp: add digital indication
 > new upgrades
     > mobility
         > turn speed
@@ -98,12 +119,8 @@ Visuals rework
 
 > visuals
     > improve shot vfx
-        > add small explosions
-        > move bullet into an enemy
         > NM: make'em flash a little
     > add engine jets
-    > rework explosion effects
-    > make varying explosion sizes
     > try at least 5 different color palletes
     > research: explosions
         > find good refs
@@ -130,37 +147,27 @@ Visuals rework
     - warp in more enemies?
     - make Behemoth Elder?
 
-> rework tech hub mechanic
-    > hold ship in one place
-    > mouse interact with ui
 > rework tech hub visuals
     - main section is placed a bit deeper with a small parallax
     - heavy a bit clunky animations
 > rework waves: impl phases
     - no time limit between phases
-> improve tinies: increase speed?
+> improve tinies: multiple swarms
 > lose: focus camera on the killer
-> rework scouts: they suck
-    - or maybe it's fine they suck?
-    - or make a better version for later phases
 > shop text: add "not enough coins"
 > upd tiny
     > (maybe) spread if far from player
 > fix ui: make all text transparent if there are enemies
-> improve coins balance among difficulties
 > ui: glowing screen bounds on low hp
-> rework aim: apply correction angle gradualy over time
 > indicate when drone flies away
 > show high score
 > show previous run waves count
-> add casual difficulty mode
 > vfx
     > make variable size for explosions
     > shoot particles
     > area boundaries
 > finish gp controls
-> fixes:
-    > disable Esc for GX
+> rework player aim assist: apply correction angle gradualy over time
 
 ======== Research ========
 > Lighting
