@@ -40,6 +40,10 @@ tiny = {
             return
         }
         is_swarm_mode = true
+        /// TODO: clean up properly when the last tniy is killed
+        ArrayEmpty(swarm_leaders)
+        instance_destroy(oAITinySwarmLeader)
+        ///////
         updateSwarmLeader()
     },
     swarmTinyDeadHook: function() {

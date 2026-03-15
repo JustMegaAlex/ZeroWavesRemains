@@ -17,6 +17,7 @@ rotary_sp = 6
 sp_dir = 0
 sp_len = 0
 is_dead = false
+leaders_spread_distance = 500
 
 move_around_player_dist = 400
 

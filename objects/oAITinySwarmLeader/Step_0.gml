@@ -14,8 +14,8 @@ if swarm_fly_away_timer.update() {
         swarm_fly_away_timer.reset()
     }
     with oAITinySwarmLeader {
-        if id == other { continue }
-        if swarm_fly_away_timer.timer <= 0 and InstDist(other) < 500 {
+        if (id == other.id) or (swarm_fly_away_timer.timer > 0) { continue }
+        if InstDist(other) < leaders_spread_distance {
             swarm_fly_away_timer.reset()
             resetFlyAwayPoint()
             break

@@ -50,9 +50,9 @@ mergeSpawnStruct = function(into, from) {
 /// @follow-up wave spawner initial waves
 waves = [
     // {oEnemyMosquito: 2},
-    {oEnemyTiny: 32},
-    {oEnemyTiny: 32},
-    {oEnemyTiny: 32},
+    // {oEnemyTiny: 32},
+    // {oEnemyTiny: 32},
+    // {oEnemyTiny: 32},
     // {oItemDrone: 1},
     // {oEnemy: 1},
     // {oEnemy: 1},
