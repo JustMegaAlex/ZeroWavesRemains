@@ -50,9 +50,9 @@ mergeSpawnStruct = function(into, from) {
 /// @follow-up wave spawner initial waves
 waves = [
     // {oEnemyMosquito: 2},
-    // {oEnemyTiny: 2},
-    // {oEnemyTiny: 2},
-    // {oEnemyTiny: 3},
+    {oEnemyTiny: 32},
+    {oEnemyTiny: 32},
+    {oEnemyTiny: 32},
     // {oItemDrone: 1},
     // {oEnemy: 1},
     // {oEnemy: 1},
@@ -251,7 +251,7 @@ spawn = function(wave_override=undefined) {
     }
 
     /// Apply AI mode
-    if next_wave_trigger_swarm_mode or (Chance(0.5) and (instance_number(oEnemyTiny) > tiny_min_swarm_count)) {
+    if next_wave_trigger_swarm_mode or ((instance_number(oEnemyTiny) > tiny_min_swarm_count)) {
         oAIEnemyControl.tiny.enterSwarmMode()
         show_debug_message("Swarm mode triggered")
     }
@@ -335,7 +335,7 @@ lastWaveCallback = function() {
 
 /// @follow-up wave spawner DEV
 if DEV {
-    wave_index = 8
+    wave_index = 0
     waves_remains = array_length(waves) - wave_index
 }
 

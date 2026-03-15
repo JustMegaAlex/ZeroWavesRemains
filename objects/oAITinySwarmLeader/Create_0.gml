@@ -94,5 +94,9 @@ mover_point = {
     }
 }
 
+resetFlyAwayPoint = function() {
+    mover_point.to.set_polar(oGameArea.radius * random(1), random(360))
+}
+
 
 updateDampening()
