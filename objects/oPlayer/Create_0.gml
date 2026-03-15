@@ -423,7 +423,12 @@ getObjectCollision = function(obj) {
 }
 
 getMissileTarget = function() {
-    var chosen = MouseCollision(oEnemyParent)
+    try {
+        var chosen = MouseCollision(oEnemyParent)
+    } catch (e) {
+        show_debug_message($"Error: MouseCollision: {e}")
+        return noone
+    }
     if chosen and !chosen.active {
         chosen = noone
     }
