@@ -32,6 +32,7 @@ loot_controlled_randomer = undefined
 player_hint_switch_weapon_showed = false
 player_bought_weapon = false
 shop_links_initialized = false
+tiny_swarm_count = 0
 tutorial = false
 tutorial_finished = false
 wave_enemies_count = 0

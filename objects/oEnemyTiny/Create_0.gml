@@ -95,7 +95,7 @@ mover.start()
 mover.to = oPlayer
 
 objectDie = function() {
-    if swarm_leader == id {
+    if is_swarm_mode {
         oAIEnemyControl.tiny.swarmTinyDeadHook()
     }
 }

@@ -9,6 +9,7 @@ tiny = {
     swarm_tree: ds_map_create(),
     updateSwarmLeader: function() {
         var tiny_count = instance_number(oEnemyTiny)
+        global.tiny_swarm_count = tiny_count
         var swarms_num = min(max_swarms, tiny_count div swarm_min_count)
         repeat swarms_num {
             var inst = instance_create_layer(0, 0, "Instances", oAITinySwarmLeader)
@@ -41,15 +42,16 @@ tiny = {
         }
         is_swarm_mode = true
         /// TODO: clean up properly when the last tniy is killed
-        ArrayEmpty(swarm_leaders)
+        ArrayClear(swarm_leaders)
         instance_destroy(oAITinySwarmLeader)
         ///////
         updateSwarmLeader()
     },
     swarmTinyDeadHook: function() {
-        if !instance_exists(oEnemyTiny) {
+        global.tiny_swarm_count -= is_swarm_mode
+        if global.tiny_swarm_count == 0 {
             is_swarm_mode = false
-            ArrayEmpty(swarm_leaders)
+            ArrayClear(swarm_leaders)
             instance_destroy(oAITinySwarmLeader)
             return
         }
