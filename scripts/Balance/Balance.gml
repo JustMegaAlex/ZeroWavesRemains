@@ -32,7 +32,7 @@ function InitBalance() {
                 // [cost, amount]
                 snipe_ammo: [20, 5],
                 scatter_ammo: [20, 100],
-                shield: [30, 45, 60]
+                shield: [60, 80, 60]
             },
         },
         coins: {
