@@ -4,7 +4,7 @@ EnsureSingleton()
 tiny = {
     is_swarm_mode: false,
     swarm_leaders: [],
-    swarm_min_count: 8,
+    swarm_min_count: 6,
     max_swarms: 3,
     swarm_tree: ds_map_create(),
     updateSwarmLeader: function() {
@@ -14,6 +14,11 @@ tiny = {
         repeat swarms_num {
             var inst = instance_create_layer(0, 0, "Instances", oAITinySwarmLeader)
             array_push(swarm_leaders, inst)
+        }
+        // just in case
+        if swarms_num == 0 {
+            is_swarm_mode = false
+            return;
         }
         var per_swarm_num = floor(tiny_count / swarms_num)
         var _swarm_count = per_swarm_num
@@ -45,7 +50,11 @@ tiny = {
         ArrayClear(swarm_leaders)
         instance_destroy(oAITinySwarmLeader)
         ///////
-        updateSwarmLeader()
+        try {
+            updateSwarmLeader()
+        } catch (e) {
+            show_debug_message($"Error in updateSwarmLeader: {e}")
+        }
     },
     swarmTinyDeadHook: function() {
         global.tiny_swarm_count -= is_swarm_mode
